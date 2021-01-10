@@ -1,0 +1,6 @@
+file: 0_intro
+sections:
+- file: 1_intro
+- file: 2_jupyter
+- file: 3_plot
+- file: 3_image
