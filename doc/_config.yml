@@ -2,9 +2,10 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Education numérique
-author: R Holzer
+author: Raphael Holzer
 logo: logo.png
 exclude_patterns: ['**/maitre.md', 'content/skel/**']
+only_build_toc_files: true
 
 #######################################################################################
 # Execution settings
@@ -33,6 +34,7 @@ parse:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_edit_page_button: true
   home_page_in_navbar         : false
   extra_footer: |
     <p>
@@ -56,9 +58,9 @@ notebook_interface            : "notebook"
 #######################################################################################
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/edunum-sec2/ressources  # Online location of your book
-  path_to_book: content  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/rasql/edunum  # Online location of your book
+  path_to_book: doc  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
 
 #######################################################################################
 # Launch button settings

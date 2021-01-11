@@ -1,6 +1,14 @@
-file: 0_intro
-sections:
-- file: 1_intro
-- file: 2_jupyter
-- file: 3_plot
-- file: 3_image
+- file: 0_intro
+# numbered: true
+  sections:
+    - file: 1_intro
+    - file: 2_jupyter
+      sections:
+        - file: 3_plot
+        - file: 3_image
+        
+    - file: python/intro
+      sections:
+        - file: python/ex1
+        - file: python/ex2
+
