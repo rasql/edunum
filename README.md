@@ -1,13 +1,16 @@
 # Education numérique
 
-Ce site présente une introduction à l'informatique.
-Il vise l'éducation numérique en langue française.
-
+Ce site présente une **introduction à l'informatique**.
+Il vise l'éducation numérique en langue française. 
 Nous avons fait le choix d'utiliser le langage **Python** pour illustrer les concepts d'informatique.
 
-Les fichiers sources sont écrit dans le format **Jupyter notebook** et compilé avec **jupyter-book**.
+Les fichiers sources sont 
+- écrit dans le format **Jupyter notebook** et 
+- compilé avec **jupyter-book**.
 
-Le matériel est présenté sous forme de site web statique ou sous forme de notebook dynamique sur Binder.
+Le matériel est présenté sous forme de 
+- site web statique ou 
+- notebook dynamique sur Binder.
 
 Pour compiler les fichiers en local utilisez:
 
