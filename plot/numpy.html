@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercice - if-else &#8212; Education numérique</title>
+    <title>NumPy &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -59,8 +59,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Visualiser" href="../plot/intro.html" />
-    <link rel="prev" title="Exerices Boucles" href="ex1.html" />
+    <link rel="next" title="Images" href="image.html" />
+    <link rel="prev" title="Graphes" href="plot.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -91,23 +91,23 @@
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="index.html">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../python/index.html">
    Programmer
   </a>
-  <ul class="current collapse-ul">
+  <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="1_intro.html">
+    <a class="reference internal" href="../python/1_intro.html">
      Introduction à Python
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="ex1.html">
+    <a class="reference internal" href="../python/ex1.html">
      Exerices Boucles
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/ex2.html">
      Exercice - if-else
     </a>
    </li>
@@ -115,28 +115,28 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../plot/intro.html">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="intro.html">
    Visualiser
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../plot/plot.html">
+    <a class="reference internal" href="plot.html">
      Graphes
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plot/numpy.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      NumPy
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plot/image.html">
+    <a class="reference internal" href="image.html">
      Images
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plot/hist.html">
+    <a class="reference internal" href="hist.html">
      Histogrammes
     </a>
    </li>
@@ -204,7 +204,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/python/ex2.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/plot/numpy.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -224,10 +224,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fpython/ex2.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fplot/numpy.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/python/ex2.ipynb"><button
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/plot/numpy.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -247,7 +247,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/python/ex2.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/plot/numpy.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -270,18 +270,23 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comparaison">
-   Comparaison
+  <a class="reference internal nav-link" href="#creer-une-plage">
+   Créer une plage
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plus-grand">
-   Plus grand
+  <a class="reference internal nav-link" href="#distribution-uniforme">
+   Distribution uniforme
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pair-impair">
-   Pair/impair
+  <a class="reference internal nav-link" href="#distribution-normale">
+   Distribution normale
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations">
+   Opérations
   </a>
  </li>
 </ul>
@@ -295,86 +300,129 @@
         
               <div>
                 
-  <div class="section" id="exercice-if-else">
-<h1>Exercice - if-else<a class="headerlink" href="#exercice-if-else" title="Permalink to this headline">¶</a></h1>
-<p>Les exercices ci-dessous sont écrit avec des boucles
-et des expressions conditionnels.
-Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show (+)</strong>.</p>
-<div class="section" id="comparaison">
-<h2>Comparaison<a class="headerlink" href="#comparaison" title="Permalink to this headline">¶</a></h2>
-<p>Quel est le code pour afficher comparaisons ? (2 lignes suffisent)</p>
-<div class="cell tag_hide-input docutils container">
+  <div class="section" id="numpy">
+<h1>NumPy<a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h1>
+<p>Le module <em>numpy</em> permet le calcul numérique.</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;&gt; 3 =&#39;</span><span class="p">,</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="creer-une-plage">
+<h2>Créer une plage<a class="headerlink" href="#creer-une-plage" title="Permalink to this headline">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> crée une plage</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 &gt; 3 = False
-1 &gt; 3 = False
-2 &gt; 3 = False
-3 &gt; 3 = False
-4 &gt; 3 = True
-5 &gt; 3 = True
-6 &gt; 3 = True
-7 &gt; 3 = True
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="plus-grand">
-<h2>Plus grand<a class="headerlink" href="#plus-grand" title="Permalink to this headline">¶</a></h2>
-<p>Quel est le code pour afficher comparaisons ?</p>
-<div class="cell tag_hide-input docutils container">
+<p>Une plage entre deux bornes.</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;plus grand que 3&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-3
-4 plus grand que 3
-5 plus grand que 3
-6 plus grand que 3
-7 plus grand que 3
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 6, 7, 8, 9])
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="pair-impair">
-<h2>Pair/impair<a class="headerlink" href="#pair-impair" title="Permalink to this headline">¶</a></h2>
-<p>Utiliser l’opérateur modulo <code class="docutils literal notranslate"><span class="pre">%</span></code> afficher si un nombre est pair ou impaire ?</p>
-<div class="cell tag_hide-input docutils container">
+<p>Avec un incrément</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;est pair&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;est impair&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 est pair
-1 est impair
-2 est pair
-3 est impair
-4 est pair
-5 est impair
-6 est pair
-7 est impair
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([10, 12, 14, 16, 18])
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/numpy_8_0.png" src="../_images/numpy_8_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="distribution-uniforme">
+<h2>Distribution uniforme<a class="headerlink" href="#distribution-uniforme" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/numpy_10_0.png" src="../_images/numpy_10_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/numpy_11_0.png" src="../_images/numpy_11_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="distribution-normale">
+<h2>Distribution normale<a class="headerlink" href="#distribution-normale" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/numpy_13_0.png" src="../_images/numpy_13_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/numpy_14_0.png" src="../_images/numpy_14_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="operations">
+<h2>Opérations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/numpy_16_0.png" src="../_images/numpy_16_0.png" />
 </div>
 </div>
 </div>
@@ -393,7 +441,7 @@ Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show 
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./python"
+            path: "./plot"
         },
         predefinedOutput: true
     }
@@ -408,8 +456,8 @@ Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show 
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="ex1.html" title="previous page">Exerices Boucles</a>
-    <a class='right-next' id="next-link" href="../plot/intro.html" title="next page">Visualiser</a>
+    <a class='left-prev' id="prev-link" href="plot.html" title="previous page">Graphes</a>
+    <a class='right-next' id="next-link" href="image.html" title="next page">Images</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

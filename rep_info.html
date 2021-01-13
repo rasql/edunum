@@ -48,6 +48,8 @@
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,8 +59,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Algorithmique" href="algo.html" />
-    <link rel="prev" title="Exercice - if-else" href="python/ex2.html" />
+    <link rel="next" title="Algorithmique" href="algo/algo.html" />
+    <link rel="prev" title="Histogrammes" href="plot/hist.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -90,32 +92,8 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="2_jupyter.html">
-   Le notebook Jupyter
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_plot.html">
-     Graphes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_image.html">
-     Images
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_hist.html">
-     Histogrammes
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="python/intro.html">
-   Introduction to Python
+  <a class="reference internal" href="python/index.html">
+   Programmer
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -137,19 +115,53 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="plot/intro.html">
+   Visualiser
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot/plot.html">
+     Graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot/numpy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot/hist.html">
+     Histogrammes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Réprésentation de l’information
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="algo.html">
+  <a class="reference internal" href="algo/algo.html">
    Algorithmique
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
+  <a class="reference internal" href="misc/markdown.html">
    Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="misc/jupyter.html">
+   Le notebook Jupyter
   </a>
  </li>
 </ul>
@@ -395,7 +407,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;4&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;5&#39;
 </pre></div>
 </div>
 </div>
@@ -416,7 +428,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;8&#39;, &#39;4&#39;, &#39;1&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;4&#39;, &#39;7&#39;, &#39;6&#39;)
 </pre></div>
 </div>
 </div>
@@ -443,7 +455,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;935&#39;, &#39;01923&#39;, &#39;3836854&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;457&#39;, &#39;99401&#39;, &#39;9204726&#39;)
 </pre></div>
 </div>
 </div>
@@ -473,7 +485,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;+51&#39;, &#39;-946&#39;, &#39;-06570&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;+43&#39;, &#39;+524&#39;, &#39;-24425&#39;)
 </pre></div>
 </div>
 </div>
@@ -497,7 +509,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;-64.329&#39;, &#39;-3.9086898&#39;, &#39;+4163.52013&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;+48.483&#39;, &#39;-7.5475132&#39;, &#39;-0520.96424&#39;)
 </pre></div>
 </div>
 </div>
@@ -520,7 +532,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;+9.78e-5&#39;, &#39;-1.6e-09&#39;, &#39;-6.51e+7&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;+2.52e+7&#39;, &#39;+7.6e-09&#39;, &#39;-2.23e-7&#39;)
 </pre></div>
 </div>
 </div>
@@ -555,9 +567,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-83 --&gt; -83
-+458 --&gt; 458
--37039 --&gt; -37039
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-04 --&gt; -4
+-898 --&gt; -898
++71428 --&gt; 71428
 </pre></div>
 </div>
 </div>
@@ -571,7 +583,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>46443513251047074203520719480431071561677886923414
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>88906342273868158519465475427982186134067974844331
 </pre></div>
 </div>
 </div>
@@ -584,7 +596,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>46443513251047074203520719480431071561677886923415
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>88906342273868158519465475427982186134067974844332
 </pre></div>
 </div>
 </div>
@@ -601,9 +613,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.82e-6 --&gt; -1.82e-06
-+1.4e+86 --&gt; 1.4e+86
--0.42e-96 --&gt; -4.2e-97
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+2.50e-0 --&gt; 2.5
++7.8e+75 --&gt; 7.8e+75
++9.72e-51 --&gt; 9.72e-51
 </pre></div>
 </div>
 </div>
@@ -943,10 +955,7 @@ True	True	True
 44 ,	60 &lt;	76 L	92 \	108 l	124 |	
 45 -	61 =	77 M	93 ]	109 m	125 }	
 46 .	62 &gt;	78 N	94 ^	110 n	126 ~	
-47 /	63 ?	
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79 O	95 _	111 o	127 	
+47 /	63 ?	79 O	95 _	111 o	127 	
 </pre></div>
 </div>
 </div>
@@ -1011,8 +1020,8 @@ True	True	True
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="python/ex2.html" title="previous page">Exercice - if-else</a>
-    <a class='right-next' id="next-link" href="algo.html" title="next page">Algorithmique</a>
+    <a class='left-prev' id="prev-link" href="plot/hist.html" title="previous page">Histogrammes</a>
+    <a class='right-next' id="next-link" href="algo/algo.html" title="next page">Algorithmique</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

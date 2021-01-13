@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction to Python &#8212; Education numérique</title>
+    <title>Les structures de flux &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -59,8 +59,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction à Python" href="1_intro.html" />
-    <link rel="prev" title="Introduction à l’informatique" href="../index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -90,10 +88,10 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="current reference internal" href="#">
-   Introduction to Python
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="index.html">
+   Programmer
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -117,7 +115,7 @@
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../plot/intro.html">
-   Matplotlib et Numpy
+   Visualiser
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -204,7 +202,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/python/intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/python/2_ struct.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -224,10 +222,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fpython/intro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fpython/2_ struct.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/python/intro.ipynb"><button
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/python/2_ struct.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -247,7 +245,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/python/intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/python/2_ struct.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -300,56 +298,70 @@
         
               <div>
                 
-  <div class="section" id="introduction-to-python">
-<h1>Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="les-structures-de-flux">
+<h1>Les structures de flux<a class="headerlink" href="#les-structures-de-flux" title="Permalink to this headline">¶</a></h1>
+<p>Tout programme suit 3 principes de base</p>
+<ul class="simple">
+<li><p>exécution linéaire</p></li>
+<li><p>branchement</p></li>
+<li><p>boucle</p></li>
+</ul>
+<p>Tout d’abord un programme est une séquence linéaire d’instructions, qui ont un ordre défini, et ils sont exécuté dans cet ordre.</p>
+<p>Ensuite il y a des instructions conditionnel, ou il y a un choix entre différents options et seulement une branche est execute.</p>
+<p>Le troisième schéma est la boucle, qui permet de parcourir une partie du code multiple fois.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">**</span> <span class="mi">8</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exécution linéaire&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;12 à la puissance 34 est&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">12</span> <span class="o">**</span> <span class="mi">34</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>256
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">i</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 1
-1 2
-2 4
-3 8
-4 16
-5 32
-6 64
-7 128
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exécution linéaire
+12 à la puissance 34 est
+4922235242952026704037113243122008064
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;** 2 =&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">i</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;itération&#39;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 ** 2 = 1
-1 ** 2 = 2
-2 ** 2 = 4
-3 ** 2 = 8
-4 ** 2 = 16
-5 ** 2 = 32
-6 ** 2 = 64
-7 ** 2 = 128
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>itération 0
+itération 1
+itération 2
+end
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s1">&#39;négatif&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s1">&#39;positif&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s1">&#39;zéro&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2 négatif
+-1 négatif
+0 zéro
+1 positif
+2 positif
 </pre></div>
 </div>
 </div>
@@ -630,7 +642,9 @@ La variable <code class="docutils literal notranslate"><span class="pre">i</span
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 5
 6
 7
@@ -652,7 +666,10 @@ La variable <code class="docutils literal notranslate"><span class="pre">i</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 + 3 = 3
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> + 3 = 3
 1 + 3 = 4
 2 + 3 = 5
 </pre></div>
@@ -661,8 +678,6 @@ La variable <code class="docutils literal notranslate"><span class="pre">i</span
 </div>
 <p>Quel est le code pour produire ceci ?</p>
 <p>Quel est le code pour produire ceci ?</p>
-<div class="toctree-wrapper compound">
-</div>
 </div>
 </div>
 
@@ -694,8 +709,6 @@ La variable <code class="docutils literal notranslate"><span class="pre">i</span
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Introduction à l’informatique</a>
-    <a class='right-next' id="next-link" href="1_intro.html" title="next page">Introduction à Python</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
