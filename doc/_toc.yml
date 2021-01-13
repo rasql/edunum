@@ -14,3 +14,6 @@
         - file: python/ex1
         - file: python/ex2
 
+    - file: rep_info
+    - file: algo
+    - file: markdown
