@@ -30,12 +30,9 @@ This is danger info.
 This is error info.
 ```
 
+## Insert an image
 
-
-
-
-
-![](logo.png)
+![](../logo.png)
 
 ## Math
 $$\frac{a + b}{1+x^2}$$
@@ -69,17 +66,3 @@ Here's a note that will take the full width
 
 ```{nb-exec-table}
 ```
-
-## Tags
-
-These tags can be added to the Jupyter notebook cell
-
-- fill-width
-- output-scroll
-- margin
-- hide-input
-- hide-output
-- hide-cell
-- remove-input
-- remove-output
-- remove-cell

@@ -1,19 +1,21 @@
-- file: 0_intro
-# numbered: true
+- file: index
   sections:
-#    - file: 1_intro
-    - file: 2_jupyter
-      sections:
-        - file: 3_plot
-        - file: 3_image
-        - file: 3_hist
-        
-    - file: python/intro
+    - file: python/index
       sections:
         - file: python/1_intro
+        - file: python/2_struct
         - file: python/ex1
         - file: python/ex2
 
+    - file: plot/intro
+      sections:
+        - file: plot/plot
+        - file: plot/numpy
+        - file: plot/image
+        - file: plot/hist
+        
     - file: rep_info
-    - file: algo
-    - file: markdown
+    - file: algo/algo
+    
+    - file: misc/markdown
+    - file: misc/jupyter
