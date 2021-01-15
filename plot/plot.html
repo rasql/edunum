@@ -102,6 +102,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../python/2_struct.html">
+     Les structures de flux
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../python/ex1.html">
      Exerices Boucles
     </a>
@@ -148,6 +153,26 @@
    <li class="toctree-l2">
     <a class="reference internal" href="text.html">
      Text
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="style.html">
+     Style
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="color.html">
+     Couleurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="subplot.html">
+     Sous graphiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="file.html">
+     Fichiers
     </a>
    </li>
   </ul>
@@ -334,6 +359,16 @@
    Figures de Lissajous
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#echelle-logarithmiques">
+   Echelle logarithmiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coordonnees-polaire">
+   Coordonnées polaire
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -347,7 +382,7 @@
                 
   <div class="section" id="graphes">
 <h1>Graphes<a class="headerlink" href="#graphes" title="Permalink to this headline">¶</a></h1>
-<p>Le module <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> permet d’afficher des graphes. Au début du notebook nous importons ces modules.</p>
+<p>Le module <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> permet d’afficher des graphes. Pour utiliser ses fonctions nous devons importer ces modules.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -359,7 +394,7 @@
 <p>Créons un vecteur avec des données que nous pouvons afficher.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -372,24 +407,24 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7faa37f60fa0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb7f976ffa0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/plot_5_1.png" src="../_images/plot_5_1.png" />
 </div>
 </div>
-<p>L’objet retourné est de type <code class="docutils literal notranslate"><span class="pre">[&lt;matplotlib.lines.Line2D</span> <span class="pre">at</span> <span class="pre">0x7fac9ecef5d0&gt;]</span></code>.
-Dorénavant nous terminons la dernière ligne avec un point-virgule <code class="docutils literal notranslate"><span class="pre">;</span></code> pour supprimer cette ligne.</p>
+<p>L’objet retourné est de type <code class="docutils literal notranslate"><span class="pre">Line2D</span></code>.
+Dorénavant nous terminons la dernière ligne avec un point-virgule <code class="docutils literal notranslate"><span class="pre">;</span></code> pour supprimer cet output.</p>
 <p><strong>Attention</strong> pour afficher un graphe, vous devez ajouter <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> dans votre programme Python. Dans ce document-ci cette commande est inclut de façon implicit.</p>
 <div class="section" id="titres-et-legendes">
 <h2>Titres et légendes<a class="headerlink" href="#titres-et-legendes" title="Permalink to this headline">¶</a></h2>
-<p>Nous pouvons ajouter des légendes pour les deux axes ainsi qu’un titre</p>
+<p>Nous pouvons ajouter un titre pour le graphe ainsque que pour les deux axes x et y.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;temps&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Evolution&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;temps&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;montant&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;evolution&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;or&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -447,12 +482,15 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 <p>Un diagramme à barres est aussi appelé histogramme. Il représente des des informations sous forme de barres.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_15_0.png" src="../_images/plot_15_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 5 artists&gt;
+</pre></div>
+</div>
+<img alt="../_images/plot_15_1.png" src="../_images/plot_15_1.png" />
 </div>
 </div>
 </div>
@@ -652,6 +690,67 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/plot_39_0.png" src="../_images/plot_39_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="echelle-logarithmiques">
+<h2>Echelle logarithmiques<a class="headerlink" href="#echelle-logarithmiques" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/plot_41_0.png" src="../_images/plot_41_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/plot_42_0.png" src="../_images/plot_42_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/plot_43_0.png" src="../_images/plot_43_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="coordonnees-polaire">
+<h2>Coordonnées polaire<a class="headerlink" href="#coordonnees-polaire" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">r</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span> <span class="s1">&#39;polar&#39;</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_rticks</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;A line plot on a polar axis&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/plot_45_0.png" src="../_images/plot_45_0.png" />
 </div>
 </div>
 </div>
