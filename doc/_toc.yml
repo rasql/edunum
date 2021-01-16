@@ -13,9 +13,17 @@
         - file: plot/numpy
         - file: plot/image
         - file: plot/hist
+        - file: plot/bar
+        - file: plot/scatter
+        - file: plot/text
+        - file: plot/style
+        - file: plot/color
+        - file: plot/subplot
+        - file: plot/file
         
     - file: rep_info
     - file: algo/algo
+    - file: alog/unary
     
     - file: misc/markdown
     - file: misc/jupyter
