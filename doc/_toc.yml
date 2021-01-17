@@ -10,11 +10,13 @@
     - file: plot/intro
       sections:
         - file: plot/plot
+        - file: plot/param
         - file: plot/numpy
         - file: plot/image
         - file: plot/hist
         - file: plot/bar
         - file: plot/scatter
+        - file: plot/polar
         - file: plot/text
         - file: plot/style
         - file: plot/color

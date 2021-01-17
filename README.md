@@ -28,3 +28,11 @@ ghp-import -n -p -f _build/html
   
 Les pages en ligne se trouvent à l'adresse
 https://rasql.github.io/edunum
+
+
+## Installation des outils
+
+```
+pip install jupyter-book
+pip install ghp-import
+```
