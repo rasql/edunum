@@ -25,7 +25,7 @@
         
     - file: rep_info
     - file: algo/algo
-    - file: alog/unary
+    - file: algo/unary
     
     - file: misc/markdown
     - file: misc/jupyter
