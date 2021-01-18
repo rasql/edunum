@@ -131,6 +131,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="plot/param.html">
+     Paramètres
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="plot/numpy.html">
      NumPy
     </a>
@@ -151,6 +156,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="plot/scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot/polar.html">
+     Coordonnées polaires
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="plot/text.html">
      Text
     </a>
@@ -167,7 +182,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="plot/subplot.html">
-     Sous graphiques
+     Sous-graphes
     </a>
    </li>
    <li class="toctree-l2">
@@ -442,7 +457,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;8&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;4&#39;
 </pre></div>
 </div>
 </div>
@@ -463,7 +478,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;8&#39;, &#39;4&#39;, &#39;6&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;5&#39;, &#39;1&#39;, &#39;7&#39;)
 </pre></div>
 </div>
 </div>
@@ -490,7 +505,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;903&#39;, &#39;86519&#39;, &#39;3085298&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;706&#39;, &#39;25220&#39;, &#39;2372830&#39;)
 </pre></div>
 </div>
 </div>
@@ -520,7 +535,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;-27&#39;, &#39;+029&#39;, &#39;+96381&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;+74&#39;, &#39;+772&#39;, &#39;-89553&#39;)
 </pre></div>
 </div>
 </div>
@@ -544,7 +559,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;+04.980&#39;, &#39;+5.8037238&#39;, &#39;-1896.59899&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;+75.794&#39;, &#39;-9.6866730&#39;, &#39;-3500.83597&#39;)
 </pre></div>
 </div>
 </div>
@@ -567,7 +582,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;-4.12e-2&#39;, &#39;-1.6e+08&#39;, &#39;-8.79e-6&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;-1.63e+0&#39;, &#39;-1.4e+28&#39;, &#39;+5.35e+5&#39;)
 </pre></div>
 </div>
 </div>
@@ -602,9 +617,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+10 --&gt; 10
-+152 --&gt; 152
--03737 --&gt; -3737
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-65 --&gt; -65
++019 --&gt; 19
+-10380 --&gt; -10380
 </pre></div>
 </div>
 </div>
@@ -618,7 +633,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19238985635119831603303579056499973332762072964323
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>91635244547015024795457356798082083826515690707459
 </pre></div>
 </div>
 </div>
@@ -631,7 +646,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19238985635119831603303579056499973332762072964324
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>91635244547015024795457356798082083826515690707460
 </pre></div>
 </div>
 </div>
@@ -648,9 +663,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+8.01e+9 --&gt; 8010000000.0
-+3.9e+19 --&gt; 3.9e+19
--1.65e-64 --&gt; -1.65e-64
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+8.08e+6 --&gt; 8080000.0
+-0.6e+49 --&gt; -6e+48
+-0.72e+17 --&gt; -7.2e+16
 </pre></div>
 </div>
 </div>
@@ -987,7 +1002,10 @@ True	True	True
 38 &amp;	54 6	70 F	86 V	102 f	118 v	
 39 &#39;	55 7	71 G	87 W	103 g	119 w	
 40 (	56 8	72 H	88 X	104 h	120 x	
-41 )	57 9	73 I	89 Y	105 i	121 y	
+41 )	57 9	73 I	89 Y
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	105 i	121 y	
 42 *	58 :	74 J	90 Z	106 j	122 z	
 43 +	59 ;	75 K	91 [	107 k	123 {	
 44 ,	60 &lt;	76 L	92 \	108 l	124 |	

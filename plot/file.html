@@ -60,7 +60,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Réprésentation de l’information" href="../rep_info.html" />
-    <link rel="prev" title="Sous graphiques" href="subplot.html" />
+    <link rel="prev" title="Sous-graphes" href="subplot.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -131,6 +131,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="param.html">
+     Paramètres
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="numpy.html">
      NumPy
     </a>
@@ -151,6 +156,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="polar.html">
+     Coordonnées polaires
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="text.html">
      Text
     </a>
@@ -167,7 +182,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="subplot.html">
-     Sous graphiques
+     Sous-graphes
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -313,9 +328,9 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;demo.png&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;demo.jpg&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;demo.pdf&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;img/demo.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;img/demo.jpg&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;img/demo.pdf&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -326,19 +341,19 @@
 <p>Les trois fichiers se trouvent dans les dossier local. Le PDF est le plus petit, le JPG le plus grand.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ll</span> <span class="n">demo</span><span class="o">*</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ll</span> <span class="n">img</span><span class="o">/</span><span class="n">demo</span><span class="o">*</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-r--r--  1 raphael  staff  17494 Jan 15 23:22 demo.jpg
--rw-r--r--  1 raphael  staff   5962 Jan 15 23:22 demo.pdf
--rw-r--r--  1 raphael  staff  12290 Jan 15 23:22 demo.png
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-r--r--  1 raphael  staff  17494 Jan 17 22:37 img/demo.jpg
+-rw-r--r--  1 raphael  staff   5962 Jan 17 22:37 img/demo.pdf
+-rw-r--r--  1 raphael  staff  12290 Jan 17 22:37 img/demo.png
 </pre></div>
 </div>
 </div>
 </div>
-<p>L’mage peut être affiché avec la commande <code class="docutils literal notranslate"><span class="pre">![](demo.jpg)</span></code>
+<p>L’mage peut être affiché avec la commande <code class="docutils literal notranslate"><span class="pre">![](img/demo.jpg)</span></code>
 <img alt="" src="../_images/demo.jpg" /></p>
 </div>
 
@@ -370,7 +385,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="subplot.html" title="previous page">Sous graphiques</a>
+    <a class='left-prev' id="prev-link" href="subplot.html" title="previous page">Sous-graphes</a>
     <a class='right-next' id="next-link" href="../rep_info.html" title="next page">Réprésentation de l’information</a>
 
     </div>

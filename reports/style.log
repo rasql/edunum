@@ -32,8 +32,8 @@ plt.gca().set_yticklabels(yticks)
 plt.tick_params(left=False, bottom=False)
 ------------------
 
-[0;31m----------------------------------------------------[0m
-[0;31mNameError[0m          Traceback (most recent call last)
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
 [0;32m<ipython-input-6-1d134668a77d>[0m in [0;36m<module>[0;34m[0m
 [1;32m     10[0m [0;34m[0m[0m
 [1;32m     11[0m [0mplt[0m[0;34m.[0m[0mylim[0m[0;34m([0m[0;36m0[0m[0;34m,[0m [0;36m4[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m

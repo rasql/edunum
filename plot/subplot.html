@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sous graphiques &#8212; Education numérique</title>
+    <title>Sous-graphes &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -131,6 +131,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="param.html">
+     Paramètres
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="numpy.html">
      NumPy
     </a>
@@ -151,6 +156,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="polar.html">
+     Coordonnées polaires
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="text.html">
      Text
     </a>
@@ -167,7 +182,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Sous graphiques
+     Sous-graphes
     </a>
    </li>
    <li class="toctree-l2">
@@ -310,13 +325,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#selectionner-un-sous-graph">
-   Sélectionner un sous-graph
+  <a class="reference internal nav-link" href="#selectionner-un-sous-graphe">
+   Sélectionner un sous-graphe
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#graphes-superposes">
    Graphes superposés
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphes-en-2x2">
+   Graphes en 2x2
   </a>
  </li>
 </ul>
@@ -330,9 +350,9 @@
         
               <div>
                 
-  <div class="section" id="sous-graphiques">
-<h1>Sous graphiques<a class="headerlink" href="#sous-graphiques" title="Permalink to this headline">¶</a></h1>
-<p>Un graphique peut être découpé en multiples sous-graphics (subplots).</p>
+  <div class="section" id="sous-graphes">
+<h1>Sous-graphes<a class="headerlink" href="#sous-graphes" title="Permalink to this headline">¶</a></h1>
+<p>Un graphique peut être découpé en multiples sous-graphes (subplots).</p>
 <div class="section" id="subplots">
 <h2>Subplots<a class="headerlink" href="#subplots" title="Permalink to this headline">¶</a></h2>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">subplot(n,</span> <span class="pre">m)</span></code> crée <span class="math notranslate nohighlight">\(n \times m\)</span> sous-graphes.</p>
@@ -358,7 +378,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -367,8 +387,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="selectionner-un-sous-graph">
-<h2>Sélectionner un sous-graph<a class="headerlink" href="#selectionner-un-sous-graph" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="selectionner-un-sous-graphe">
+<h2>Sélectionner un sous-graphe<a class="headerlink" href="#selectionner-un-sous-graphe" title="Permalink to this headline">¶</a></h2>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">subplot(n,</span> <span class="pre">m,</span> <span class="pre">i)</span></code> sélectionne le i-ième sous-graphique d’une matrice de <span class="math notranslate nohighlight">\(n \times m\)</span> sous-graphes.</p>
 <p>Si le nombre des graphes est inférieur à 10 on peux les désigner directement avec <code class="docutils literal notranslate"><span class="pre">subplot(nmi)</span></code></p>
 <div class="cell docutils container">
@@ -408,10 +428,33 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fc2a3578a30&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fbb17589550&gt;]
 </pre></div>
 </div>
 <img alt="../_images/subplot_10_1.png" src="../_images/subplot_10_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="graphes-en-2x2">
+<h2>Graphes en 2x2<a class="headerlink" href="#graphes-en-2x2" title="Permalink to this headline">¶</a></h2>
+<p>Nous pouvons aussi sous-diviser en <span class="math notranslate nohighlight">\(2 \times 2\)</span> sous-graphes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;ro-&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">223</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">224</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;og&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/subplot_12_0.png" src="../_images/subplot_12_0.png" />
 </div>
 </div>
 </div>

@@ -131,6 +131,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="param.html">
+     Paramètres
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="numpy.html">
      NumPy
     </a>
@@ -151,6 +156,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="polar.html">
+     Coordonnées polaires
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="text.html">
      Text
     </a>
@@ -167,7 +182,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="subplot.html">
-     Sous graphiques
+     Sous-graphes
     </a>
    </li>
    <li class="toctree-l2">
@@ -299,6 +314,60 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#charger-une-image">
+   Charger une image
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annotation">
+   Annotation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sans-les-axes">
+   Sans les axes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#noir-et-blancs">
+   Noir et blancs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#color-maps">
+   Color maps
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#afficher-la-barre-des-couleurs">
+   Afficher la barre des couleurs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#origin-de-l-image">
+   Origin de l’image
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#juxtaposer">
+   Juxtaposer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#superposer">
+   Superposer
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -308,100 +377,229 @@
                 
   <div class="section" id="images">
 <h1>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h1>
-<p>Pour commencer nous devons importer ces modules.</p>
+<div class="section" id="charger-une-image">
+<h2>Charger une image<a class="headerlink" href="#charger-une-image" title="Permalink to this headline">¶</a></h2>
+<p>Pour charger des images nous importons la fonction <code class="docutils literal notranslate"><span class="pre">imread</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.image</span> <span class="kn">import</span> <span class="n">imread</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Chargeons une image depuis un fichier.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">imread()</span></code> peut importer deux types d’images</p>
+<ul class="simple">
+<li><p>couleur (RGB)</p></li>
+<li><p>noir et blancs (0..255)</p></li>
+</ul>
+<p>Voici une image en couleur</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;stinkbug.png&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;img/Bachalpsee.jpg&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.40784314 0.40784314 0.40784314 ... 0.42745098 0.42745098 0.42745098]
- [0.4117647  0.4117647  0.4117647  ... 0.42745098 0.42745098 0.42745098]
- [0.41960785 0.41568628 0.41568628 ... 0.43137255 0.43137255 0.43137255]
- ...
- [0.4392157  0.43529412 0.43137255 ... 0.45490196 0.4509804  0.4509804 ]
- [0.44313726 0.44313726 0.4392157  ... 0.4509804  0.44705883 0.44705883]
- [0.44313726 0.4509804  0.4509804  ... 0.44705883 0.44705883 0.44313726]]
-</pre></div>
+<img alt="../_images/image_5_0.png" src="../_images/image_5_0.png" />
 </div>
 </div>
-</div>
-<p>L’image à 375 lignes et 500 colonnes.</p>
+<p>Voici les dimensions de la matrice:</p>
+<ul class="simple">
+<li><p>188 pixelx en hauteur</p></li>
+<li><p>250 pixels en largeur</p></li>
+<li><p>3 octets pour définir une couleur</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">img</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(375, 500)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(188, 250, 3)
 </pre></div>
 </div>
 </div>
 </div>
+<p>Voici le pixel à la position (25, 25). C’est dans la région ciel et de couleur cyan. Les composant bleu et vert sont au maximum</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imgplot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/image_6_0.png" src="../_images/image_6_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;hot&quot;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_7_0.png" src="../_images/image_7_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([206, 255, 255], dtype=uint8)
+</pre></div>
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="annotation">
+<h2>Annotation<a class="headerlink" href="#annotation" title="Permalink to this headline">¶</a></h2>
+<p>Nous pouvons superposer du text à une image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imgplot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-<span class="n">imgplot</span><span class="o">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="s1">&#39;nipy_spectral&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;peak&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="s1">&#39;lake&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_8_0.png" src="../_images/image_8_0.png" />
+<img alt="../_images/image_12_0.png" src="../_images/image_12_0.png" />
 </div>
 </div>
+</div>
+<div class="section" id="sans-les-axes">
+<h2>Sans les axes<a class="headerlink" href="#sans-les-axes" title="Permalink to this headline">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">axis('off')</span></code> permet de ne pas afficher les axes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imgplot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-<span class="n">imgplot</span><span class="o">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="s1">&#39;terrain&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_9_0.png" src="../_images/image_9_0.png" />
+<img alt="../_images/image_14_0.png" src="../_images/image_14_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="noir-et-blancs">
+<h2>Noir et blancs<a class="headerlink" href="#noir-et-blancs" title="Permalink to this headline">¶</a></h2>
+<p>Les images noir-et-blancs sont affiché avec une <strong>colormap</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;img/lake.jpg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hot&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/image_17_0.png" src="../_images/image_17_0.png" />
+</div>
+</div>
+<p>L’image est de taille 220x170 et du type <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(170, 220)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="color-maps">
+<h2>Color maps<a class="headerlink" href="#color-maps" title="Permalink to this headline">¶</a></h2>
+<p>Les images en noir et blancs peuvent être coloriés avec des colormaps.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;winter&#39;</span><span class="p">,</span> <span class="s1">&#39;summer&#39;</span><span class="p">,</span> <span class="s1">&#39;autumn&#39;</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">maps</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">maps</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/image_22_0.png" src="../_images/image_22_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="afficher-la-barre-des-couleurs">
+<h2>Afficher la barre des couleurs<a class="headerlink" href="#afficher-la-barre-des-couleurs" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hot&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/image_24_0.png" src="../_images/image_24_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="origin-de-l-image">
+<h2>Origin de l’image<a class="headerlink" href="#origin-de-l-image" title="Permalink to this headline">¶</a></h2>
+<p>Pour inverser l’image nous utilison l’option <code class="docutils literal notranslate"><span class="pre">origin</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">gray</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hot&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/image_26_0.png" src="../_images/image_26_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;terrain&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_10_0.png" src="../_images/image_10_0.png" />
+<img alt="../_images/image_27_0.png" src="../_images/image_27_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="juxtaposer">
+<h2>Juxtaposer<a class="headerlink" href="#juxtaposer" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">img</span><span class="p">,</span> <span class="n">img</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/image_29_0.png" src="../_images/image_29_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="superposer">
+<h2>Superposer<a class="headerlink" href="#superposer" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">img</span><span class="p">,</span> <span class="n">img</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/image_31_0.png" src="../_images/image_31_0.png" />
+</div>
 </div>
 </div>
 </div>
