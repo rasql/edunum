@@ -4,6 +4,7 @@
       sections:
         - file: python/1_intro
         - file: python/2_struct
+        - file: python/3_loops
         - file: python/ex1
         - file: python/ex2
           sections:
