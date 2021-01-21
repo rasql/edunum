@@ -84,3 +84,27 @@ Voici les statistiques des Jupyter notebooks.
 
 ```{nb-exec-table}
 ```
+
+
+## inclure un document
+
+Inclure le fichier **hello.py**
+
+``` {literalinclude} txtllo.py
+txt`
+
+Inclure à partir de la ligne 2.
+
+``` {literalinclude} hello.py
+:lines: 2-
+```
+
+## Télécharger un document
+
+{download}`hello.py <hello.py>`
+
+{download}`download <hello.py>`
+
+{download}`demo.txt <demo.txt>`
+
+{download}`download <demo.txt>`

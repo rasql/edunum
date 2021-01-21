@@ -6,6 +6,8 @@
         - file: python/2_struct
         - file: python/ex1
         - file: python/ex2
+          sections:
+            - file: python/python1_ex1
 
     - file: plot/intro
       sections:
