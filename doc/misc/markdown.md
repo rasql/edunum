@@ -9,7 +9,7 @@ Pour mettre un paragraphe en évidence il y a ces directives:
 - note
 - tip
 - caution
-- attentino
+- attention
 - warning
 - danger
 - error
@@ -86,12 +86,12 @@ Voici les statistiques des Jupyter notebooks.
 ```
 
 
-## inclure un document
+## Inclure un document
 
 Inclure le fichier **hello.py**
 
-``` {literalinclude} txtllo.py
-txt`
+``` {literalinclude} hello.py
+```
 
 Inclure à partir de la ligne 2.
 
@@ -101,10 +101,79 @@ Inclure à partir de la ligne 2.
 
 ## Télécharger un document
 
-{download}`hello.py <hello.py>`
+    {download}`hello.py <hello.py>`
 
 {download}`download <hello.py>`
 
-{download}`demo.txt <demo.txt>`
+    {download}`demo.txt <demo.txt>`
 
 {download}`download <demo.txt>`
+
+
+## Questions à choix multiples
+
+Il est possible d'intégrer des questions à choix multiples au fil des pages via la directive `question`.
+Dans le corps de la directive, les bonnes et mauvaises réponses sont indiquées via les rôles `{v}` et `{f}` pour *vrai* et *faux*.
+
+`````{tabbed} Aperçu
+
+```{question}
+Combien y a t'il de bits dans un octet ?
+Je pense qu'il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
+```
+`````
+
+`````{tabbed} Code
+
+````{code-block} markdown
+```{question}
+Combien y a t'il de bits dans un octet ?
+Je pense qu'il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
+```
+````
+`````
+
+Il est possible de changer le titre affiché au dessus de la question.
+Le contenu de la question peut lui-même être structuré en Markdown.
+Dans l'exemple ci-dessous, les réponses sont affichées dans une liste.
+
+`````{tabbed} Aperçu
+
+```{question} Question avec un titre personnalisé
+Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turing ?
+* {v}`Barbara Liskov`
+* {v}`Niklaus Wirth`
+* {f}`Alan Turing`
+* {v}`Tim Berners-Lee`
+```
+`````
+
+`````{tabbed} Code
+
+````{code-block} markdown
+```{question} Question avec un titre personnalisé
+Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turing ?
+* {v}`Barbara Liskov`
+* {v}`Niklaus Wirth`
+* {f}`Alan Turing`
+* {v}`Tim Berners-Lee`
+```
+````
+`````
+
+
+## Blancs
+
+Pour ajouter des *blancs* dans le texte, il suffit d'utiliser le rôle `bl`.
+Dans le texte du rôle, les différentes options de réponses sont séparées par un caractère `|`.
+Une réponse valable est précédée d'un caractère `>`.
+
+`````{tabbed} Aperçu
+Dans le texte suivant, certains {bl}`>mots|trucs|machins` sont laissés {bl}`pour compte|>blancs|verts|seuls`.
+`````
+
+`````{tabbed} Code
+```{code-block} markdown
+Dans le texte suivant, certains {bl}`>mots|trucs|machins` sont laissés {bl}`pour compte|>blancs|verts|seuls`.
+```
+`````

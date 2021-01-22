@@ -36,3 +36,22 @@ https://rasql.github.io/edunum
 pip install jupyter-book
 pip install ghp-import
 ```
+## Extensions
+
+Des extensions Sphinx ont été ajouté avec un dossier `extension`:
+- quesionts
+- blanks
+`
+Un dossier `doc/_static` a été ajouté avec
+- reactions
+
+Le fichier `_config.yml` a été modifié:
+
+    sphinx:
+    config:
+        html_show_copyright: false
+        language: fr
+        html_theme: sphinx_book_theme
+    local_extensions:
+        questions: ../extensions/
+        blanks: ../extensions/
