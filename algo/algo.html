@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,6 +31,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -44,12 +48,14 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,8 +64,8 @@
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Markdown" href="../misc/markdown.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Système unaire" href="unary.html" />
     <link rel="prev" title="Réprésentation de l’information" href="../rep_info.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -87,7 +93,7 @@
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="current nav sidenav_l1">
@@ -106,15 +112,53 @@
      Les structures de flux
     </a>
    </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../python/vi/3/3_loops.html">
+     Listes et boucles
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/vi/3/3_ex1.html">
+       Ex. Listes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/vi/3/3_ex2.html">
+       Ex. Boucle for
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/vi/3/3_ex3.html">
+       Ex. Boucle while
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/le/3/3ex.html">
+     Exercices
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/ex1.html">
      Exerices Boucles
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../python/ex2.html">
      Exercice - if-else
     </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/python1_ex1.html">
+       Exercice
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -205,6 +249,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="unary.html">
+   Système unaire
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../misc/markdown.html">
    Markdown
   </a>
@@ -238,8 +287,8 @@
         
         <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
             data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
@@ -247,7 +296,7 @@
         
         
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -255,10 +304,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/algo/algo.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -271,23 +320,23 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
             href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Falgo/algo.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
         <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/algo/algo.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
     </div>
 </div>
 
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -298,7 +347,7 @@
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/algo/algo.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -315,13 +364,13 @@
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i> Contenu
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#defintion-formelle">
-   Défintion formelle
+  <a class="reference internal nav-link" href="#definition-formelle">
+   Définition formelle
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -401,14 +450,14 @@
               <div>
                 
   <div class="section" id="algorithmique">
-<h1>Algorithmique<a class="headerlink" href="#algorithmique" title="Permalink to this headline">¶</a></h1>
+<h1>Algorithmique<a class="headerlink" href="#algorithmique" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Un algorithme est une description d’une un marche à suivre par étappes pour faire un calcul répétitif.</p>
-<div class="section" id="defintion-formelle">
-<h2>Défintion formelle<a class="headerlink" href="#defintion-formelle" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition-formelle">
+<h2>Définition formelle<a class="headerlink" href="#definition-formelle" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous allons mieux définir le concept d’algorithme dans le context mathématique ou informatique.</p>
 </div>
 <div class="section" id="algorithme-simple">
-<h2>Algorithme simple<a class="headerlink" href="#algorithme-simple" title="Permalink to this headline">¶</a></h2>
+<h2>Algorithme simple<a class="headerlink" href="#algorithme-simple" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un algorithme simple est décrit par</p>
 <ul class="simple">
 <li><p>un nom</p></li>
@@ -448,7 +497,7 @@
 </div>
 </div>
 <div class="section" id="algorithme-complexe">
-<h2>Algorithme complexe<a class="headerlink" href="#algorithme-complexe" title="Permalink to this headline">¶</a></h2>
+<h2>Algorithme complexe<a class="headerlink" href="#algorithme-complexe" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un algorithme complex contient en plus</p>
 <ul class="simple">
 <li><p>des variables</p></li>
@@ -497,7 +546,7 @@
 </div>
 </div>
 <div class="section" id="des-listes">
-<h2>Des listes<a class="headerlink" href="#des-listes" title="Permalink to this headline">¶</a></h2>
+<h2>Des listes<a class="headerlink" href="#des-listes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous allons commencer avec des algorithmes qui s’appliquent à des listes
 Voi</p>
 <div class="cell docutils container">
@@ -521,7 +570,7 @@ Voi</p>
 <p>Nous allons utiliser une fonction</p>
 </div>
 <div class="section" id="somme">
-<h2>Somme<a class="headerlink" href="#somme" title="Permalink to this headline">¶</a></h2>
+<h2>Somme<a class="headerlink" href="#somme" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici un exemple simple pour calculer la somme des éléments d’une liste</p>
 <ul class="simple">
 <li><p>l’accumuleur <code class="docutils literal notranslate"><span class="pre">somme</span></code> est mis à zéro</p></li>
@@ -545,21 +594,7 @@ de la liste est additionné</p></li>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Nous</span> <span class="n">pouvons</span> <span class="n">définir</span> <span class="n">une</span> 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-10-3466c485af4f&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
-    <span class="n">Nous</span> <span class="n">pouvons</span> <span class="n">définir</span> <span class="n">une</span>
-         <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
-</div>
+<p>Nous pouvons définir une</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
@@ -585,7 +620,7 @@ de la liste est additionné</p></li>
 </div>
 </div>
 <div class="section" id="minimum">
-<h2>Minimum<a class="headerlink" href="#minimum" title="Permalink to this headline">¶</a></h2>
+<h2>Minimum<a class="headerlink" href="#minimum" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour trouver le minimum nous prenons le premier élément comme minimum actuel.
 Ensuite nous comparons cette valeurs avec toutes les autres éléments.
 Si nous trouvons un plus petit, nous remplaçons le minimum acctuel avec celle ci</p>
@@ -607,17 +642,6 @@ minimum 2
 minimum 1
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">liste</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/algo_25_0.png" src="../_images/algo_25_0.png" />
 </div>
 </div>
 <p>La fonction suivante visualise le minimum successive.</p>
@@ -644,18 +668,18 @@ minimum 1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>min [0, 0, 1, 4] [4, 4, 2, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>min [0, 0, 4] [2, 2, 1]
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
-<img alt="../_images/algo_27_2.png" src="../_images/algo_27_2.png" />
+<img alt="../_images/algo_26_2.png" src="../_images/algo_26_2.png" />
 </div>
 </div>
 </div>
 <div class="section" id="maximum">
-<h2>Maximum<a class="headerlink" href="#maximum" title="Permalink to this headline">¶</a></h2>
+<h2>Maximum<a class="headerlink" href="#maximum" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maximum</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -668,14 +692,14 @@ minimum 1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="enumerer-une-liste">
-<h2>Enumérer une liste<a class="headerlink" href="#enumerer-une-liste" title="Permalink to this headline">¶</a></h2>
+<h2>Enumérer une liste<a class="headerlink" href="#enumerer-une-liste" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> retourne pour chaque élément d’une liste un tuple avec son index et sa valeur <code class="docutils literal notranslate"><span class="pre">(i,</span> <span class="pre">val)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -710,7 +734,7 @@ minimum 1
 </div>
 </div>
 <div class="section" id="position">
-<h2>Position<a class="headerlink" href="#position" title="Permalink to this headline">¶</a></h2>
+<h2>Position<a class="headerlink" href="#position" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Parfois nous voulons connaitre la position d’un maximum.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -754,7 +778,7 @@ minimum 1
 </div>
 </div>
 <div class="section" id="tri-par-insertion">
-<h2>Tri par insertion<a class="headerlink" href="#tri-par-insertion" title="Permalink to this headline">¶</a></h2>
+<h2>Tri par insertion<a class="headerlink" href="#tri-par-insertion" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
@@ -764,7 +788,7 @@ minimum 1
 </div>
 </div>
 <div class="section" id="trouver-position">
-<h2>Trouver position<a class="headerlink" href="#trouver-position" title="Permalink to this headline">¶</a></h2>
+<h2>Trouver position<a class="headerlink" href="#trouver-position" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici un algorithme pour trouver la position d’une valeur <code class="docutils literal notranslate"><span class="pre">x</span></code> dans une liste <code class="docutils literal notranslate"><span class="pre">a</span></code>déjà trié.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -797,7 +821,7 @@ minimum 1
 </div>
 </div>
 <div class="section" id="trouver-le-minimum">
-<h2>Trouver le minimum<a class="headerlink" href="#trouver-le-minimum" title="Permalink to this headline">¶</a></h2>
+<h2>Trouver le minimum<a class="headerlink" href="#trouver-le-minimum" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici un algorithme pour trouver la position du minimum.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -826,7 +850,7 @@ minimum 1
 </div>
 </div>
 <div class="section" id="tri-par-selection">
-<h2>Tri par séléction<a class="headerlink" href="#tri-par-selection" title="Permalink to this headline">¶</a></h2>
+<h2>Tri par séléction<a class="headerlink" href="#tri-par-selection" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Dans cet algorithme nous cherchons le plus petit élément de la liste et nous l’ajoutons à une nouvelle liste.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -893,7 +917,7 @@ minimum 1
 </div>
 </div>
 <div class="section" id="echanger-deux-elements">
-<h2>Echanger deux éléments<a class="headerlink" href="#echanger-deux-elements" title="Permalink to this headline">¶</a></h2>
+<h2>Echanger deux éléments<a class="headerlink" href="#echanger-deux-elements" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici une fonction pour échanger deux éléments d’une liste.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -924,7 +948,7 @@ minimum 1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 8, 1, 2, 4, 5, 6, 7, 3, 9]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 2, 1, 8, 4, 5, 6, 7, 3, 9]
 </pre></div>
 </div>
 </div>
@@ -961,7 +985,7 @@ minimum 1
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../rep_info.html" title="previous page">Réprésentation de l’information</a>
-    <a class='right-next' id="next-link" href="../misc/markdown.html" title="next page">Markdown</a>
+    <a class='right-next' id="next-link" href="unary.html" title="next page">Système unaire</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

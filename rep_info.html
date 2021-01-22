@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,6 +31,10 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -44,12 +48,14 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/questions.js"></script>
+    <script src="_static/blanks.js"></script>
+    <script src="_static/reactions.js"></script>
+    <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,7 +64,7 @@
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Algorithmique" href="algo/algo.html" />
     <link rel="prev" title="Fichiers" href="plot/file.html" />
 
@@ -87,7 +93,7 @@
 </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="current nav sidenav_l1">
@@ -106,15 +112,53 @@
      Les structures de flux
     </a>
    </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="python/vi/3/3_loops.html">
+     Listes et boucles
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="python/vi/3/3_ex1.html">
+       Ex. Listes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="python/vi/3/3_ex2.html">
+       Ex. Boucle for
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="python/vi/3/3_ex3.html">
+       Ex. Boucle while
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python/le/3/3ex.html">
+     Exercices
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="python/ex1.html">
      Exerices Boucles
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="python/ex2.html">
      Exercice - if-else
     </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="python/python1_ex1.html">
+       Exercice
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -205,6 +249,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="algo/unary.html">
+   Système unaire
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="misc/markdown.html">
    Markdown
   </a>
@@ -238,8 +287,8 @@
         
         <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
             data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
@@ -247,7 +296,7 @@
         
         
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -255,10 +304,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="_sources/rep_info.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -271,23 +320,23 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
             href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Frep_info.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
         <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/rep_info.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
     </div>
 </div>
 
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -298,7 +347,7 @@
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/rep_info.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -315,7 +364,7 @@
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i> Contenu
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -413,7 +462,7 @@
               <div>
                 
   <div class="section" id="representation-de-l-information">
-<h1>Réprésentation de l’information<a class="headerlink" href="#representation-de-l-information" title="Permalink to this headline">¶</a></h1>
+<h1>Réprésentation de l’information<a class="headerlink" href="#representation-de-l-information" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Notre universe est divisé en</p>
 <ul class="simple">
 <li><p>espace</p></li>
@@ -433,7 +482,7 @@
 </ul>
 <p>Avec le langage parlé, nous avons inventé des symboles pour designer des entités, des catégories et des objets spécifics, des attributs et des actions.</p>
 <div class="section" id="nombres">
-<h2>Nombres<a class="headerlink" href="#nombres" title="Permalink to this headline">¶</a></h2>
+<h2>Nombres<a class="headerlink" href="#nombres" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le système décimale utilise 10 chiffres pour représenter les nombres. Dans cette sections nous allons construire des séquence de symboles qui représentes un</p>
 <ul class="simple">
 <li><p>nombre naturel</p></li>
@@ -457,7 +506,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;4&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2&#39;
 </pre></div>
 </div>
 </div>
@@ -478,13 +527,13 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;5&#39;, &#39;1&#39;, &#39;7&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;8&#39;, &#39;3&#39;, &#39;3&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="nombre-naturel">
-<h3>Nombre naturel<a class="headerlink" href="#nombre-naturel" title="Permalink to this headline">¶</a></h3>
+<h3>Nombre naturel<a class="headerlink" href="#nombre-naturel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Un nombre naturel est représenté avec une séquence de chiffres.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -505,14 +554,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;706&#39;, &#39;25220&#39;, &#39;2372830&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;917&#39;, &#39;42720&#39;, &#39;6516585&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="nombre-entier">
-<h3>Nombre entier<a class="headerlink" href="#nombre-entier" title="Permalink to this headline">¶</a></h3>
+<h3>Nombre entier<a class="headerlink" href="#nombre-entier" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Les nombre entiers incluent aussi les nombres négatives. Nous utilisons les symboles</p>
 <ul class="simple">
 <li><p>plus <code class="docutils literal notranslate"><span class="pre">+</span></code></p></li>
@@ -535,14 +584,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;+74&#39;, &#39;+772&#39;, &#39;-89553&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;-46&#39;, &#39;-377&#39;, &#39;-87196&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="nombre-rationel">
-<h3>Nombre rationel<a class="headerlink" href="#nombre-rationel" title="Permalink to this headline">¶</a></h3>
+<h3>Nombre rationel<a class="headerlink" href="#nombre-rationel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Nombre a virgule flottante</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -559,14 +608,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;+75.794&#39;, &#39;-9.6866730&#39;, &#39;-3500.83597&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;-07.470&#39;, &#39;+0.4390918&#39;, &#39;-5823.33598&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="nombre-scientifique">
-<h3>Nombre scientifique<a class="headerlink" href="#nombre-scientifique" title="Permalink to this headline">¶</a></h3>
+<h3>Nombre scientifique<a class="headerlink" href="#nombre-scientifique" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">e</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
@@ -582,7 +631,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;-1.63e+0&#39;, &#39;-1.4e+28&#39;, &#39;+5.35e+5&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;+3.13e-8&#39;, &#39;-6.3e+00&#39;, &#39;+3.17e-0&#39;)
 </pre></div>
 </div>
 </div>
@@ -590,7 +639,7 @@
 </div>
 </div>
 <div class="section" id="type-int">
-<h2>Type int<a class="headerlink" href="#type-int" title="Permalink to this headline">¶</a></h2>
+<h2>Type int<a class="headerlink" href="#type-int" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Python connait deux types de nombres</p>
 <ul class="simple">
 <li><p>int</p></li>
@@ -617,9 +666,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-65 --&gt; -65
-+019 --&gt; 19
--10380 --&gt; -10380
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-16 --&gt; -16
+-356 --&gt; -356
++22963 --&gt; 22963
 </pre></div>
 </div>
 </div>
@@ -633,7 +682,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>91635244547015024795457356798082083826515690707459
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41202897292098274027477877193047814135821830647208
 </pre></div>
 </div>
 </div>
@@ -646,14 +695,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>91635244547015024795457356798082083826515690707460
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41202897292098274027477877193047814135821830647209
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="type-float">
-<h2>Type float<a class="headerlink" href="#type-float" title="Permalink to this headline">¶</a></h2>
+<h2>Type float<a class="headerlink" href="#type-float" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nombres</span> <span class="o">=</span> <span class="n">e</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">e</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">e</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -663,16 +712,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+8.08e+6 --&gt; 8080000.0
--0.6e+49 --&gt; -6e+48
--0.72e+17 --&gt; -7.2e+16
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+5.81e-9 --&gt; 5.81e-09
++5.7e-63 --&gt; 5.7e-63
+-6.28e-59 --&gt; -6.28e-59
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="nombre-binaire">
-<h2>Nombre binaire<a class="headerlink" href="#nombre-binaire" title="Permalink to this headline">¶</a></h2>
+<h2>Nombre binaire<a class="headerlink" href="#nombre-binaire" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les humains ont développé le système de numérotation décimale, sur base de 10, parce que nous avons 10 doigts. Mais on peut representer des nombres dans n’importe quel base.
 En informatique nous utilisons le système binaire, sur base 2</p>
 <div class="cell docutils container">
@@ -712,7 +761,7 @@ En informatique nous utilisons le système binaire, sur base 2</p>
 </div>
 </div>
 <div class="section" id="transformation">
-<h2>Transformation<a class="headerlink" href="#transformation" title="Permalink to this headline">¶</a></h2>
+<h2>Transformation<a class="headerlink" href="#transformation" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span> <span class="o">=</span> <span class="s1">&#39;11111111&#39;</span>
@@ -727,7 +776,7 @@ En informatique nous utilisons le système binaire, sur base 2</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.n(m)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>255
 </pre></div>
 </div>
 </div>
@@ -777,7 +826,7 @@ En informatique nous utilisons le système binaire, sur base 2</p>
 </div>
 </div>
 <div class="section" id="nombres-hexadecimales">
-<h2>Nombres héxadécimales<a class="headerlink" href="#nombres-hexadecimales" title="Permalink to this headline">¶</a></h2>
+<h2>Nombres héxadécimales<a class="headerlink" href="#nombres-hexadecimales" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le système hexadécimale est un système de numérotation sur base 16. En dehors des 10 chiffres, il utilise les premiers 6 lettres de l’alphabet.</p>
 <p>Ce système est très pratiques en informatique, parce qu’il permet de représenter 4 digits binaires avec un seul symbole hexadécimale.</p>
 <div class="cell docutils container">
@@ -829,7 +878,7 @@ En informatique nous utilisons le système binaire, sur base 2</p>
 </div>
 </div>
 <div class="section" id="operations-logiques">
-<h2>Opérations logiques<a class="headerlink" href="#operations-logiques" title="Permalink to this headline">¶</a></h2>
+<h2>Opérations logiques<a class="headerlink" href="#operations-logiques" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le resultat d’une comparaison est une valeur booléenne.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -858,7 +907,7 @@ En informatique nous utilisons le système binaire, sur base 2</p>
 </div>
 </div>
 <div class="section" id="operateur-not">
-<h2>Opérateur not<a class="headerlink" href="#operateur-not" title="Permalink to this headline">¶</a></h2>
+<h2>Opérateur not<a class="headerlink" href="#operateur-not" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’opératueur <code class="docutils literal notranslate"><span class="pre">not</span></code> inverse son argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -874,7 +923,7 @@ En informatique nous utilisons le système binaire, sur base 2</p>
 </div>
 </div>
 <div class="section" id="table-de-verite">
-<h2>Table de vérité<a class="headerlink" href="#table-de-verite" title="Permalink to this headline">¶</a></h2>
+<h2>Table de vérité<a class="headerlink" href="#table-de-verite" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous pouvons itérer et afficher une table de vérité.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -909,7 +958,7 @@ True	False
 </div>
 </div>
 <div class="section" id="operateur-and">
-<h2>Opérateur and<a class="headerlink" href="#operateur-and" title="Permalink to this headline">¶</a></h2>
+<h2>Opérateur and<a class="headerlink" href="#operateur-and" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’opérateur logique <code class="docutils literal notranslate"><span class="pre">and</span></code> donne <code class="docutils literal notranslate"><span class="pre">True</span></code>, seulement si les deus arguments sont <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -945,7 +994,7 @@ True	True	True
 </div>
 </div>
 <div class="section" id="representation-des-caracteres">
-<h2>Représentation des caractères<a class="headerlink" href="#representation-des-caracteres" title="Permalink to this headline">¶</a></h2>
+<h2>Représentation des caractères<a class="headerlink" href="#representation-des-caracteres" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les charactères sont représenté par des nombres. La fonction <code class="docutils literal notranslate"><span class="pre">ord</span></code> donne le nombre associé à un caractères. Le nombre qui correspond à la lettre <strong>A</strong> majuscule est 65.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -990,10 +1039,7 @@ True	True	True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  	48 0	64 @	80 P	96 `	112 p	
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32  	48 0	64 @	80 P	96 `	112 p	
 33 !	49 1	65 A	81 Q	97 a	113 q	
 34 &quot;	50 2	66 B	82 R	98 b	114 r	
 35 #	51 3	67 C	83 S	99 c	115 s	
@@ -1002,10 +1048,7 @@ True	True	True
 38 &amp;	54 6	70 F	86 V	102 f	118 v	
 39 &#39;	55 7	71 G	87 W	103 g	119 w	
 40 (	56 8	72 H	88 X	104 h	120 x	
-41 )	57 9	73 I	89 Y
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	105 i	121 y	
+41 )	57 9	73 I	89 Y	105 i	121 y	
 42 *	58 :	74 J	90 Z	106 j	122 z	
 43 +	59 ;	75 K	91 [	107 k	123 {	
 44 ,	60 &lt;	76 L	92 \	108 l	124 |	
@@ -1018,7 +1061,7 @@ True	True	True
 </div>
 </div>
 <div class="section" id="emoji">
-<h2>Emoji<a class="headerlink" href="#emoji" title="Permalink to this headline">¶</a></h2>
+<h2>Emoji<a class="headerlink" href="#emoji" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;😀&#39;</span><span class="p">)</span>

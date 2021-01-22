@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,6 +31,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -44,12 +48,14 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,7 +64,7 @@
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="prev" title="Markdown" href="markdown.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -86,7 +92,7 @@
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="current nav sidenav_l1">
@@ -105,15 +111,53 @@
      Les structures de flux
     </a>
    </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../python/vi/3/3_loops.html">
+     Listes et boucles
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/vi/3/3_ex1.html">
+       Ex. Listes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/vi/3/3_ex2.html">
+       Ex. Boucle for
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/vi/3/3_ex3.html">
+       Ex. Boucle while
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/le/3/3ex.html">
+     Exercices
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/ex1.html">
      Exerices Boucles
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../python/ex2.html">
      Exercice - if-else
     </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/python1_ex1.html">
+       Exercice
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -204,6 +248,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../algo/unary.html">
+   Système unaire
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    Markdown
   </a>
@@ -237,8 +286,8 @@
         
         <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
             data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
@@ -246,7 +295,7 @@
         
         
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -254,10 +303,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/misc/jupyter.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -270,23 +319,23 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
             href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fmisc/jupyter.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
         <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/misc/jupyter.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
     </div>
 </div>
 
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -297,7 +346,7 @@
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/misc/jupyter.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -314,7 +363,7 @@
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i> Contenu
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -444,21 +493,21 @@
               <div>
                 
   <div class="section" id="le-notebook-jupyter">
-<h1>Le notebook Jupyter<a class="headerlink" href="#le-notebook-jupyter" title="Permalink to this headline">¶</a></h1>
+<h1>Le notebook Jupyter<a class="headerlink" href="#le-notebook-jupyter" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Ce document peut être édité dans</p>
 <ul class="simple">
 <li><p>VS code</p></li>
 <li><p>Jupyter Lab</p></li>
 </ul>
 <div class="section" id="styles">
-<h2>Styles<a class="headerlink" href="#styles" title="Permalink to this headline">¶</a></h2>
+<h2>Styles<a class="headerlink" href="#styles" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les styles <em>italic</em>  <strong>bold</strong> et <code class="docutils literal notranslate"><span class="pre">code</span></code> peuvent être appliqués dans un text.</p>
 </div>
 <div class="section" id="listes">
-<h2>Listes<a class="headerlink" href="#listes" title="Permalink to this headline">¶</a></h2>
+<h2>Listes<a class="headerlink" href="#listes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Listes peuvent avoir multiples niveaux.</p>
 <div class="section" id="listes-a-puces">
-<h3>Listes à puces<a class="headerlink" href="#listes-a-puces" title="Permalink to this headline">¶</a></h3>
+<h3>Listes à puces<a class="headerlink" href="#listes-a-puces" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>item</p>
 <ul>
@@ -473,7 +522,7 @@
 </ul>
 </div>
 <div class="section" id="listes-numerotes">
-<h3>Listes numérotés<a class="headerlink" href="#listes-numerotes" title="Permalink to this headline">¶</a></h3>
+<h3>Listes numérotés<a class="headerlink" href="#listes-numerotes" title="Lien permanent vers ce titre">¶</a></h3>
 <ol class="simple">
 <li><p>item</p></li>
 <li><p>item
@@ -484,7 +533,7 @@
 </ol>
 </div>
 <div class="section" id="listes-melangees">
-<h3>Listes mélangées<a class="headerlink" href="#listes-melangees" title="Permalink to this headline">¶</a></h3>
+<h3>Listes mélangées<a class="headerlink" href="#listes-melangees" title="Lien permanent vers ce titre">¶</a></h3>
 <ol class="simple">
 <li><p>item</p></li>
 </ol>
@@ -501,10 +550,10 @@
 </div>
 </div>
 <div class="section" id="blockquote">
-<h2>Blockquote<a class="headerlink" href="#blockquote" title="Permalink to this headline">¶</a></h2>
+<h2>Blockquote<a class="headerlink" href="#blockquote" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Toutes les lignes sont précédées par <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.</p>
 <div class="section" id="id1">
-<h3>blockquote<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>blockquote<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>text</p>
 <ul class="simple">
 <li><p><em>italic</em></p></li>
@@ -514,7 +563,7 @@
 </div>
 </div>
 <div class="section" id="texte-litteral">
-<h2>Texte littéral<a class="headerlink" href="#texte-litteral" title="Permalink to this headline">¶</a></h2>
+<h2>Texte littéral<a class="headerlink" href="#texte-litteral" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Toutes les lignes sont indentées.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># text littéral
 x = &#39;hello&#39;
@@ -523,7 +572,7 @@ print(x)
 </div>
 </div>
 <div class="section" id="commandes-magiques">
-<h2>Commandes magiques<a class="headerlink" href="#commandes-magiques" title="Permalink to this headline">¶</a></h2>
+<h2>Commandes magiques<a class="headerlink" href="#commandes-magiques" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les commandes magiques permettent d’appeler certaines commandes UNIX</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -544,8 +593,7 @@ print(x)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>demo.txt            hide-input-tag.png  markdown.md
-hello.py            jupyter.ipynb
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>demo.txt       hello.py       jupyter.ipynb  markdown.md
 </pre></div>
 </div>
 </div>
@@ -557,12 +605,11 @@ hello.py            jupyter.ipynb
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 80
--rw-r--r--  1 raphael  staff     22 Jan 15 23:22 demo.txt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 56
+-rw-r--r--  1 raphael  staff     10 Jan 13 09:07 demo.txt
 -rw-r--r--  1 raphael  staff     29 Jan 10 08:09 hello.py
--rw-r--r--@ 1 raphael  staff  11662 Jan 13 09:46 hide-input-tag.png
--rw-r--r--@ 1 raphael  staff  12447 Jan 13 09:54 jupyter.ipynb
--rw-r--r--  1 raphael  staff    703 Jan 13 09:22 markdown.md
+-rw-r--r--@ 1 raphael  staff  15030 Jan 13 09:07 jupyter.ipynb
+-rw-r--r--  1 raphael  staff    867 Jan 13 08:39 markdown.md
 </pre></div>
 </div>
 </div>
@@ -576,7 +623,10 @@ hello.py            jupyter.ipynb
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>File `hello.py` exists. Use `%save -f hello.py` to force overwrite
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>File `hello.py` exists. Overwrite (y/[N])?   y
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&#39; was not found in history, as a file, url, nor in the user namespace.
 hello
 world
 </pre></div>
@@ -585,21 +635,21 @@ world
 </div>
 </div>
 <div class="section" id="images-et-liens">
-<h2>Images et liens<a class="headerlink" href="#images-et-liens" title="Permalink to this headline">¶</a></h2>
+<h2>Images et liens<a class="headerlink" href="#images-et-liens" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>![logo](../logo.png)
 </pre></div>
 </div>
 <p><img alt="logo" src="../_images/logo.png" /></p>
 </div>
 <div class="section" id="hyper-liens">
-<h2>Hyper-liens<a class="headerlink" href="#hyper-liens" title="Permalink to this headline">¶</a></h2>
+<h2>Hyper-liens<a class="headerlink" href="#hyper-liens" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[notebook](https://jupyter-notebook.readthedocs.io)
 </pre></div>
 </div>
 <p><a class="reference external" href="https://jupyter-notebook.readthedocs.io">notebook</a></p>
 </div>
 <div class="section" id="formules-mathematiques">
-<h2>Formules mathématiques<a class="headerlink" href="#formules-mathematiques" title="Permalink to this headline">¶</a></h2>
+<h2>Formules mathématiques<a class="headerlink" href="#formules-mathematiques" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Des expression en LaTeX peuvent être inséré dans le texte.</p>
 <ul class="simple">
 <li><p>index <code class="docutils literal notranslate"><span class="pre">$a_2$</span></code> <span class="math notranslate nohighlight">\(a_2\)</span></p></li>
@@ -616,7 +666,7 @@ world
 \[\sum_{i=0}^n {n} = 0 + 1 + 2 + ... + n\]</div>
 </div>
 <div class="section" id="exemple-de-code">
-<h2>Exemple de code<a class="headerlink" href="#exemple-de-code" title="Permalink to this headline">¶</a></h2>
+<h2>Exemple de code<a class="headerlink" href="#exemple-de-code" title="Lien permanent vers ce titre">¶</a></h2>
 <p>En Python</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;Hello World&quot;</span>
 </pre></div>
@@ -630,7 +680,7 @@ world
 </div>
 </div>
 <div class="section" id="tableau">
-<h2>Tableau<a class="headerlink" href="#tableau" title="Permalink to this headline">¶</a></h2>
+<h2>Tableau<a class="headerlink" href="#tableau" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un tableau est centré avec des bandes alternés.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -649,19 +699,13 @@ world
 </table>
 </div>
 <div class="section" id="charger-un-fichier">
-<h2>Charger un fichier<a class="headerlink" href="#charger-un-fichier" title="Permalink to this headline">¶</a></h2>
+<h2>Charger un fichier<a class="headerlink" href="#charger-un-fichier" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Executer la commande <code class="docutils literal notranslate"><span class="pre">%load</span> <span class="pre">hello.py</span></code> ajoute le fichier dans la cellule et met la la commande en commentaire.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %load hello.py</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
-world
 </pre></div>
 </div>
 </div>
@@ -682,7 +726,7 @@ world
 </div>
 </div>
 <div class="section" id="code-html">
-<h2>Code HTML<a class="headerlink" href="#code-html" title="Permalink to this headline">¶</a></h2>
+<h2>Code HTML<a class="headerlink" href="#code-html" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
@@ -698,7 +742,7 @@ Text <b>bold</b> <i>italics</i>
 </div>
 </div>
 <div class="section" id="file-manipulation">
-<h2>File manipulation<a class="headerlink" href="#file-manipulation" title="Permalink to this headline">¶</a></h2>
+<h2>File manipulation<a class="headerlink" href="#file-manipulation" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> demo.txt
@@ -720,8 +764,7 @@ Text <b>bold</b> <i>italics</i>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>demo.txt            hide-input-tag.png  markdown.md
-hello.py            jupyter.ipynb
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>demo.txt       hello.py       jupyter.ipynb  markdown.md
 </pre></div>
 </div>
 </div>
@@ -756,7 +799,7 @@ append text
 </div>
 </div>
 <div class="section" id="widgets">
-<h2>Widgets<a class="headerlink" href="#widgets" title="Permalink to this headline">¶</a></h2>
+<h2>Widgets<a class="headerlink" href="#widgets" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les widgets n’appariassent pas dans ce Jupyter notebook, mais ils apparaissent dans le document HTML.
 Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 <div class="cell docutils container">
@@ -775,7 +818,7 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "b78dbcb6316e425e89c30014336a0426"}
+{"model_id": "b8498d3fde8c427caf08a2262e6ae226", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -793,13 +836,14 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "37194b5cb35f47ab8b7c0f216305af42"}
-</script></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="tags">
-<h2>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h2>
+<h2>Tags<a class="headerlink" href="#tags" title="Lien permanent vers ce titre">¶</a></h2>
 <p>These tags can be added to the Jupyter notebook cell</p>
 <ul class="simple">
 <li><p>fill-width</p></li>
@@ -815,7 +859,7 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 <p>Le résultat n’est pas visible dans le Jupyter notebook, seulement dans la page HTML.</p>
 </div>
 <div class="section" id="hide-input">
-<h2>Hide input<a class="headerlink" href="#hide-input" title="Permalink to this headline">¶</a></h2>
+<h2>Hide input<a class="headerlink" href="#hide-input" title="Lien permanent vers ce titre">¶</a></h2>
 <p>To hide the input add this to the Cell Metadata:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
     &quot;tags&quot;: [
@@ -849,7 +893,7 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 </div>
 <div class="section" id="hide-output">
-<h2>Hide output<a class="headerlink" href="#hide-output" title="Permalink to this headline">¶</a></h2>
+<h2>Hide output<a class="headerlink" href="#hide-output" title="Lien permanent vers ce titre">¶</a></h2>
 <p>To hide the output add this to the Cell Metadata:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
     &quot;tags&quot;: [
@@ -875,7 +919,7 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 </div>
 <div class="section" id="hide-cell">
-<h2>Hide cell<a class="headerlink" href="#hide-cell" title="Permalink to this headline">¶</a></h2>
+<h2>Hide cell<a class="headerlink" href="#hide-cell" title="Lien permanent vers ce titre">¶</a></h2>
 <p>To hide the cell add this to the Cell Metadata:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
     &quot;tags&quot;: [
@@ -901,12 +945,6 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 </div>
 </div>
-
-
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {"4308e16e75614066b23efcef3d67477a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "6109f9f6c94e4056894f84ee04a83bef": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "b78dbcb6316e425e89c30014336a0426": {"model_name": "IntSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "IntSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "IntSliderView", "continuous_update": true, "description": "", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_4308e16e75614066b23efcef3d67477a", "max": 100, "min": 0, "orientation": "horizontal", "readout": true, "readout_format": "d", "step": 1, "style": "IPY_MODEL_6109f9f6c94e4056894f84ee04a83bef", "value": 0}}, "cc72d1c79d33447c95360b376e603b60": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "37194b5cb35f47ab8b7c0f216305af42": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_223eca6d2c374e4baba0632d9901abb5", "IPY_MODEL_eab6cfc1ff8043e59247d6d6aee36bd0"], "layout": "IPY_MODEL_cc72d1c79d33447c95360b376e603b60"}}, "eb5cfbbf8af841f085f6dc6806e1221b": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b865b4e9fdbe483ea60a3c5046d509fe": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "223eca6d2c374e4baba0632d9901abb5": {"model_name": "IntSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "IntSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "IntSliderView", "continuous_update": true, "description": "x", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_eb5cfbbf8af841f085f6dc6806e1221b", "max": 30, "min": -10, "orientation": "horizontal", "readout": true, "readout_format": "d", "step": 1, "style": "IPY_MODEL_b865b4e9fdbe483ea60a3c5046d509fe", "value": 10}}, "8377d5cfbb5d4ba09e720a9e96335a55": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "eab6cfc1ff8043e59247d6d6aee36bd0": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_8377d5cfbb5d4ba09e720a9e96335a55", "msg_id": "", "outputs": [{"output_type": "display_data", "metadata": {}, "data": {"text/plain": "10"}}]}}}, "version_major": 2, "version_minor": 0}
-</script>
-
 
     <script type="text/x-thebe-config">
     {

@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,6 +31,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -44,12 +48,14 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,9 +64,9 @@
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Exercice - if-else" href="ex2.html" />
-    <link rel="prev" title="Les structures de flux" href="2_struct.html" />
+    <link rel="prev" title="Exercices" href="le/3/3ex.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -87,7 +93,7 @@
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="current nav sidenav_l1">
@@ -106,15 +112,53 @@
      Les structures de flux
     </a>
    </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="vi/3/3_loops.html">
+     Listes et boucles
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="vi/3/3_ex1.html">
+       Ex. Listes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="vi/3/3_ex2.html">
+       Ex. Boucle for
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="vi/3/3_ex3.html">
+       Ex. Boucle while
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="le/3/3ex.html">
+     Exercices
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Exerices Boucles
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="ex2.html">
      Exercice - if-else
     </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="python1_ex1.html">
+       Exercice
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -205,6 +249,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../algo/unary.html">
+   Système unaire
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../misc/markdown.html">
    Markdown
   </a>
@@ -238,8 +287,8 @@
         
         <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
             data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
@@ -247,7 +296,7 @@
         
         
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -255,10 +304,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/python/ex1.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -271,23 +320,23 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
             href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fpython/ex1.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
         <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/python/ex1.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
     </div>
 </div>
 
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -298,7 +347,7 @@
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/python/ex1.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -315,7 +364,7 @@
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i> Contenu
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -381,11 +430,11 @@
               <div>
                 
   <div class="section" id="exerices-boucles">
-<h1>Exerices Boucles<a class="headerlink" href="#exerices-boucles" title="Permalink to this headline">¶</a></h1>
+<h1>Exerices Boucles<a class="headerlink" href="#exerices-boucles" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Les exercices ci-dessous sont écrit avec des boucles.<br />
 Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show (+)</strong>.</p>
 <div class="section" id="carres">
-<h2>Carrés<a class="headerlink" href="#carres" title="Permalink to this headline">¶</a></h2>
+<h2>Carrés<a class="headerlink" href="#carres" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Quel est le code pour afficher ces carrés ? (2 lignes suffisent)</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -409,7 +458,7 @@ Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show 
 </div>
 </div>
 <div class="section" id="puissances-de-2">
-<h2>Puissances de 2<a class="headerlink" href="#puissances-de-2" title="Permalink to this headline">¶</a></h2>
+<h2>Puissances de 2<a class="headerlink" href="#puissances-de-2" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Quel est le code pour afficher ces puissances de 2 ? (2 lignes suffisent)</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -433,7 +482,7 @@ Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show 
 </div>
 </div>
 <div class="section" id="des-carres-sur-une-lignes">
-<h2>Des carrés sur une lignes<a class="headerlink" href="#des-carres-sur-une-lignes" title="Permalink to this headline">¶</a></h2>
+<h2>Des carrés sur une lignes<a class="headerlink" href="#des-carres-sur-une-lignes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Quel est le code pour afficher ces carrés sur une seule ligne ?</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -450,7 +499,7 @@ Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show 
 </div>
 </div>
 <div class="section" id="des-puissances-de-2-sur-une-lignes">
-<h2>Des puissances de 2 sur une lignes<a class="headerlink" href="#des-puissances-de-2-sur-une-lignes" title="Permalink to this headline">¶</a></h2>
+<h2>Des puissances de 2 sur une lignes<a class="headerlink" href="#des-puissances-de-2-sur-une-lignes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Quel est le code pour afficher ces carrés sur une seule ligne ?</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -467,7 +516,7 @@ Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show 
 </div>
 </div>
 <div class="section" id="table-de-multiplication">
-<h2>Table de multiplication<a class="headerlink" href="#table-de-multiplication" title="Permalink to this headline">¶</a></h2>
+<h2>Table de multiplication<a class="headerlink" href="#table-de-multiplication" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Utilisez deux boucles <code class="docutils literal notranslate"><span class="pre">for</span></code> imbriqués pour créer une table de multiplications.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -494,7 +543,7 @@ Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show 
 </div>
 </div>
 <div class="section" id="table-de-verite-not">
-<h2>Table de vérité <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#table-de-verite-not" title="Permalink to this headline">¶</a></h2>
+<h2>Table de vérité <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#table-de-verite-not" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Utilisez une boucle qui itère sur le tuple <code class="docutils literal notranslate"><span class="pre">(False,</span> <span class="pre">True)</span></code>
 pour créer une table de verité pour la fonction logique <code class="docutils literal notranslate"><span class="pre">not</span></code>.</p>
 <div class="cell tag_hide-input docutils container">
@@ -517,7 +566,7 @@ True	False
 </div>
 </div>
 <div class="section" id="table-de-verite-and">
-<h2>Table de vérité <code class="docutils literal notranslate"><span class="pre">and</span></code><a class="headerlink" href="#table-de-verite-and" title="Permalink to this headline">¶</a></h2>
+<h2>Table de vérité <code class="docutils literal notranslate"><span class="pre">and</span></code><a class="headerlink" href="#table-de-verite-and" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Utilisez deux boucles impriquées qui itèrent sur le tuple <code class="docutils literal notranslate"><span class="pre">(False,</span> <span class="pre">True)</span></code>
 pour créer une table de verité pour la fonction logique <code class="docutils literal notranslate"><span class="pre">and</span></code>.</p>
 <div class="cell tag_hide-input docutils container">
@@ -543,7 +592,7 @@ True	True	True
 </div>
 </div>
 <div class="section" id="suite-de-fibonacci">
-<h2>Suite de Fibonacci<a class="headerlink" href="#suite-de-fibonacci" title="Permalink to this headline">¶</a></h2>
+<h2>Suite de Fibonacci<a class="headerlink" href="#suite-de-fibonacci" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La suite de Fibonacci est obtenu en additionnant les deux nombre précédents.
 Utilisez une boucle pour les calculer.</p>
 <div class="cell tag_hide-input docutils container">
@@ -595,7 +644,7 @@ Utilisez une boucle pour les calculer.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="2_struct.html" title="previous page">Les structures de flux</a>
+    <a class='left-prev' id="prev-link" href="le/3/3ex.html" title="previous page">Exercices</a>
     <a class='right-next' id="next-link" href="ex2.html" title="next page">Exercice - if-else</a>
 
     </div>

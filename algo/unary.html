@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,6 +31,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -44,12 +48,14 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,7 +64,9 @@
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Markdown" href="../misc/markdown.html" />
+    <link rel="prev" title="Algorithmique" href="algo.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -85,10 +93,10 @@
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+    <ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../python/index.html">
    Programmer
@@ -104,15 +112,53 @@
      Les structures de flux
     </a>
    </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../python/vi/3/3_loops.html">
+     Listes et boucles
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/vi/3/3_ex1.html">
+       Ex. Listes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/vi/3/3_ex2.html">
+       Ex. Boucle for
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/vi/3/3_ex3.html">
+       Ex. Boucle while
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/le/3/3ex.html">
+     Exercices
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/ex1.html">
      Exerices Boucles
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../python/ex2.html">
      Exercice - if-else
     </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/python1_ex1.html">
+       Exercice
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -202,6 +248,11 @@
    Algorithmique
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Système unaire
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/markdown.html">
    Markdown
@@ -236,8 +287,8 @@
         
         <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
             data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
@@ -245,7 +296,7 @@
         
         
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -253,10 +304,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/algo/unary.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -269,23 +320,23 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
             href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Falgo/unary.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
         <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/algo/unary.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
     </div>
 </div>
 
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -296,7 +347,7 @@
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/algo/unary.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -313,7 +364,7 @@
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i> Contenu
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -381,7 +432,7 @@
               <div>
                 
   <div class="section" id="systeme-unaire">
-<h1>Système unaire<a class="headerlink" href="#systeme-unaire" title="Permalink to this headline">¶</a></h1>
+<h1>Système unaire<a class="headerlink" href="#systeme-unaire" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Un système unaire, aussi appelé <strong>monadique</strong>, représente les entiers naturels avec un seul symbole. Ici nous avons choisi le symbole <code class="docutils literal notranslate"><span class="pre">1</span></code> mais on pourrait prendre n’importe quel symbole.</p>
 <p>C’est le système utilisé par le prisonier dans sa cellule, ou Robinson sur son île, pour compter les jours.</p>
 <p><img alt="" src="../_images/unary.png" /></p>
@@ -399,7 +450,7 @@ Voici donc la représentation des nombres 0, 1, et 5.</p>
 </div>
 </div>
 <div class="section" id="comparaison">
-<h2>Comparaison<a class="headerlink" href="#comparaison" title="Permalink to this headline">¶</a></h2>
+<h2>Comparaison<a class="headerlink" href="#comparaison" title="Lien permanent vers ce titre">¶</a></h2>
 <p>En Python, les opérateurs de comparaison numériques (<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, …) sont aussi valide pour la comparaison de nombres sous forme unaire.</p>
 <p>C’est dû au fait que Python permet de comparer des chaines de caractères. Le résultat de la comparaison est basé sur sur l’ordre alphabétique et correspond à l’ordre utilisé dans un dictionnaire. Un mot court commençant avec les mêmes lettres apparait avant le mots plus long.</p>
 <div class="cell docutils container">
@@ -441,7 +492,7 @@ Voici donc la représentation des nombres 0, 1, et 5.</p>
 </div>
 </div>
 <div class="section" id="conversion">
-<h2>Conversion<a class="headerlink" href="#conversion" title="Permalink to this headline">¶</a></h2>
+<h2>Conversion<a class="headerlink" href="#conversion" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour faire la conversion entre les deux systèmes nous definissons deux fonctions:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">unaire(d)</span></code> pour transformer un décimal <code class="docutils literal notranslate"><span class="pre">d</span></code> en unaire</p></li>
@@ -493,7 +544,7 @@ Voici donc la représentation des nombres 0, 1, et 5.</p>
 </div>
 </div>
 <div class="section" id="incrementation">
-<h2>Incrémentation<a class="headerlink" href="#incrementation" title="Permalink to this headline">¶</a></h2>
+<h2>Incrémentation<a class="headerlink" href="#incrementation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un des algorithmes élémentaires est celui qui donne le <strong>successeur à un nombre</strong>. On parle aussi d’incrémentation et nous pouvons la definir comme</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -518,7 +569,7 @@ Voici donc la représentation des nombres 0, 1, et 5.</p>
 </div>
 </div>
 <div class="section" id="decrementation">
-<h2>Décrémentation<a class="headerlink" href="#decrementation" title="Permalink to this headline">¶</a></h2>
+<h2>Décrémentation<a class="headerlink" href="#decrementation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La <strong>décrémentation</strong> est effectué par l’enlèvement d’un symblole et trouve le prédécesseur d’un nombre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -543,7 +594,7 @@ Voici donc la représentation des nombres 0, 1, et 5.</p>
 </div>
 </div>
 <div class="section" id="compteur">
-<h2>Compteur<a class="headerlink" href="#compteur" title="Permalink to this headline">¶</a></h2>
+<h2>Compteur<a class="headerlink" href="#compteur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous pouvons maintenant définir un algrithme qui compte.<br />
 Ci-dessous nous mettons la variable <code class="docutils literal notranslate"><span class="pre">u</span></code> à zéro et incrémentons 5 fois.</p>
 <div class="cell docutils container">
@@ -572,7 +623,7 @@ Ci-dessous nous mettons la variable <code class="docutils literal notranslate"><
 <li><p>la boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
 </ul>
 <div class="section" id="addition">
-<h3>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">¶</a></h3>
+<h3>Addition<a class="headerlink" href="#addition" title="Lien permanent vers ce titre">¶</a></h3>
 <p>L’addition se traduit par la concatenation de deux séquences qui représentent un nombre. Ici l’opérateur <code class="docutils literal notranslate"><span class="pre">+</span></code> est l’opérateur de concaténation de deux chaînes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -597,7 +648,7 @@ Ci-dessous nous mettons la variable <code class="docutils literal notranslate"><
 </div>
 </div>
 <div class="section" id="soustraction">
-<h3>Soustraction<a class="headerlink" href="#soustraction" title="Permalink to this headline">¶</a></h3>
+<h3>Soustraction<a class="headerlink" href="#soustraction" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La soustraction se traduit par l’effacement ou l’enlèvement d’un nombre de caractères correspondant au deuxième nombre.</p>
 <p>En Python nous utilison l’opérateur de tranche <code class="docutils literal notranslate"><span class="pre">[m:n]</span></code>
 pour enlever un certain nombre de symboles.</p>
@@ -639,7 +690,7 @@ Un message d’erreur serait une possibilité, mais à l’occurence la fonction
 </div>
 </div>
 <div class="section" id="multiplication">
-<h2>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">¶</a></h2>
+<h2>Multiplication<a class="headerlink" href="#multiplication" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La multiplication de deux entiers naturels s’effectue par substitution de chaque symbole de la séquence du premier par une copie de la séquence du deuxième.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -664,7 +715,7 @@ Un message d’erreur serait une possibilité, mais à l’occurence la fonction
 </div>
 </div>
 <div class="section" id="division">
-<h2>Division<a class="headerlink" href="#division" title="Permalink to this headline">¶</a></h2>
+<h2>Division<a class="headerlink" href="#division" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La division se traduit par la soustraction succéssive de <code class="docutils literal notranslate"><span class="pre">b</span></code> de <code class="docutils literal notranslate"><span class="pre">a</span></code>.
 Le nombre de soustractions <code class="docutils literal notranslate"><span class="pre">q</span></code> est le <code class="docutils literal notranslate"><span class="pre">quotient</span></code>. Ce qui reste de <code class="docutils literal notranslate"><span class="pre">a</span></code>
 est le <strong>reste</strong> de la division</p>
@@ -696,7 +747,7 @@ est le <strong>reste</strong> de la division</p>
 </div>
 </div>
 <div class="section" id="table-de-multiplication">
-<h2>Table de multiplication<a class="headerlink" href="#table-de-multiplication" title="Permalink to this headline">¶</a></h2>
+<h2>Table de multiplication<a class="headerlink" href="#table-de-multiplication" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous sommes maintenant capable de definir un algorithme qui affiche le livret de 3 affiché pour 1 à 10.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -754,6 +805,8 @@ est le <strong>reste</strong> de la division</p>
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="algo.html" title="previous page">Algorithmique</a>
+    <a class='right-next' id="next-link" href="../misc/markdown.html" title="next page">Markdown</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
