@@ -7,6 +7,7 @@
         - file: python/3_loops
         - file: python/ex1
         - file: python/ex2
+        - file: python/ex/ex
           sections:
             - file: python/python1_ex1
 
