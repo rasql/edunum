@@ -11,7 +11,8 @@
           - file: python/vi/3/3_ex2
           - file: python/vi/3/3_ex3
           
-        - file: python/le/3/3ex  
+        - file: python/le/3/3ex
+        - file: python/le/4/fonctions
         
         - file: python/ex1
         - file: python/ex2
