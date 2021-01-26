@@ -3,21 +3,21 @@
     - file: python/index
       sections:
         - file: python/1_intro
+        - file: python/1_calc
         - file: python/2_struct
+        - file: python/3_list
+        - file: python/4_loop
         
         - file: python/vi/3/3_loops
           sections:
           - file: python/vi/3/3_ex1
           - file: python/vi/3/3_ex2
           - file: python/vi/3/3_ex3
-          
-        - file: python/le/3/3ex
-        - file: python/le/4/fonctions
+
         
         - file: python/ex1
         - file: python/ex2
-          sections:
-            - file: python/python1_ex1
+        - file: python/quiz
 
     - file: plot/intro
       sections:
@@ -41,3 +41,4 @@
     
     - file: misc/markdown
     - file: misc/jupyter
+    - file: misc/thonny
