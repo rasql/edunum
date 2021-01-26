@@ -1,0 +1,1065 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Texte (string) &#8212; Education numérique</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/questions.js"></script>
+    <script type="text/javascript" src="../_static/blanks.js"></script>
+    <script type="text/javascript" src="../_static/reactions.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script type="text/javascript">
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Les structures de flux" href="2_struct.html" />
+    <link rel="prev" title="Calcul numérique" href="1_calc.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Education numérique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="index.html">
+   Programmer
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_intro.html">
+     Introduction à Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_calc.html">
+     Calcul numérique
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Texte (string)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2_struct.html">
+     Les structures de flux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_list.html">
+     Listes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4_loop.html">
+     Boucle
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="vi/3/3_loops.html">
+     Listes et boucles
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="vi/3/3_ex1.html">
+       Exercice sur les listes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="vi/3/3_ex2.html">
+       Ex. Boucle for
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="vi/3/3_ex3.html">
+       Ex. Boucle while
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex1.html">
+     Exerices Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex2.html">
+     Exercice - if-else
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="quiz.html">
+     Quiz
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../plot/intro.html">
+   Visualiser
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/plot.html">
+     Graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/param.html">
+     Paramètres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/numpy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/hist.html">
+     Histogrammes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/bar.html">
+     Diagrammes à barres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/polar.html">
+     Coordonnées polaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/text.html">
+     Text
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/style.html">
+     Style
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/color.html">
+     Couleurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/subplot.html">
+     Sous-graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/file.html">
+     Fichiers
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../rep_info.html">
+   Réprésentation de l’information
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algo/algo.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algo/unary.html">
+   Système unaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/jupyter.html">
+   Le notebook Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/thonny.html">
+   Thonny
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/python/1_text.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fpython/1_text.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/python/1_text.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/python/1_text.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rasql/edunum/blob/main/doc/python/1_text.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="lancement Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concepts">
+   Concepts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delimitation">
+   Délimitation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#longueur">
+   Longueur
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#index">
+   Index
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tranche">
+   Tranche
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#une-chaine-est-immuable">
+   Une chaine est immuable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operateur-de-concatenation">
+   Opérateur de concaténation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operateur-de-repetition">
+   Opérateur de répétition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#un-caractere-d-echappement">
+   Un caractère d’échappement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unicode">
+   Unicode
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#type">
+   Type
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conversion">
+   Conversion
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="texte-string">
+<h1>Texte (string)<a class="headerlink" href="#texte-string" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Un texte est une chaine de caractères.</p>
+<p><img alt="typewriter" src="https://media.giphy.com/media/3o84sqlBujhGoXvTyM/giphy-downsized.gif" /></p>
+<p>Le texte standard (ASCII code) consiste de</p>
+<ul class="simple">
+<li><p>26 lettres minuscules (<code class="docutils literal notranslate"><span class="pre">a-z</span></code>)</p></li>
+<li><p>26 lettres majuscules (<code class="docutils literal notranslate"><span class="pre">A-Z</span></code>)</p></li>
+<li><p>10 chiffres (<code class="docutils literal notranslate"><span class="pre">0-9</span></code>)</p></li>
+<li><p>symboles de ponctuation (<code class="docutils literal notranslate"><span class="pre">.,;:?!</span></code>)</p></li>
+<li><p>délimiteurs (<code class="docutils literal notranslate"><span class="pre">(){}[]&lt;&gt;&quot;'</span></code>)</p></li>
+<li><p>symboles spéciaux (<code class="docutils literal notranslate"><span class="pre">$%&amp;/</span></code>)</p></li>
+<li><p>opérateurs (<code class="docutils literal notranslate"><span class="pre">+-*/</span></code>)</p></li>
+</ul>
+<div class="section" id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les concepts présentés dans ce chapitre sont</p>
+<ul class="simple">
+<li><p>création de string <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">'hello'</span></code></p></li>
+<li><p>délimitation par un guillemet simple <code class="docutils literal notranslate"><span class="pre">'</span></code> ou double <code class="docutils literal notranslate"><span class="pre">&quot;</span></code></p></li>
+<li><p>caractère d’échappement <code class="docutils literal notranslate"><span class="pre">\</span></code></p></li>
+</ul>
+<p>Les indexages</p>
+<ul class="simple">
+<li><p>index simple <code class="docutils literal notranslate"><span class="pre">s[i]</span></code> pour accéder à une seule lettre</p></li>
+<li><p>tranche <code class="docutils literal notranslate"><span class="pre">s[m:n]</span></code> pour accèder à une sous-chaine</p></li>
+<li><p>tranche <code class="docutils literal notranslate"><span class="pre">s[::i]</span></code> avec incrément (2) et chaine inversée (-1)</p></li>
+</ul>
+<p>Les fonctions</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">len()</span></code> pour retourner la longeur</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str()</span></code> pour transformer nombre en chaine</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int()</span></code> pour transformer chaine en nombre</p></li>
+</ul>
+<p>Les opérateurs</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> de concaténation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> de répétition</p></li>
+</ul>
+</div>
+<div class="section" id="delimitation">
+<h2>Délimitation<a class="headerlink" href="#delimitation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une chaine de caractères est délimitée par des guillemets anglais simples <code class="docutils literal notranslate"><span class="pre">'</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hello&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hello&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>ou des guillemets anglais doubles  <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.<br />
+<strong>Attention</strong>: il ne faut pas confondre le guillemet double <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> (1 caractère) avec deux guillemets simples <code class="docutils literal notranslate"><span class="pre">''</span></code> (2 caractères).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;world&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;world&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si le texte contient déjà un guillemet simple (apostrophe), on entoure le texte avec des guillemets doubles.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;c&#39;est bien&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;c&#39;est bien&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si une chaine contient les deux sortes de guillemets, on les précède avec une barre oblique inverse <code class="docutils literal notranslate"><span class="pre">\</span></code> (backslash) qui est le caractère d’échappement.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;c</span><span class="se">\&#39;</span><span class="s1">est &quot;très&quot; bien&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c&#39;est &quot;très&quot; bien
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="longueur">
+<h2>Longueur<a class="headerlink" href="#longueur" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une chaine s’appelle <strong>string</strong> en anglais.<br />
+C’est pour cela que nous utilisons souvent <code class="docutils literal notranslate"><span class="pre">s</span></code> comme variable pour désigner une chaine.<br />
+Par exemple:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">len()</span></code> retourne la longueur de la chaine.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="index">
+<h2>Index<a class="headerlink" href="#index" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Chaque caractère d’une chaine peux être accédé par son index.<br />
+Un index est un nombre entier, commençant avec 0 pour le premier caractère.</p>
+<p>Voici la première et deuxième lettre du texte <code class="docutils literal notranslate"><span class="pre">s</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;P&#39;, &#39;y&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Un index négatif permet d’accéder à une chaine dépuis sa fin.
+Voici la dernière et avant-dernière lettre du string <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;n&#39;, &#39;o&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tranche">
+<h2>Tranche<a class="headerlink" href="#tranche" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une tranche est un sous-ensemble d’une chaine indiqué par un double indice de la forme <code class="docutils literal notranslate"><span class="pre">[m:n]</span></code>.<br />
+Elle retourne la sous-chaine avec les lettres qui ont un indice m à n-1.</p>
+<p>Voici la sous-chaine avec les indices 0, 1, et 2.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Pyt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voici la sous-chaine avec les indices 2 et 3.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;th&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voici la sous-chaine avec les indices 3, 4 et 5.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hon&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Un troisième paramètre peut donner l”<strong>incrément</strong>.<br />
+Voici la chaine avec les lettres 0, 2, et 4 (à cause de l’incrément 2).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Pto&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Un incrément négatif (-1) <strong>inverse</strong> la chaine.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;nohtyP&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="une-chaine-est-immuable">
+<h2>Une chaine est immuable<a class="headerlink" href="#une-chaine-est-immuable" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Contrairement à une liste, une chaine est <strong>immuable</strong>.<br />
+Essayer de réaffecter une lettre, donne une erreur.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s[0] = &#39;J&#39;
+TypeError: &#39;str&#39; object does not support item assignment
+</pre></div>
+</div>
+<p>Par contre c’est possible de créer une nouvelle chaine.<br />
+Nous pouvons concaténer une lettre et une tranche d’une chaine existante, pour en former une nouvelle chaine.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;J&#39;</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Jython&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operateur-de-concatenation">
+<h2>Opérateur de concaténation<a class="headerlink" href="#operateur-de-concatenation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’opératieur <code class="docutils literal notranslate"><span class="pre">+</span></code> permet de concatener (enchainer) deux textes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;world&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La concatenation donne</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;helloworld&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous pouvons ajouter une espace au milieu.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hello world&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous pouvons ajouter un retour à la ligne (<code class="docutils literal notranslate"><span class="pre">\n</span></code>) au milieu.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+world
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operateur-de-repetition">
+<h2>Opérateur de répétition<a class="headerlink" href="#operateur-de-repetition" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’opératieur <code class="docutils literal notranslate"><span class="pre">*</span></code> permet de répéter un texte.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hi&#39;</span> <span class="o">*</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hihihihihihihihihihihihihihihihihihihihi&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">*</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hellohellohellohellohello&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Maintenant, l’opérateur <code class="docutils literal notranslate"><span class="pre">*</span></code> signifie la multiplication</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span> <span class="o">*</span> <span class="mi">12</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>144
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous pouvons utiliser des parenthèses pour fixer la priorité.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hello hello hello hello hello &#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="un-caractere-d-echappement">
+<h2>Un caractère d’échappement<a class="headerlink" href="#un-caractere-d-echappement" title="Lien permanent vers ce titre">¶</a></h2>
+<p>En informatique et en télécommunications, est un caractère qui déclenche une interprétation alternative du ou des caractères qui le suivent. En Python nous avons la <strong>barre oblique inversée</strong> comme caractère d’échappement.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">\n</span></code> pour un retour à la ligne (=newline)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\t</span></code> pour un tabulateur</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\\</span></code> pour échapper le caractère d’échappement.</p></li>
+</ul>
+<p>Le tabulateur aligne un texte à des multiples de 8.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello</span><span class="se">\t</span><span class="s1">world&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1</span><span class="se">\t</span><span class="s1">2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello	world
+1	2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le <code class="docutils literal notranslate"><span class="pre">\n</span></code> (newline) insère un retour à la ligne.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello</span><span class="se">\n</span><span class="s1">world&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+world
+</pre></div>
+</div>
+</div>
+</div>
+<p>La première et troisième barre oblique sont échapés.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tab=</span><span class="se">\\</span><span class="s1">t </span><span class="se">\t</span><span class="s1">newline=</span><span class="se">\\</span><span class="s1">n</span><span class="se">\n</span><span class="s1">1</span><span class="se">\t</span><span class="s1">2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tab=\t 	newline=\n
+1	2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="unicode">
+<h2>Unicode<a class="headerlink" href="#unicode" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le chaines de caractères utilisent Unicode. Ceci permet de créer des chaines dans toutes les langues du mondes.</p>
+<p>Voici une chaine en japonais avec une sous-tranche.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jap</span> <span class="o">=</span> <span class="s1">&#39;これは日本語です&#39;</span>
+<span class="n">jap</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;日本語&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voici une chaine qui utilise des emoji.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">emoji</span> <span class="o">=</span> <span class="s1">&#39;🍏🍎🍐🍊🍋🍌🍉🍇🍓&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voici deux emojis répétés 10 fois.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;🍎🍏&#39;</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;🍎🍏🍎🍏🍎🍏🍎🍏🍎🍏🍎🍏🍎🍏🍎🍏🍎🍏🍎🍏&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="type">
+<h2>Type<a class="headerlink" href="#type" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">type</span></code> retourne le type d’un objet.<br />
+Pour une chaine c’est <code class="docutils literal notranslate"><span class="pre">str</span></code> (=string).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voici trois autres types:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> (entier)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> (virgule fottante</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code> (booléen)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="mf">1.2</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(int, float, bool)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conversion">
+<h2>Conversion<a class="headerlink" href="#conversion" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un nombre peut être présenté comme chaine.<br />
+L’opérateur <code class="docutils literal notranslate"><span class="pre">*</span></code> signifie alors la répétition.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;12&#39;</span> <span class="o">*</span> <span class="mi">12</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;121212121212121212121212&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Maintenant, l’opérateur <code class="docutils literal notranslate"><span class="pre">*</span></code> signifie la multiplication</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span> <span class="o">*</span> <span class="mi">12</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>144
+</pre></div>
+</div>
+</div>
+</div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">int()</span></code> transforme une chaine qui represente un entier en entier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;12&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p>L’opérateur inverse <code class="docutils literal notranslate"><span class="pre">str()</span></code> transforme un nombre en string.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;123&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="1_calc.html" title="previous page">Calcul numérique</a>
+    <a class='right-next' id="next-link" href="2_struct.html" title="next page">Les structures de flux</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Holzer<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

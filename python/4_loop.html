@@ -1,0 +1,845 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Boucle &#8212; Education numérique</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/questions.js"></script>
+    <script type="text/javascript" src="../_static/blanks.js"></script>
+    <script type="text/javascript" src="../_static/reactions.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script type="text/javascript">
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Listes et boucles" href="vi/3/3_loops.html" />
+    <link rel="prev" title="Listes" href="3_list.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Education numérique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="index.html">
+   Programmer
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_intro.html">
+     Introduction à Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_calc.html">
+     Calcul
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html">
+     Texte (string)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html#resume">
+     Résumé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html#delimitation">
+     Délimitation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html#longueur">
+     Longueur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html#index">
+     Index
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html#tranche">
+     Tranche
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html#une-chaine-est-immuable">
+     Une chaine est immuable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html#operateur-de-concatenation">
+     Opérateur de concaténation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html#operateur-de-repetition">
+     Opérateur de répétition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html#type">
+     Type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html#conversion">
+     Conversion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2_struct.html">
+     Les structures de flux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_list.html">
+     Listes
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Boucle
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="vi/3/3_loops.html">
+     Listes et boucles
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="vi/3/3_ex1.html">
+       Exercice sur les listes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="vi/3/3_ex2.html">
+       Ex. Boucle for
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="vi/3/3_ex3.html">
+       Ex. Boucle while
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex1.html">
+     Exerices Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex2.html">
+     Exercice - if-else
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="quiz.html">
+     Quiz
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../plot/intro.html">
+   Visualiser
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/plot.html">
+     Graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/param.html">
+     Paramètres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/numpy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/hist.html">
+     Histogrammes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/bar.html">
+     Diagrammes à barres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/polar.html">
+     Coordonnées polaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/text.html">
+     Text
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/style.html">
+     Style
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/color.html">
+     Couleurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/subplot.html">
+     Sous-graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/file.html">
+     Fichiers
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../rep_info.html">
+   Réprésentation de l’information
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algo/algo.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algo/unary.html">
+   Système unaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/jupyter.html">
+   Le notebook Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/thonny.html">
+   Thonny
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/python/4_loop.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fpython/4_loop.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/python/4_loop.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/python/4_loop.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rasql/edunum/blob/main/doc/python/4_loop.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="lancement Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-boucle-for">
+   La boucle
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-bloc">
+   Le bloc
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#iterer-sur-une-liste">
+   Itérer sur une liste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#iterer-sur-une-chaine">
+   Itérer sur une chaine
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#iterer-sur-une-plage">
+   Itérer sur une plage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boucles-impriques">
+   Boucles impriques
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="boucle">
+<h1>Boucle<a class="headerlink" href="#boucle" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Une boucle permet de <strong>répéter un bloc d’instructions</strong> un certain nombre de fois.</p>
+<p><img alt="loop" src="https://media.giphy.com/media/FGnCkFfcHXaGk/giphy.gif" /></p>
+<div class="section" id="la-boucle-for">
+<h2>La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#la-boucle-for" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> est une répétition pour chaque élément d’un ensemble.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+    <span class="n">bloc</span>
+</pre></div>
+</div>
+<p>Formellement nous avons</p>
+<ul class="simple">
+<li><p>le mot-clé <code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
+<li><p>une variable <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
+<li><p>le mot-clé <code class="docutils literal notranslate"><span class="pre">in</span></code></p></li>
+<li><p>le deux-points <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
+<li><p>un <code class="docutils literal notranslate"><span class="pre">bloc</span></code> indenté de 1+ instructions.</p></li>
+</ul>
+<p>Par exemple</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">345</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>123
+23
+345
+</pre></div>
+</div>
+</div>
+</div>
+<p>On appelle les répétions du <code class="docutils literal notranslate"><span class="pre">bloc</span></code> aussi des <strong>itérations</strong>. On dit <strong>itérer sur la séquence</strong>.</p>
+<p>On appelle la variable <code class="docutils literal notranslate"><span class="pre">x</span></code> un <strong>itérateur</strong>. Cette variable peut avoir n’importe quel nom. Cette variable prend succéssivement (un après l’autre) toutes les valeurs de la séquence.</p>
+</div>
+<div class="section" id="le-bloc">
+<h2>Le bloc<a class="headerlink" href="#le-bloc" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le bloc répété consiste d’une ou plusieurs (1+) instructions.
+Toutes les instructions qui font partie du bloc sont indentées.
+La première instruction qui n’est plus indentée ne fait plus partie du bloc.</p>
+<p>Ici <strong>instruction 1</strong> fait partie du bloc d’itération.<br />
+Donc, cette instruction est exécutée 3 fois.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;i =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;instruction 1&#39;</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;instruction 2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i = 0
+instruction 1
+i = 1
+instruction 1
+i = 2
+instruction 1
+instruction 2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Maintenant, <strong>instruction 1</strong> ne fait plus partie du bloc d’itération.<br />
+Cette instruction est exécutée seulement une fois.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;i =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;instruction 1&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;instruction 2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i = 0
+i = 1
+i = 2
+instruction 1
+instruction 2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="iterer-sur-une-liste">
+<h2>Itérer sur une liste<a class="headerlink" href="#iterer-sur-une-liste" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici une itération sur une liste de textes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pomme&#39;</span><span class="p">,</span> <span class="s1">&#39;poire&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;***&#39;</span><span class="p">,</span> <span class="n">fruit</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*** pomme
+*** poire
+*** orange
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voici une itération sur une liste de nombres.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premiers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">premiers</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;i =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;  i**2 =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i = 2   i**2 = 4
+i = 3   i**2 = 9
+i = 5   i**2 = 25
+i = 7   i**2 = 49
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adjectives</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;belle&#39;</span><span class="p">,</span> <span class="s1">&#39;riche&#39;</span><span class="p">,</span> <span class="s1">&#39;intelligente&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">adjectives</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;elle est&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>elle est belle
+elle est riche
+elle est intelligente
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous pouvons aussi concatener les textes et la variable avec l’opérateur <code class="docutils literal notranslate"><span class="pre">+</span></code>.<br />
+Attention aux espaces!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">adjectives</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;elle est &#39;</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="s1">&#39;, bien plus &#39;</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="s1">&#39; que lui.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>elle est belle, bien plus belle que lui.
+elle est riche, bien plus riche que lui.
+elle est intelligente, bien plus intelligente que lui.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="iterer-sur-une-chaine">
+<h2>Itérer sur une chaine<a class="headerlink" href="#iterer-sur-une-chaine" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> peut itérer sur une chaine.<br />
+L’itérateur prend alors chaque valeur de la séquence.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;Python&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;lettre -&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lettre - P
+lettre - y
+lettre - t
+lettre - h
+lettre - o
+lettre - n
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="iterer-sur-une-plage">
+<h2>Itérer sur une plage<a class="headerlink" href="#iterer-sur-une-plage" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous pouvons itérer sur une plage d’entiers</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;* 2 =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 * 2 = 2
+2 * 2 = 4
+3 * 2 = 6
+4 * 2 = 8
+5 * 2 = 10
+6 * 2 = 12
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous pouvons utiliser l’itérateur multiple fois dans le bloc d’itération.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 * 10 = 100
+11 * 11 = 121
+12 * 12 = 144
+13 * 13 = 169
+14 * 14 = 196
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="boucles-impriques">
+<h2>Boucles impriques<a class="headerlink" href="#boucles-impriques" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous pouvons placer une boucle dans une boucle.</p>
+<p>Nous appelons la boucle en <code class="docutils literal notranslate"><span class="pre">i</span></code> extérieure, et la boucle en <code class="docutils literal notranslate"><span class="pre">j</span></code> boucle intérieure.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;i =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39; j =&#39;</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i = 0  j = 0
+i = 0  j = 1
+i = 1  j = 0
+i = 1  j = 1
+i = 2  j = 0
+i = 2  j = 1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Normalement chaque instruction <code class="docutils literal notranslate"><span class="pre">print</span></code> se termine avec un retour à la ligne.
+L’argument optionel <code class="docutils literal notranslate"><span class="pre">end</span></code> permet de le changer en 3 espaces.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;   &#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>( 0 0 )   ( 0 1 )   ( 0 2 )   ( 0 3 )   ( 0 4 )   
+( 1 0 )   ( 1 1 )   ( 1 2 )   ( 1 3 )   ( 1 4 )   
+( 2 0 )   ( 2 1 )   ( 2 2 )   ( 2 3 )   ( 2 4 )   
+</pre></div>
+</div>
+</div>
+</div>
+<p>Les boucles imbriquées nous permettent de programmer une table de multiplication.
+Cette fois nous utlison le caractère spéciale <strong>tabulateur</strong> <code class="docutils literal notranslate"><span class="pre">\t</span></code> qui aligne les caractèrs sur 8 caractères-</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">j</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1	2	3	4	5	6	7	8	9	
+2	4	6	8	10	12	14	16	18	
+3	6	9	12	15	18	21	24	27	
+4	8	12	16	20	24	28	32	36	
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="3_list.html" title="previous page">Listes</a>
+    <a class='right-next' id="next-link" href="vi/3/3_loops.html" title="next page">Listes et boucles</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Holzer<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
