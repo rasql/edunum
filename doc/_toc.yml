@@ -4,15 +4,18 @@
       sections:
         - file: python/1_intro
         - file: python/1_calc
+        - file: python/1_text
         - file: python/2_struct
         - file: python/3_list
         - file: python/4_loop
         
-        - file: python/vi/3/3_loops
-          sections:
-          - file: python/vi/3/3_ex1
-          - file: python/vi/3/3_ex2
-          - file: python/vi/3/3_ex3
+#        - file: python/vi/3/3_loops
+#          sections:
+#          - file: python/vi/3/3_ex1
+#          - file: python/vi/3/3_ex2
+#          - file: python/vi/3/3_ex3
+          
+#        - file: python/le/3/3ex
 
         
         - file: python/ex1
