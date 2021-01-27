@@ -73,8 +73,17 @@ repository:
 launch_buttons:
   notebook_interface: "classic" # or "jupyterlab"
 
+
 #######################################################################################
 #binder:
   binderhub_url               : "https://mybinder.org"
   text                        : "Launch binder"
 
+  colab_url                   : "https://colab.research.google.com"
+  text                        : "Launch Colab"
+  
+  cocalc_url                  : "https://cocalc.com"
+  text                        : "Launch CoCalc"
+  
+  kaggle_url                  : "https://www.kaggle.com"
+  text                        : "Launch Kaggle"
