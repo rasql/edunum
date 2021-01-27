@@ -64,7 +64,7 @@
     <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Calcul" href="1_calc.html" />
+    <link rel="next" title="Calcul numérique" href="1_calc.html" />
     <link rel="prev" title="Programmer" href="index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -108,7 +108,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="1_calc.html">
-     Calcul
+     Calcul numérique
     </a>
    </li>
    <li class="toctree-l2">
@@ -117,58 +117,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1_text.html#resume">
-     Résumé
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_text.html#delimitation">
-     Délimitation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_text.html#longueur">
-     Longueur
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_text.html#index">
-     Index
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_text.html#tranche">
-     Tranche
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_text.html#une-chaine-est-immuable">
-     Une chaine est immuable
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_text.html#operateur-de-concatenation">
-     Opérateur de concaténation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_text.html#operateur-de-repetition">
-     Opérateur de répétition
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_text.html#type">
-     Type
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_text.html#conversion">
-     Conversion
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="2_struct.html">
-     Les structures de flux
+     Les branchements
     </a>
    </li>
    <li class="toctree-l2">
@@ -181,38 +131,14 @@
      Boucle
     </a>
    </li>
-   <li class="toctree-l2 collapsible-parent">
-    <a class="reference internal" href="vi/3/3_loops.html">
-     Listes et boucles
-    </a>
-    <ul class="collapse-ul">
-     <li class="toctree-l3">
-      <a class="reference internal" href="vi/3/3_ex1.html">
-       Exercice sur les listes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="vi/3/3_ex2.html">
-       Ex. Boucle for
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="vi/3/3_ex3.html">
-       Ex. Boucle while
-      </a>
-     </li>
-    </ul>
-    <i class="fas fa-chevron-down">
-    </i>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ex1.html">
-     Exerices Boucles
+     Exercices Boucles
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ex2.html">
-     Exercice - if-else
+     Exercices if-else
     </a>
    </li>
    <li class="toctree-l2">
@@ -444,6 +370,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#un-programme-est-une-sequence">
+   Un programme est une séquence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calcul-mathematique">
    Calcul mathématique
   </a>
@@ -456,35 +387,13 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#texte">
-   Texte
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#caracteres-speciales">
-   Caractères spéciales
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#concatenation-et-repetion">
-   Concatenation (
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     +
-    </span>
-   </code>
-   ) et répétion (
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     *
-    </span>
-   </code>
-   )
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#boucles">
    Boucles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#execution-pas-a-pas">
+   Execution pas à pas
   </a>
  </li>
 </ul>
@@ -500,10 +409,17 @@
                 
   <div class="section" id="introduction-a-python">
 <h1>Introduction à Python<a class="headerlink" href="#introduction-a-python" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Pyhton est un langage de programmation qui est populaire, puissant et concis.</p>
+<p>Python est un <strong>langage</strong> de programmation.</p>
+<p><img alt="intro" src="https://media.giphy.com/media/mXeOgQvTWweG1hODif/giphy-downsized.gif" /></p>
+<p>Python est:</p>
+<ul class="simple">
+<li><p><strong>populaire</strong> (mondialement numéro 3, après C et Java)</p></li>
+<li><p><strong>puissant</strong> (des milliers de modules d’extensions)</p></li>
+<li><p><strong>concis</strong> (peu de mot-clés, visuel)</p></li>
+</ul>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ce document présente la programmation en Python. Partout dans le document, des exemple de code sont donnée. Voici le tout premier exemple d’une ligne de code.</p>
+<p>Ce document présente la programmation en Python. Partout dans le document, des exemples de code sont donnés. Voici le tout premier exemple d’une ligne de code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
@@ -523,18 +439,21 @@
 <li><p>des guillemets <code class="docutils literal notranslate"><span class="pre">''</span></code> qui entourent un texte</p></li>
 <li><p>une chaine de texte <code class="docutils literal notranslate"><span class="pre">hello</span></code></p></li>
 </ul>
-<p>Multiples instruction peuvent se suivre, et on appelle une séquence d’instructions un programme. Dans l’exemple suivant nous avons une suite de 3 instructions.</p>
+</div>
+<div class="section" id="un-programme-est-une-sequence">
+<h2>Un programme est une séquence<a class="headerlink" href="#un-programme-est-une-sequence" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Multiples instructions peuvent se suivre, et on appelle une telle <strong>séquence d’instructions</strong> un programme. Dans l’exemple suivant nous avons une suite de 3 instructions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;introduction&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;à la programmation&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;commençons&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;à programmer&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;avec Python&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>introduction
-à la programmation
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>commençons
+à programmer
 avec Python
 </pre></div>
 </div>
@@ -566,27 +485,28 @@ avec Python
 <li><p>division (<code class="docutils literal notranslate"><span class="pre">/</span></code>)</p></li>
 </ul>
 <p>Nous pouvons placer plusieurs expression sur une même ligne et les séparer par des virgules. Cette séquence est appelé un <strong>tuple</strong>. Un tuple est délimité par des parenthèses <code class="docutils literal notranslate"><span class="pre">()</span></code> et les éléments sont séparé par des virgules.</p>
+<p>Voici une multiplication</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">*</span><span class="mi">3</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-1, 6, 0.75)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
 </div>
-<p>La division entière  (<code class="docutils literal notranslate"><span class="pre">//</span></code>) et le reste, aussi appelé modulo (<code class="docutils literal notranslate"><span class="pre">%</span></code>).</p>
+<p>et une division</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span><span class="o">//</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="o">%</span><span class="k">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">/</span><span class="mi">4</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3, 1)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.75
 </pre></div>
 </div>
 </div>
@@ -594,202 +514,66 @@ avec Python
 <p>Les paranthèses changent la priorité</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(7, 9)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="texte">
-<h2>Texte<a class="headerlink" href="#texte" title="Lien permanent vers ce titre">¶</a></h2>
-<p>A part des nombres, Python excelle dans le traitement de l’information textuelle. Une chaine de caractères est délimité par des</p>
-<ul class="simple">
-<li><p>guillemets simples</p></li>
-<li><p>guillemets doubles</p></li>
-</ul>
-<p>Attention il ne faut pas confondre deux guillements simples <code class="docutils literal notranslate"><span class="pre">''</span></code> avec un guillement double <code class="docutils literal notranslate"><span class="pre">&quot;</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;c&#39;est&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;hello&#39;, &#39;hello&#39;, &quot;c&#39;est&quot;)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Par défaut Phython utilise les guillemets simple. Si le texte contient un guillemet simple, alors on le délimite avec des guillements doubles.</p>
-<p>Une autre façon de marquer les guillements est de les précéder avec un barre oblique en arrière <code class="docutils literal notranslate"><span class="pre">\</span></code> (back slash).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c</span><span class="se">\&#39;</span><span class="s1">est &quot;très&quot; bon&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c&#39;est &quot;très&quot; bon
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="caracteres-speciales">
-<h2>Caractères spéciales<a class="headerlink" href="#caracteres-speciales" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une séries de caractères spéciales utilise la barre oblique:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">\n</span></code> le retour a la ligne (newline)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">\t</span></code> le tabulateur</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bon</span><span class="se">\n</span><span class="s1">jour&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bon
-jour
-</pre></div>
-</div>
-</div>
-</div>
-<p>Le tabulateur est souvant utilisé pour aligner le texte en colonnes. La valeur par défaut est de 8 caractères.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x</span><span class="se">\t</span><span class="s1">y&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;12</span><span class="se">\t</span><span class="s1">1.2&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;13</span><span class="se">\t</span><span class="s1">1.34&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x	y
-12	1.2
-13	1.34
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="concatenation-et-repetion">
-<h2>Concatenation (<code class="docutils literal notranslate"><span class="pre">+</span></code>) et répétion (<code class="docutils literal notranslate"><span class="pre">*</span></code>)<a class="headerlink" href="#concatenation-et-repetion" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les opérateurs d’addition et multiplication ont une autre signification si ils sont appliqué avec un texte:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> est l’opérateur de concaténation</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> est l’opérateur de répétition</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;bon&#39;</span> <span class="o">+</span> <span class="s1">&#39;jour&#39;</span><span class="p">,</span> <span class="s1">&#39;ha&#39;</span> <span class="o">*</span> <span class="mi">5</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;bonjour&#39;, &#39;hahahahaha&#39;)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Addtion de nombres et concaténation de texte</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span> <span class="o">+</span> <span class="s1">&#39;5&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(15, &#39;105&#39;)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Multiplication de nombres et répétition de texte</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">*</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span> <span class="o">*</span> <span class="mi">5</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(50, &#39;1010101010&#39;)
-</pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="boucles">
 <h2>Boucles<a class="headerlink" href="#boucles" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une boucle permet de répeter un bloc de code. Dans l’exemple ci-dessous le bloc <code class="docutils literal notranslate"><span class="pre">print</span></code> est répétés 4 fois, pour aficher l’itérateur <code class="docutils literal notranslate"><span class="pre">i</span></code>, son carré et son cube.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0
-1 1
-2 4
-3 9
-4 16
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 1 1
+2 4 8
+3 9 27
+4 16 64
 </pre></div>
 </div>
 </div>
 </div>
+<p>Une boucle peux aussi itérer sur un chaine, lettre par lettre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;Hello&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p
-y
-t
-h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>H
+e
+l
+l
 o
-n
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;Monty Python&#39;</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isupper</span><span class="p">()]</span>
-</pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;M&#39;, &#39;P&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Monty Python&#39;</span>
-<span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-    <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="n">d</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;M&#39;: 1, &#39;o&#39;: 2, &#39;n&#39;: 2, &#39;t&#39;: 2, &#39;y&#39;: 2, &#39; &#39;: 1, &#39;P&#39;: 1, &#39;h&#39;: 1}
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="execution-pas-a-pas">
+<h2>Execution pas à pas<a class="headerlink" href="#execution-pas-a-pas" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’éditeur Thonny permet d’exécuter un programme pas à pas.</p>
+<p><a class="reference download internal" download="" href="../_downloads/63e3d278d519a5e2e00457f145c79c99/demo2.py"><code class="xref download docutils literal notranslate"><span class="pre">prog/demo2.py</span></code></a></p>
+<ul class="simple">
+<li><p>Affichez les variables</p></li>
+<li><p>Démarrez l’exécution pas à pas avec le bouton Débogueur (insect)</p></li>
+<li><p>Avancez pas à pas (F7)</p></li>
+</ul>
+<p><img alt="" src="../_images/thonny_step.png" /></p>
 </div>
 </div>
 
@@ -822,7 +606,7 @@ n
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="index.html" title="previous page">Programmer</a>
-    <a class='right-next' id="next-link" href="1_calc.html" title="next page">Calcul</a>
+    <a class='right-next' id="next-link" href="1_calc.html" title="next page">Calcul numérique</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
