@@ -12,7 +12,8 @@ only_build_toc_files: true
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: auto
+  execute_notebooks: false
+  #execute_notebooks: auto
   #execute_notebooks           : cache
 
 #######################################################################################
@@ -50,6 +51,11 @@ html:
 sphinx:
   config:
     html_show_copyright: false
+    language: fr
+    html_theme: sphinx_book_theme
+  local_extensions:
+    questions: ../extensions/
+    blanks: ../extensions/
 
 #######################################################################################
 # Interact link settings
@@ -67,8 +73,17 @@ repository:
 launch_buttons:
   notebook_interface: "classic" # or "jupyterlab"
 
+
 #######################################################################################
 #binder:
   binderhub_url               : "https://mybinder.org"
   text                        : "Launch binder"
 
+  colab_url                   : "https://colab.research.google.com"
+  text                        : "Launch Colab"
+  
+  cocalc_url                  : "https://cocalc.com"
+  text                        : "Launch CoCalc"
+  
+  kaggle_url                  : "https://www.kaggle.com"
+  text                        : "Launch Kaggle"
