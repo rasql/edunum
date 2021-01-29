@@ -61,8 +61,6 @@ print("Message décodé      : ",messageDecode)
 
 messageADecoder = "MoCCo vsqxo oBC moACksxowoxC vk zvDB vsBslvo no CyDCoB"
 
-
-clef = 0
 for clef in range(20):
 	clef = clef + 1
 	messageDecode = ""
