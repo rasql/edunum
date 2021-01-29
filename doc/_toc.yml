@@ -8,6 +8,7 @@
         - file: python/2_struct
         - file: python/3_list
         - file: python/4_loop
+        - file: python/4_text2
         
 #        - file: python/vi/3/3_loops
 #          sections:
