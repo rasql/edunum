@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calcul numérique &#8212; Education numérique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -24,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,31 +38,30 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/questions.js"></script>
-    <script type="text/javascript" src="../_static/blanks.js"></script>
-    <script type="text/javascript" src="../_static/reactions.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Texte (string)" href="1_text.html" />
@@ -129,6 +129,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="4_loop.html">
      Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="le/2/seance8.html">
+     Séance 8
     </a>
    </li>
    <li class="toctree-l2">
@@ -375,8 +380,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#operations-entiers">
-   Opérations entiers
+  <a class="reference internal nav-link" href="#division-entiere-et-reste">
+   Division entière et reste
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -392,11 +397,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variables">
    Variables
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#utiliser-une-variable">
-   Utiliser une variable
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -438,9 +438,9 @@
 <h2>Utilisation de la console<a class="headerlink" href="#utilisation-de-la-console" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Tous ces opérations simples, vous pouvez les faire dans la <strong>console</strong> de votre éditeur Thonny.</p>
 <ul class="simple">
-<li><p>tapez vos expression après l’invite <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code></p></li>
+<li><p>tapez une expression après l’invite <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code></p></li>
 <li><p>appuyez sur la touche <strong>Retour</strong> pour exécuter l’expression</p></li>
-<li><p>vous ne pouvez plus modifer des expression déjà exécutés</p></li>
+<li><p>vous ne pouvez plus modifer une expression déjà exécutée</p></li>
 <li><p>vous devez ajouter une nouvelle expression et l’exécuter de nouveau</p></li>
 </ul>
 <p><img alt="" src="../_images/thonny_calc.png" /></p>
@@ -500,8 +500,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="operations-entiers">
-<h2>Opérations entiers<a class="headerlink" href="#operations-entiers" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="division-entiere-et-reste">
+<h2>Division entière et reste<a class="headerlink" href="#division-entiere-et-reste" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’opérateur <code class="docutils literal notranslate"><span class="pre">//</span></code> est pour la division entière.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -528,7 +528,8 @@
 </div>
 </div>
 </div>
-<p>L’opérateur modulo <code class="docutils literal notranslate"><span class="pre">%</span></code> donne le reste de la division entière.</p>
+<p>L’opérateur modulo <code class="docutils literal notranslate"><span class="pre">%</span></code> donne le reste de la division entière.<br />
+Par exemple 10 divisé par 3 donne 3, avec un reste de 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>
@@ -570,7 +571,7 @@
 </div>
 <div class="section" id="puissance">
 <h2>Puissance<a class="headerlink" href="#puissance" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’opérateur de puissance est <code class="docutils literal notranslate"><span class="pre">**</span></code></p>
+<p>L’opérateur de puissance est <code class="docutils literal notranslate"><span class="pre">**</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">**</span> <span class="mi">2</span>
@@ -583,7 +584,7 @@
 </div>
 </div>
 </div>
-<p>Dans un octet nous avons 2 à la puissance 8 valeurs différents.</p>
+<p>Dans un octet nous avons 2 à la puissance 8 valeurs différentes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">**</span> <span class="mi">8</span>
@@ -596,7 +597,8 @@
 </div>
 </div>
 </div>
-<p>En Python le calcul en entier n’est pas limité dans sa précision.</p>
+<p>En Python le calcul en entier n’est pas limité dans sa précision.<br />
+Une opération avec des entiers peut donner un nombre avec beaucoup de chiffres.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">99</span> <span class="o">**</span> <span class="mi">99</span>
@@ -605,6 +607,20 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>369729637649726772657187905628805440595668764281741102430259972423552570455277523421410650010128232727940978889548326540119429996769494359451621570193644014418071060667659301384999779999159200499899
+</pre></div>
+</div>
+</div>
+</div>
+<p>Par contre, la précision avec des nombres à virgule flottante et limité à 16 chiffres.<br />
+Voici le même calcul fait cette fois avec des nombres à virgule flottante.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">99.</span> <span class="o">**</span> <span class="mf">99.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.697296376497268e+197
 </pre></div>
 </div>
 </div>
@@ -628,13 +644,18 @@
 </div>
 <div class="section" id="parentheses">
 <h2>Parenthèses<a class="headerlink" href="#parentheses" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’ordre de priorité est</p>
+<p>L’ordre de priorité des opérations est</p>
 <ul class="simple">
 <li><p>puissance</p></li>
 <li><p>multiplication et division</p></li>
 <li><p>addition et soustraction</p></li>
 </ul>
-<p>Dans l’exemple ci-dessous nous calculons d’abord la puissance (27) ensuite la multiplication (54) et finalement l’addition.</p>
+<p>Dans l’exemple ci-dessous nous calculons</p>
+<ul class="simple">
+<li><p>d’abord la puissance (27)</p></li>
+<li><p>ensuite la multiplication (54)</p></li>
+<li><p>et finalement l’addition (55).</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">**</span> <span class="mi">3</span>
@@ -688,9 +709,9 @@
 <div class="section" id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une variable est une place en mémoire pour stocker une valeur.</p>
-<p>En Python une variable est créé avec une opération d”<strong>affection</strong>.
+<p>En Python une variable est créé avec une opération d”<strong>affectation</strong>.
 Elle à la forme</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>variable = valeur
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span> <span class="o">=</span> <span class="n">valeur</span>
 </pre></div>
 </div>
 <p>Ou plus générale</p>
@@ -698,7 +719,7 @@ Elle à la forme</p>
 </pre></div>
 </div>
 <p>L’expression est évalué, et sa valeur est affecté à la variable.<br />
-Par exemple 2 + 3 donne 5. La variable <strong>a</strong> est obtient la valeur 5.</p>
+Par exemple 2 + 3 donne 5. La variable <strong>a</strong> obtient la valeur 5.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
@@ -719,10 +740,7 @@ Par exemple 2 + 3 donne 5. La variable <strong>a</strong> est obtient la valeur 
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="utiliser-une-variable">
-<h2>Utiliser une variable<a class="headerlink" href="#utiliser-une-variable" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une fois définie, la variable peut être utilisé dans des expressions, tel que</p>
+<p>Par la suite, la variable peut être utilisée dans des expressions, tel que</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">*</span> <span class="mi">2</span>
@@ -752,7 +770,8 @@ Par exemple 2 + 3 donne 5. La variable <strong>a</strong> est obtient la valeur 
 </div>
 <div class="section" id="nom-d-une-variable">
 <h2>Nom d’une variable<a class="headerlink" href="#nom-d-une-variable" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les variable sont sensible à la chasse. Donc <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">A</span></code> sont deux variables différents.</p>
+<p>Le nom d’une variable est sensible à la chasse (minuscules/majuscules).<br />
+Donc <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">A</span></code> sont deux variables différents.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="mi">33</span>
@@ -777,15 +796,15 @@ Par exemple 2 + 3 donne 5. La variable <strong>a</strong> est obtient la valeur 
 <ul class="simple">
 <li><p>de lettres (majuscule ou minuscule)</p></li>
 <li><p>du tiret bas <code class="docutils literal notranslate"><span class="pre">_</span></code></p></li>
-<li><p>de chiffres (sauf le premier caractère)</p></li>
+<li><p>de chiffres (sauf pour le premier caractère)</p></li>
 </ul>
 <p>Sont interdit</p>
 <ul class="simple">
 <li><p>les mots-clé (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, …)</p></li>
-<li><p>toute autre caractère spécial (<code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">+</span> <span class="pre">%</span> <span class="pre">&amp;</span> <span class="pre">$</span> <span class="pre">-</span> <span class="pre">/</span> <span class="pre">?</span></code>)</p></li>
+<li><p>tout autre caractère spécial (<code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">+</span> <span class="pre">%</span> <span class="pre">&amp;</span> <span class="pre">$</span> <span class="pre">-</span> <span class="pre">/</span> <span class="pre">?</span></code>)</p></li>
 </ul>
 <p>Correct: <code class="docutils literal notranslate"><span class="pre">a2</span></code>, <code class="docutils literal notranslate"><span class="pre">_a</span></code>, <code class="docutils literal notranslate"><span class="pre">speed</span></code>, <code class="docutils literal notranslate"><span class="pre">pos_x</span></code>, <code class="docutils literal notranslate"><span class="pre">POS_X</span></code></p>
-<p>Incorrecte:</p>
+<p>Incorrect:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">2var</span></code> (commence avec un chiffre)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">if</span></code> (correspond à un mot-clé)</p></li>
@@ -794,7 +813,7 @@ Par exemple 2 + 3 donne 5. La variable <strong>a</strong> est obtient la valeur 
 </div>
 <div class="section" id="la-fonction-print">
 <h2>La fonction print()<a class="headerlink" href="#la-fonction-print" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> permet d’imprimer</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> permet d’afficher</p>
 <ul class="simple">
 <li><p>une valeur (nombre ou texte)</p></li>
 <li><p>une variable</p></li>
@@ -805,7 +824,7 @@ Par exemple 2 + 3 donne 5. La variable <strong>a</strong> est obtient la valeur 
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>        <span class="c1"># nombre</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>    <span class="c1"># texte</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>          <span class="c1"># variable</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;cm&#39;</span><span class="p">)</span>   <span class="c1"># texte et variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;cm&#39;</span><span class="p">)</span>   <span class="c1"># texte, variable, texte</span>
 </pre></div>
 </div>
 </div>
@@ -865,7 +884,7 @@ périmètre = 18
 </div>
 <div class="section" id="cas-du-cercle">
 <h2>Cas du cercle<a class="headerlink" href="#cas-du-cercle" title="Lien permanent vers ce titre">¶</a></h2>
-<p>A partir du rayon <strong>r</strong>, calculeu la circonférence et la surface d’un cercle.</p>
+<p>A partir du rayon <strong>r</strong>, calculez la circonférence et la surface d’un cercle.</p>
 <p>Rappel:</p>
 <div class="math notranslate nohighlight">
 \[ circ. = 2 \pi r \]</div>
@@ -951,7 +970,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     
