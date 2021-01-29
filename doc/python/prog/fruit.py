@@ -1,0 +1,2 @@
+print('fruit')
+print('')
