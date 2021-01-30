@@ -1,4 +1,6 @@
 - file: index
+
+- part: Cours
   sections:
     - file: python/index
       sections:
@@ -39,10 +41,18 @@
         - file: plot/subplot
         - file: plot/file
         
-    - file: rep_info
+    - file: rep/index
+      sections:
+        - file: rep/intro
+        - file: rep/binary
+        - file: rep/images
+        - file: rep/sound/sound
+        
     - file: algo/algo
     - file: algo/unary
     
-    - file: misc/markdown
-    - file: misc/jupyter
-    - file: misc/thonny
+- part: Reference
+  chapters:
+  - file: misc/markdown
+  - file: misc/jupyter
+  - file: misc/thonny
