@@ -43,13 +43,15 @@
         
     - file: rep/index
       sections:
-        - file: rep/intro
-        - file: rep/binary
-        - file: rep/images
-        - file: rep/sound/sound
+        - file: rep/unaire
+        - file: rep/binaire
+        - file: rep/nombre
+        - file: rep/logique
+        - file: rep/image
+        - file: rep/texte
+        - file: rep/son
         
     - file: algo/algo
-    - file: algo/unary
     
 - part: Reference
   chapters:
