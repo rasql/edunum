@@ -11,6 +11,7 @@
         - file: python/3_list
         - file: python/4_loop
         - file: python/4_text2
+        - file: python/logique
         
 #        - file: python/vi/3/3_loops
 #          sections:
@@ -46,8 +47,9 @@
         - file: rep/unaire
         - file: rep/binaire
         - file: rep/nombre
-        - file: rep/logique
         - file: rep/image
+        - file: rep/couleur
+        - file: rep/svg
         - file: rep/texte
         - file: rep/son
         
