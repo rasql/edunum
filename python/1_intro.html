@@ -95,7 +95,12 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="index.html">
    Programmer
@@ -129,6 +134,21 @@
    <li class="toctree-l2">
     <a class="reference internal" href="4_loop.html">
      Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4_text2.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="le/2/seance8.html">
+     Séance 8
     </a>
    </li>
    <li class="toctree-l2">
@@ -224,21 +244,67 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../rep_info.html">
-   Réprésentation de l’information
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rep/index.html">
+   Encoder
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/binaire.html">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../algo/algo.html">
    Algorithmique
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../algo/unary.html">
-   Système unaire
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/markdown.html">
    Markdown
@@ -246,7 +312,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/jupyter.html">
-   Le notebook Jupyter
+   Jupyter
   </a>
  </li>
  <li class="toctree-l1">
@@ -393,7 +459,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#execution-pas-a-pas">
-   Execution pas à pas
+   Exécution pas à pas
   </a>
  </li>
 </ul>
@@ -413,7 +479,7 @@
 <p><img alt="intro" src="https://media.giphy.com/media/mXeOgQvTWweG1hODif/giphy-downsized.gif" /></p>
 <p>Python est:</p>
 <ul class="simple">
-<li><p><strong>populaire</strong> (mondialement numéro 3, après C et Java)</p></li>
+<li><p><strong>populaire</strong> (mondialement le numéro 3, après C et Java)</p></li>
 <li><p><strong>puissant</strong> (des milliers de modules d’extensions)</p></li>
 <li><p><strong>concis</strong> (peu de mot-clés, visuel)</p></li>
 </ul>
@@ -432,17 +498,17 @@
 </div>
 </div>
 </div>
-<p>Cette ligne de code affiche le texte <em>hello</em> vers la console. Le code consiste de 4 éléments:</p>
+<p>Cette ligne de code affiche le texte <em>hello</em> dans la console. Le code se compose de 4 éléments:</p>
 <ul class="simple">
 <li><p>une fonction <code class="docutils literal notranslate"><span class="pre">print</span></code></p></li>
 <li><p>des parenthèses <code class="docutils literal notranslate"><span class="pre">()</span></code> qui entourent l’argument de la fonction</p></li>
 <li><p>des guillemets <code class="docutils literal notranslate"><span class="pre">''</span></code> qui entourent un texte</p></li>
-<li><p>une chaine de texte <code class="docutils literal notranslate"><span class="pre">hello</span></code></p></li>
+<li><p>une chaîne de texte <code class="docutils literal notranslate"><span class="pre">hello</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="un-programme-est-une-sequence">
 <h2>Un programme est une séquence<a class="headerlink" href="#un-programme-est-une-sequence" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Multiples instructions peuvent se suivre, et on appelle une telle <strong>séquence d’instructions</strong> un programme. Dans l’exemple suivant nous avons une suite de 3 instructions.</p>
+<p>De multiples instructions peuvent se suivre, et on appelle une telle <strong>séquence d’instructions</strong> un programme. Dans l’exemple suivant nous avons une suite de 3 instructions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;commençons&#39;</span><span class="p">)</span>
@@ -462,7 +528,7 @@ avec Python
 </div>
 <div class="section" id="calcul-mathematique">
 <h2>Calcul mathématique<a class="headerlink" href="#calcul-mathematique" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Python peut résoudre des expréssion mathématiques. Par exemple cette addition simple</p>
+<p>Python peut résoudre des expressions mathématiques. Par exemple cette addition simple</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
@@ -477,14 +543,13 @@ avec Python
 </div>
 <div class="section" id="les-operations-de-base">
 <h3>Les opérations de base<a class="headerlink" href="#les-operations-de-base" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Les 4 operations de base sont</p>
+<p>Les 4 opérations de base sont</p>
 <ul class="simple">
 <li><p>addition (<code class="docutils literal notranslate"><span class="pre">+</span></code>)</p></li>
 <li><p>soustraction (<code class="docutils literal notranslate"><span class="pre">-</span></code>)</p></li>
 <li><p>multiplication (<code class="docutils literal notranslate"><span class="pre">*</span></code>)</p></li>
 <li><p>division (<code class="docutils literal notranslate"><span class="pre">/</span></code>)</p></li>
 </ul>
-<p>Nous pouvons placer plusieurs expression sur une même ligne et les séparer par des virgules. Cette séquence est appelé un <strong>tuple</strong>. Un tuple est délimité par des parenthèses <code class="docutils literal notranslate"><span class="pre">()</span></code> et les éléments sont séparé par des virgules.</p>
 <p>Voici une multiplication</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -511,7 +576,7 @@ avec Python
 </div>
 </div>
 </div>
-<p>Les paranthèses changent la priorité</p>
+<p>Les parenthèses changent la priorité</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
@@ -528,7 +593,7 @@ avec Python
 </div>
 <div class="section" id="boucles">
 <h2>Boucles<a class="headerlink" href="#boucles" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une boucle permet de répeter un bloc de code. Dans l’exemple ci-dessous le bloc <code class="docutils literal notranslate"><span class="pre">print</span></code> est répétés 4 fois, pour aficher l’itérateur <code class="docutils literal notranslate"><span class="pre">i</span></code>, son carré et son cube.</p>
+<p>Une boucle permet de <strong>répéter un bloc</strong> de code. Dans l’exemple ci-dessous le bloc <code class="docutils literal notranslate"><span class="pre">print</span></code> est répété 4 fois, pour afficher l’itérateur <code class="docutils literal notranslate"><span class="pre">i</span></code>, son carré et son cube.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
@@ -545,7 +610,7 @@ avec Python
 </div>
 </div>
 </div>
-<p>Une boucle peux aussi itérer sur un chaine, lettre par lettre.</p>
+<p>Une boucle peut aussi itérer sur une chaîne, lettre par lettre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;Hello&#39;</span><span class="p">:</span>
@@ -565,13 +630,13 @@ o
 </div>
 </div>
 <div class="section" id="execution-pas-a-pas">
-<h2>Execution pas à pas<a class="headerlink" href="#execution-pas-a-pas" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Exécution pas à pas<a class="headerlink" href="#execution-pas-a-pas" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’éditeur Thonny permet d’exécuter un programme pas à pas.</p>
 <p><a class="reference download internal" download="" href="../_downloads/63e3d278d519a5e2e00457f145c79c99/demo2.py"><code class="xref download docutils literal notranslate"><span class="pre">prog/demo2.py</span></code></a></p>
 <ul class="simple">
-<li><p>Affichez les variables</p></li>
-<li><p>Démarrez l’exécution pas à pas avec le bouton Débogueur (insect)</p></li>
-<li><p>Avancez pas à pas (F7)</p></li>
+<li><p>Affichez les variables avec <strong>Affichage &gt; Variables</strong></p></li>
+<li><p>Démarrez l’exécution pas à pas avec le bouton <strong>Débogueur (insect)</strong></p></li>
+<li><p>Avancez pas à pas avec le bouton <strong>Entrer dans le noeud (F7)</strong></p></li>
 </ul>
 <p><img alt="" src="../_images/thonny_step.png" /></p>
 </div>

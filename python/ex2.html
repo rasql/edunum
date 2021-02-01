@@ -95,7 +95,12 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="index.html">
    Programmer
@@ -129,6 +134,21 @@
    <li class="toctree-l2">
     <a class="reference internal" href="4_loop.html">
      Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4_text2.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="le/2/seance8.html">
+     Séance 8
     </a>
    </li>
    <li class="toctree-l2">
@@ -224,21 +244,67 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../rep_info.html">
-   Réprésentation de l’information
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rep/index.html">
+   Encoder
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/binaire.html">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../algo/algo.html">
    Algorithmique
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../algo/unary.html">
-   Système unaire
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/markdown.html">
    Markdown
@@ -246,7 +312,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/jupyter.html">
-   Le notebook Jupyter
+   Jupyter
   </a>
  </li>
  <li class="toctree-l1">
@@ -392,7 +458,7 @@
                 
   <div class="section" id="exercices-if-else">
 <h1>Exercices if-else<a class="headerlink" href="#exercices-if-else" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les exercices ci-dessous sont écrit avec des boucles
+<p>Les exercices ci-dessous sont écrits avec des boucles
 et des expressions conditionnels.
 Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show (+)</strong>.</p>
 <div class="section" id="comparaison">
@@ -449,7 +515,7 @@ Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show 
 </div>
 <div class="section" id="pair-impair">
 <h2>Pair/impair<a class="headerlink" href="#pair-impair" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Utiliser l’opérateur modulo <code class="docutils literal notranslate"><span class="pre">%</span></code> pour afficher si un nombre est pair ou impaire ?</p>
+<p>Utilisez l’opérateur modulo <code class="docutils literal notranslate"><span class="pre">%</span></code> pour afficher si un nombre est pair ou impaire ?</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>

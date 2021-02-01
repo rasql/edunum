@@ -64,8 +64,8 @@
     <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Exercice - if-else" href="ex2.html" />
-    <link rel="prev" title="Boucle" href="4_loop.html" />
+    <link rel="next" title="Exercices if-else" href="ex2.html" />
+    <link rel="prev" title="Séance 8" href="le/2/seance8.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -95,7 +95,12 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="index.html">
    Programmer
@@ -118,7 +123,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_struct.html">
-     Les structures de flux
+     Les branchements
     </a>
    </li>
    <li class="toctree-l2">
@@ -131,6 +136,21 @@
      Boucle
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4_text2.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="le/2/seance8.html">
+     Séance 8
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Exercices Boucles
@@ -138,7 +158,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ex2.html">
-     Exercice - if-else
+     Exercices if-else
     </a>
    </li>
    <li class="toctree-l2">
@@ -224,21 +244,67 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../rep_info.html">
-   Réprésentation de l’information
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rep/index.html">
+   Encoder
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/binaire.html">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../algo/algo.html">
    Algorithmique
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../algo/unary.html">
-   Système unaire
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/markdown.html">
    Markdown
@@ -246,7 +312,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/jupyter.html">
-   Le notebook Jupyter
+   Jupyter
   </a>
  </li>
  <li class="toctree-l1">
@@ -380,8 +446,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#des-puissances-de-2-sur-une-lignes">
-   Des puissances de 2 sur une lignes
+  <a class="reference internal nav-link" href="#des-puissances-sur-une-lignes">
+   Des puissances sur une lignes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -427,11 +493,11 @@
                 
   <div class="section" id="exercices-boucles">
 <h1>Exercices Boucles<a class="headerlink" href="#exercices-boucles" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les exercices ci-dessous sont écrit avec des boucles.<br />
+<p>Les exercices ci-dessous sont écrits avec des boucles.<br />
 Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show (+)</strong>.</p>
 <div class="section" id="carres">
 <h2>Carrés<a class="headerlink" href="#carres" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Quel est le code pour afficher ces 8 lignes carrés ?<br />
+<p>Quel est le code pour afficher ces 8 lignes de carrés ?<br />
 (2 lignes de code suffisent)</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -485,29 +551,29 @@ Essayez de trouver la solution sans cliquer sur le bouton <strong>click to show 
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1,4,9,16,25,36,49,64,81,100,121,144,169,196,225,256,289,324,361,400,
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="des-puissances-de-2-sur-une-lignes">
-<h2>Des puissances de 2 sur une lignes<a class="headerlink" href="#des-puissances-de-2-sur-une-lignes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="des-puissances-sur-une-lignes">
+<h2>Des puissances sur une lignes<a class="headerlink" href="#des-puissances-sur-une-lignes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Quel est le code pour afficher ces carrés sur une seule ligne ?</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 
 </pre></div>
 </div>
 </div>
@@ -592,7 +658,7 @@ True	True	True
 <div class="section" id="suite-de-fibonacci">
 <h2>Suite de Fibonacci<a class="headerlink" href="#suite-de-fibonacci" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La suite de Fibonacci est obtenu en additionnant les deux nombres précédents.
-Utilisez une boucle pour les calculer ses 15 premiers éléments.</p>
+Utilisez une boucle pour calculer ses 15 premiers éléments.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
@@ -642,8 +708,8 @@ Utilisez une boucle pour les calculer ses 15 premiers éléments.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="4_loop.html" title="previous page">Boucle</a>
-    <a class='right-next' id="next-link" href="ex2.html" title="next page">Exercice - if-else</a>
+    <a class='left-prev' id="prev-link" href="le/2/seance8.html" title="previous page">Séance 8</a>
+    <a class='right-next' id="next-link" href="ex2.html" title="next page">Exercices if-else</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

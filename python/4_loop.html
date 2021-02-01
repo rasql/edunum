@@ -64,7 +64,7 @@
     <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Exercices Boucles" href="ex1.html" />
+    <link rel="next" title="Composer des textes" href="4_text2.html" />
     <link rel="prev" title="Listes" href="3_list.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -95,7 +95,12 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="index.html">
    Programmer
@@ -129,6 +134,21 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4_text2.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="le/2/seance8.html">
+     Séance 8
     </a>
    </li>
    <li class="toctree-l2">
@@ -224,21 +244,67 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../rep_info.html">
-   Réprésentation de l’information
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rep/index.html">
+   Encoder
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/binaire.html">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../algo/algo.html">
    Algorithmique
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../algo/unary.html">
-   Système unaire
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/markdown.html">
    Markdown
@@ -246,7 +312,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/jupyter.html">
-   Le notebook Jupyter
+   Jupyter
   </a>
  </li>
  <li class="toctree-l1">
@@ -375,8 +441,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-bloc">
-   Le bloc
+  <a class="reference internal nav-link" href="#le-bloc-repete">
+   Le bloc répété
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -395,8 +461,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#boucles-impriques">
-   Boucles impriques
+  <a class="reference internal nav-link" href="#boucles-impriquees">
+   Boucles impriquées
   </a>
  </li>
 </ul>
@@ -432,7 +498,7 @@
 <p>Par exemple</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">345</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ada&#39;</span><span class="p">,</span> <span class="s1">&#39;Grace&#39;</span><span class="p">,</span> <span class="s1">&#39;Anita&#39;</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -440,18 +506,18 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>123
-23
-345
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ada
+Grace
+Anita
 </pre></div>
 </div>
 </div>
 </div>
 <p>On appelle les répétions du <code class="docutils literal notranslate"><span class="pre">bloc</span></code> aussi des <strong>itérations</strong>. On dit <strong>itérer sur la séquence</strong>.</p>
-<p>On appelle la variable <code class="docutils literal notranslate"><span class="pre">x</span></code> un <strong>itérateur</strong>. Cette variable peut avoir n’importe quel nom. Cette variable prend succéssivement (un après l’autre) toutes les valeurs de la séquence.</p>
+<p>On appelle la variable <code class="docutils literal notranslate"><span class="pre">x</span></code> un <strong>itérateur</strong>. Cette variable peut avoir n’importe quel nom. Cette variable prend succéssivement toutes les valeurs de la séquence, une après l’autre.</p>
 </div>
-<div class="section" id="le-bloc">
-<h2>Le bloc<a class="headerlink" href="#le-bloc" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="le-bloc-repete">
+<h2>Le bloc répété<a class="headerlink" href="#le-bloc-repete" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le bloc répété consiste d’une ou plusieurs (1+) instructions.
 Toutes les instructions qui font partie du bloc sont indentées.
 La première instruction qui n’est plus indentée ne fait plus partie du bloc.</p>
@@ -639,10 +705,14 @@ lettre - n
 </div>
 </div>
 </div>
-<div class="section" id="boucles-impriques">
-<h2>Boucles impriques<a class="headerlink" href="#boucles-impriques" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous pouvons placer une boucle dans une boucle.</p>
-<p>Nous appelons la boucle en <code class="docutils literal notranslate"><span class="pre">i</span></code> extérieure, et la boucle en <code class="docutils literal notranslate"><span class="pre">j</span></code> boucle intérieure.</p>
+<div class="section" id="boucles-impriquees">
+<h2>Boucles impriquées<a class="headerlink" href="#boucles-impriquees" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une boucle peut être placée dans le corps d’une autre boucle.<br />
+Nous appelons</p>
+<ul class="simple">
+<li><p>la boucle en <code class="docutils literal notranslate"><span class="pre">i</span></code> boucle extérieure, et</p></li>
+<li><p>la boucle en <code class="docutils literal notranslate"><span class="pre">j</span></code> boucle intérieure.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
@@ -663,7 +733,7 @@ i = 2  j = 1
 </div>
 </div>
 <p>Normalement chaque instruction <code class="docutils literal notranslate"><span class="pre">print</span></code> se termine avec un retour à la ligne.
-L’argument optionel <code class="docutils literal notranslate"><span class="pre">end</span></code> permet de le changer en 3 espaces.</p>
+L’argument optionel <code class="docutils literal notranslate"><span class="pre">end</span></code> permet de le changer en 3 espaces <code class="docutils literal notranslate"><span class="pre">'</span>&#160;&#160; <span class="pre">'</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
@@ -682,7 +752,7 @@ L’argument optionel <code class="docutils literal notranslate"><span class="pr
 </div>
 </div>
 <p>Les boucles imbriquées nous permettent de programmer une table de multiplication.
-Cette fois nous utlison le caractère spéciale <strong>tabulateur</strong> <code class="docutils literal notranslate"><span class="pre">\t</span></code> qui aligne les caractèrs sur 8 caractères-</p>
+Cette fois nous utlison le caractère spéciale <strong>tabulateur</strong> <code class="docutils literal notranslate"><span class="pre">\t</span></code> qui aligne les caractèrs sur des multiples de 8.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
@@ -733,7 +803,7 @@ Cette fois nous utlison le caractère spéciale <strong>tabulateur</strong> <cod
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="3_list.html" title="previous page">Listes</a>
-    <a class='right-next' id="next-link" href="ex1.html" title="next page">Exercices Boucles</a>
+    <a class='right-next' id="next-link" href="4_text2.html" title="next page">Composer des textes</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

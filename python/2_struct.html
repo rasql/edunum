@@ -95,7 +95,12 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="index.html">
    Programmer
@@ -129,6 +134,21 @@
    <li class="toctree-l2">
     <a class="reference internal" href="4_loop.html">
      Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4_text2.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="le/2/seance8.html">
+     Séance 8
     </a>
    </li>
    <li class="toctree-l2">
@@ -224,21 +244,67 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../rep_info.html">
-   Réprésentation de l’information
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rep/index.html">
+   Encoder
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/binaire.html">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../algo/algo.html">
    Algorithmique
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../algo/unary.html">
-   Système unaire
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/markdown.html">
    Markdown
@@ -246,7 +312,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/jupyter.html">
-   Le notebook Jupyter
+   Jupyter
   </a>
  </li>
  <li class="toctree-l1">
@@ -365,13 +431,13 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#valeur-booleen">
-   Valeur Booléen
+  <a class="reference internal nav-link" href="#valeur-booleene">
+   Valeur booléene
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-comparaisons">
-   Les comparaisons
+  <a class="reference internal nav-link" href="#les-comparateurs">
+   Les comparateurs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -380,13 +446,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comparaison">
-   Comparaison
+  <a class="reference internal nav-link" href="#comparer-avec-une-valeur">
+   Comparer avec une valeur
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comparaison-pour-une-interval">
-   Comparaison pour une interval
+  <a class="reference internal nav-link" href="#comparer-avec-un-intervalle">
+   Comparer avec un intervalle
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -412,7 +478,7 @@
                 
   <div class="section" id="les-branchements">
 <h1>Les branchements<a class="headerlink" href="#les-branchements" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Un instruction conditionnelle donne un <strong>choix</strong> entre plusieurs options.</p>
+<p>Une instruction conditionnelle donne un <strong>choix</strong> entre plusieurs options.</p>
 <p><img alt="" src="https://media.giphy.com/media/3oipPTHYlTpCw8oBBy/giphy.gif" /></p>
 <p>Tout programme suit 3 principes de base</p>
 <ul class="simple">
@@ -420,12 +486,12 @@
 <li><p>branchement</p></li>
 <li><p>boucle</p></li>
 </ul>
-<p>Tout d’abord un programme est une <strong>séquence linéaire</strong> d’instructions, ce qui veut dire que les instructions sont exécuté un après l’autre.</p>
-<p>Un <strong>branchement</strong>, auissi appelé instructions conditionnelles, donne un choix entre différents branches et seulement une branche entre plusieurs est exécute.</p>
+<p>Tout d’abord un programme est une <strong>séquence linéaire</strong> d’instructions, ce qui veut dire que les instructions sont exécutées une après l’autre.</p>
+<p>Un <strong>branchement</strong>, auissi appelé instruction conditionnelle, donne un choix entre différentes branches et seulement une branche entre plusieurs est exécutee.</p>
 <p>Le troisième schéma est la <strong>boucle</strong>, qui permet de parcourir une partie du code multiple fois. Le programme reviens donc en amont, pour ré-exécuter des instructions déjà éxécutées.</p>
-<div class="section" id="valeur-booleen">
-<h2>Valeur Booléen<a class="headerlink" href="#valeur-booleen" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une variable booléenne a seulement deux valeurs possibles:</p>
+<div class="section" id="valeur-booleene">
+<h2>Valeur booléene<a class="headerlink" href="#valeur-booleene" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une variable booléenne a seulement deux valeurs possibles</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span>
@@ -458,8 +524,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="les-comparaisons">
-<h2>Les comparaisons<a class="headerlink" href="#les-comparaisons" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="les-comparateurs">
+<h2>Les comparateurs<a class="headerlink" href="#les-comparateurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>En Python, il y a 6 opérateur de comparaison</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> égal</p></li>
@@ -525,7 +591,7 @@
 </div>
 <div class="section" id="imprimer-sur-une-ligne">
 <h2>Imprimer sur une ligne<a class="headerlink" href="#imprimer-sur-une-ligne" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Normalement la fonction <code class="docutils literal notranslate"><span class="pre">print</span></code> se termine avec un retour à la ligne. Donc chaque <code class="docutils literal notranslate"><span class="pre">x</span></code> est imprimé sur une nouvelle ligne.</p>
+<p>Normalement la fonction <code class="docutils literal notranslate"><span class="pre">print</span></code> termine avec un retour à la ligne (<code class="docutils literal notranslate"><span class="pre">\n</span></code>). Donc chaque <code class="docutils literal notranslate"><span class="pre">x</span></code> est imprimé sur une nouvelle ligne.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -543,7 +609,7 @@ x
 </div>
 </div>
 </div>
-<p>Mais la fonction <code class="docutils literal notranslate"><span class="pre">print</span></code> à un argument optionel <code class="docutils literal notranslate"><span class="pre">end</span></code> qui permet de supprimer le retour à la ligne.</p>
+<p>Mais la fonction <code class="docutils literal notranslate"><span class="pre">print</span></code> a un argument optionel <code class="docutils literal notranslate"><span class="pre">end</span></code> qui permet de supprimer le retour à la ligne.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -572,8 +638,8 @@ x
 </div>
 </div>
 </div>
-<div class="section" id="comparaison">
-<h2>Comparaison<a class="headerlink" href="#comparaison" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="comparer-avec-une-valeur">
+<h2>Comparer avec une valeur<a class="headerlink" href="#comparer-avec-une-valeur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous comparons les nombre 0 à 49 avec un seuil de 10.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -592,8 +658,8 @@ x
 </div>
 </div>
 </div>
-<div class="section" id="comparaison-pour-une-interval">
-<h2>Comparaison pour une interval<a class="headerlink" href="#comparaison-pour-une-interval" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="comparer-avec-un-intervalle">
+<h2>Comparer avec un intervalle<a class="headerlink" href="#comparer-avec-un-intervalle" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous vérifions si le nombre <code class="docutils literal notranslate"><span class="pre">i</span></code> se trouve entre 10 et 15.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -647,22 +713,22 @@ x
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39; ⬆️ 🟥&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39; ⬆️&#39;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39; ⬇️ 🟦&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39; ⬇️&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39; zéro&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3  ⬇️ 🟦
--2  ⬇️ 🟦
--1  ⬇️ 🟦
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3  ⬇️
+-2  ⬇️
+-1  ⬇️
 0  zéro
-1  ⬆️ 🟥
-2  ⬆️ 🟥
-3  ⬆️ 🟥
+1  ⬆️
+2  ⬆️
+3  ⬆️
 </pre></div>
 </div>
 </div>

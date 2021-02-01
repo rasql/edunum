@@ -95,7 +95,12 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../python/index.html">
    Programmer
@@ -118,7 +123,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/2_struct.html">
-     Les structures de flux
+     Les branchements
     </a>
    </li>
    <li class="toctree-l2">
@@ -132,13 +137,28 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../python/4_text2.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/le/2/seance8.html">
+     Séance 8
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../python/ex1.html">
      Exercices Boucles
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/ex2.html">
-     Exercice - if-else
+     Exercices if-else
     </a>
    </li>
    <li class="toctree-l2">
@@ -224,21 +244,67 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../rep_info.html">
-   Réprésentation de l’information
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rep/index.html">
+   Encoder
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/binaire.html">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../algo/algo.html">
    Algorithmique
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../algo/unary.html">
-   Système unaire
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/markdown.html">
    Markdown
@@ -246,7 +312,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/jupyter.html">
-   Le notebook Jupyter
+   Jupyter
   </a>
  </li>
  <li class="toctree-l1">
@@ -510,6 +576,24 @@
 <img alt="../_images/numpy_10_1.png" src="../_images/numpy_10_1.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;range(5)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;range(2, 7)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">y</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/numpy_11_0.png" src="../_images/numpy_11_0.png" />
+</div>
+</div>
 </div>
 <div class="section" id="distribution-uniforme">
 <h2>Distribution uniforme<a class="headerlink" href="#distribution-uniforme" title="Lien permanent vers ce titre">¶</a></h2>
@@ -522,7 +606,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_12_0.png" src="../_images/numpy_12_0.png" />
+<img alt="../_images/numpy_13_0.png" src="../_images/numpy_13_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -534,7 +618,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_13_0.png" src="../_images/numpy_13_0.png" />
+<img alt="../_images/numpy_14_0.png" src="../_images/numpy_14_0.png" />
 </div>
 </div>
 </div>
@@ -548,7 +632,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_15_0.png" src="../_images/numpy_15_0.png" />
+<img alt="../_images/numpy_16_0.png" src="../_images/numpy_16_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -558,7 +642,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_16_0.png" src="../_images/numpy_16_0.png" />
+<img alt="../_images/numpy_17_0.png" src="../_images/numpy_17_0.png" />
 </div>
 </div>
 </div>
@@ -571,7 +655,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_18_0.png" src="../_images/numpy_18_0.png" />
+<img alt="../_images/numpy_19_0.png" src="../_images/numpy_19_0.png" />
 </div>
 </div>
 </div>
@@ -590,7 +674,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-0.5, 35.5, 23.5, -0.5)
 </pre></div>
 </div>
-<img alt="../_images/numpy_20_1.png" src="../_images/numpy_20_1.png" />
+<img alt="../_images/numpy_21_1.png" src="../_images/numpy_21_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -600,7 +684,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_21_0.png" src="../_images/numpy_21_0.png" />
+<img alt="../_images/numpy_22_0.png" src="../_images/numpy_22_0.png" />
 </div>
 </div>
 </div>
@@ -616,7 +700,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_23_0.png" src="../_images/numpy_23_0.png" />
+<img alt="../_images/numpy_24_0.png" src="../_images/numpy_24_0.png" />
 </div>
 </div>
 <p>Nous pouvons la transformer en tableau <strong>numpy</strong> avec la fonction <code class="docutils literal notranslate"><span class="pre">np.array</span></code>. Le type de l’objet est <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> (numeric data array`.</p>
@@ -645,7 +729,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_27_0.png" src="../_images/numpy_27_0.png" />
+<img alt="../_images/numpy_28_0.png" src="../_images/numpy_28_0.png" />
 </div>
 </div>
 </div>
@@ -765,7 +849,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fa2d34cc810&gt;]
 </pre></div>
 </div>
-<img alt="../_images/numpy_43_1.png" src="../_images/numpy_43_1.png" />
+<img alt="../_images/numpy_44_1.png" src="../_images/numpy_44_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -776,7 +860,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_44_0.png" src="../_images/numpy_44_0.png" />
+<img alt="../_images/numpy_45_0.png" src="../_images/numpy_45_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -788,7 +872,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_45_0.png" src="../_images/numpy_45_0.png" />
+<img alt="../_images/numpy_46_0.png" src="../_images/numpy_46_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -801,7 +885,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_46_0.png" src="../_images/numpy_46_0.png" />
+<img alt="../_images/numpy_47_0.png" src="../_images/numpy_47_0.png" />
 </div>
 </div>
 </div>
@@ -829,7 +913,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/numpy_48_0.png" src="../_images/numpy_48_0.png" />
+<img alt="../_images/numpy_49_0.png" src="../_images/numpy_49_0.png" />
 </div>
 </div>
 </div>

@@ -64,7 +64,7 @@
     <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="prev" title="Le notebook Jupyter" href="jupyter.html" />
+    <link rel="prev" title="Jupyter" href="jupyter.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -94,7 +94,12 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../python/index.html">
    Programmer
@@ -117,7 +122,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/2_struct.html">
-     Les structures de flux
+     Les branchements
     </a>
    </li>
    <li class="toctree-l2">
@@ -131,13 +136,28 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../python/4_text2.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/le/2/seance8.html">
+     Séance 8
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../python/ex1.html">
      Exercices Boucles
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/ex2.html">
-     Exercice - if-else
+     Exercices if-else
     </a>
    </li>
    <li class="toctree-l2">
@@ -223,21 +243,67 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../rep_info.html">
-   Réprésentation de l’information
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rep/index.html">
+   Encoder
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/binaire.html">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../algo/algo.html">
    Algorithmique
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../algo/unary.html">
-   Système unaire
-  </a>
- </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    Markdown
@@ -245,7 +311,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="jupyter.html">
-   Le notebook Jupyter
+   Jupyter
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -377,6 +443,28 @@
   <a class="reference internal nav-link" href="#lancer-jupyter-lab">
    Lancer Jupyter Lab
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ouvrir-un-notebook">
+     Ouvrir un notebook
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#le-boutons">
+     Le boutons
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#les-touches-sur-mac">
+     Les touches sur Mac
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#telecharger-un-jupyter-notebook">
+     Télécharger un Jupyter notebook
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#modules-utiles">
@@ -424,10 +512,10 @@ Il installe un environnement virtuel pour Python et permet d’y installer facil
 <h2>Installer des modules<a class="headerlink" href="#installer-des-modules" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour installer des modules supplémentaires</p>
 <ul class="simple">
-<li><p>choisissez le menu <strong>Tools &gt; Manage packages…</strong></p></li>
+<li><p>choisissez le menu <strong>Outils &gt; Gérer les paquets…</strong></p></li>
 <li><p>cherchez le module (par example jupyterlab)</p></li>
-<li><p>cliquez <strong>Search on PyPi</strong></p></li>
-<li><p>cliquez <strong>Install</strong></p></li>
+<li><p>cliquez sur le bouton <strong>Rechercher sur PyPi</strong></p></li>
+<li><p>cliquez sur le bouton <strong>Installer</strong></p></li>
 </ul>
 <p><img alt="" src="../_images/module.png" /></p>
 </div>
@@ -435,9 +523,55 @@ Il installe un environnement virtuel pour Python et permet d’y installer facil
 <h2>Lancer Jupyter Lab<a class="headerlink" href="#lancer-jupyter-lab" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>installer le module jupyterlab</p></li>
-<li><p>choisissez le menu <strong>Tools &gt; Open system shell…</strong></p></li>
+<li><p>choisissez le menu <strong>Outils &gt; Ouvrir la console du système…</strong></p></li>
 <li><p>lancez la commande <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code></p></li>
 </ul>
+<div class="section" id="ouvrir-un-notebook">
+<h3>Ouvrir un notebook<a class="headerlink" href="#ouvrir-un-notebook" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>cliquez sur l’icône dossier tout à gauche</p></li>
+<li><p>sélectionnez votre fichier <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code></p></li>
+<li><p>ouvrez-le</p></li>
+<li><p>choisissez menu <strong>Edit &gt; Clear All Output</strong></p></li>
+</ul>
+<p><img alt="" src="../_images/jupyter.png" /></p>
+</div>
+<div class="section" id="le-boutons">
+<h3>Le boutons<a class="headerlink" href="#le-boutons" title="Lien permanent vers ce titre">¶</a></h3>
+<p><img alt="" src="../_images/jupyter_buttons.png" /></p>
+<ul class="simple">
+<li><p>ajouter une cellule en dessous (B = Below)</p></li>
+<li><p>couper la cellule (X)</p></li>
+<li><p>copier la cellule (C)</p></li>
+<li><p>coller la cellule (V)</p></li>
+<li><p>exécuter la cellule (maj + retour)</p></li>
+</ul>
+</div>
+<div class="section" id="les-touches-sur-mac">
+<h3>Les touches sur Mac<a class="headerlink" href="#les-touches-sur-mac" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>hashtag <code class="docutils literal notranslate"><span class="pre">#</span></code> (alt+3)</p></li>
+<li><p>crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code> (alt+5/6)</p></li>
+<li><p>accolades <code class="docutils literal notranslate"><span class="pre">{}</span></code> (alt+8/9)</p></li>
+<li><p>parenthèses <code class="docutils literal notranslate"><span class="pre">()</span></code> (maj+8/9)</p></li>
+</ul>
+<p>La barre</p>
+<ul class="simple">
+<li><p>oblique <code class="docutils literal notranslate"><span class="pre">/</span></code> (maj+7)</p></li>
+<li><p>verticale <code class="docutils literal notranslate"><span class="pre">|</span></code> (alt+7)</p></li>
+<li><p>oblique inversée <code class="docutils literal notranslate"><span class="pre">\</span></code> (alt+maj+7)</p></li>
+</ul>
+</div>
+<div class="section" id="telecharger-un-jupyter-notebook">
+<h3>Télécharger un Jupyter notebook<a class="headerlink" href="#telecharger-un-jupyter-notebook" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour télécharger une Jupyter notebook depuis ce site</p>
+<ul class="simple">
+<li><p>placez la souris sur le 4e bouton</p></li>
+<li><p>descendez vers .ipynb</p></li>
+<li><p>téléchargez le notebook</p></li>
+</ul>
+<p><img alt="" src="../_images/jb_buttons.png" /></p>
+</div>
 </div>
 <div class="section" id="modules-utiles">
 <h2>Modules utiles<a class="headerlink" href="#modules-utiles" title="Lien permanent vers ce titre">¶</a></h2>
@@ -505,7 +639,7 @@ Il installe un environnement virtuel pour Python et permet d’y installer facil
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="jupyter.html" title="previous page">Le notebook Jupyter</a>
+    <a class='left-prev' id="prev-link" href="jupyter.html" title="previous page">Jupyter</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
