@@ -3,7 +3,7 @@
 
 title: Education numérique
 author: Raphael Holzer
-logo: logo.png
+logo: img/logo.png
 exclude_patterns: ['**/maitre.md', 'content/skel/**']
 only_build_toc_files: true
 
