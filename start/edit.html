@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>JupyterLab &#8212; Education numérique</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/questions.js"></script>
+    <script type="text/javascript" src="../_static/blanks.js"></script>
+    <script type="text/javascript" src="../_static/reactions.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script type="text/javascript">
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Introduction à Python" href="../python/1_intro.html" />
+    <link rel="prev" title="Démarrer" href="install.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Education numérique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../python/index.html">
+   Programmer
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="why.html">
+     A quoi ça sert?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="install.html">
+     Démarrer
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/1_intro.html">
+     Introduction à Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/1_calc.html">
+     Calcul numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/1_text.html">
+     Texte (string)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/2_struct.html">
+     Les branchements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/3_list.html">
+     Listes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/4_loop.html">
+     Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/4_text2.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/le/2/seance8.html">
+     Séance 8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/ex1.html">
+     Exercices Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/ex2.html">
+     Exercices if-else
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/quiz.html">
+     Quiz
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../plot/intro.html">
+   Visualiser
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/plot.html">
+     Graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/param.html">
+     Paramètres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/numpy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/hist.html">
+     Histogrammes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/bar.html">
+     Diagrammes à barres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/polar.html">
+     Coordonnées polaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/text.html">
+     Text
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/style.html">
+     Style
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/color.html">
+     Couleurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/subplot.html">
+     Sous-graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/file.html">
+     Fichiers
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rep/index.html">
+   Encoder
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/binaire.html">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algo/algo.html">
+   Algorithmique
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/jupyter.html">
+   Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/thonny.html">
+   Thonny
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/style.html">
+   Style
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/start/edit.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fstart/edit.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/start/edit.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/start/edit.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rasql/edunum/blob/main/doc/start/edit.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="lancement Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pourquoi-jupyter">
+   Pourquoi Jupyter?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creer-un-nouveau-notebook">
+   Créer un nouveau notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#une-cellule-vide">
+   Une cellule vide
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evaluler-une-cellule">
+   Evaluler une cellule
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evaluer-de-nouveau">
+   Evaluer de nouveau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajouter-des-cellules">
+   Ajouter des cellules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mode-edit-command">
+   Mode edit/command
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#couper-copier-coller">
+   Couper, copier, coller
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#selection-multiple">
+   Sélection multiple
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resultat">
+   Résultat
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="jupyterlab">
+<h1>JupyterLab<a class="headerlink" href="#jupyterlab" title="Lien permanent vers ce titre">¶</a></h1>
+<p>JupyterLab est un environnement pour développer <strong>code et documentation</strong> dans un navigateur web.</p>
+<p><img alt="" src="../_images/jupyterlab.png" /></p>
+<p>Dans l’image ci-dessus vous pouvez voir</p>
+<ul class="simple">
+<li><p>un navigateur de fichier à gauche</p></li>
+<li><p>un <strong>notebook</strong> avec formules mathématiques</p></li>
+<li><p>une <strong>image</strong> interactive</p></li>
+<li><p>du <strong>code</strong> Python</p></li>
+</ul>
+<div class="section" id="pourquoi-jupyter">
+<h2>Pourquoi Jupyter?<a class="headerlink" href="#pourquoi-jupyter" title="Lien permanent vers ce titre">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/jupyter_logo.png"><img alt="../_images/jupyter_logo.png" src="../_images/jupyter_logo.png" style="width: 100px;" /></a>
+<p>Le nom <strong>Ju-pyt-R</strong> fait référence au trois langages</p>
+<ul class="simple">
+<li><p>Julia</p></li>
+<li><p>Python</p></li>
+<li><p>R</p></li>
+</ul>
+<p>Le logo représente les lunes de la planète Jupiter qui sont:</p>
+<ul class="simple">
+<li><p>Io</p></li>
+<li><p>Europe</p></li>
+<li><p>Ganymède</p></li>
+<li><p>Callisto</p></li>
+</ul>
+</div>
+<div class="section" id="creer-un-nouveau-notebook">
+<h2>Créer un nouveau notebook<a class="headerlink" href="#creer-un-nouveau-notebook" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>Choisissez <strong>File &gt; New &gt; Notebook</strong></p></li>
+<li><p>Choisissez un noyeau (kernel): <strong>Python 3</strong></p></li>
+</ul>
+<p>Alternativement:</p>
+<ul class="simple">
+<li><p>Cliquer sur (+)</p></li>
+<li><p>Choisir dans le Launcher: <strong>Notebook Python 3</strong></p></li>
+</ul>
+<p><img alt="nb" src="../_images/start_nb.png" /></p>
+</div>
+<div class="section" id="une-cellule-vide">
+<h2>Une cellule vide<a class="headerlink" href="#une-cellule-vide" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Au début il y a une cellule vide.</p>
+<p><img alt="" src="../_images/cell1.png" /></p>
+<p>Vous notez :</p>
+<ul class="simple">
+<li><p>la barre de sélection bleu</p></li>
+<li><p>les crochets encore vides</p></li>
+</ul>
+</div>
+<div class="section" id="evaluler-une-cellule">
+<h2>Evaluler une cellule<a class="headerlink" href="#evaluler-une-cellule" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ecrivez une expression Python dans la cellule, et appuyez simultanément sur les touches <strong>maj + retour</strong> pour exécuter l’expression.</p>
+<p><img alt="" src="../_images/cell2.png" /></p>
+<p>Vous notez que:</p>
+<ul class="simple">
+<li><p>le numéro de l’exécution apparait dans les crochets (1)</p></li>
+<li><p>le resultat de l’expression est affiché après la cellule code</p></li>
+<li><p>une nouvelle cellule vide est ajouté</p></li>
+</ul>
+</div>
+<div class="section" id="evaluer-de-nouveau">
+<h2>Evaluer de nouveau<a class="headerlink" href="#evaluer-de-nouveau" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez ajouter une autre expression et évaluer de nouveau la cellule.</p>
+<p><img alt="" src="../_images/cell3.png" /></p>
+<p>Vous notez que:</p>
+<ul class="simple">
+<li><p>le numéro de l’execution a incrémenté (2)</p></li>
+<li><p>la nouvelle cellule n’est pas en mode édition (il n’y a pas de curseur)</p></li>
+</ul>
+</div>
+<div class="section" id="ajouter-des-cellules">
+<h2>Ajouter des cellules<a class="headerlink" href="#ajouter-des-cellules" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez ajouter des cellules</p>
+<ul class="simple">
+<li><p>avec le bouton (+) ou</p></li>
+<li><p>avec les raccourcis <strong>A</strong> et <strong>B</strong>.</p></li>
+</ul>
+<p>Par rapport à la cellule active (barre bleu) vous pouvez ajouter une nouvelle cellule</p>
+<ul class="simple">
+<li><p><strong>A</strong> en-dessus (above)</p></li>
+<li><p><strong>B</strong> en-dessous (below)</p></li>
+</ul>
+<p><img alt="" src="../_images/cell4.png" /></p>
+</div>
+<div class="section" id="mode-edit-command">
+<h2>Mode edit/command<a class="headerlink" href="#mode-edit-command" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une cellule est en mode <strong>edit</strong> s’il y a un curseur d’insertion dans la cellule.</p>
+<p><img alt="" src="../_images/cell5.png" /></p>
+<p>Vous basculez vers le mode <strong>command</strong> en</p>
+<ul class="simple">
+<li><p>cliquant en dehors de la cellule</p></li>
+<li><p>en appuyant sur la touche <strong>escape</strong></p></li>
+</ul>
+<p><img alt="" src="../_images/cell6.png" /></p>
+<p>Vous notez que:</p>
+<ul class="simple">
+<li><p>la cellule est grisé</p></li>
+<li><p>le cursur a disparu</p></li>
+</ul>
+</div>
+<div class="section" id="couper-copier-coller">
+<h2>Couper, copier, coller<a class="headerlink" href="#couper-copier-coller" title="Lien permanent vers ce titre">¶</a></h2>
+<p>En mode <strong>command</strong> vous pouvez couper, copier et coller des cellules avec les raccourcis:</p>
+<ul class="simple">
+<li><p><strong>X</strong> coupe la cellule</p></li>
+<li><p><strong>C</strong> copie la cellule</p></li>
+<li><p><strong>V</strong> colle la cellule</p></li>
+</ul>
+<p>Par exemple la cellule <code class="docutils literal notranslate"><span class="pre">'hello'</span></code> a été coupé avec la touche <strong>X</strong></p>
+<p><img alt="" src="../_images/cell7.png" /></p>
+<p>et ensuite colle à la fin de la cellule <code class="docutils literal notranslate"><span class="pre">2</span></code> avec la touche <strong>V</strong></p>
+<p><img alt="" src="../_images/cell8.png" /></p>
+</div>
+<div class="section" id="selection-multiple">
+<h2>Sélection multiple<a class="headerlink" href="#selection-multiple" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec les touches de flèche <strong>haut/bas</strong> vous pouvez naviger parmis les cellules.<br />
+En appuyant simultanément sur la touche <strong>maj</strong> et <strong>haut/bas</strong> vous pouvez sélectionner des cellules multiples.</p>
+<p><img alt="" src="../_images/cell9.png" /></p>
+<p>La sélection multiple est utile pour couper, copier et coller multiples cellules.</p>
+</div>
+<div class="section" id="resultat">
+<h2>Résultat<a class="headerlink" href="#resultat" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Quand une cellule est exéculté, toutes les sexpressions sont évaluées, mais seulement le dernier résultat est affiché.</p>
+<p><img alt="" src="../_images/cell10.png" /></p>
+<p>Vous pouvez afficher toutes les valeurs en utilisant la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">12</span> <span class="o">+</span> <span class="mi">23</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">23</span> <span class="o">*</span> <span class="mi">34</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">12</span> <span class="o">/</span> <span class="mi">23</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>35
+782
+0.5217391304347826
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./start"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="install.html" title="previous page">Démarrer</a>
+    <a class='right-next' id="next-link" href="../python/1_intro.html" title="next page">Introduction à Python</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Holzer<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
