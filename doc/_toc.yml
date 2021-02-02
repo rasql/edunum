@@ -4,6 +4,7 @@
   sections:
     - file: python/index
       sections:
+        - file: why
         - file: python/1_intro
         - file: python/1_calc
         - file: python/1_text
