@@ -452,12 +452,12 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pourquoi-jupyter">
-   Pourquoi Jupyter?
+   Pourquoi « Jupyter »?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creer-un-nouveau-notebook">
-   Créer un nouveau notebook
+  <a class="reference internal nav-link" href="#creer-un-notebook">
+   Créer un notebook
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -500,6 +500,63 @@
    Résultat
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deux-types-de-cellules">
+   Deux types de cellules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#langage-a-balise">
+   Langage à balise
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#html">
+     HTML
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#xml">
+     XML
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#latex">
+     LaTeX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markdown">
+     Markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#titres">
+   Titres
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#styles">
+   Styles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listes">
+   Listes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inserer-une-image">
+   Insérer une image
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inserer-un-hyper-lien">
+   Insérer un hyper-lien
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -513,64 +570,66 @@
                 
   <div class="section" id="jupyterlab">
 <h1>JupyterLab<a class="headerlink" href="#jupyterlab" title="Lien permanent vers ce titre">¶</a></h1>
-<p>JupyterLab est un environnement pour développer <strong>code et documentation</strong> dans un navigateur web.</p>
+<p>JupyterLab est un environnement pour déveloper <strong>code et documentation</strong> dans un navigateur web.</p>
 <p><img alt="" src="../_images/jupyterlab.png" /></p>
 <p>Dans l’image ci-dessus vous pouvez voir</p>
 <ul class="simple">
-<li><p>un navigateur de fichier à gauche</p></li>
-<li><p>un <strong>notebook</strong> avec formules mathématiques</p></li>
+<li><p>un <strong>notebook</strong> avec des formules mathématiques</p></li>
 <li><p>une <strong>image</strong> interactive</p></li>
 <li><p>du <strong>code</strong> Python</p></li>
 </ul>
 <div class="section" id="pourquoi-jupyter">
-<h2>Pourquoi Jupyter?<a class="headerlink" href="#pourquoi-jupyter" title="Lien permanent vers ce titre">¶</a></h2>
-<a class="reference internal image-reference" href="../_images/jupyter_logo.png"><img alt="../_images/jupyter_logo.png" src="../_images/jupyter_logo.png" style="width: 100px;" /></a>
-<p>Le nom <strong>Ju-pyt-R</strong> fait référence au trois langages</p>
+<h2>Pourquoi « Jupyter »?<a class="headerlink" href="#pourquoi-jupyter" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le nom <strong>Ju-pyt-R</strong> fait référence au trois langages de programmation</p>
 <ul class="simple">
 <li><p>Julia</p></li>
 <li><p>Python</p></li>
 <li><p>R</p></li>
 </ul>
-<p>Le logo représente les lunes de la planète Jupiter qui sont:</p>
+<a class="reference internal image-reference" href="../_images/jupyter_logo.png"><img alt="../_images/jupyter_logo.png" src="../_images/jupyter_logo.png" style="width: 100px;" /></a>
+<p>Le logo Juypter représente les lunes de la planète Jupiter qui sont:</p>
 <ul class="simple">
 <li><p>Io</p></li>
 <li><p>Europe</p></li>
 <li><p>Ganymède</p></li>
 <li><p>Callisto</p></li>
 </ul>
+<p>Ces quatre satellites de Jupiter ont été découvertes en 1610 par <strong>Galilée</strong>, fondateur d’une pensée scientifique basé sur l’observation.</p>
+<p>Il a proposé un <strong>modèle héliocentriste</strong> (=soleil au centre) avec des mouvement satellitaires des planètes autour du soleil et des lunes autour des planètes.</p>
 </div>
-<div class="section" id="creer-un-nouveau-notebook">
-<h2>Créer un nouveau notebook<a class="headerlink" href="#creer-un-nouveau-notebook" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="creer-un-notebook">
+<h2>Créer un notebook<a class="headerlink" href="#creer-un-notebook" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Choisissez <strong>File &gt; New &gt; Notebook</strong></p></li>
 <li><p>Choisissez un noyeau (kernel): <strong>Python 3</strong></p></li>
 </ul>
 <p>Alternativement:</p>
 <ul class="simple">
-<li><p>Cliquer sur (+)</p></li>
-<li><p>Choisir dans le Launcher: <strong>Notebook Python 3</strong></p></li>
+<li><p>Cliquez sur (+)</p></li>
+<li><p>Choisissez dans le Launcher: <strong>Notebook Python 3</strong></p></li>
 </ul>
 <p><img alt="nb" src="../_images/start_nb.png" /></p>
 </div>
 <div class="section" id="une-cellule-vide">
 <h2>Une cellule vide<a class="headerlink" href="#une-cellule-vide" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Au début il y a une cellule vide.</p>
+<p>Au début vous avez juste une cellule vide.</p>
 <p><img alt="" src="../_images/cell1.png" /></p>
-<p>Vous notez :</p>
+<p>Vous notez:</p>
 <ul class="simple">
-<li><p>la barre de sélection bleu</p></li>
-<li><p>les crochets encore vides</p></li>
+<li><p>une barre de sélection bleue</p></li>
+<li><p>des crochets encore vides</p></li>
 </ul>
 </div>
 <div class="section" id="evaluler-une-cellule">
 <h2>Evaluler une cellule<a class="headerlink" href="#evaluler-une-cellule" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ecrivez une expression Python dans la cellule, et appuyez simultanément sur les touches <strong>maj + retour</strong> pour exécuter l’expression.</p>
+<p>Alternativement vous pouvez cliquer sur le bouton ▶︎ dans le menu.</p>
 <p><img alt="" src="../_images/cell2.png" /></p>
 <p>Vous notez que:</p>
 <ul class="simple">
 <li><p>le numéro de l’exécution apparait dans les crochets (1)</p></li>
 <li><p>le resultat de l’expression est affiché après la cellule code</p></li>
-<li><p>une nouvelle cellule vide est ajouté</p></li>
+<li><p>une nouvelle cellule vide est ajoutée</p></li>
 </ul>
 </div>
 <div class="section" id="evaluer-de-nouveau">
@@ -579,18 +638,18 @@
 <p><img alt="" src="../_images/cell3.png" /></p>
 <p>Vous notez que:</p>
 <ul class="simple">
-<li><p>le numéro de l’execution a incrémenté (2)</p></li>
-<li><p>la nouvelle cellule n’est pas en mode édition (il n’y a pas de curseur)</p></li>
+<li><p>le numéro de l’exécution a incrémenté (2)</p></li>
+<li><p>une nouvelle cellule vide est ajoutée</p></li>
 </ul>
 </div>
 <div class="section" id="ajouter-des-cellules">
 <h2>Ajouter des cellules<a class="headerlink" href="#ajouter-des-cellules" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Vous pouvez ajouter des cellules</p>
 <ul class="simple">
-<li><p>avec le bouton (+) ou</p></li>
+<li><p>avec le bouton (+) du menu, ou</p></li>
 <li><p>avec les raccourcis <strong>A</strong> et <strong>B</strong>.</p></li>
 </ul>
-<p>Par rapport à la cellule active (barre bleu) vous pouvez ajouter une nouvelle cellule</p>
+<p>Par rapport à la cellule active (barre bleue) vous pouvez ajouter une nouvelle cellule</p>
 <ul class="simple">
 <li><p><strong>A</strong> en-dessus (above)</p></li>
 <li><p><strong>B</strong> en-dessous (below)</p></li>
@@ -609,7 +668,7 @@
 <p><img alt="" src="../_images/cell6.png" /></p>
 <p>Vous notez que:</p>
 <ul class="simple">
-<li><p>la cellule est grisé</p></li>
+<li><p>la cellule est grisée</p></li>
 <li><p>le cursur a disparu</p></li>
 </ul>
 </div>
@@ -621,21 +680,22 @@
 <li><p><strong>C</strong> copie la cellule</p></li>
 <li><p><strong>V</strong> colle la cellule</p></li>
 </ul>
-<p>Par exemple la cellule <code class="docutils literal notranslate"><span class="pre">'hello'</span></code> a été coupé avec la touche <strong>X</strong></p>
+<p>Par exemple la cellule <code class="docutils literal notranslate"><span class="pre">'hello'</span></code> a été coupée avec la touche <strong>X</strong></p>
 <p><img alt="" src="../_images/cell7.png" /></p>
-<p>et ensuite colle à la fin de la cellule <code class="docutils literal notranslate"><span class="pre">2</span></code> avec la touche <strong>V</strong></p>
+<p>et ensuite collée à la fin de la cellule <code class="docutils literal notranslate"><span class="pre">2</span></code> avec la touche <strong>V</strong></p>
 <p><img alt="" src="../_images/cell8.png" /></p>
+<p><strong>Attention:</strong> La touche <strong>cmd</strong> n’est pas nécessaire en mode <em>command</em>.</p>
 </div>
 <div class="section" id="selection-multiple">
 <h2>Sélection multiple<a class="headerlink" href="#selection-multiple" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Avec les touches de flèche <strong>haut/bas</strong> vous pouvez naviger parmis les cellules.<br />
+<p>Avec les touches de flèche <strong>haut/bas</strong> (▲ et ▼) vous pouvez naviguer parmis les cellules.<br />
 En appuyant simultanément sur la touche <strong>maj</strong> et <strong>haut/bas</strong> vous pouvez sélectionner des cellules multiples.</p>
 <p><img alt="" src="../_images/cell9.png" /></p>
 <p>La sélection multiple est utile pour couper, copier et coller multiples cellules.</p>
 </div>
 <div class="section" id="resultat">
 <h2>Résultat<a class="headerlink" href="#resultat" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Quand une cellule est exéculté, toutes les sexpressions sont évaluées, mais seulement le dernier résultat est affiché.</p>
+<p>Quand une cellule est exécutée, toutes les expressions sont évaluées, mais seulement le dernier résultat est affiché.</p>
 <p><img alt="" src="../_images/cell10.png" /></p>
 <p>Vous pouvez afficher toutes les valeurs en utilisant la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
 <div class="cell docutils container">
@@ -654,6 +714,142 @@ En appuyant simultanément sur la touche <strong>maj</strong> et <strong>haut/ba
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="deux-types-de-cellules">
+<h2>Deux types de cellules<a class="headerlink" href="#deux-types-de-cellules" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans un notebook Jupyter il y a deux types de cellules:</p>
+<ul class="simple">
+<li><p>code</p></li>
+<li><p>texte (Markdown)</p></li>
+</ul>
+<p>Pour basculer entre code et texte utilisez le menu <strong>Code/Markdown</strong> dans la barre des menus.</p>
+<p><img alt="" src="../_images/jupyter_menu.png" /></p>
+<p>Vous pouvez également utiliser les raccourcis</p>
+<ul class="simple">
+<li><p><strong>M</strong> pour Markdown</p></li>
+<li><p><strong>Y</strong> pour code</p></li>
+</ul>
+<p><strong>Attention:</strong> il faut être en mode <em>command</em> pour que les raccourcis fonctionnent.</p>
+</div>
+<div class="section" id="langage-a-balise">
+<h2>Langage à balise<a class="headerlink" href="#langage-a-balise" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un langage à balises est appelé <strong>markup language</strong> en anglais.<br />
+Un texte contient des <strong>balises</strong> spéciales (=markup) pour formater le texte.</p>
+<div class="section" id="html">
+<h3>HTML<a class="headerlink" href="#html" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La plus célèbres des langages Markup est <strong>HTML</strong>. C’est le langage dans lequel les pages internet sont écrites. D’ailleurs le <strong>ML</strong> dans HTML est pour <strong>Hyper-Text Markup Langage</strong></p>
+<p>Voici un exemple de code HTML utilisant la balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;img src=&#39;img/html5_logog.png&#39;&gt;
+</pre></div>
+</div>
+<p>qui insère cette image</p>
+<a class="reference internal image-reference" href="../_images/html5_logo.png"><img alt="../_images/html5_logo.png" src="../_images/html5_logo.png" style="width: 100px;" /></a>
+<p>et un autre exemple utilisant la balise <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;a href=&#39;https://fr.wikipedia.org/wiki/Hypertext_Markup_Language&#39;&gt;HTML sur Wikipédia&lt;/&gt;
+</pre></div>
+</div>
+<p>qui produit cet hyper-lien</p>
+<p><a href='https://fr.wikipedia.org/wiki/Hypertext_Markup_Language'>HTML sur Wikipédia</a></p>
+</div>
+<div class="section" id="xml">
+<h3>XML<a class="headerlink" href="#xml" title="Lien permanent vers ce titre">¶</a></h3>
+<p>C’est <strong>eXtendend Markup Langage</strong>. Ce langage est utilisé par exmple pour le nouveau format des fichiers Microsoft Office:</p>
+<ul class="simple">
+<li><p>Word (.docx)</p></li>
+<li><p>Excel (.xlsx)</p></li>
+<li><p>PowerPoint (.pptx)</p></li>
+</ul>
+<p>Ou le <strong>X</strong> dans l’extension est pour <strong>Open XML</strong></p>
+</div>
+<div class="section" id="latex">
+<h3>LaTeX<a class="headerlink" href="#latex" title="Lien permanent vers ce titre">¶</a></h3>
+<p>C’est un langage à balises pour représenter des formules mathématiques. Ce langage est adoré par les mathématiciens et scientifiques. Votre support de cours et vos exercices de maths ont certainement été écrits avec LaTeX.</p>
+<p>Voici un exemple de code en LateX</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$$ c = \sqrt[2]{a^2 + b^2} $$
+</pre></div>
+</div>
+<p>qui produit</p>
+<div class="math notranslate nohighlight">
+\[ c = \sqrt{a^2 + b^2} \]</div>
+</div>
+<div class="section" id="markdown">
+<h3>Markdown<a class="headerlink" href="#markdown" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le mot <strong>Markdown</strong> est un jeu de mot sur <strong>Markup</strong>.<br />
+Le mot <strong>down</strong> (bas, inférieur) se veut pour désigner une version <em>simplifiée</em> de langage Markup.</p>
+<p>Souvent un ou deux symboles suffisent déjà pour la mise en format.</p>
+</div>
+</div>
+<div class="section" id="titres">
+<h2>Titres<a class="headerlink" href="#titres" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez créer des titres avec la balise hashtag <code class="docutils literal notranslate"><span class="pre">#</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Titre 1
+## Titre 2 
+### Titre 3
+</pre></div>
+</div>
+<p>ce qui produit ceci</p>
+<p><img alt="" src="../_images/md1.png" /></p>
+</div>
+<div class="section" id="styles">
+<h2>Styles<a class="headerlink" href="#styles" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les ballises</p>
+<ul class="simple">
+<li><p>astérisque simple (<code class="docutils literal notranslate"><span class="pre">*</span></code>)</p></li>
+<li><p>astérisque double (<code class="docutils literal notranslate"><span class="pre">**</span></code>)</p></li>
+<li><p>apostrophe arrière (<code class="docutils literal notranslate"><span class="pre">`</span></code> )</p></li>
+</ul>
+<p>entourent un ou plusieurs mots pour créer les styles</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*italique*, **gras** et `code`
+</pre></div>
+</div>
+<p>en produisent ce résultat</p>
+<p><em>italique</em>, <strong>gras</strong> et <code class="docutils literal notranslate"><span class="pre">code</span></code></p>
+</div>
+<div class="section" id="listes">
+<h2>Listes<a class="headerlink" href="#listes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le code Markdown</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- item
+- item
+</pre></div>
+</div>
+<p>produit une liste à puces</p>
+<ul class="simple">
+<li><p>item</p></li>
+<li><p>item</p></li>
+</ul>
+<p>Le code Markdown</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. item
+1. item
+</pre></div>
+</div>
+<p>produit une liste numérotées</p>
+<ol class="simple">
+<li><p>item</p></li>
+<li><p>item</p></li>
+</ol>
+</div>
+<div class="section" id="inserer-une-image">
+<h2>Insérer une image<a class="headerlink" href="#inserer-une-image" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour insérer une image utilisez le code</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>![](img/html5_logo.png)
+</pre></div>
+</div>
+<p>qui produit cecui</p>
+<p><img alt="logo" src="../_images/html5_logo.png" /></p>
+<p>Le chemin vers l’image peut être</p>
+<ul class="simple">
+<li><p>un lien local (une image dans le même dossier que votre notebook)</p></li>
+<li><p>un URL (une adresse complète sur internet)</p></li>
+</ul>
+</div>
+<div class="section" id="inserer-un-hyper-lien">
+<h2>Insérer un hyper-lien<a class="headerlink" href="#inserer-un-hyper-lien" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour insérer un hyper-lien utilisez le code</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[Lien vers le site Python](https://www.python.org)
+</pre></div>
+</div>
+<p>ce qui produit</p>
+<p><a class="reference external" href="https://www.python.org">Lien vers le site Python</a></p>
 </div>
 </div>
 
