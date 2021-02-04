@@ -6,7 +6,7 @@
   - file: python/index
     sections:
       - file: start/why
-      - file: start/install
+      - file: start/thonny/thonny
       - file: start/edit
       
       - file: python/1_intro
