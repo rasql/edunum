@@ -1,41 +1,9 @@
 # Programmer
 
-Programmer en informatique est décrire avec un langage de programmation un processus.
-Nous commencons par cette activité, parce que c'est une activité qui nous permet d'entrés tout de suite dans le vif du sujet, et aussi parce que ça nous permet d'utiliser ce langage pour la suite.
+Programmer est le processus de **dire à un ordinateur ce qu'il doit faire**.
 
+![hello world](https://media.giphy.com/media/MeJgB3yMMwIaHmKD4z/giphy.gif)
 
-## Literal include
-```
-.. literalinclude:: ex/hello.py
-  :lines 3-
-```
+Ceci nécessite un langage de programmation, qui est compris à la fois par un humain et par un ordinateur.
+Dans ce cours nous avons choisi le langage **Python**, un langage facile à lire et facile à écrire.
 
-``` {literalinclude} ex/hello.py
-:lines: 3-
-```
-
-## Image
-```
-.. image:: ../thonny.png
-```
-
-``` {image} ../logo.png
-```
-
-## Download
-
-```
-:download:`ex/hello.py <ex/hello.py>`
-```
-
-{download}`ex/hello.py <ex/hello.py>`
-
-```{download}
-`ex/hello.py <ex/hello.py>`
-```
-
-```{admonition} Here's my title
-:class: warning
-
-Here's my admonition content
-```
