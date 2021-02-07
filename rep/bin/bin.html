@@ -1,0 +1,1190 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Système binaire &#8212; Education numérique</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/questions.js"></script>
+    <script type="text/javascript" src="../../_static/blanks.js"></script>
+    <script type="text/javascript" src="../../_static/reactions.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script type="text/javascript">
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" type="text/javascript" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="Nombres" href="../nombre.html" />
+    <link rel="prev" title="Système unaire" href="../unaire.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Education numérique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../python/index.html">
+   Programmer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/why.html">
+     A quoi ça sert?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/thonny/thonny.html">
+     Démarrer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/markdown.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/1_intro.html">
+     Introduction à Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/1_calc.html">
+     Calcul numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/1_text.html">
+     Texte (string)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/2_struct.html">
+     Les branchements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/3_list.html">
+     Listes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/4_loop.html">
+     Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/4_text2.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/ex1.html">
+     Exercices Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/ex2.html">
+     Exercices if-else
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/quiz.html">
+     Quiz
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../plot/intro.html">
+   Visualiser
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/plot.html">
+     Graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/param.html">
+     Paramètres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/numpy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/hist.html">
+     Histogrammes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/bar.html">
+     Diagrammes à barres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/polar.html">
+     Coordonnées polaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/text.html">
+     Text
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/style.html">
+     Style
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/color.html">
+     Couleurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/subplot.html">
+     Sous-graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/file.html">
+     Fichiers
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../index.html">
+   Encoder
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../algo/algo.html">
+   Algorithmique
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../misc/markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../misc/jupyter.html">
+   Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../misc/thonny.html">
+   Thonny
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../misc/style.html">
+   Style
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/rep/bin/bin.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Frep/bin/bin.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/rep/bin/bin.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/rep/bin/bin.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rasql/edunum/blob/main/doc/rep/bin/bin.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="lancement Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tour-de-magie">
+   Tour de magie
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comment-ca-fonctionne">
+   Comment ça fonctionne?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-binaire">
+   Code binaire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-fonction-bin">
+   La fonction
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bin
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-format-string">
+   Le format-string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programmer-un-quiz">
+   Programmer un quiz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice">
+     Exercice
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-chiffres">
+   Les chiffres
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-systeme-positionnel">
+   Le système positionnel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexage">
+   Indexage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-poids-des-positions">
+   Le poids des positions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binaire-en-decimal">
+   Binaire en décimal
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-avance">
+     Python avancé
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decimal-en-binaire">
+   Décimal en binaire
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exercice
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="systeme-binaire">
+<h1>Système binaire<a class="headerlink" href="#systeme-binaire" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Le système <strong>binaire</strong> est la base de toute représentation d’information d’un ordinateur.</p>
+<p><img alt="" src="../../_images/binaire.jpg" /></p>
+<div class="section" id="tour-de-magie">
+<h2>Tour de magie<a class="headerlink" href="#tour-de-magie" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous commençons ce chapitre par un <strong>tour de magie</strong>.
+Pensez à un nombre entre 0 et 15, mais ne le dites pas.</p>
+<p><img alt="" src="../../_images/binaire.png" /></p>
+<p>Votre nombre, se trouve-t-il sur la</p>
+<ul class="simple">
+<li><p>première carte ? – oui</p></li>
+<li><p>deuxième carte ? – oui</p></li>
+<li><p>troisième carte ? – non</p></li>
+<li><p>quatrième carte ? – oui</p></li>
+</ul>
+<p>Alors vous avez pensé à 11.</p>
+<p>Encore une fois!<br />
+Pensez à une autre nombre entre 0 et 15.<br />
+Votre nombre, se trouve-t-il sur la</p>
+<ul class="simple">
+<li><p>première carte ? – oui</p></li>
+<li><p>deuxième carte ? – oui</p></li>
+<li><p>troisième carte ? – oui</p></li>
+<li><p>quatrième carte ? – non</p></li>
+</ul>
+<p>Alors vous avez pensé à 7.</p>
+<p><strong>Astuce:</strong> Vous pouvez imprimer ces 4 cartes pour présenter le tour de magie à vos amis.</p>
+<ul class="simple">
+<li><p>faites un <strong>clic-droit</strong> sur l’image</p></li>
+<li><p>choisissez <strong>Ouvrir l’image dans un noveau onglet</strong></p></li>
+<li><p>imprimez la page</p></li>
+</ul>
+</div>
+<div class="section" id="comment-ca-fonctionne">
+<h2>Comment ça fonctionne?<a class="headerlink" href="#comment-ca-fonctionne" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour vous donner un indice, nous ajoutons à ces nombres leur code binaire.</p>
+<p><img alt="" src="../../_images/binaire2.png" /></p>
+<p>Regardez bien ce qui est commun aux séquences binaires de chaque carte.<br />
+Vous trouvez l’aspect commun ?</p>
+</div>
+<div class="section" id="code-binaire">
+<h2>Code binaire<a class="headerlink" href="#code-binaire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un vrai magicien ne divulgue jamais comment fonctione son tour de magie.<br />
+Mais vous avez maintenant assez d’indices pour trouver la solution par vous mêmes.</p>
+<p>Pour vous donner encore un indice, pensez de nouveau à un nombre entre 0 et 15, mais cette fois représenté-le pas en décimal, mais avec un code binaire de 4 chiffres (lu de droite à gauche).</p>
+<p>Voici les quatre questions. Est-ce que le</p>
+<ul class="simple">
+<li><p>premier chiffre est 1 - oui</p></li>
+<li><p>deuxième chiffre est 1 - non</p></li>
+<li><p>troisièe chiffre est 1 - oui</p></li>
+<li><p>uatrième chiffre est 1 - oui</p></li>
+</ul>
+<p>Alors, le nombre auqel vous avez pensé est <code class="docutils literal notranslate"><span class="pre">1011</span></code>.<br />
+Ceci correspond au nombre décimal 11.</p>
+</div>
+<div class="section" id="la-fonction-bin">
+<h2>La fonction <code class="docutils literal notranslate"><span class="pre">bin</span></code><a class="headerlink" href="#la-fonction-bin" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Python possèce une fonction <code class="docutils literal notranslate"><span class="pre">bin()</span></code> qui transforme un décimal en binaire.<br />
+Par exemple voici le code binaire de 9.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0b1001&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dans la réponse le terme <code class="docutils literal notranslate"><span class="pre">0b</span></code> est ajouté au début du code binaire pour le différencier d’un nombre décimal. Utilisant la fonction <code class="docutils literal notranslate"><span class="pre">bin()</span></code> nous pouvons maintenant imprimer les nombres de 0 à 15.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="nb">bin</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 = 0b0
+1 = 0b1
+2 = 0b10
+3 = 0b11
+4 = 0b100
+5 = 0b101
+6 = 0b110
+7 = 0b111
+8 = 0b1000
+9 = 0b1001
+10 = 0b1010
+11 = 0b1011
+12 = 0b1100
+13 = 0b1101
+14 = 0b1110
+15 = 0b1111
+</pre></div>
+</div>
+</div>
+</div>
+<p>En Python nous pouvons représenter un nombre sous sa forme binare en le précédent de <code class="docutils literal notranslate"><span class="pre">0b</span></code>. Voici la séquence <code class="docutils literal notranslate"><span class="pre">101</span></code> en binaire et en décimal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mb">0b101</span><span class="p">,</span> <span class="mi">101</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5, 101)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="le-format-string">
+<h2>Le format-string<a class="headerlink" href="#le-format-string" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La notation <strong>f-string</strong> (chaîne avec formattage) est très util pour afficher des codes binaires, et c’est une méthode plus puissant que la fonction <code class="docutils literal notranslate"><span class="pre">bin()</span></code>.</p>
+<p>Un <strong>f-string</strong> est une chaîne de caractères qui</p>
+<ul class="simple">
+<li><p>commence par <code class="docutils literal notranslate"><span class="pre">f</span></code></p></li>
+<li><p>contient des accolades <code class="docutils literal notranslate"><span class="pre">{}</span></code> qui peuvent contenir des variables avec description de format</p></li>
+</ul>
+<p>Par exemple:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{i:2}</span></code> imprime la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> sur 2 positions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{i:4b}</span></code> imprime la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> sur 4 positions en binaire</p></li>
+</ul>
+<p>Ceci nous permet d’aligner les nombres décimaux et binaires à droite.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{i:2}</span><span class="s1"> = </span><span class="si">{i:4b}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 0 =    0
+ 1 =    1
+ 2 =   10
+ 3 =   11
+ 4 =  100
+ 5 =  101
+ 6 =  110
+ 7 =  111
+ 8 = 1000
+ 9 = 1001
+10 = 1010
+11 = 1011
+12 = 1100
+13 = 1101
+14 = 1110
+15 = 1111
+</pre></div>
+</div>
+</div>
+</div>
+<p>Au lieu de mettre un espace, le zéro est fréquemment utilisé pour créer des nombres qui ont tous la même longueur. Le <strong>f-string</strong> permet de choisir le symbole de rembourrage (padding).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{i:02}</span></code> imprimer la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> sur 2 positions (rembourré avec des <code class="docutils literal notranslate"><span class="pre">0</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{i:04b}</span></code> imprimer la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> sur 4 positions en binaire (rembourré avec des <code class="docutils literal notranslate"><span class="pre">0</span></code>)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{i:02}</span><span class="s1"> = </span><span class="si">{i:04b}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00 = 0000
+01 = 0001
+02 = 0010
+03 = 0011
+04 = 0100
+05 = 0101
+06 = 0110
+07 = 0111
+08 = 1000
+09 = 1001
+10 = 1010
+11 = 1011
+12 = 1100
+13 = 1101
+14 = 1110
+15 = 1111
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="programmer-un-quiz">
+<h2>Programmer un quiz<a class="headerlink" href="#programmer-un-quiz" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons créer un <strong>quiz pour apprendre le code binaire</strong>.
+Nous commençons par créer une liste de nombres que nous voulons utiliser dans le quiz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nombres</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">nombres</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4, 5, 6, 7]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Du module <code class="docutils literal notranslate"><span class="pre">random</span></code> nous importons la fonction <code class="docutils literal notranslate"><span class="pre">shuffle</span></code>.  Cette fonction permet de réarranger une liste de façon aléatoire. L’aventage de cette méthode est que chaqe élément est testé une seule fois.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">shuffle</span>
+<span class="n">shuffle</span><span class="p">(</span><span class="n">nombres</span><span class="p">)</span>
+<span class="n">nombres</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 4, 1, 3, 0, 2, 7, 5]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voici le code de ce quiz. Vous pouvez le copier dans l’éditeur de script de Thonny.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Quiz: décimal en binaire&#39;</span><span class="p">)</span>
+
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nombres</span><span class="p">:</span>
+    <span class="n">dec</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">)</span>
+    <span class="n">dec</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dec</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;faux! réponse correcte =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;score =&#39;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Quiz: décimal en binaire
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b110: 6
+0b100: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! réponse correcte = 4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b1: 1
+0b11: 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! réponse correcte = 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b0: 0
+0b10: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! réponse correcte = 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b111: 7
+0b101: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>score = 5
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Attention:</strong><br />
+Il est possible que l’indicateur de cellule reste à <code class="docutils literal notranslate"><span class="pre">[*]</span></code> ce qui indique que l’execution n’est pas terminée.<br />
+En haut à droite vous avec <strong>Python 3 ⚫️</strong>  (noyeau en tour d’exécution).<br />
+Si nécessaire vous pouvez interrompre l’exécution avec le bouton ◼️.</p>
+<div class="section" id="exercice">
+<h3>Exercice<a class="headerlink" href="#exercice" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Créez le quiz inverse, ou il faut trouver le code binaire pour un nombre donné en format décimal.</p>
+</div>
+</div>
+<div class="section" id="les-chiffres">
+<h2>Les chiffres<a class="headerlink" href="#les-chiffres" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous appelons <strong>base b</strong> le nombre de chiffres utilisé pour représenter un nombre.</p>
+<p>Dans le système de base 10 (système décimal) nous utilisons les chiffres</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;0123456789&#39;
+</pre></div>
+</div>
+<p>Dans le système de base 2 (système binaire) nous utilisons seulement</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;01&#39;
+</pre></div>
+</div>
+<p>et dans le système héxadécimal nous utilisons 16 symboles.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;0123456789ABCDEF&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="le-systeme-positionnel">
+<h2>Le système positionnel<a class="headerlink" href="#le-systeme-positionnel" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans un système positionnel la valeur d’un symbol est determinée par</p>
+<ul class="simple">
+<li><p>sa propre valeur,</p></li>
+<li><p>sa position dans la séquence.</p></li>
+</ul>
+<p>Un nombre est représenté par une <strong>séquences de chiffres</strong>.  Par exemple:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>n = &#39;2021&#39;
+</pre></div>
+</div>
+<p>La valeur d’un chiffre dépend de sa position.</p>
+<ul class="simple">
+<li><p>le premier 2 a la valeur 2000</p></li>
+<li><p>le deuxième 2 a la valeur 20</p></li>
+</ul>
+<p>Nous povons représenter un <strong>nombre n</strong> dans une <strong>base b</strong> par une séquence de <strong>chiffres c</strong> dont les <strong>indices i</strong> vont de 0 à m-1.</p>
+<div class="math notranslate nohighlight">
+\[ c_{m-1} ... c_2 c_1 c_0 \]</div>
+<p>Le valeur de cette séquence des chiffres est</p>
+<div class="math notranslate nohighlight">
+\[ n_b = \sum_{i=0}^{m-1} {c_i \cdot b^i} \]</div>
+<p>La valeur du nombre est donc la somme des valeur du <strong>chiffre</strong> <span class="math notranslate nohighlight">\(c_i\)</span> muliplié par son <strong>poids</strong> <span class="math notranslate nohighlight">\(b^i\)</span>.</p>
+</div>
+<div class="section" id="indexage">
+<h2>Indexage<a class="headerlink" href="#indexage" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">range(m)</span></code> nous donne la liste des indices 0 à m-1 que nous aurons besoin pour les calculs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4, 5, 6, 7]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Seulement, nous avons pris l’habitude d’écrire les nombres de droite à gauche.</p>
+<div class="math notranslate nohighlight">
+\[ c_{m-1} ... c_2 c_1 c_0 \]</div>
+<p>Donc l’indice m-1 se trouve à gauche et l’indice 0 à droite.<br />
+L’opérateur de tranche <code class="docutils literal notranslate"><span class="pre">[::-1]</span></code> permet d’inverser l’ordre d’une liste.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[7, 6, 5, 4, 3, 2, 1, 0]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="le-poids-des-positions">
+<h2>Le poids des positions<a class="headerlink" href="#le-poids-des-positions" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le poids du chiffre <span class="math notranslate nohighlight">\(c_i\)</span> est <span class="math notranslate nohighlight">\(b^i\)</span>, donc la puissance de la <strong>base b</strong> et sa <strong>position i</strong>.<br />
+Les poids pour 5 positions décimales est</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">10</span><span class="o">**</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[10000, 1000, 100, 10, 1]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pour reprendre le nombre 2021 sa décomposition est</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">*</span><span class="mi">1000</span> <span class="o">+</span> <span class="mi">0</span><span class="o">*</span><span class="mi">100</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021
+</pre></div>
+</div>
+</div>
+</div>
+<p>Les poids du système binaire sont des puissances de 2.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">**</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">poids</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>128	64	32	16	8	4	2	1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="binaire-en-decimal">
+<h2>Binaire en décimal<a class="headerlink" href="#binaire-en-decimal" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous pouvons donc calculer la valeur de la séquence binaire et l’exprimer en décimal.<br />
+Affichons les 8 poids binaires et les 8 chiffres binaires ensemble.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;10010100&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">poids</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">c</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>128	64	32	16	8	4	2	1
+1	0	0	1	0	1	0	0
+</pre></div>
+</div>
+</div>
+</div>
+<p>La valeur représenté par <code class="docutils literal notranslate"><span class="pre">10010100</span></code> correspond à</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">128</span> <span class="o">+</span> <span class="mi">16</span> <span class="o">+</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>148
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous pouvons visualiser cet algorithme en Python. L’indexe <code class="docutils literal notranslate"><span class="pre">c[m-1-i]</span></code> tient compte que nous indexons la séquence des chiffres de droite à gauche.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;10010100&#39;</span>
+<span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="mi">2</span><span class="o">**</span><span class="n">i</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+ 4
++ 16
++ 128
+= 148
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous pouvons maintenant définir une fonction <code class="docutils literal notranslate"><span class="pre">bin2dec</span></code> qui fait la conversion chaîne binaire vers nombre décimal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bin2dec</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">+=</span> <span class="mi">2</span><span class="o">**</span><span class="n">i</span>
+    <span class="k">return</span> <span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bin2dec</span><span class="p">(</span><span class="s1">&#39;10010100&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>148
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="python-avance">
+<h3>Python avancé<a class="headerlink" href="#python-avance" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La <strong>compréhension de liste</strong> permet d’écrire la liste des termes <span class="math notranslate nohighlight">\(c_i b^i\)</span> en une seule ligne.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">])</span> <span class="o">*</span> <span class="mi">2</span><span class="o">**</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 0, 4, 0, 16, 0, 0, 128]
+</pre></div>
+</div>
+</div>
+</div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">sum</span></code> permet de sommer les éléments de cette liste.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">])</span> <span class="o">*</span> <span class="mi">2</span><span class="o">**</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>148
+</pre></div>
+</div>
+</div>
+</div>
+<p>La notation Python est pratiquement identique à la formule mathématique.</p>
+<div class="math notranslate nohighlight">
+\[ n_b = \sum_{i=0}^{m-1} {c_i \cdot b^i} \]</div>
+</div>
+</div>
+<div class="section" id="decimal-en-binaire">
+<h2>Décimal en binaire<a class="headerlink" href="#decimal-en-binaire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’algorithme de conversion décimale en binaire utilise</p>
+<ul class="simple">
+<li><p>division entière <code class="docutils literal notranslate"><span class="pre">//</span></code></p></li>
+<li><p>division modulo <code class="docutils literal notranslate"><span class="pre">%</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">148</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10010100
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous en créons une fonction</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dec2bin</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">c</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dec2bin</span><span class="p">(</span><span class="mi">148</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;10010100&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Exercice<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Créez une fonction qui permet de choisir la base, par exemple 3, 4 et 5.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./rep/bin"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../unaire.html" title="previous page">Système unaire</a>
+    <a class='right-next' id="next-link" href="../nombre.html" title="next page">Nombres</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Holzer<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
