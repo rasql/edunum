@@ -49,7 +49,7 @@ This is error info.
 ```
 
 ## Insert an image
-![](../logo.png)
+![](../img/logo.png)
 
 ## Math
 $$\frac{a + b}{1+x^2}$$

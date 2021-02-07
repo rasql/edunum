@@ -6,8 +6,9 @@
   - file: python/index
     sections:
       - file: start/why
-      - file: start/install
-      - file: start/edit
+      - file: start/thonny/thonny
+      - file: start/jupyterlab
+      - file: start/markdown
       
       - file: python/1_intro
       - file: python/1_calc
@@ -25,7 +26,7 @@
 #          - file: python/vi/3/3_ex3
           
 #        - file: python/le/3/3ex
-      - file: python/le/2/seance8
+#      - file: python/le/2/seance8
         
       - file: python/ex1
       - file: python/ex2
@@ -50,12 +51,12 @@
   - file: rep/index
     sections:
       - file: rep/unaire
-      - file: rep/binaire
+      - file: rep/bin/bin
       - file: rep/nombre
+      - file: rep/texte
       - file: rep/image
       - file: rep/couleur
       - file: rep/svg
-      - file: rep/texte
       - file: rep/son
         
   - file: algo/algo
