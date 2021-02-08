@@ -101,8 +101,8 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../python/index.html">
-   Programmer
+  <a class="reference internal" href="../start/index.html">
+   Démarrer
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -112,7 +112,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../start/thonny/thonny.html">
-     Démarrer
+     Thonny
     </a>
    </li>
    <li class="toctree-l2">
@@ -125,6 +125,15 @@
      Markdown
     </a>
    </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../python/index.html">
+   Programmer
+  </a>
+  <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../python/1_intro.html">
      Introduction à Python
@@ -166,19 +175,33 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../python/ex1.html">
-     Exercices Boucles
+    <a class="reference internal" href="../python/fonction.html">
+     Fonctions
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/ex2.html">
-     Exercices if-else
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../python/exercices.html">
+     Exercices
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/quiz.html">
-     Quiz
-    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/ex1.html">
+       Exercices Boucles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/ex2.html">
+       Exercices if-else
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/quiz.html">
+       Quiz
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -521,6 +544,11 @@
    Listes
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#texte-dans-la-marge">
+   Texte dans la marge
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -537,14 +565,14 @@
 <p>Ceci est un guide de style pour éditer les documents de ce jupyter-book.</p>
 <div class="section" id="debut-de-chapitre">
 <h2>Début de chapitre<a class="headerlink" href="#debut-de-chapitre" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Mettez une phrase qui explique le concept principal du chapitre, suivi d’une image captivant en lien.</p>
+<p>Mettez une phrase qui explique le concept principal du chapitre, suivi d’une image captivant en lien avec ce concept.</p>
 <p><img alt="" src="https://media.giphy.com/media/l0HlOBZcl7sbV6LnO/giphy.gif" /></p>
 <p>Vous pouvez trouver des GIF animés sur <a class="reference external" href="https://giphy.com">giphy.com</a><br />
 Choisir <strong>Media &gt; Small</strong> et coller le lien.</p>
 </div>
 <div class="section" id="public-cible">
 <h2>Public cible<a class="headerlink" href="#public-cible" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le public principal est 15-18 ans.</p>
+<p>Le public principal est agé de 15 à 18 ans.</p>
 <ul class="simple">
 <li><p>Il ne faux pas utiliser le <em>tu</em>.</p></li>
 <li><p>Utilisez <em>nous</em> et <em>vous</em>.</p></li>
@@ -568,6 +596,13 @@ Choisir <strong>Media &gt; Small</strong> et coller le lien.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>WARNING: Non-consecutive header level increase; 0 to 2
 </pre></div>
 </div>
+<p>Attention:</p>
+<ul class="simple">
+<li><p>il ne faudrait pas avoir plus que 12 documents dans une section<br />
+(autrement le menu sur smartphone devient trop long)</p></li>
+<li><p>il ne faudrait pas avoir plus que 12 sous-sectins dans un documents<br />
+(autrement le bouton forward pourrait être couvert par le menu)</p></li>
+</ul>
 </div>
 <div class="section" id="style-de-code">
 <h2>Style de code<a class="headerlink" href="#style-de-code" title="Lien permanent vers ce titre">¶</a></h2>
@@ -706,6 +741,10 @@ n = input(&#39;nom: &#39;)
 </ul>
 <p>La première lettre des items est en minuscule si les items sont très court.
 La première lettre des items est en majuscule si les items sont des phrases entières, et terminé par une ponctuation.</p>
+</div>
+<div class="section" id="texte-dans-la-marge">
+<h2>Texte dans la marge<a class="headerlink" href="#texte-dans-la-marge" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il ne faut pas placer de texte dans la marge (sidebar). C’est trop serré sur un smartphone.</p>
 </div>
 </div>
 
