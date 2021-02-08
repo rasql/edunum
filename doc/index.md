@@ -6,7 +6,6 @@ La science de l'informatique est l'étude
 - de la **représentation** de l'information
 - du **traitement** de l'information
 - de **transmission** de l'information
-- des **machines** capable de manuipuler l'information
 
 Dans ce document nous avons choisi le langage **Python** pour illustrer ces concepts.
 
