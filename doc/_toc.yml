@@ -43,6 +43,7 @@
       - file: plot/color
       - file: plot/subplot
       - file: plot/file
+      - file: plot/gif/gif
         
   - file: rep/index
     sections:
