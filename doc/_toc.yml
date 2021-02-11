@@ -3,13 +3,15 @@
 - part: Cours
   chapters:
   
-  - file: python/index
+  - file: start/index
     sections:
       - file: start/why
       - file: start/thonny/thonny
       - file: start/jupyterlab
       - file: start/markdown
       
+  - file: python/index
+    sections:
       - file: python/1_intro
       - file: python/1_calc
       - file: python/1_text
@@ -18,20 +20,14 @@
       - file: python/4_loop
       - file: python/4_text2
       - file: python/logique
+      - file: python/fonction
         
-#        - file: python/vi/3/3_loops
-#          sections:
-#          - file: python/vi/3/3_ex1
-#          - file: python/vi/3/3_ex2
-#          - file: python/vi/3/3_ex3
-          
-#        - file: python/le/3/3ex
-#      - file: python/le/2/seance8
-        
-      - file: python/ex1
-      - file: python/ex2
-      - file: python/quiz
-
+      - file: python/exercices
+        sections:
+          - file: python/ex1
+          - file: python/ex2
+          - file: python/quiz
+      
   - file: plot/intro
     sections:
       - file: plot/plot
@@ -47,6 +43,7 @@
       - file: plot/color
       - file: plot/subplot
       - file: plot/file
+      - file: plot/gif/gif
         
   - file: rep/index
     sections:
