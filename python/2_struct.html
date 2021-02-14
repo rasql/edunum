@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>Les branchements &#8212; Education numérique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L’instruction conditionnelle &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -24,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -39,29 +40,28 @@
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/questions.js"></script>
-    <script type="text/javascript" src="../_static/blanks.js"></script>
-    <script type="text/javascript" src="../_static/reactions.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Listes" href="3_list.html" />
@@ -108,7 +108,7 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../start/why.html">
-     A quoi ça sert?
+     Á quoi ça sert?
     </a>
    </li>
    <li class="toctree-l2">
@@ -152,7 +152,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Les branchements
+     L’instruction conditionnelle
     </a>
    </li>
    <li class="toctree-l2">
@@ -177,7 +177,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fonction.html">
-     Fonctions
+     Fonction avec argument
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#la-fonction-minimale">
+     La fonction minimale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#fonctions-predefinies">
+     Fonctions prédéfinies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#retour-d-une-valeur">
+     Retour d’une valeur
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -276,6 +291,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plot/file.html">
      Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     Animated GIF
     </a>
    </li>
   </ul>
@@ -519,8 +539,8 @@
         
               <div>
                 
-  <div class="section" id="les-branchements">
-<h1>Les branchements<a class="headerlink" href="#les-branchements" title="Lien permanent vers ce titre">¶</a></h1>
+  <div class="section" id="l-instruction-conditionnelle">
+<h1>L’instruction conditionnelle<a class="headerlink" href="#l-instruction-conditionnelle" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Une instruction conditionnelle donne un <strong>choix</strong> entre plusieurs options.</p>
 <p><img alt="" src="https://media.giphy.com/media/3oipPTHYlTpCw8oBBy/giphy.gif" /></p>
 <p>Tout programme suit 3 principes de base</p>
@@ -530,8 +550,8 @@
 <li><p>boucle</p></li>
 </ul>
 <p>Tout d’abord un programme est une <strong>séquence linéaire</strong> d’instructions, ce qui veut dire que les instructions sont exécutées une après l’autre.</p>
-<p>Un <strong>branchement</strong>, auissi appelé instruction conditionnelle, donne un choix entre différentes branches et seulement une branche entre plusieurs est exécutee.</p>
-<p>Le troisième schéma est la <strong>boucle</strong>, qui permet de parcourir une partie du code multiple fois. Le programme reviens donc en amont, pour ré-exécuter des instructions déjà éxécutées.</p>
+<p>Un <strong>branchement</strong>, aussi appelé instruction conditionnelle, donne un choix entre différentes branches et seulement une branche entre plusieurs est exécutée.</p>
+<p>Le troisième schéma est la <strong>boucle</strong>, qui permet de parcourir une partie du code multiple fois. Le programme revient donc en amont, pour ré-exécuter des instructions déjà exécutées.</p>
 <div class="section" id="valeur-booleene">
 <h2>Valeur booléene<a class="headerlink" href="#valeur-booleene" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une variable booléenne a seulement deux valeurs possibles</p>
@@ -569,7 +589,7 @@
 </div>
 <div class="section" id="les-comparateurs">
 <h2>Les comparateurs<a class="headerlink" href="#les-comparateurs" title="Lien permanent vers ce titre">¶</a></h2>
-<p>En Python, il y a 6 opérateur de comparaison</p>
+<p>En Python, il y a 6 opérateurs de comparaison</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> égal</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">!=</span></code> inégal</p></li>
@@ -578,7 +598,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> plus petit</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> plus petit ou égal</p></li>
 </ul>
-<p>Definissons une variable <code class="docutils literal notranslate"><span class="pre">x</span></code> que nous allons utiliser pour les comparaison</p>
+<p>Définissons une variable <code class="docutils literal notranslate"><span class="pre">x</span></code> que nous allons utiliser pour les comparaisons</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -652,7 +672,7 @@ x
 </div>
 </div>
 </div>
-<p>Mais la fonction <code class="docutils literal notranslate"><span class="pre">print</span></code> a un argument optionel <code class="docutils literal notranslate"><span class="pre">end</span></code> qui permet de supprimer le retour à la ligne.</p>
+<p>Mais la fonction <code class="docutils literal notranslate"><span class="pre">print</span></code> a un argument optionnel <code class="docutils literal notranslate"><span class="pre">end</span></code> qui permet de supprimer le retour à la ligne.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -666,7 +686,7 @@ x
 </div>
 </div>
 </div>
-<p>Pour visualiser le résultat des comparaisons, nous allons afficher une ligne de 50 charactères.</p>
+<p>Pour visualiser le résultat des comparaisons, nous allons afficher une ligne de 50 caractères.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
@@ -683,7 +703,7 @@ x
 </div>
 <div class="section" id="comparer-avec-une-valeur">
 <h2>Comparer avec une valeur<a class="headerlink" href="#comparer-avec-une-valeur" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous comparons les nombre 0 à 49 avec un seuil de 10.</p>
+<p>Nous comparons les nombres 0 à 49 avec un seuil de 10.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
@@ -725,7 +745,7 @@ x
 </div>
 <div class="section" id="comparaison-if-else">
 <h2>Comparaison if-else<a class="headerlink" href="#comparaison-if-else" title="Lien permanent vers ce titre">¶</a></h2>
-<p>On affiche un point rouge si la valeur est positive.</p>
+<p>On affiche un point rouge si la valeur est positive sinon un point bleu.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>

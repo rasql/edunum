@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JupyterLab &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
@@ -24,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -39,29 +40,28 @@
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/questions.js"></script>
-    <script type="text/javascript" src="../_static/blanks.js"></script>
-    <script type="text/javascript" src="../_static/reactions.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Markdown" href="markdown.html" />
@@ -108,7 +108,7 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="why.html">
-     A quoi ça sert?
+     Á quoi ça sert?
     </a>
    </li>
    <li class="toctree-l2">
@@ -152,7 +152,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/2_struct.html">
-     Les branchements
+     L’instruction conditionnelle
     </a>
    </li>
    <li class="toctree-l2">
@@ -177,7 +177,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/fonction.html">
-     Fonctions
+     Fonction avec argument
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/fonction.html#la-fonction-minimale">
+     La fonction minimale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/fonction.html#fonctions-predefinies">
+     Fonctions prédéfinies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/fonction.html#retour-d-une-valeur">
+     Retour d’une valeur
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -276,6 +291,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plot/file.html">
      Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     Animated GIF
     </a>
    </li>
   </ul>
@@ -490,12 +510,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#evaluler-une-cellule">
-   Evaluler une cellule
+   Évaluler une cellule
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#evaluer-de-nouveau">
-   Evaluer de nouveau
+   Évaluer de nouveau
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -519,8 +539,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evaluer-multiple-lignes">
-   Evaluer multiple lignes
+  <a class="reference internal nav-link" href="#evaluer-multiples-lignes">
+   Évaluer multiples lignes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -551,7 +571,7 @@
                 
   <div class="section" id="jupyterlab">
 <h1>JupyterLab<a class="headerlink" href="#jupyterlab" title="Lien permanent vers ce titre">¶</a></h1>
-<p>JupyterLab est un environnement pour déveloper <strong>code et documentation</strong> dans un navigateur web.</p>
+<p>JupyterLab est un environnement pour développer <strong>code et documentation</strong> dans un navigateur web.</p>
 <p><img alt="" src="../_images/jupyterlab.png" /></p>
 <p>Dans l’image ci-dessus vous pouvez voir</p>
 <ul class="simple">
@@ -561,7 +581,7 @@
 </ul>
 <div class="section" id="pourquoi-jupyter">
 <h2>Pourquoi « Jupyter »?<a class="headerlink" href="#pourquoi-jupyter" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le nom <strong>Ju-pyt-R</strong> fait référence au trois langages de programmation</p>
+<p>Le nom <strong>Ju-pyt-R</strong> fait référence aux trois langages de programmation</p>
 <ul class="simple">
 <li><p>Julia</p></li>
 <li><p>Python</p></li>
@@ -575,14 +595,14 @@
 <li><p>Ganymède</p></li>
 <li><p>Callisto</p></li>
 </ul>
-<p>Ces quatre satellites de Jupiter ont été découvertes en 1610 par <strong>Galilée</strong>, fondateur d’une pensée scientifique basé sur l’observation.</p>
-<p>Il a proposé un <strong>modèle héliocentriste</strong> (=soleil au centre) avec des mouvement satellitaires des planètes autour du soleil et des lunes autour des planètes.</p>
+<p>Ces quatre satellites de Jupiter ont été découverts en 1610 par <strong>Galilée</strong>, fondateur d’une pensée scientifique basé sur l’observation.</p>
+<p>Il a proposé un <strong>modèle héliocentriste</strong> (=soleil au centre) avec des mouvements satellitaires des planètes autour du soleil et des lunes autour des planètes.</p>
 </div>
 <div class="section" id="creer-un-notebook">
 <h2>Créer un notebook<a class="headerlink" href="#creer-un-notebook" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Choisissez <strong>File &gt; New &gt; Notebook</strong></p></li>
-<li><p>Choisissez un noyeau (kernel): <strong>Python 3</strong></p></li>
+<li><p>Choisissez un noyau (kernel): <strong>Python 3</strong></p></li>
 </ul>
 <p>Alternativement:</p>
 <ul class="simple">
@@ -602,24 +622,24 @@
 </ul>
 </div>
 <div class="section" id="evaluler-une-cellule">
-<h2>Evaluler une cellule<a class="headerlink" href="#evaluler-une-cellule" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ecrivez une expression Python dans la cellule, et appuyez simultanément sur les touches <strong>maj + retour</strong> pour exécuter l’expression.</p>
+<h2>Évaluler une cellule<a class="headerlink" href="#evaluler-une-cellule" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Écrivez une expression Python dans la cellule, et appuyez simultanément sur les touches <strong>maj + retour</strong> pour exécuter l’expression.</p>
 <p>Alternativement vous pouvez cliquer sur le bouton ▶︎ dans le menu.</p>
 <p><img alt="" src="../_images/cell2.png" /></p>
 <p>Vous notez que:</p>
 <ul class="simple">
 <li><p>le numéro de l’exécution apparait dans les crochets (1)</p></li>
-<li><p>le resultat de l’expression est affiché après la cellule code</p></li>
+<li><p>le résultat de l’expression est affiché après la cellule code</p></li>
 <li><p>une nouvelle cellule vide est ajoutée</p></li>
 </ul>
 </div>
 <div class="section" id="evaluer-de-nouveau">
-<h2>Evaluer de nouveau<a class="headerlink" href="#evaluer-de-nouveau" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Évaluer de nouveau<a class="headerlink" href="#evaluer-de-nouveau" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Vous pouvez ajouter une autre expression et évaluer de nouveau la cellule.</p>
 <p><img alt="" src="../_images/cell3.png" /></p>
 <p>Vous notez que:</p>
 <ul class="simple">
-<li><p>le numéro de l’exécution a incrémenté (2)</p></li>
+<li><p>le numéro de l’exécution a été incrémenté (2)</p></li>
 <li><p>une nouvelle cellule vide est ajoutée</p></li>
 </ul>
 </div>
@@ -632,8 +652,8 @@
 </ul>
 <p>Par rapport à la cellule active (barre bleue) vous pouvez ajouter une nouvelle cellule</p>
 <ul class="simple">
-<li><p><strong>A</strong> en-dessus (above)</p></li>
-<li><p><strong>B</strong> en-dessous (below)</p></li>
+<li><p><strong>A</strong> en dessus (above)</p></li>
+<li><p><strong>B</strong> en dessous (below)</p></li>
 </ul>
 <p><img alt="" src="../_images/cell4.png" /></p>
 </div>
@@ -650,7 +670,7 @@
 <p>Vous notez que:</p>
 <ul class="simple">
 <li><p>la cellule est grisée</p></li>
-<li><p>le cursur a disparu</p></li>
+<li><p>le curseur a disparu</p></li>
 </ul>
 </div>
 <div class="section" id="couper-copier-coller">
@@ -669,13 +689,13 @@
 </div>
 <div class="section" id="selection-multiple">
 <h2>Sélection multiple<a class="headerlink" href="#selection-multiple" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Avec les touches de flèche <strong>haut/bas</strong> (▲ et ▼) vous pouvez naviguer parmis les cellules.<br />
-En appuyant simultanément sur la touche <strong>maj</strong> et <strong>haut/bas</strong> vous pouvez sélectionner des cellules multiples.</p>
+<p>Avec les touches de flèche <strong>haut/bas</strong> (▲ et ▼) vous pouvez naviguer parmi les cellules.<br />
+En appuyant simultanément sur la touche <strong>maj</strong> et <strong>haut/bas</strong>, vous pouvez sélectionner des cellules multiples.</p>
 <p><img alt="" src="../_images/cell9.png" /></p>
 <p>La sélection multiple est utile pour couper, copier et coller multiples cellules.</p>
 </div>
-<div class="section" id="evaluer-multiple-lignes">
-<h2>Evaluer multiple lignes<a class="headerlink" href="#evaluer-multiple-lignes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="evaluer-multiples-lignes">
+<h2>Évaluer multiples lignes<a class="headerlink" href="#evaluer-multiples-lignes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Quand une cellule est exécutée, toutes les expressions sont évaluées, mais seulement le dernier résultat est affiché.</p>
 <p><img alt="" src="../_images/cell10.png" /></p>
 <p>Vous pouvez afficher toutes les valeurs en utilisant la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
@@ -698,7 +718,7 @@ En appuyant simultanément sur la touche <strong>maj</strong> et <strong>haut/ba
 </div>
 <div class="section" id="navigateur-de-fichiers">
 <h2>Navigateur de fichiers<a class="headerlink" href="#navigateur-de-fichiers" title="Lien permanent vers ce titre">¶</a></h2>
-<p>A gauche vous pouvez ouvrir un onglet de navigation.
+<p>À gauche vous pouvez ouvrir un onglet de navigation.
 Ce navigateur permet de</p>
 <ul class="simple">
 <li><p>naviguer dans votre système</p></li>
@@ -711,7 +731,7 @@ Ce navigateur permet de</p>
 </div>
 <div class="section" id="renommer-un-notebook">
 <h2>Renommer un notebook<a class="headerlink" href="#renommer-un-notebook" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Cliquer avec le bouton-droit dans le navigateur des fichiers vous permet d’accéder à un menu contextuel qui vous permet de renommer votre notebook.</p>
+<p>Cliquer avec le bouton droit dans le navigateur des fichiers vous permet d’accéder à un menu contextuel qui vous permet de renommer votre notebook.</p>
 <p><img alt="" src="../_images/jupyterlab_menu.png" /></p>
 </div>
 <div class="section" id="exercice">

@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logique &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
@@ -24,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -39,32 +40,31 @@
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/questions.js"></script>
-    <script type="text/javascript" src="../_static/blanks.js"></script>
-    <script type="text/javascript" src="../_static/reactions.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Fonctions" href="fonction.html" />
+    <link rel="next" title="Fonction avec argument" href="fonction.html" />
     <link rel="prev" title="Composer des textes" href="4_text2.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -108,7 +108,7 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../start/why.html">
-     A quoi ça sert?
+     Á quoi ça sert?
     </a>
    </li>
    <li class="toctree-l2">
@@ -152,7 +152,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_struct.html">
-     Les branchements
+     L’instruction conditionnelle
     </a>
    </li>
    <li class="toctree-l2">
@@ -177,7 +177,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fonction.html">
-     Fonctions
+     Fonction avec argument
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#la-fonction-minimale">
+     La fonction minimale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#fonctions-predefinies">
+     Fonctions prédéfinies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#retour-d-une-valeur">
+     Retour d’une valeur
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -276,6 +291,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plot/file.html">
      Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     Animated GIF
     </a>
    </li>
   </ul>
@@ -508,7 +528,7 @@
 <h1>Logique<a class="headerlink" href="#logique" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="operations-logiques">
 <h2>Opérations logiques<a class="headerlink" href="#operations-logiques" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le resultat d’une comparaison est une valeur booléenne.</p>
+<p>Le résultat d’une comparaison est une valeur booléenne.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">0</span>
@@ -521,7 +541,7 @@
 </div>
 </div>
 </div>
-<p>Il existent exactement deux valeurs <code class="docutils literal notranslate"><span class="pre">True</span></code> et <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>Il existe exactement deux valeurs <code class="docutils literal notranslate"><span class="pre">True</span></code> et <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span>
@@ -537,7 +557,7 @@
 </div>
 <div class="section" id="operateur-not">
 <h2>Opérateur not<a class="headerlink" href="#operateur-not" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’opératueur <code class="docutils literal notranslate"><span class="pre">not</span></code> inverse son argument.</p>
+<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">not</span></code> inverse son argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="kc">True</span>
@@ -588,7 +608,7 @@ True	False
 </div>
 <div class="section" id="operateur-and">
 <h2>Opérateur and<a class="headerlink" href="#operateur-and" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’opérateur logique <code class="docutils literal notranslate"><span class="pre">and</span></code> donne <code class="docutils literal notranslate"><span class="pre">True</span></code>, seulement si les deus arguments sont <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>L’opérateur logique <code class="docutils literal notranslate"><span class="pre">and</span></code> donne <code class="docutils literal notranslate"><span class="pre">True</span></code>, seulement si les deux arguments sont <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span>
@@ -601,7 +621,7 @@ True	False
 </div>
 </div>
 </div>
-<p>Calculons de nouveaux une table de verité.</p>
+<p>Calculons de nouveau une table de vérité.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p</span><span class="se">\t</span><span class="s1">q</span><span class="se">\t</span><span class="s1">p and q&#39;</span><span class="p">)</span>
@@ -653,7 +673,7 @@ True	True	True
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="4_text2.html" title="previous page">Composer des textes</a>
-    <a class='right-next' id="next-link" href="fonction.html" title="next page">Fonctions</a>
+    <a class='right-next' id="next-link" href="fonction.html" title="next page">Fonction avec argument</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calcul numérique &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
@@ -24,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -39,29 +40,28 @@
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/questions.js"></script>
-    <script type="text/javascript" src="../_static/blanks.js"></script>
-    <script type="text/javascript" src="../_static/reactions.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Texte (string)" href="1_text.html" />
@@ -108,7 +108,7 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../start/why.html">
-     A quoi ça sert?
+     Á quoi ça sert?
     </a>
    </li>
    <li class="toctree-l2">
@@ -152,7 +152,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_struct.html">
-     Les branchements
+     L’instruction conditionnelle
     </a>
    </li>
    <li class="toctree-l2">
@@ -177,7 +177,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fonction.html">
-     Fonctions
+     Fonction avec argument
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#la-fonction-minimale">
+     La fonction minimale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#fonctions-predefinies">
+     Fonctions prédéfinies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#retour-d-une-valeur">
+     Retour d’une valeur
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -276,6 +291,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plot/file.html">
      Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     Animated GIF
     </a>
    </li>
   </ul>
@@ -514,13 +534,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cas-du-rectangle">
-   Cas du rectangle
+  <a class="reference internal nav-link" href="#exemple-de-calcul-pour-un-rectangle">
+   Exemple de calcul pour un rectangle
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cas-du-cercle">
-   Cas du cercle
+  <a class="reference internal nav-link" href="#exemple-de-calcul-pour-un-cercle">
+   Exemple de calcul pour un cercle
   </a>
  </li>
 </ul>
@@ -540,11 +560,11 @@
 <p><img alt="" src="https://media.giphy.com/media/UvOaWabxo1enu/giphy.gif" /></p>
 <div class="section" id="utilisation-de-la-console">
 <h2>Utilisation de la console<a class="headerlink" href="#utilisation-de-la-console" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Tous ces opérations simples, vous pouvez les faire dans la <strong>console</strong> de votre éditeur Thonny.</p>
+<p>Toutes ces opérations simples, vous pouvez les faire dans la <strong>console</strong> de votre éditeur Thonny.</p>
 <ul class="simple">
 <li><p>tapez une expression après l’invite <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code></p></li>
 <li><p>appuyez sur la touche <strong>Retour</strong> pour exécuter l’expression</p></li>
-<li><p>vous ne pouvez plus modifer une expression déjà exécutée</p></li>
+<li><p>vous ne pouvez plus modifier une expression déjà exécutée</p></li>
 <li><p>vous devez ajouter une nouvelle expression et l’exécuter de nouveau</p></li>
 </ul>
 <p><img alt="" src="../_images/thonny_calc.png" /></p>
@@ -715,7 +735,7 @@ Une opération avec des entiers peut donner un nombre avec beaucoup de chiffres.
 </div>
 </div>
 </div>
-<p>Par contre, la précision avec des nombres à virgule flottante et limité à 16 chiffres.<br />
+<p>Par contre, la précision avec des nombres à virgule flottante est limitée à 16 chiffres.<br />
 Voici le même calcul fait cette fois avec des nombres à virgule flottante.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -729,7 +749,7 @@ Voici le même calcul fait cette fois avec des nombres à virgule flottante.</p>
 </div>
 </div>
 </div>
-<p>Pour calculer la racine vous pouvez utiliser la relation</p>
+<p>Pour calculer la racine, vous pouvez utiliser la relation</p>
 <div class="math notranslate nohighlight">
 \[ \sqrt{a} = a^{0.5} \]</div>
 <p>La racine de 2 est</p>
@@ -773,7 +793,7 @@ Voici le même calcul fait cette fois avec des nombres à virgule flottante.</p>
 </div>
 </div>
 <p>Les <strong>parenthèses</strong> nous permettent de changer cet ordre.</p>
-<p>Dans l’exemple ci-dessous nous calculons</p>
+<p>Dans l’exemple ci-dessous, nous calculons</p>
 <ul class="simple">
 <li><p>d’abord la multiplication (6)</p></li>
 <li><p>ensuite la puissance (216)</p></li>
@@ -813,8 +833,8 @@ Voici le même calcul fait cette fois avec des nombres à virgule flottante.</p>
 <div class="section" id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une variable est une place en mémoire pour stocker une valeur.</p>
-<p>En Python une variable est créé avec une opération d”<strong>affectation</strong>.
-Elle à la forme</p>
+<p>En Python une variable est créée avec une opération d”<strong>affectation</strong>.
+Elle a la forme</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span> <span class="o">=</span> <span class="n">valeur</span>
 </pre></div>
 </div>
@@ -822,7 +842,7 @@ Elle à la forme</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>variable = expression
 </pre></div>
 </div>
-<p>L’expression est évalué, et sa valeur est affecté à la variable.<br />
+<p>L’expression est évaluée, et sa valeur est affectée à la variable.<br />
 Par exemple 2 + 3 donne 5. La variable <strong>a</strong> obtient la valeur 5.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -857,7 +877,7 @@ Par exemple 2 + 3 donne 5. La variable <strong>a</strong> obtient la valeur 5.</
 </div>
 </div>
 </div>
-<p>Une variable peut etre réaffécté avec une nouvelle valeur</p>
+<p>Une variable peut être réaffectée avec une nouvelle valeur</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">17</span>
@@ -874,8 +894,8 @@ Par exemple 2 + 3 donne 5. La variable <strong>a</strong> obtient la valeur 5.</
 </div>
 <div class="section" id="nom-d-une-variable">
 <h2>Nom d’une variable<a class="headerlink" href="#nom-d-une-variable" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le nom d’une variable est sensible à la chasse (minuscules/majuscules).<br />
-Donc <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">A</span></code> sont deux variables différents.</p>
+<p>Le nom d’une variable est sensible à la casse (minuscules/majuscules).<br />
+Donc <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">A</span></code> sont deux variables différentes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="mi">33</span>
@@ -904,7 +924,7 @@ Donc <code class="docutils literal notranslate"><span class="pre">a</span></code
 </ul>
 <p>Sont interdit</p>
 <ul class="simple">
-<li><p>les mots-clé (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, …)</p></li>
+<li><p>les mots-clés (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, …)</p></li>
 <li><p>tout autre caractère spécial (<code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">+</span> <span class="pre">%</span> <span class="pre">&amp;</span> <span class="pre">$</span> <span class="pre">-</span> <span class="pre">/</span> <span class="pre">?</span></code>)</p></li>
 </ul>
 <p>Correct: <code class="docutils literal notranslate"><span class="pre">a2</span></code>, <code class="docutils literal notranslate"><span class="pre">_a</span></code>, <code class="docutils literal notranslate"><span class="pre">speed</span></code>, <code class="docutils literal notranslate"><span class="pre">pos_x</span></code>, <code class="docutils literal notranslate"><span class="pre">POS_X</span></code></p>
@@ -942,9 +962,9 @@ a = 17 cm
 </div>
 </div>
 </div>
-<div class="section" id="cas-du-rectangle">
-<h2>Cas du rectangle<a class="headerlink" href="#cas-du-rectangle" title="Lien permanent vers ce titre">¶</a></h2>
-<p>A partir de la longueur <strong>a</strong> et largeur <strong>b</strong> d’un rectangle nous pouvons calculer:</p>
+<div class="section" id="exemple-de-calcul-pour-un-rectangle">
+<h2>Exemple de calcul pour un rectangle<a class="headerlink" href="#exemple-de-calcul-pour-un-rectangle" title="Lien permanent vers ce titre">¶</a></h2>
+<p>À partir de la longueur <strong>a</strong> et largeur <strong>b</strong> d’un rectangle nous pouvons calculer:</p>
 <ul class="simple">
 <li><p>la surface</p></li>
 <li><p>le périmètre</p></li>
@@ -969,7 +989,7 @@ périmètre = 18
 <p>Utilisez la formule de Pythagore pour calculer la diagonale.</p>
 <div class="math notranslate nohighlight">
 \[ c = \sqrt{a^2 + b^2} \]</div>
-<p>Pour calculer la racine utilisez la relation</p>
+<p>Pour calculer la racine, utilisez la relation</p>
 <div class="math notranslate nohighlight">
 \[ \sqrt{a} = a^{0.5} \]</div>
 <div class="cell docutils container">
@@ -986,9 +1006,9 @@ périmètre = 18
 </div>
 <p>Maintenant modifiez <strong>a</strong> et <strong>b</strong> et refaites les calculs.</p>
 </div>
-<div class="section" id="cas-du-cercle">
-<h2>Cas du cercle<a class="headerlink" href="#cas-du-cercle" title="Lien permanent vers ce titre">¶</a></h2>
-<p>A partir du rayon <strong>r</strong>, calculez la circonférence et la surface d’un cercle.</p>
+<div class="section" id="exemple-de-calcul-pour-un-cercle">
+<h2>Exemple de calcul pour un cercle<a class="headerlink" href="#exemple-de-calcul-pour-un-cercle" title="Lien permanent vers ce titre">¶</a></h2>
+<p>À partir du rayon <strong>r</strong>, calculez la circonférence et la surface d’un cercle.</p>
 <p>Rappel:</p>
 <div class="math notranslate nohighlight">
 \[ circ. = 2 \pi r \]</div>
@@ -1011,7 +1031,7 @@ surface = 38.47725
 </div>
 </div>
 </div>
-<p>Maintenant modifiez le rayon <strong>r</strong> et refaites les calculs.</p>
+<p>Maintenant, modifiez le rayon <strong>r</strong> et refaites les calculs.</p>
 </div>
 </div>
 

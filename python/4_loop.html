@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boucle &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
@@ -24,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -39,29 +40,28 @@
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/questions.js"></script>
-    <script type="text/javascript" src="../_static/blanks.js"></script>
-    <script type="text/javascript" src="../_static/reactions.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Composer des textes" href="4_text2.html" />
@@ -108,7 +108,7 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../start/why.html">
-     A quoi ça sert?
+     Á quoi ça sert?
     </a>
    </li>
    <li class="toctree-l2">
@@ -152,7 +152,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_struct.html">
-     Les branchements
+     L’instruction conditionnelle
     </a>
    </li>
    <li class="toctree-l2">
@@ -177,7 +177,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fonction.html">
-     Fonctions
+     Fonction avec argument
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#la-fonction-minimale">
+     La fonction minimale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#fonctions-predefinies">
+     Fonctions prédéfinies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#retour-d-une-valeur">
+     Retour d’une valeur
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -276,6 +291,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plot/file.html">
      Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     Animated GIF
     </a>
    </li>
   </ul>
@@ -504,8 +524,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#boucles-impriquees">
-   Boucles impriquées
+  <a class="reference internal nav-link" href="#boucles-imbriquees">
+   Boucles imbriquées
   </a>
  </li>
 </ul>
@@ -535,8 +555,9 @@
 <li><p>le mot-clé <code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
 <li><p>une variable <code class="docutils literal notranslate"><span class="pre">x</span></code></p></li>
 <li><p>le mot-clé <code class="docutils literal notranslate"><span class="pre">in</span></code></p></li>
+<li><p>une <code class="docutils literal notranslate"><span class="pre">séquence</span></code> (liste, chaîne, plage)</p></li>
 <li><p>le deux-points <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
-<li><p>un <code class="docutils literal notranslate"><span class="pre">bloc</span></code> indenté de 1+ instructions.</p></li>
+<li><p>un <code class="docutils literal notranslate"><span class="pre">bloc</span></code> d’instructions indenté.</p></li>
 </ul>
 <p>Par exemple</p>
 <div class="cell docutils container">
@@ -557,11 +578,11 @@ Anita
 </div>
 </div>
 <p>On appelle les répétions du <code class="docutils literal notranslate"><span class="pre">bloc</span></code> aussi des <strong>itérations</strong>. On dit <strong>itérer sur la séquence</strong>.</p>
-<p>On appelle la variable <code class="docutils literal notranslate"><span class="pre">x</span></code> un <strong>itérateur</strong>. Cette variable peut avoir n’importe quel nom. Cette variable prend succéssivement toutes les valeurs de la séquence, une après l’autre.</p>
+<p>On appelle la variable <code class="docutils literal notranslate"><span class="pre">x</span></code> un <strong>itérateur</strong>. Cette variable peut avoir n’importe quel nom. Cette variable prend successivement toutes les valeurs de la séquence, une après l’autre.</p>
 </div>
 <div class="section" id="le-bloc-repete">
 <h2>Le bloc répété<a class="headerlink" href="#le-bloc-repete" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le bloc répété consiste d’une ou plusieurs (1+) instructions.
+<p>Le bloc répété consiste en une ou plusieurs (1+) instructions.
 Toutes les instructions qui font partie du bloc sont indentées.
 La première instruction qui n’est plus indentée ne fait plus partie du bloc.</p>
 <p>Ici <strong>instruction 1</strong> fait partie du bloc d’itération.<br />
@@ -667,7 +688,7 @@ elle est intelligente
 </div>
 </div>
 </div>
-<p>Nous pouvons aussi concatener les textes et la variable avec l’opérateur <code class="docutils literal notranslate"><span class="pre">+</span></code>.<br />
+<p>Nous pouvons aussi concaténer les textes et la variable avec l’opérateur <code class="docutils literal notranslate"><span class="pre">+</span></code>.<br />
 Attention aux espaces!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -748,8 +769,8 @@ lettre - n
 </div>
 </div>
 </div>
-<div class="section" id="boucles-impriquees">
-<h2>Boucles impriquées<a class="headerlink" href="#boucles-impriquees" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="boucles-imbriquees">
+<h2>Boucles imbriquées<a class="headerlink" href="#boucles-imbriquees" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une boucle peut être placée dans le corps d’une autre boucle.<br />
 Nous appelons</p>
 <ul class="simple">
@@ -776,7 +797,7 @@ i = 2  j = 1
 </div>
 </div>
 <p>Normalement chaque instruction <code class="docutils literal notranslate"><span class="pre">print</span></code> se termine avec un retour à la ligne.
-L’argument optionel <code class="docutils literal notranslate"><span class="pre">end</span></code> permet de le changer en 3 espaces <code class="docutils literal notranslate"><span class="pre">'</span>&#160;&#160; <span class="pre">'</span></code>.</p>
+L’argument optionnel <code class="docutils literal notranslate"><span class="pre">end</span></code> permet de le changer en 3 espaces <code class="docutils literal notranslate"><span class="pre">'</span>&#160;&#160; <span class="pre">'</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
@@ -794,8 +815,8 @@ L’argument optionel <code class="docutils literal notranslate"><span class="pr
 </div>
 </div>
 </div>
-<p>Les boucles imbriquées nous permettent de programmer une table de multiplication.
-Cette fois nous utlison le caractère spéciale <strong>tabulateur</strong> <code class="docutils literal notranslate"><span class="pre">\t</span></code> qui aligne les caractèrs sur des multiples de 8.</p>
+<p>Les boucles imbriquées nous permettent oar exenoke de programmer une table de multiplication.
+Cette fois nous utilisons le caractère spécial <strong>tabulateur</strong> <code class="docutils literal notranslate"><span class="pre">\t</span></code> qui aligne les caractères sur des multiples de 8.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>

@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listes &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
@@ -24,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -39,33 +40,32 @@
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/questions.js"></script>
-    <script type="text/javascript" src="../_static/blanks.js"></script>
-    <script type="text/javascript" src="../_static/reactions.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Boucle" href="4_loop.html" />
-    <link rel="prev" title="Les branchements" href="2_struct.html" />
+    <link rel="prev" title="L’instruction conditionnelle" href="2_struct.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -108,7 +108,7 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../start/why.html">
-     A quoi ça sert?
+     Á quoi ça sert?
     </a>
    </li>
    <li class="toctree-l2">
@@ -152,7 +152,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_struct.html">
-     Les branchements
+     L’instruction conditionnelle
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -177,7 +177,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fonction.html">
-     Fonctions
+     Fonction avec argument
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#la-fonction-minimale">
+     La fonction minimale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#fonctions-predefinies">
+     Fonctions prédéfinies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#retour-d-une-valeur">
+     Retour d’une valeur
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -276,6 +291,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plot/file.html">
      Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     Animated GIF
     </a>
    </li>
   </ul>
@@ -485,12 +505,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operateur-de-concatenation">
-   Operateur de concaténation
+   Opérateur de concaténation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operateur-de-repetition">
-   Operateur de répétition
+   Opérateur de répétition
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -553,7 +573,7 @@
 </div>
 </div>
 <p>Une liste est ordonnée.<br />
-Deux listes avec les mêmes éléments mais un ordre différent sont différentes.</p>
+Deux listes avec les mêmes éléments, mais un ordre différent sont différentes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -580,7 +600,7 @@ Deux listes avec les mêmes éléments mais un ordre différent sont différente
 </ul>
 <p>Les fonctions:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">len()</span></code> pour retourner la longeur de la liste</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">len()</span></code> pour retourner la longueur de la liste</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">list()</span></code> pour transformer une séquence en liste</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">range()</span></code> pour produire une plage d’entiers</p></li>
 </ul>
@@ -615,7 +635,7 @@ Deux listes avec les mêmes éléments mais un ordre différent sont différente
 </div>
 </div>
 </div>
-<p>Une liste peux contenir un mélange d’objets de types différents.</p>
+<p>Une liste peut contenir un mélange d’objets de types différents.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mix</span> <span class="o">=</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
@@ -629,7 +649,7 @@ Deux listes avec les mêmes éléments mais un ordre différent sont différente
 </div>
 </div>
 </div>
-<p>Une liste peux même contenir une deuxième liste.</p>
+<p>Une liste peut même contenir une deuxième liste.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
@@ -642,10 +662,10 @@ Deux listes avec les mêmes éléments mais un ordre différent sont différente
 </div>
 </div>
 </div>
-<p>Sur un Mac vous pouvez choisir et insérer des <em>emoji</em> en faisant ceci</p>
+<p>Sur un Mac vous pouvez choisir et insérer des <em>émojis</em> en faisant ceci</p>
 <ul class="simple">
 <li><p>Choisir <strong> &gt; Préférences Système… &gt; Clavier</strong></p></li>
-<li><p>Cocher <strong>Afficher les visualisateurs de claver et d’emoji dans la barre de menu</strong></p></li>
+<li><p>Cocher <strong>Afficher les visualisateurs de claver et d’émoji dans la barre de menu</strong></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -675,7 +695,7 @@ Deux listes avec les mêmes éléments mais un ordre différent sont différente
 </div>
 </div>
 <div class="section" id="operateur-de-concatenation">
-<h2>Operateur de concaténation<a class="headerlink" href="#operateur-de-concatenation" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Opérateur de concaténation<a class="headerlink" href="#operateur-de-concatenation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’opérateur <code class="docutils literal notranslate"><span class="pre">+</span></code> permet de concaténer des listes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -704,7 +724,7 @@ Deux listes avec les mêmes éléments mais un ordre différent sont différente
 </div>
 </div>
 <div class="section" id="operateur-de-repetition">
-<h2>Operateur de répétition<a class="headerlink" href="#operateur-de-repetition" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Opérateur de répétition<a class="headerlink" href="#operateur-de-repetition" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’opérateur <code class="docutils literal notranslate"><span class="pre">*</span></code> permet de concaténer des listes.<br />
 Nous pouvons facilement créer des listes d’objets identiques.</p>
 <div class="cell docutils container">
@@ -853,8 +873,8 @@ Voici la plage des nombres de 10 à 19.</p>
 </div>
 </div>
 </div>
-<p>Un troisème argument peut être utilisé pour indiquer l’incrément.<br />
-Voici la plage des nombres paires de 10 à 18.</p>
+<p>Un troisième argument peut être utilisé pour indiquer l’incrément.<br />
+Voici la plage des nombres pairs de 10 à 18.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
@@ -867,7 +887,7 @@ Voici la plage des nombres paires de 10 à 18.</p>
 </div>
 </div>
 </div>
-<p>Une plage peut être inversé avec un incrément négatif.<br />
+<p>Une plage peut être inversée avec un incrément négatif.<br />
 Voici la plage des entiers de 30 à 21.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -928,7 +948,7 @@ Voici la plage des entiers de 30 à 21.</p>
 </div>
 <p>La méthode <code class="docutils literal notranslate"><span class="pre">split()</span></code> permet de découper une phrases en mots et créer une liste.</p>
 <p><strong>Attention:</strong><br />
-<code class="docutils literal notranslate"><span class="pre">split()</span></code> une <strong>méthode</strong> qui est attachée à une chaine avec la notation doté.</p>
+<code class="docutils literal notranslate"><span class="pre">split()</span></code> une <strong>méthode</strong> qui est attachée à une chaine avec la notation dotée.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;les mots sont séparés par des espaces&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
@@ -941,7 +961,7 @@ Voici la plage des entiers de 30 à 21.</p>
 </div>
 </div>
 </div>
-<p>Nous pouvons également transformer une chaine avec des émoji en liste.</p>
+<p>Nous pouvons également transformer une chaine avec des émojis en liste.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;🍏🍎🍐🍊🍋🍌&#39;</span><span class="p">)</span>
@@ -985,7 +1005,7 @@ Voici la plage des entiers de 30 à 21.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="2_struct.html" title="previous page">Les branchements</a>
+    <a class='left-prev' id="prev-link" href="2_struct.html" title="previous page">L’instruction conditionnelle</a>
     <a class='right-next' id="next-link" href="4_loop.html" title="next page">Boucle</a>
 
     </div>

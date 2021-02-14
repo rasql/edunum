@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Composer des textes &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
@@ -24,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -39,29 +40,28 @@
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/questions.js"></script>
-    <script type="text/javascript" src="../_static/blanks.js"></script>
-    <script type="text/javascript" src="../_static/reactions.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Logique" href="logique.html" />
@@ -108,7 +108,7 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../start/why.html">
-     A quoi ça sert?
+     Á quoi ça sert?
     </a>
    </li>
    <li class="toctree-l2">
@@ -152,7 +152,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_struct.html">
-     Les branchements
+     L’instruction conditionnelle
     </a>
    </li>
    <li class="toctree-l2">
@@ -177,7 +177,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fonction.html">
-     Fonctions
+     Fonction avec argument
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#la-fonction-minimale">
+     La fonction minimale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#fonctions-predefinies">
+     Fonctions prédéfinies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#retour-d-une-valeur">
+     Retour d’une valeur
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -276,6 +291,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plot/file.html">
      Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     Animated GIF
     </a>
    </li>
   </ul>
@@ -485,7 +505,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ecrire-un-horoscope">
-   Ecrire un horoscope
+   Écrire un horoscope
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -547,7 +567,7 @@
 </ul>
 <div class="section" id="le-module-random">
 <h2>Le module random<a class="headerlink" href="#le-module-random" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le module <code class="docutils literal notranslate"><span class="pre">random</span></code> met à dispositon des fonctions pour calculer des valeurs aléatoires. Nous importons deux fonctions.</p>
+<p>Le module <code class="docutils literal notranslate"><span class="pre">random</span></code> met à disposition des fonctions pour calculer des valeurs aléatoires. Nous importons deux fonctions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choice</span><span class="p">,</span> <span class="n">randint</span>
@@ -598,7 +618,7 @@ On pourrait l’utiliser pour simuler un dé.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">noms</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bill&#39;</span><span class="p">,</span> <span class="s1">&#39;Steve&#39;</span><span class="p">,</span> <span class="s1">&#39;Guido&#39;</span><span class="p">,</span> <span class="s1">&#39;Ada&#39;</span><span class="p">,</span> <span class="s1">&#39;Grace&#39;</span><span class="p">]</span>
 <span class="n">villes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Paris&#39;</span><span class="p">,</span> <span class="s1">&#39;Tokyo&#39;</span><span class="p">,</span> <span class="s1">&#39;Lausanne&#39;</span><span class="p">,</span> <span class="s1">&#39;Lutry&#39;</span><span class="p">,</span> <span class="s1">&#39;Dubai&#39;</span><span class="p">]</span>
 <span class="n">adverbes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;joyeusement&#39;</span><span class="p">,</span> <span class="s1">&#39;tristement&#39;</span><span class="p">,</span> <span class="s1">&#39;temporairement&#39;</span><span class="p">,</span> <span class="s1">&#39;toujours&#39;</span><span class="p">]</span>
-<span class="n">verbes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dort&#39;</span><span class="p">,</span> <span class="s1">&#39;vit&#39;</span><span class="p">,</span> <span class="s1">&#39;séjourne&#39;</span><span class="p">,</span> <span class="s1">&#39;travaille&#39;</span><span class="p">,</span> <span class="s1">&#39;voyage&#39;</span><span class="p">,</span> <span class="s1">&#39;se ballade&#39;</span><span class="p">,</span> <span class="s1">&#39;étudie&#39;</span><span class="p">]</span>
+<span class="n">verbes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dort&#39;</span><span class="p">,</span> <span class="s1">&#39;vit&#39;</span><span class="p">,</span> <span class="s1">&#39;séjourne&#39;</span><span class="p">,</span> <span class="s1">&#39;travaille&#39;</span><span class="p">,</span> <span class="s1">&#39;voyage&#39;</span><span class="p">,</span> <span class="s1">&#39;se balade&#39;</span><span class="p">,</span> <span class="s1">&#39;étudie&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -617,18 +637,18 @@ On pourrait l’utiliser pour simuler un dé.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Grace se ballade toujours à Tokyo.
-Ada voyage temporairement à Lutry.
-Bill se ballade joyeusement à Dubai.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Grace dort temporairement à Tokyo.
+Bill se balade temporairement à Paris.
+Steve séjourne toujours à Paris.
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="ecrire-un-horoscope">
-<h2>Ecrire un horoscope<a class="headerlink" href="#ecrire-un-horoscope" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Écrire un horoscope<a class="headerlink" href="#ecrire-un-horoscope" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le premier horoscope basé sur les signes du zodiaque dans la presse française serait paru dans <strong>Marie-Claire</strong> en 1935.</p>
-<p>En général les horoscopes sont plus souvent positif que négatif et incitent à la conformité.</p>
+<p>En général les horoscopes sont plus souvent positifs que négatifs et incitent à la conformité.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">signes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bélier&#39;</span><span class="p">,</span> <span class="s1">&#39;Taureau&#39;</span><span class="p">,</span> <span class="s1">&#39;Gémeaux&#39;</span><span class="p">,</span> <span class="s1">&#39;Cancer&#39;</span><span class="p">,</span> <span class="s1">&#39;Lion&#39;</span><span class="p">,</span> <span class="s1">&#39;Vierge&#39;</span><span class="p">,</span>
@@ -689,8 +709,8 @@ Vierge
 </div>
 <div class="section" id="conjuguer-un-verbe">
 <h2>Conjuguer un verbe<a class="headerlink" href="#conjuguer-un-verbe" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La conjugaison de beaucoup de verbes est régulier.<br />
-Voici une fonction pour conjuger un verbe en <em>er</em>.</p>
+<p>La conjugaison de beaucoup de verbes est régulière.<br />
+Voici une fonction pour conjuguer un verbe en <em>er</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conjuger</span><span class="p">(</span><span class="n">verbe</span><span class="p">):</span>
@@ -776,7 +796,7 @@ porc
 </div>
 </div>
 <p>En décalant l’année avec une soustraction <code class="docutils literal notranslate"><span class="pre">year</span> <span class="pre">-</span> <span class="pre">1900</span></code> nous pouvons aligner avec le début de la liste, le rat ayant l’indice 0.
-Avec la fonction modulo <code class="docutils literal notranslate"><span class="pre">%</span></code> nous obetenons des indices cycliques allant de 0 à 11. Ceci nous permet d’afficher un tableau avec des années et l’animal correspondant.</p>
+Avec la fonction modulo <code class="docutils literal notranslate"><span class="pre">%</span></code> nous obtenons des indices cycliques allant de 0 à 11. Ceci nous permet d’afficher un tableau avec des années et l’animal correspondant.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1960</span><span class="p">,</span> <span class="mi">2025</span><span class="p">):</span>
@@ -863,7 +883,7 @@ Avec la fonction modulo <code class="docutils literal notranslate"><span class="
 <li><p>Yin (buffle, tigre, serpent, cheval, coq, chien)</p></li>
 <li><p>Yan (rat, lapon, dragon, chèvre, singe, cochon)</p></li>
 </ul>
-<p>On peux combiner le cycle des animaux avec les 5 éléments</p>
+<p>On peut combiner le cycle des animaux avec les 5 éléments</p>
 <ul class="simple">
 <li><p>métal</p></li>
 <li><p>eau</p></li>
@@ -915,8 +935,8 @@ Avec la fonction modulo <code class="docutils literal notranslate"><span class="
 </div>
 <div class="section" id="compter-en-japonais">
 <h2>Compter en japonais<a class="headerlink" href="#compter-en-japonais" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous mettons les nombre de 1 à 10 dans une liste.
-Pour faire coincider l’index de la liste avec le nombre, nous mettons <em>zero</em> à premier position.</p>
+<p>Nous mettons les nombres de 1 à 10 dans une liste.
+Pour faire coïncider l’index de la liste avec le nombre, nous mettons <em>zero</em> en première position.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nombres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="s1">&#39;ichi&#39;</span><span class="p">,</span> <span class="s1">&#39;ni&#39;</span><span class="p">,</span> <span class="s1">&#39;san&#39;</span><span class="p">,</span> <span class="s1">&#39;yon&#39;</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="s1">&#39;roku&#39;</span><span class="p">,</span> <span class="s1">&#39;nana&#39;</span><span class="p">,</span> <span class="s1">&#39;hachi&#39;</span><span class="p">,</span> <span class="s1">&#39;kyu&#39;</span><span class="p">,</span> <span class="s1">&#39;ju&#39;</span><span class="p">]</span>
@@ -924,7 +944,7 @@ Pour faire coincider l’index de la liste avec le nombre, nous mettons <em>zero
 </div>
 </div>
 </div>
-<p>L’index d’un élémment de la liste correspond maintenant au texte de l’élément.</p>
+<p>L’index d’un élément de la liste correspond maintenant au texte de l’élément.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>
@@ -951,7 +971,7 @@ Pour faire coincider l’index de la liste avec le nombre, nous mettons <em>zero
 </div>
 <div class="section" id="apprendre-a-compter">
 <h2>Apprendre à compter<a class="headerlink" href="#apprendre-a-compter" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous allons faire un petit programme, ou les nombres de 0 à 10 sont présenté en japonais, de façon aléatoire. Vous devez les reconnaitre et répondre avec un nombre de 0 à 10.</p>
+<p>Nous allons faire un petit programme, ou les nombres de 0 à 10 sont présentés en japonais, de façon aléatoire. Vous devez les reconnaitre et répondre avec un nombre de 0 à 10.</p>
 <p>Nous utilisons la fonction <code class="docutils literal notranslate"><span class="pre">randint(0,</span> <span class="pre">10)</span></code> pour trouver un entier aléatoire entre 0 et 10.
 Voici 20 nombres aléatoires affichés sur la même ligne.</p>
 <div class="cell docutils container">
@@ -970,9 +990,10 @@ Voici 20 nombres aléatoires affichés sur la même ligne.</p>
 <p>Voici le code pour le jeu. Nous commençons à initialiser le score à 0.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Aprenez les nombres 0 à 10 en japonais&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Apprenez les nombres 0 à 10 en japonais&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
     <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombres</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -987,32 +1008,19 @@ Voici 20 nombres aléatoires affichés sur la même ligne.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aprenez les nombres 0 à 10 en japonais
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Apprenez les nombres 0 à 10 en japonais
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ichi:  1
-roku:  6
-ichi:  1
-hachi:  7
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! la bonne réponse est 8
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nana:  7
-kyu:  9
-ni:  2
-kyu:  9
-ni:  3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! la bonne réponse est 2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nana:  7
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>votre score: 8
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">9635</span><span class="n">ea0a746e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombres</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">reponse</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">nombre</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">reponse</span><span class="p">)</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
+
+<span class="ne">NameError</span>: name &#39;nombres&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1164,7 +1172,7 @@ Un utilisant les nombres 1 à 10 vous arrivez a compter jusqu’à 99.</p>
 </div>
 <div class="section" id="calendrier-japonais">
 <h2>Calendrier japonais<a class="headerlink" href="#calendrier-japonais" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les années au Japon sont comptés selon les ères de l’empereur.</p>
+<p>Les années au Japon sont comptées selon les ères de l’empereur.</p>
 <ul class="simple">
 <li><p>1868 ère Meishi</p></li>
 <li><p>1912 ère Taisho</p></li>
@@ -1172,7 +1180,7 @@ Un utilisant les nombres 1 à 10 vous arrivez a compter jusqu’à 99.</p>
 <li><p>1989 ère Heisei</p></li>
 <li><p>2019 ère Reiwa</p></li>
 </ul>
-<p>Nous pouvons afficher les ères en utilisant des test <strong>if-elif</strong>.</p>
+<p>Nous pouvons afficher les ères en utilisant des tests <strong>if-elif</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1980</span><span class="p">,</span> <span class="mi">2025</span><span class="p">):</span>

@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Graphes &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
@@ -24,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -39,29 +40,28 @@
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/questions.js"></script>
-    <script type="text/javascript" src="../_static/blanks.js"></script>
-    <script type="text/javascript" src="../_static/reactions.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Paramètres" href="param.html" />
@@ -108,7 +108,7 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../start/why.html">
-     A quoi ça sert?
+     Á quoi ça sert?
     </a>
    </li>
    <li class="toctree-l2">
@@ -152,7 +152,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/2_struct.html">
-     Les branchements
+     L’instruction conditionnelle
     </a>
    </li>
    <li class="toctree-l2">
@@ -177,7 +177,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/fonction.html">
-     Fonctions
+     Fonction avec argument
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/fonction.html#la-fonction-minimale">
+     La fonction minimale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/fonction.html#fonctions-predefinies">
+     Fonctions prédéfinies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/fonction.html#retour-d-une-valeur">
+     Retour d’une valeur
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -276,6 +291,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="file.html">
      Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gif/gif.html">
+     Animated GIF
     </a>
    </li>
   </ul>
@@ -479,6 +499,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#style-des-lignes">
+   Style des lignes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#coordonnees-dans-x">
    Coordonnées dans x
   </a>
@@ -526,7 +551,12 @@
                 
   <div class="section" id="graphes">
 <h1>Graphes<a class="headerlink" href="#graphes" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Le module <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> permet d’afficher des graphes. Pour utiliser ses fonctions nous devons importer ces modules.</p>
+<p>Le module <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> permet d’afficher des graphes. Le module <code class="docutils literal notranslate"><span class="pre">numpy</span></code> permet de faire du calcul numérique avec des matrices.</p>
+<p>Pour utiliser ces modules nous devons les importer. Il est tradition de les importer sous les noms raccourcis suivants.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">plt</span></code> pour <strong>pyplot</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np</span></code> pour <strong>numpy</strong></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -535,7 +565,7 @@
 </div>
 </div>
 </div>
-<p>Créons un vecteur avec des données que nous pouvons afficher.</p>
+<p>Créons une liste de données que nous pouvons afficher.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -543,7 +573,7 @@
 </div>
 </div>
 </div>
-<p>Un simple plot est obtenu avec ceci.</p>
+<p>Un graphique simple (plot en anglais) est obtenu avec ceci.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -551,18 +581,19 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe56e0c3050&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fd4222a65d0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/plot_5_1.png" src="../_images/plot_5_1.png" />
 </div>
 </div>
 <p>L’objet retourné est de type <code class="docutils literal notranslate"><span class="pre">Line2D</span></code>.
-Dorénavant nous terminons la dernière ligne avec un point-virgule <code class="docutils literal notranslate"><span class="pre">;</span></code> pour supprimer cet output.</p>
-<p><strong>Attention</strong> pour afficher un graphe, vous devez ajouter <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> dans votre programme Python. Dans ce document-ci cette commande est inclut de façon implicit.</p>
+Dorénavant nous terminons la dernière ligne avec un point-virgule <code class="docutils literal notranslate"><span class="pre">;</span></code> pour supprimer cette information.</p>
+<p><strong>Attention:</strong><br />
+Pour afficher un graphique dans votre programme Python, vous devez ajouter la commande <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> pour l’afficher dans une fenêtre à part.  Dans ce document-ci cette commande est inclut de façon implicite.</p>
 <div class="section" id="titres-et-legendes">
 <h2>Titres et légendes<a class="headerlink" href="#titres-et-legendes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous pouvons ajouter un titre pour le graphe ainsque que pour les deux axes x et y.</p>
+<p>Nous pouvons ajouter un <strong>titre</strong> ainsi que des <strong>légendes</strong> pour les deux axes x et y.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Evolution&#39;</span><span class="p">)</span>
@@ -576,34 +607,95 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 <img alt="../_images/plot_8_0.png" src="../_images/plot_8_0.png" />
 </div>
 </div>
+</div>
+<div class="section" id="style-des-lignes">
+<h2>Style des lignes<a class="headerlink" href="#style-des-lignes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous pouvons également ajouter un string de formatage. Les couleurs sont indiqué par</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> rouge</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">g</span></code> vert (green)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b</span></code> bleu</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y</span></code> jaune (yellow)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">m</span></code> magenta</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> cyan</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">k</span></code> noir (black)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">w</span></code> blanc (white)</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;or&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;mo-&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_9_0.png" src="../_images/plot_9_0.png" />
+<img alt="../_images/plot_10_0.png" src="../_images/plot_10_0.png" />
+</div>
+</div>
+<p>La forme des points est indiqué par</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">o</span></code> cercle</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code> carré (square)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">^</span></code> triangle (haut)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">v</span></code> triangle (bas)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> asterisque</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> x</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> plus</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;gv:&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/plot_12_0.png" src="../_images/plot_12_0.png" />
+</div>
+</div>
+<p>Le format de ligne est indiqué par</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> solide</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:</span></code> pointillé</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--</span></code> traitille</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-.</span></code> mixte</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;cs-.&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/plot_14_0.png" src="../_images/plot_14_0.png" />
+</div>
+</div>
+<p>Nous pouvons mélanger deux styles. Pour ceci nous devons afficher deux lignes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;b:&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;or&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fd423de44d0&gt;,
+ &lt;matplotlib.lines.Line2D at 0x7fd423de4550&gt;]
+</pre></div>
+</div>
+<img alt="../_images/plot_16_1.png" src="../_images/plot_16_1.png" />
 </div>
 </div>
 </div>
 <div class="section" id="coordonnees-dans-x">
 <h2>Coordonnées dans x<a class="headerlink" href="#coordonnees-dans-x" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Si nous affichons un graphe à partir d’un seul vecteur, les valeurs x sont sont des entiers commençant à 0. Nous pouvons définir notre propre plage x, par exemple avec un vecteur <strong>x</strong> allant de -2 à +2.</p>
-<p>Le style de la ligne est indiqué avec un texte:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">'g^:'</span></code> green, triangle, pointillé</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'or'</span></code> discs, red</p></li>
-</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span><span class="s1">&#39;g^:&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span><span class="s1">&#39;k^:&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_11_0.png" src="../_images/plot_11_0.png" />
+<img alt="../_images/plot_18_0.png" src="../_images/plot_18_0.png" />
 </div>
 </div>
 </div>
@@ -612,12 +704,16 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 <p>Avec des arguments à options nous pouvons changer les propriétés d’une ligne.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> 
+         <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> 
+         <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> 
+         <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> 
+         <span class="n">markeredgewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_13_0.png" src="../_images/plot_13_0.png" />
+<img alt="../_images/plot_20_0.png" src="../_images/plot_20_0.png" />
 </div>
 </div>
 </div>
@@ -634,10 +730,27 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 5 artists&gt;
 </pre></div>
 </div>
-<img alt="../_images/plot_15_1.png" src="../_images/plot_15_1.png" />
+<img alt="../_images/plot_22_1.png" src="../_images/plot_22_1.png" />
 </div>
 </div>
-<p>Créer des données aléatoires.</p>
+<p>Un diagramme à barres produits un objet <code class="docutils literal notranslate"><span class="pre">BarContainer</span></code> qui contient des objets <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">_</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rectangle(xy=(-2.4, 0), width=0.8, height=2, angle=0)
+Rectangle(xy=(-1.4, 0), width=0.8, height=4, angle=0)
+Rectangle(xy=(-0.4, 0), width=0.8, height=3, angle=0)
+Rectangle(xy=(0.6, 0), width=0.8, height=6, angle=0)
+Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="multiples-lignes">
 <h2>Multiples lignes<a class="headerlink" href="#multiples-lignes" title="Lien permanent vers ce titre">¶</a></h2>
@@ -645,17 +758,23 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;bs:&#39;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">t</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;g^:&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;bs:&#39;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">t</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;g^:&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_18_0.png" src="../_images/plot_18_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fd422210d10&gt;,
+ &lt;matplotlib.lines.Line2D at 0x7fd4240c7050&gt;,
+ &lt;matplotlib.lines.Line2D at 0x7fd4240c7290&gt;]
+</pre></div>
+</div>
+<img alt="../_images/plot_26_1.png" src="../_images/plot_26_1.png" />
 </div>
 </div>
 </div>
 <div class="section" id="courbes-trigonometriques">
 <h2>Courbes trigonométriques<a class="headerlink" href="#courbes-trigonometriques" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le module <strong>numpy</strong> nous permet l’accès faciles aux fonctions trigonométriques.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -667,9 +786,12 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_20_0.png" src="../_images/plot_20_0.png" />
+<img alt="../_images/plot_28_0.png" src="../_images/plot_28_0.png" />
 </div>
 </div>
+<p>Ici nous affichons le carré du sinus.</p>
+<div class="math notranslate nohighlight">
+\[ f(t) = (\sin t)^2 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -681,7 +803,7 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_21_0.png" src="../_images/plot_21_0.png" />
+<img alt="../_images/plot_30_0.png" src="../_images/plot_30_0.png" />
 </div>
 </div>
 </div>
@@ -697,7 +819,7 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_23_0.png" src="../_images/plot_23_0.png" />
+<img alt="../_images/plot_32_0.png" src="../_images/plot_32_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -708,7 +830,7 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_24_0.png" src="../_images/plot_24_0.png" />
+<img alt="../_images/plot_33_0.png" src="../_images/plot_33_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -719,7 +841,7 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_25_0.png" src="../_images/plot_25_0.png" />
+<img alt="../_images/plot_34_0.png" src="../_images/plot_34_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -730,12 +852,13 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_26_0.png" src="../_images/plot_26_0.png" />
+<img alt="../_images/plot_35_0.png" src="../_images/plot_35_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="echelle-logarithmiques">
 <h2>Echelle logarithmiques<a class="headerlink" href="#echelle-logarithmiques" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous pouvons afficher une axe</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -746,7 +869,7 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_28_0.png" src="../_images/plot_28_0.png" />
+<img alt="../_images/plot_37_0.png" src="../_images/plot_37_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -758,7 +881,7 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_29_0.png" src="../_images/plot_29_0.png" />
+<img alt="../_images/plot_38_0.png" src="../_images/plot_38_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -771,7 +894,7 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_30_0.png" src="../_images/plot_30_0.png" />
+<img alt="../_images/plot_39_0.png" src="../_images/plot_39_0.png" />
 </div>
 </div>
 </div>

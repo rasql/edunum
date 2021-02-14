@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Texte (string) &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
@@ -24,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -39,32 +40,31 @@
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/questions.js"></script>
-    <script type="text/javascript" src="../_static/blanks.js"></script>
-    <script type="text/javascript" src="../_static/reactions.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Les branchements" href="2_struct.html" />
+    <link rel="next" title="L’instruction conditionnelle" href="2_struct.html" />
     <link rel="prev" title="Calcul numérique" href="1_calc.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -108,7 +108,7 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../start/why.html">
-     A quoi ça sert?
+     Á quoi ça sert?
     </a>
    </li>
    <li class="toctree-l2">
@@ -152,7 +152,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_struct.html">
-     Les branchements
+     L’instruction conditionnelle
     </a>
    </li>
    <li class="toctree-l2">
@@ -177,7 +177,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="fonction.html">
-     Fonctions
+     Fonction avec argument
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#la-fonction-minimale">
+     La fonction minimale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#fonctions-predefinies">
+     Fonctions prédéfinies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#retour-d-une-valeur">
+     Retour d’une valeur
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -276,6 +291,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plot/file.html">
      Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     Animated GIF
     </a>
    </li>
   </ul>
@@ -548,7 +568,7 @@
 <h1>Texte (string)<a class="headerlink" href="#texte-string" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Un texte est une <strong>chaine</strong> de caractères.</p>
 <p><img alt="typewriter" src="https://media.giphy.com/media/3o84sqlBujhGoXvTyM/giphy-downsized.gif" /></p>
-<p>Le texte standard (ASCII code) consiste de</p>
+<p>Le texte standard (ASCII code) consiste en</p>
 <ul class="simple">
 <li><p>26 lettres minuscules (<code class="docutils literal notranslate"><span class="pre">a-z</span></code>)</p></li>
 <li><p>26 lettres majuscules (<code class="docutils literal notranslate"><span class="pre">A-Z</span></code>)</p></li>
@@ -572,7 +592,7 @@
 <p>Les indexages</p>
 <ul class="simple">
 <li><p>index simple <code class="docutils literal notranslate"><span class="pre">s[i]</span></code> pour accéder à un seul caractère</p></li>
-<li><p>tranche <code class="docutils literal notranslate"><span class="pre">s[m:n]</span></code> pour accèder à une sous-chaine</p></li>
+<li><p>tranche <code class="docutils literal notranslate"><span class="pre">s[m:n]</span></code> pour accéder à une sous-chaine</p></li>
 <li><p>tranche <code class="docutils literal notranslate"><span class="pre">s[::i]</span></code> avec incrément (2) et chaine inversée (-1)</p></li>
 </ul>
 <p>Les fonctions</p>
@@ -672,7 +692,7 @@ Par exemple:</p>
 </div>
 <div class="section" id="index">
 <h2>Index<a class="headerlink" href="#index" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Chaque caractère d’une chaine peux être accédé par son index.<br />
+<p>Chaque caractère d’une chaine peut être accédé par son index (sa position).<br />
 Un index est un nombre entier, commençant avec 0 pour le premier caractère.</p>
 <p>Voici la première et deuxième lettre du texte <code class="docutils literal notranslate"><span class="pre">s</span></code></p>
 <div class="cell docutils container">
@@ -687,7 +707,7 @@ Un index est un nombre entier, commençant avec 0 pour le premier caractère.</p
 </div>
 </div>
 </div>
-<p>Un index négatif permet d’accéder à une chaine dépuis sa fin.
+<p>Un index négatif permet d’accéder à une chaine depuis sa fin.
 Voici la dernière et avant-dernière lettre du string <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -798,7 +818,7 @@ Nous pouvons concaténer une lettre et une tranche d’une chaine existante, pou
 </div>
 <div class="section" id="operateur-de-concatenation">
 <h2>Opérateur de concaténation<a class="headerlink" href="#operateur-de-concatenation" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’opératieur <code class="docutils literal notranslate"><span class="pre">+</span></code> permet de concatener (enchainer) deux textes.</p>
+<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">+</span></code> permet de concaténer (enchaîner) deux textes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
@@ -807,7 +827,7 @@ Nous pouvons concaténer une lettre et une tranche d’une chaine existante, pou
 </div>
 </div>
 </div>
-<p>La concatenation donne</p>
+<p>La concaténation donne</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
@@ -850,7 +870,7 @@ world
 </div>
 <div class="section" id="operateur-de-repetition">
 <h2>Opérateur de répétition<a class="headerlink" href="#operateur-de-repetition" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’opératieur <code class="docutils literal notranslate"><span class="pre">*</span></code> permet de répéter un texte.</p>
+<p>L’opérateur <code class="docutils literal notranslate"><span class="pre">*</span></code> permet de répéter un texte.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hi&#39;</span> <span class="o">*</span> <span class="mi">20</span>
@@ -941,7 +961,7 @@ world
 </div>
 </div>
 </div>
-<p>La première et troisième barre oblique sont échapés.</p>
+<p>La première et la troisième barre oblique sont échappées.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tab=</span><span class="se">\\</span><span class="s1">t </span><span class="se">\t</span><span class="s1">newline=</span><span class="se">\\</span><span class="s1">n</span><span class="se">\n</span><span class="s1">1</span><span class="se">\t</span><span class="s1">2&#39;</span><span class="p">)</span>
@@ -958,7 +978,7 @@ world
 </div>
 <div class="section" id="unicode">
 <h2>Unicode<a class="headerlink" href="#unicode" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les chaines de caractères utilisent Unicode. Le format <strong>Unicode</strong> permet de créer des caractères et alphabets de presque tous les langues du mondes.</p>
+<p>Les chaines de caractères utilisent Unicode. Le format <strong>Unicode</strong> permet de créer des caractères et alphabets de presque toutes les langues du monde.</p>
 <p>Voici une chaine en japonais avec une sous-tranche.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -973,7 +993,7 @@ world
 </div>
 </div>
 </div>
-<p>Voici une chaine qui utilise des emoji.</p>
+<p>Voici une chaine qui utilise des émojis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">emoji</span> <span class="o">=</span> <span class="s1">&#39;🍏🍎🍐🍊🍋🍌🍉🍇🍓&#39;</span>
@@ -981,7 +1001,7 @@ world
 </div>
 </div>
 </div>
-<p>Voici deux emojis répétés 10 fois.</p>
+<p>Voici deux émojis répétés 10 fois.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;🍎🍏&#39;</span> <span class="o">*</span> <span class="mi">10</span>
@@ -1014,7 +1034,7 @@ Le type d’une chaine est <code class="docutils literal notranslate"><span clas
 <p>Voici trois autres types:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> (entier)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> (virgule fottante</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> (virgule flottante</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code> (booléen)</p></li>
 </ul>
 <div class="cell docutils container">
@@ -1059,7 +1079,7 @@ L’opérateur <code class="docutils literal notranslate"><span class="pre">*</s
 </div>
 </div>
 </div>
-<p>La fonction <code class="docutils literal notranslate"><span class="pre">int()</span></code> transforme une chaine (qui represente un entier) en entier.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">int()</span></code> transforme une chaine (qui représente un entier) en entier.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;12&#39;</span><span class="p">)</span>
@@ -1117,7 +1137,7 @@ L’opérateur <code class="docutils literal notranslate"><span class="pre">*</s
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="1_calc.html" title="previous page">Calcul numérique</a>
-    <a class='right-next' id="next-link" href="2_struct.html" title="next page">Les branchements</a>
+    <a class='right-next' id="next-link" href="2_struct.html" title="next page">L’instruction conditionnelle</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

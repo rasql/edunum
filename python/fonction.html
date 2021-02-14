@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>Fonctions &#8212; Education numérique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonction avec argument &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -24,8 +25,8 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -39,29 +40,28 @@
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/togglebutton.js"></script>
-    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="../_static/questions.js"></script>
-    <script type="text/javascript" src="../_static/blanks.js"></script>
-    <script type="text/javascript" src="../_static/reactions.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
-    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script type="text/javascript" src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script type="text/javascript">
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" type="text/javascript" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Exercices" href="exercices.html" />
@@ -108,7 +108,7 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../start/why.html">
-     A quoi ça sert?
+     Á quoi ça sert?
     </a>
    </li>
    <li class="toctree-l2">
@@ -152,7 +152,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_struct.html">
-     Les branchements
+     L’instruction conditionnelle
     </a>
    </li>
    <li class="toctree-l2">
@@ -177,7 +177,22 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Fonctions
+     Fonction avec argument
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="#la-fonction-minimale">
+     La fonction minimale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="#fonctions-predefinies">
+     Fonctions prédéfinies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="#retour-d-une-valeur">
+     Retour d’une valeur
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -276,6 +291,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plot/file.html">
      Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     Animated GIF
     </a>
    </li>
   </ul>
@@ -473,22 +493,22 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fonction-avec-argument">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
    Fonction avec argument
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#la-fonction-minimale">
    La fonction minimale
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fonctions-predefinies">
    Fonctions prédéfinies
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#retour-d-une-valeur">
    Retour d’une valeur
   </a>
@@ -504,12 +524,7 @@
         
               <div>
                 
-  <div class="section" id="fonctions">
-<h1>Fonctions<a class="headerlink" href="#fonctions" title="Lien permanent vers ce titre">¶</a></h1>
-<p>En programmation, un fonction est une suite d’instructions nommées.
-Ceci permet d’éviter de devoir reécrire des longues suites d’instructions et les appeler juste en invocant le nom de la fonction.</p>
-<p>Nous pouvons ainsi définir la fonction <code class="docutils literal notranslate"><span class="pre">saluer()</span></code></p>
-<div class="cell docutils container">
+  <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">saluer</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bonjour&#39;</span><span class="p">)</span>
@@ -518,7 +533,7 @@ Ceci permet d’éviter de devoir reécrire des longues suites d’instructions 
 </div>
 </div>
 </div>
-<p>Une fois défini, la fonction peut être appelé, autant de fois qu’on veut.</p>
+<p>Une fois définie, la fonction peut être appelée, autant de fois qu’on veut.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">saluer</span><span class="p">()</span>
@@ -533,8 +548,8 @@ Comment vas-tu?
 </div>
 </div>
 <div class="section" id="fonction-avec-argument">
-<h2>Fonction avec argument<a class="headerlink" href="#fonction-avec-argument" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une fonction peux avoir un argument. C’est une variable qui lui est passé par les parenthèses</p>
+<h1>Fonction avec argument<a class="headerlink" href="#fonction-avec-argument" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Une fonction peut avoir un argument. C’est une variable qui lui est passée par les parenthèses</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">saluer</span><span class="p">(</span><span class="n">nom</span><span class="p">):</span>
@@ -544,7 +559,7 @@ Comment vas-tu?
 </div>
 </div>
 </div>
-<p>Par le suite je peux appeler cette fonction avec l’argument <code class="docutils literal notranslate"><span class="pre">Guido</span></code></p>
+<p>Par la suite je peux appeler cette fonction avec l’argument <code class="docutils literal notranslate"><span class="pre">Guido</span></code> par exemple.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">saluer</span><span class="p">(</span><span class="s1">&#39;Guido&#39;</span><span class="p">)</span>
@@ -574,7 +589,7 @@ Comment vas-tu? Grace
 </div>
 </div>
 <div class="section" id="la-fonction-minimale">
-<h2>La fonction minimale<a class="headerlink" href="#la-fonction-minimale" title="Lien permanent vers ce titre">¶</a></h2>
+<h1>La fonction minimale<a class="headerlink" href="#la-fonction-minimale" title="Lien permanent vers ce titre">¶</a></h1>
 <p>La fonction minimale est</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -584,13 +599,13 @@ Comment vas-tu? Grace
 </div>
 </div>
 </div>
-<p>Elle consiste de</p>
+<p>Elle consiste en</p>
 <ul class="simple">
-<li><p>mot-clé <code class="docutils literal notranslate"><span class="pre">def</span></code></p></li>
+<li><p>un mot-clé <code class="docutils literal notranslate"><span class="pre">def</span></code></p></li>
 <li><p>un nom de fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> (une ou plusieurs lettres)</p></li>
 <li><p>des parenthèses <code class="docutils literal notranslate"><span class="pre">()</span></code> avec des arguments optionnels</p></li>
 <li><p>un deux-points <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
-<li><p>mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code></p></li>
+<li><p>un mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code></p></li>
 </ul>
 <p>Nous pouvons appeler (exécuter) cette fonction. Elle ne fait rien.</p>
 <div class="cell docutils container">
@@ -602,8 +617,8 @@ Comment vas-tu? Grace
 </div>
 </div>
 <div class="section" id="fonctions-predefinies">
-<h2>Fonctions prédéfinies<a class="headerlink" href="#fonctions-predefinies" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Plus que 50 fonctions sont prédéfinis dans Python.</p>
+<h1>Fonctions prédéfinies<a class="headerlink" href="#fonctions-predefinies" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Plus que 50 fonctions sont prédéfinies dans Python.</p>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> affiche une valeur.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -656,11 +671,11 @@ Comment vas-tu? Grace
 </div>
 </div>
 </div>
-<p>Dans cet exemple certaines fonction prédéfinies de python sont appelées. Il est d’usage de stocker la valeur de retour dans une variable.</p>
+<p>Dans cet exemple certaines fonctions prédéfinies de python sont appelées. Il est d’usage de stocker la valeur de retour dans une variable.</p>
 </div>
 <div class="section" id="retour-d-une-valeur">
-<h2>Retour d’une valeur<a class="headerlink" href="#retour-d-une-valeur" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une fonction peut retourner une valeur comme resultat avec le mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
+<h1>Retour d’une valeur<a class="headerlink" href="#retour-d-une-valeur" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Une fonction peut retourner une valeur comme résultat avec le mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
 <p>Par exemple</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -698,7 +713,6 @@ Comment vas-tu? Grace
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60.0 km/h
 </pre></div>
-</div>
 </div>
 </div>
 </div>
