@@ -177,22 +177,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/fonction.html">
-     Fonction avec argument
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/fonction.html#la-fonction-minimale">
-     La fonction minimale
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/fonction.html#fonctions-predefinies">
-     Fonctions prédéfinies
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/fonction.html#retour-d-une-valeur">
-     Retour d’une valeur
+     Fonctions
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -543,23 +528,23 @@
 <h1>Graphique vectoriel<a class="headerlink" href="#graphique-vectoriel" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Le <strong>Scalable Vector Graphics</strong> (graphique vectoriel adaptable) permet de décrire des graphiques vectoriels.</p>
 <p>Un graphique vectoriel décrit des objets (lignes, cercles, rectangles, polygones) de par leur paramètres et non pas par des pixels.</p>
-<p>A partir de la description paramètrique, les pixels sont calculé à chaque fois. Ceci permet une <strong>résolution maximum</strong> pour chaque echelle d’agrandissement.</p>
+<p>A partir de la description paramétrique, les pixels sont calculé à chaque fois. Ceci permet une <strong>résolution maximum</strong> pour chaque échelle d’agrandissement.</p>
 <p>Les avantages:</p>
 <ul class="simple">
 <li><p>une image SVG peut être édité avec un éditeur de text</p></li>
-<li><p>pas de perte de qualité en zoomant</p></li>
+<li><p>pas de perte de qualité en agrandissant</p></li>
 <li><p>standard ouvert</p></li>
 </ul>
 <div class="section" id="cercle">
 <h2>Cercle<a class="headerlink" href="#cercle" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La balise <code class="docutils literal notranslate"><span class="pre">&lt;svg&gt;</span></code> indique le debut de code SVG.
+<p>La balise <code class="docutils literal notranslate"><span class="pre">&lt;svg&gt;</span></code> indique le début de code SVG.
 Il est terminé par la balise <code class="docutils literal notranslate"><span class="pre">&lt;\svg&gt;</span></code></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> designe le rayon</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> désigne le rayon</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cx</span></code> et <code class="docutils literal notranslate"><span class="pre">cy</span></code> sont les coordonnées du centre. Par défaut à (0, 0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fill</span></code> couleur de remplissage</p></li>
 </ul>
-<p>Le contour est définis par</p>
+<p>Le contour est défini par</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">stroke</span></code> couleur du contour</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stroke-width</span></code> épaisseur du contour</p></li>
@@ -614,7 +599,7 @@ Il est terminé par la balise <code class="docutils literal notranslate"><span c
 <h2>Ellipse<a class="headerlink" href="#ellipse" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La balise <ellipse> définit une ellipse.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rx</span></code> et <code class="docutils literal notranslate"><span class="pre">ry</span></code> designe les deux rayons</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rx</span></code> et <code class="docutils literal notranslate"><span class="pre">ry</span></code> désigne les deux rayons</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cx</span></code> et <code class="docutils literal notranslate"><span class="pre">cy</span></code> sont les coordonnées du centre. Par défaut à (0, 0)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fill</span></code> couleur de remplissage</p></li>
 </ul>
@@ -640,8 +625,8 @@ Il est terminé par la balise <code class="docutils literal notranslate"><span c
 <h2>Ligne<a class="headerlink" href="#ligne" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La balise <code class="docutils literal notranslate"><span class="pre">&lt;line&gt;</span></code> définit une ligne.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">x1</span></code> et <code class="docutils literal notranslate"><span class="pre">y1</span></code> designe le point de départ</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x2</span></code> et <code class="docutils literal notranslate"><span class="pre">y2</span></code> designe le point d’arrivée</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x1</span></code> et <code class="docutils literal notranslate"><span class="pre">y1</span></code> désigne le point de départ</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x2</span></code> et <code class="docutils literal notranslate"><span class="pre">y2</span></code> désigne le point d’arrivée</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -665,7 +650,7 @@ Il est terminé par la balise <code class="docutils literal notranslate"><span c
 <h2>Polygone<a class="headerlink" href="#polygone" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La balise <code class="docutils literal notranslate"><span class="pre">&lt;polygon&gt;</span></code> définit un polygone.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">points</span></code> designe une liste de points <code class="docutils literal notranslate"><span class="pre">x1,y1</span> <span class="pre">x2,y2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">points</span></code> désigne une liste de points <code class="docutils literal notranslate"><span class="pre">x1,y1</span> <span class="pre">x2,y2</span></code></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

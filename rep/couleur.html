@@ -177,22 +177,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/fonction.html">
-     Fonction avec argument
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/fonction.html#la-fonction-minimale">
-     La fonction minimale
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/fonction.html#fonctions-predefinies">
-     Fonctions prédéfinies
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/fonction.html#retour-d-une-valeur">
-     Retour d’une valeur
+     Fonctions
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -575,7 +560,7 @@ Une couleur est donc un tuple, et nous pouvons définir les 3 coulers de base co
 </div>
 <div class="section" id="melanger-des-couleurs">
 <h2>Mélanger des couleurs<a class="headerlink" href="#melanger-des-couleurs" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les couleurs sont additif.</p>
+<p>Les couleurs sont additives.</p>
 <ul class="simple">
 <li><p>R+B donne <strong>magenta</strong> (M)</p></li>
 <li><p>R+G donne <strong>jaune</strong> (Y)</p></li>
@@ -621,7 +606,7 @@ Une couleur est donc un tuple, et nous pouvons définir les 3 coulers de base co
 </div>
 <div class="section" id="noir-et-blanc">
 <h2>Noir et blanc<a class="headerlink" href="#noir-et-blanc" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Toutes les couleurs mélangé donne blanc (W=white). L’absence de toute couleur donne noir (K=black).</p>
+<p>Toutes les couleurs mélangées donnent blanc (W=white). L’absence de toute couleur donne noir (K=black).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">R</span> <span class="o">+</span> <span class="n">G</span> <span class="o">+</span> <span class="n">B</span>
@@ -661,7 +646,7 @@ Une couleur est donc un tuple, et nous pouvons définir les 3 coulers de base co
 <div class="section" id="saturation">
 <h2>Saturation.<a class="headerlink" href="#saturation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une couleur avec sa composante au maximum (255) est dit saturée.
-Elle peut etre rendu plus foncé en diminuant. Voici 4 valeurs de saturation (100%, 50%, 33%, 25%)</p>
+Elle peut être rendue plus foncé en diminuant cette composante. Voici 4 valeurs de saturation (100%, 50%, 33%, 25%)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">R</span><span class="p">,</span> <span class="n">R</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">R</span><span class="o">//</span><span class="mi">3</span><span class="p">,</span> <span class="n">R</span><span class="o">//</span><span class="mi">4</span><span class="p">]])</span>
@@ -717,7 +702,7 @@ Elle peut etre rendu plus foncé en diminuant. Voici 4 valeurs de saturation (10
 </div>
 <div class="section" id="multiplier-et-diviser">
 <h2>Multiplier et diviser<a class="headerlink" href="#multiplier-et-diviser" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous pouvons multiplier et diviser les matrices <strong>numpy</strong>. Divisé par 2, l’image devient plus sombre.</p>
+<p>Nous pouvons multiplier et diviser les matrices <strong>numpy</strong>. Divisées par 2, l’image devient plus sombre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="o">//</span><span class="mi">2</span><span class="p">);</span>
@@ -728,7 +713,7 @@ Elle peut etre rendu plus foncé en diminuant. Voici 4 valeurs de saturation (10
 <img alt="../_images/couleur_27_0.png" src="../_images/couleur_27_0.png" />
 </div>
 </div>
-<p>Multiplié par 2, l’image devant plus clair et montre des traces de saturation.</p>
+<p>Multipliées par 2, l’image devient plus clair et montre des traces de saturation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="o">*</span><span class="mi">2</span><span class="p">);</span>

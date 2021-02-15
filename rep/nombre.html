@@ -177,22 +177,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/fonction.html">
-     Fonction avec argument
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/fonction.html#la-fonction-minimale">
-     La fonction minimale
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/fonction.html#fonctions-predefinies">
-     Fonctions prédéfinies
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/fonction.html#retour-d-une-valeur">
-     Retour d’une valeur
+     Fonctions
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -514,8 +499,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nombre-rationel">
-   Nombre rationel
+  <a class="reference internal nav-link" href="#nombre-rationnel">
+   Nombre rationnel
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -535,7 +520,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nombres-hexadecimales">
-   Nombres héxadécimales
+   Nombres hexadécimales
   </a>
  </li>
 </ul>
@@ -555,7 +540,7 @@
 <p><img alt="" src="https://media.giphy.com/media/IsfrRWvbUdRny/giphy.gif" /></p>
 <div class="section" id="numeration">
 <h2>Numération<a class="headerlink" href="#numeration" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La <strong>numération</strong> designe le mode de représentation des nombres.<br />
+<p>La <strong>numération</strong> désigne le mode de représentation des nombres.<br />
 Nous utilisons la numération occidentale, dite <em>arabe</em> ou <em>indo-arabe</em>.  Elle est décimale et positionnelle.</p>
 <p>Voici les 5 premiers nombres en numération arabe</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1, 2, 3, 4, 5
@@ -572,12 +557,12 @@ Nous utilisons la numération occidentale, dite <em>arabe</em> ou <em>indo-arabe
 </div>
 <div class="section" id="les-differents-ensembles">
 <h2>Les différents ensembles<a class="headerlink" href="#les-differents-ensembles" title="Lien permanent vers ce titre">¶</a></h2>
-<p>système décimale utilise 10 chiffres pour représenter les nombres.
-Dans cette sections nous allons construire des séquence de symboles qui représentes un</p>
+<p>Le système décimal utilise 10 chiffres pour représenter les nombres.
+Dans cette section nous allons construire des séquences de symboles qui représentent un</p>
 <ul class="simple">
 <li><p>nombre naturel</p></li>
 <li><p>nombre entier</p></li>
-<li><p>nombre rationel</p></li>
+<li><p>nombre rationnel</p></li>
 <li><p>nombre scientifique</p></li>
 </ul>
 <div class="cell docutils container">
@@ -587,7 +572,7 @@ Dans cette sections nous allons construire des séquence de symboles qui représ
 </div>
 </div>
 </div>
-<p>La fonction <code class="docutils literal notranslate"><span class="pre">choice</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code> permet d’en selectionner une chiffre aléatoire.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">choice</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code> permet d’en sélectionner un chiffre aléatoire.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choice</span>
@@ -653,10 +638,10 @@ Dans cette sections nous allons construire des séquence de symboles qui représ
 </div>
 <div class="section" id="nombre-entier">
 <h2>Nombre entier<a class="headerlink" href="#nombre-entier" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les nombre entiers incluent aussi les nombres négatives. Nous utilisons les symboles</p>
+<p>Les nombre entiers incluent aussi les nombres négatifs. Nous utilisons les symboles</p>
 <ul class="simple">
 <li><p>plus <code class="docutils literal notranslate"><span class="pre">+</span></code></p></li>
-<li><p>minus <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
+<li><p>moins <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -681,9 +666,9 @@ Dans cette sections nous allons construire des séquence de symboles qui représ
 </div>
 </div>
 </div>
-<div class="section" id="nombre-rationel">
-<h2>Nombre rationel<a class="headerlink" href="#nombre-rationel" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nombre a virgule flottante</p>
+<div class="section" id="nombre-rationnel">
+<h2>Nombre rationnel<a class="headerlink" href="#nombre-rationnel" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nombre à virgule flottante.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">q</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
@@ -811,10 +796,10 @@ Dans cette sections nous allons construire des séquence de symboles qui représ
 </div>
 </div>
 <div class="section" id="nombres-hexadecimales">
-<h2>Nombres héxadécimales<a class="headerlink" href="#nombres-hexadecimales" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le système hexadécimale est un système de numérotation sur base 16. En plus des 10 chiffres, il utilise les premiers 6 lettres de l’alphabet.</p>
-<p>Ce système est très pratiques en informatique, parce qu’il permet de représenter 4 digits binaires avec un seul symbole hexadécimale.</p>
-<p>Nous utilisons ici un <strong>f-string</strong> pour formatter la variable <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
+<h2>Nombres hexadécimales<a class="headerlink" href="#nombres-hexadecimales" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le système hexadécimal est un système de numérotation en base 16. En plus des 10 chiffres, il utilise les premiers 6 lettres de l’alphabet.</p>
+<p>Ce système est très pratique en informatique, parce qu’il permet de représenter 4 éléments binaires avec un seul symbole hexadécimale.</p>
+<p>Nous utilisons ici un <strong>f-string</strong> pour formater la variable <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">{i:2}</span></code> affiche la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> avec 2 positions</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">{i:04b}</span></code> affiche la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> en binaire avec 4 positions (rambourré avec des <code class="docutils literal notranslate"><span class="pre">0</span></code>)</p></li>

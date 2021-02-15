@@ -4,7 +4,7 @@ Ce document est écrit en Markdown.
 
 ## Directives
 
-Pour mettre un paragraphe en évidence il y a ces directives:
+Pour mettre un paragraphe en évidence, voici quelques directives:
 
 - note
 - tip
@@ -14,7 +14,7 @@ Pour mettre un paragraphe en évidence il y a ces directives:
 - danger
 - error
 
-Le code Markdown pour une directive est:
+Le code Markdown pour utiliser une directive est:
 
     ```{note}
     This is a note.
@@ -56,7 +56,7 @@ $$\frac{a + b}{1+x^2}$$
 
 
 ## Sidebar
-Vous pouvez intégrer un texte dans le coté gauche du texte. 
+Vous pouvez intégrer un texte dans le côté gauche du texte. 
 Les deux textes sont séparés par une barre verticale.
 
 ```{sidebar} My sidebar title
@@ -118,7 +118,7 @@ Dans le corps de la directive, les bonnes et mauvaises réponses sont indiquées
 `````{tabbed} Aperçu
 
 ```{question}
-Combien y a t'il de bits dans un octet ?
+Combien y a-t-il de bits dans un octet ?
 Je pense qu'il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
 ```
 `````
@@ -133,7 +133,7 @@ Je pense qu'il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
 ````
 `````
 
-Il est possible de changer le titre affiché au dessus de la question.
+Il est possible de changer le titre affiché au-dessus de la question.
 Le contenu de la question peut lui-même être structuré en Markdown.
 Dans l'exemple ci-dessous, les réponses sont affichées dans une liste.
 
