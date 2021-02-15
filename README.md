@@ -55,3 +55,4 @@ Le fichier `_config.yml` a été modifié:
     local_extensions:
         questions: ../extensions/
         blanks: ../extensions/
+        
