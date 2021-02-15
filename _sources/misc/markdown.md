@@ -116,7 +116,6 @@ Il est possible d'intégrer des questions à choix multiples au fil des pages vi
 Dans le corps de la directive, les bonnes et mauvaises réponses sont indiquées via les rôles `{v}` et `{f}` pour *vrai* et *faux*.
 
 `````{tabbed} Aperçu
-
 ```{question}
 Combien y a-t-il de bits dans un octet ?
 Je pense qu'il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
@@ -124,7 +123,6 @@ Je pense qu'il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
 `````
 
 `````{tabbed} Code
-
 ````{code-block} markdown
 ```{question}
 Combien y a t'il de bits dans un octet ?
@@ -138,7 +136,6 @@ Le contenu de la question peut lui-même être structuré en Markdown.
 Dans l'exemple ci-dessous, les réponses sont affichées dans une liste.
 
 `````{tabbed} Aperçu
-
 ```{question} Question avec un titre personnalisé
 Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turing ?
 * {v}`Barbara Liskov`
@@ -149,7 +146,6 @@ Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turin
 `````
 
 `````{tabbed} Code
-
 ````{code-block} markdown
 ```{question} Question avec un titre personnalisé
 Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turing ?

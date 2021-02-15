@@ -364,6 +364,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../misc/github.html">
+   GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../misc/style.html">
    Style
   </a>
@@ -502,11 +507,13 @@
   <a class="reference internal nav-link" href="#evaluer-de-nouveau">
    Évaluer de nouveau
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ajouter-des-cellules">
-   Ajouter des cellules
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice">
+     Exercice
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mode-edit-command">
@@ -514,8 +521,23 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajouter-des-cellules">
+   Ajouter des cellules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#couper-copier-coller">
    Couper, copier, coller
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deplacer-une-cellule">
+   Déplacer une cellule
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#naviguer-avec-les-touches">
+   Naviguer avec les touches
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -539,7 +561,12 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice">
+  <a class="reference internal nav-link" href="#resume">
+   Résumé
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
    Exercice
   </a>
  </li>
@@ -591,7 +618,7 @@
 </ul>
 <p>Alternativement:</p>
 <ul class="simple">
-<li><p>Cliquez sur (+)</p></li>
+<li><p>Choississez <strong>New Launcher</strong> (ou cliquez sur + dans le navigateur)</p></li>
 <li><p>Choisissez dans le Launcher: <strong>Notebook Python 3</strong></p></li>
 </ul>
 <p><img alt="nb" src="../_images/start_nb.png" /></p>
@@ -627,20 +654,10 @@
 <li><p>le numéro de l’exécution a été incrémenté (2)</p></li>
 <li><p>une nouvelle cellule vide est ajoutée</p></li>
 </ul>
+<div class="section" id="exercice">
+<h3>Exercice<a class="headerlink" href="#exercice" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ajouter 4-5 cellules avec des expressions Python (soustractions, multiplications, divisions)</p>
 </div>
-<div class="section" id="ajouter-des-cellules">
-<h2>Ajouter des cellules<a class="headerlink" href="#ajouter-des-cellules" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Vous pouvez ajouter des cellules</p>
-<ul class="simple">
-<li><p>avec le bouton (+) du menu, ou</p></li>
-<li><p>avec les raccourcis <strong>A</strong> et <strong>B</strong>.</p></li>
-</ul>
-<p>Par rapport à la cellule active (barre bleue) vous pouvez ajouter une nouvelle cellule</p>
-<ul class="simple">
-<li><p><strong>A</strong> en dessus (above)</p></li>
-<li><p><strong>B</strong> en dessous (below)</p></li>
-</ul>
-<p><img alt="" src="../_images/cell4.png" /></p>
 </div>
 <div class="section" id="mode-edit-command">
 <h2>Mode edit/command<a class="headerlink" href="#mode-edit-command" title="Lien permanent vers ce titre">¶</a></h2>
@@ -658,6 +675,21 @@
 <li><p>le curseur a disparu</p></li>
 </ul>
 </div>
+<div class="section" id="ajouter-des-cellules">
+<h2>Ajouter des cellules<a class="headerlink" href="#ajouter-des-cellules" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez ajouter des cellules</p>
+<ul class="simple">
+<li><p>avec le bouton (+) du menu, ou</p></li>
+<li><p>avec les raccourcis <strong>A</strong> et <strong>B</strong></p></li>
+</ul>
+<p>Par rapport à la cellule active (barre bleue) vous pouvez ajouter une nouvelle cellule</p>
+<ul class="simple">
+<li><p><strong>A</strong> en dessus (above)</p></li>
+<li><p><strong>B</strong> en dessous (below)</p></li>
+</ul>
+<p><strong>Attention:</strong> il faut être dans le <strong>mode command</strong> pour utiliser ces raccourcis.</p>
+<p><img alt="" src="../_images/cell4.png" /></p>
+</div>
 <div class="section" id="couper-copier-coller">
 <h2>Couper, copier, coller<a class="headerlink" href="#couper-copier-coller" title="Lien permanent vers ce titre">¶</a></h2>
 <p>En mode <strong>command</strong> vous pouvez couper, copier et coller des cellules avec les raccourcis:</p>
@@ -671,6 +703,16 @@
 <p>et ensuite collée à la fin de la cellule <code class="docutils literal notranslate"><span class="pre">2</span></code> avec la touche <strong>V</strong></p>
 <p><img alt="" src="../_images/cell8.png" /></p>
 <p><strong>Attention:</strong> La touche <strong>cmd</strong> n’est pas nécessaire en mode <em>command</em>.</p>
+</div>
+<div class="section" id="deplacer-une-cellule">
+<h2>Déplacer une cellule<a class="headerlink" href="#deplacer-une-cellule" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez cliquer à droite de la barre bleu pour déplacer une cellule.
+La ligne bleu vous indique la nouvelle position de la cellule.</p>
+<p><img alt="" src="../_images/lab_move.png" /></p>
+</div>
+<div class="section" id="naviguer-avec-les-touches">
+<h2>Naviguer avec les touches<a class="headerlink" href="#naviguer-avec-les-touches" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec les touches de flèche <strong>haut/bas</strong> (▲ et ▼) vous pouvez naviguer parmi les cellules.</p>
 </div>
 <div class="section" id="selection-multiple">
 <h2>Sélection multiple<a class="headerlink" href="#selection-multiple" title="Lien permanent vers ce titre">¶</a></h2>
@@ -719,8 +761,26 @@ Ce navigateur permet de</p>
 <p>Cliquer avec le bouton droit dans le navigateur des fichiers vous permet d’accéder à un menu contextuel qui vous permet de renommer votre notebook.</p>
 <p><img alt="" src="../_images/jupyterlab_menu.png" /></p>
 </div>
-<div class="section" id="exercice">
-<h2>Exercice<a class="headerlink" href="#exercice" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="resume">
+<h2>Résumé<a class="headerlink" href="#resume" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>JupyterLab est un <strong>editeur web</strong> pour programmer en Python.</p></li>
+<li><p>Il permet de combiner <strong>code et documentation</strong> dans un seul document.</p></li>
+<li><p>Ses documents s’apellent <strong>Jupyter notebook</strong>.</p></li>
+<li><p>Un Jupyter notebook est <strong>divisé en cellules</strong>.</p></li>
+<li><p>Un <strong>serveur JupyterLab</strong> est lancé à partir d’un terminal avec la commande <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code>.</p></li>
+</ul>
+<p>Les raccourcis:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">A</span></code> ajouter une cellule en dessus (above)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">B</span></code> ajouter une cellule en dessous (below)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code> copier une cellule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">X</span></code> couper une cellule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">V</span></code> coller une cellule</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>Exercice<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>créez un dossier <em>leçon 1</em></p></li>
 <li><p>renommez le document <em>Untitled.ipynb</em> en <em>Intro JuypterLab.ipynb</em></p></li>
