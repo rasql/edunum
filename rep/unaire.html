@@ -638,7 +638,7 @@ Le tas contenait alors l’équivalent en caillou du nombre de soldats.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">unaire(d)</span></code> pour transformer un décimal <code class="docutils literal notranslate"><span class="pre">d</span></code> en unaire</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">decimal(u)</span></code> pour transformer un unaire <code class="docutils literal notranslate"><span class="pre">u</span></code> en décimal</p></li>
 </ul>
-<p>Nous utilisons l’opérateur de de répétition <code class="docutils literal notranslate"><span class="pre">*</span></code> pour créer la séquence unaire.</p>
+<p>Nous utilisons l’opérateur de répétition <code class="docutils literal notranslate"><span class="pre">*</span></code> pour créer la séquence unaire.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">unaire</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
@@ -710,7 +710,7 @@ Le tas contenait alors l’équivalent en caillou du nombre de soldats.</p>
 </div>
 <div class="section" id="decrementation">
 <h2>Décrémentation<a class="headerlink" href="#decrementation" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La <strong>décrémentation</strong> est effectuée par l’enlèvement d’un symbole et trouve le prédécesseur d’un nombre.</p>
+<p>La <strong>décrémentation</strong> est effectuée par la suppression du dernier symbole et trouve le prédécesseur d’un nombre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dec</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
@@ -790,7 +790,7 @@ Ci-dessous nous mettons la variable <code class="docutils literal notranslate"><
 </div>
 <div class="section" id="soustraction">
 <h2>Soustraction<a class="headerlink" href="#soustraction" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La soustraction se traduit par l’effacement ou l’enlèvement d’un nombre de caractères correspondant au deuxième nombre.</p>
+<p>La soustraction se traduit par la suppression d’un nombre de caractères correspondant au deuxième nombre.</p>
 <p>En Python nous utilison l’opérateur de tranche <code class="docutils literal notranslate"><span class="pre">[m:n]</span></code>
 pour enlever un certain nombre de symboles.</p>
 <div class="cell docutils container">
@@ -815,7 +815,7 @@ pour enlever un certain nombre de symboles.</p>
 </div>
 <p>Notre système unaire ne peut pas représenter des nombres négatifs. Or la soustraction pourrait donner des résultats négatifs.
 Que fait notre fonction <code class="docutils literal notranslate"><span class="pre">sub</span></code> si le résultat donnerait un nombre négatif?
-Un message d’erreur serait une possibilité, mais à l’occurence la fonction retourne tout simplement 0.</p>
+Un message d’erreur serait une possibilité, mais en occurrence la fonction retourne tout simplement 0.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;🍎🍎&#39;</span><span class="p">,</span> <span class="s1">&#39;🍎🍎🍎🍎🍎&#39;</span><span class="p">)</span>
@@ -856,7 +856,7 @@ Un message d’erreur serait une possibilité, mais à l’occurence la fonction
 </div>
 <div class="section" id="division">
 <h2>Division<a class="headerlink" href="#division" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La division se traduit par la soustraction succéssive de <code class="docutils literal notranslate"><span class="pre">b</span></code> de <code class="docutils literal notranslate"><span class="pre">a</span></code>.
+<p>La division se traduit par la soustraction successive de <code class="docutils literal notranslate"><span class="pre">b</span></code> de <code class="docutils literal notranslate"><span class="pre">a</span></code>.
 Le nombre de soustractions <code class="docutils literal notranslate"><span class="pre">q</span></code> est le <code class="docutils literal notranslate"><span class="pre">quotient</span></code>. Ce qui reste de <code class="docutils literal notranslate"><span class="pre">a</span></code>
 est le <strong>reste</strong> de la division.</p>
 <p>La fonction retourne <strong>quotient</strong> et <strong>reste</strong></p>
@@ -888,7 +888,7 @@ est le <strong>reste</strong> de la division.</p>
 </div>
 <div class="section" id="table-de-multiplication">
 <h2>Table de multiplication<a class="headerlink" href="#table-de-multiplication" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous sommes maintenant capables de definir un algorithme qui affiche le livret de 3 affiché pour 1 à 7.</p>
+<p>Nous sommes maintenant capable de définir un algorithme qui affiche le livret de 3 affiché pour 1 à 7.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
