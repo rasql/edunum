@@ -21,6 +21,7 @@
       - file: python/4_text2
       - file: python/logique
       - file: python/fonction
+      - file: python/jeu_ppc
         
       - file: python/exercices
         sections:
