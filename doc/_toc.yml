@@ -63,4 +63,5 @@
   - file: misc/markdown
   - file: misc/jupyter
   - file: misc/thonny
+  - file: misc/github
   - file: misc/style
