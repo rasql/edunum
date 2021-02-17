@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeu : pierre-papier-ciseaux &#8212; Education numérique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -575,7 +575,7 @@
 <img alt="" src="https://media.giphy.com/media/3ohzdGnD5vAud1NCZW/giphy.gif" /></p>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les deux joueurs choisissent simultanémant un des trois coups possibles:</p>
+<p>Les deux joueurs choisissent simultanément un des trois coups possibles:</p>
 <p><img alt="" src="../_images/ppc.png" /></p>
 <ul class="simple">
 <li><p>pierre bat ciseaux</p></li>
@@ -601,13 +601,13 @@ Vous (you) allez jouer contre l’ordinateur (bot).</p>
 <li><p>vous décidez qui gagne</p></li>
 <li><p>vous tenez compte du score</p></li>
 </ul>
-<p>Ce jeux est simple, mais il vous permet de comprendre comment un jeux vidéo fonctionne.</p>
+<p>Ce jeu est simple, mais il vous permet de comprendre comment un jeu vidéo fonctionne.</p>
 </div>
 <div class="section" id="representation-des-coups">
 <h2>Représentation des coups<a class="headerlink" href="#representation-des-coups" title="Lien permanent vers ce titre">¶</a></h2>
-<p>A chaque tour il y a 3 coups possibles.
+<p>Á chaque tour il y a 3 coups possibles.
 Il a différentes manières de représenter ces 3 options.
-Une façon est d’utiliser des chaînes de caracters.</p>
+Une façon est d’utiliser des chaînes de caractères.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coups</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pierre&#39;</span><span class="p">,</span> <span class="s1">&#39;papier&#39;</span><span class="p">,</span> <span class="s1">&#39;ciseaux&#39;</span><span class="p">]</span>
@@ -629,7 +629,7 @@ En commençant par 0, nous pouvons utiliser ces entiers comme indexe pour une li
 </div>
 </div>
 </div>
-<p>Bien sur, vous pouvez aussi utiliser des émoji pour rendre l’apparence plus cool.</p>
+<p>Bien sûr, vous pouvez aussi utiliser des émojis pour rendre l’apparence plus cool.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coups</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;📜&#39;</span><span class="p">,</span> <span class="s1">&#39;💎&#39;</span><span class="p">,</span> <span class="s1">&#39;✂️&#39;</span><span class="p">]</span>
@@ -694,7 +694,7 @@ Essayez différentes valeurs.</p>
 </div>
 </div>
 </div>
-<p>Donc voici une boucle de jeu. Elle continue jusqu’à ce que vous appuyer sur <strong>retour</strong> tout seul.</p>
+<p>Donc voici une boucle de jeu. Elle continue jusqu’à ce que vous appuyez sur <strong>retour</strong> tout seul.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;votre choix:&#39;</span><span class="p">)</span>
@@ -718,7 +718,7 @@ votre choix:
 </div>
 <div class="section" id="verification">
 <h2>Vérification<a class="headerlink" href="#verification" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Un jeu vérifie si les entrées sont permis. Donc établissons d’abord une liste des coups qui sont permis.</p>
+<p>Un jeu vérifie si les entrées sont permises. Donc, établissons d’abord une liste des coups qui sont permis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coups</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pierre&#39;</span><span class="p">,</span> <span class="s1">&#39;papier&#39;</span><span class="p">,</span> <span class="s1">&#39;ciseaux&#39;</span><span class="p">]</span>
@@ -751,11 +751,11 @@ votre choix:
 </div>
 </div>
 </div>
-<p>Nous pouvons maintentant ajouter la vérification.</p>
+<p>Nous pouvons maintenant ajouter la vérification.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coups</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pierre&#39;</span><span class="p">,</span> <span class="s1">&#39;papier&#39;</span><span class="p">,</span> <span class="s1">&#39;ciseaux&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;choissisez entre:&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">coups</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;choisissez entre:&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">coups</span><span class="p">)</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;votre choix:&#39;</span><span class="p">)</span>
 <span class="k">while</span> <span class="n">x</span> <span class="p">:</span>
@@ -770,7 +770,7 @@ votre choix:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>choissisez entre: pierre papier ciseaux
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>choisissez entre: pierre papier ciseaux
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>votre choix: pierre
@@ -779,10 +779,10 @@ votre choix:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ok
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>votre choix ciso
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>votre choix cayou
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ciso n&#39;est pas dans [&#39;pierre&#39;, &#39;papier&#39;, &#39;ciseaux&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cayou n&#39;est pas dans [&#39;pierre&#39;, &#39;papier&#39;, &#39;ciseaux&#39;]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>votre choix 
@@ -860,7 +860,7 @@ votre choix:
 </div>
 <div class="section" id="transformer-le-choix">
 <h2>Transformer le choix<a class="headerlink" href="#transformer-le-choix" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Dans le jeux, il est avantageux de transformer les indices (0, 1, 2) en mots.</p>
+<p>Dans le jeu, il est avantageux de transformer les indices (0, 1, 2) en mots.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coups</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pierre&#39;</span><span class="p">,</span> <span class="s1">&#39;papier&#39;</span><span class="p">,</span> <span class="s1">&#39;ciseaux&#39;</span><span class="p">]</span>
@@ -994,7 +994,7 @@ L’ordinateur choisit une des 3 possibilités de façon aléatoire.</p>
 </div>
 <div class="section" id="qui-gagne">
 <h2>Qui gagne ?<a class="headerlink" href="#qui-gagne" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Si les deux coups sont les même, c’est un match nul, c’est facile à détécter.</p>
+<p>Si les deux coups sont les mêmes, c’est un match nul, c’est facile à détecter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1077,7 +1077,7 @@ L’ordinateur choisit une des 3 possibilités de façon aléatoire.</p>
 </div>
 <div class="section" id="projet">
 <h2>Projet<a class="headerlink" href="#projet" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Combinez toutes les éléments pour créer un jeux vidéo où</p>
+<p>Combinez toutes les éléments pour créer un jeu vidéo où</p>
 <ul class="simple">
 <li><p>vous jouez contre l’ordinateur</p></li>
 <li><p>vous continuez jusqu’à une condition de fin</p></li>
@@ -1148,7 +1148,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     
