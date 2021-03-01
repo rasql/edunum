@@ -21,6 +21,7 @@
       - file: python/4_text2
       - file: python/logique
       - file: python/fonction
+      - file: python/jeu_ppc
         
       - file: python/exercices
         sections:
@@ -63,4 +64,5 @@
   - file: misc/markdown
   - file: misc/jupyter
   - file: misc/thonny
+  - file: misc/github
   - file: misc/style
