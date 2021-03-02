@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boucle &#8212; Education numérique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -64,7 +64,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Composer des textes" href="4_text2.html" />
+    <link rel="next" title="Logique" href="logique.html" />
     <link rel="prev" title="Listes" href="3_list.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -126,6 +126,11 @@
      Markdown
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/rappel.html">
+     Rappel
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -166,11 +171,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="4_text2.html">
-     Composer des textes
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="logique.html">
      Logique
     </a>
@@ -178,11 +178,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="fonction.html">
      Fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="jeu_ppc.html">
-     Jeu : pierre-papier-ciseaux
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -208,6 +203,30 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../jeu/index.html">
+   Jouer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/ppc.html">
+     Pierre-papier-ciseaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/texte.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/japon.html">
+     Culture du Japon
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -499,8 +518,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-bloc-repete">
-   Le bloc répété
+  <a class="reference internal nav-link" href="#le-caractere-sequentiel">
+   Le caractère séquentiel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vocabulaire">
+   Vocabulaire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indentation">
+   Indentation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -521,6 +550,21 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#boucles-imbriquees">
    Boucles imbriquées
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-boucle-while">
+   La boucle
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decompte">
+   Décompte
   </a>
  </li>
 </ul>
@@ -554,13 +598,19 @@
 <li><p>le deux-points <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
 <li><p>un <code class="docutils literal notranslate"><span class="pre">bloc</span></code> d’instructions indenté.</p></li>
 </ul>
-<p>Par exemple</p>
+</div>
+<div class="section" id="le-caractere-sequentiel">
+<h2>Le caractère séquentiel<a class="headerlink" href="#le-caractere-sequentiel" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour ralentir notre boucle nous allons importer la fonction <code class="docutils literal notranslate"><span class="pre">sleep</span></code> du module <code class="docutils literal notranslate"><span class="pre">time</span></code>.<br />
+Le ralentissement nous montre le <strong>caractère séquentielle</strong> de la boucle.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ada&#39;</span><span class="p">,</span> <span class="s1">&#39;Grace&#39;</span><span class="p">,</span> <span class="s1">&#39;Anita&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">sleep</span>
+<span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ada&#39;</span><span class="p">,</span> <span class="s1">&#39;Grace&#39;</span><span class="p">,</span> <span class="s1">&#39;Anita&#39;</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -572,47 +622,55 @@ Anita
 </div>
 </div>
 </div>
-<p>On appelle les répétions du <code class="docutils literal notranslate"><span class="pre">bloc</span></code> aussi des <strong>itérations</strong>. On dit <strong>itérer sur la séquence</strong>.</p>
-<p>On appelle la variable <code class="docutils literal notranslate"><span class="pre">x</span></code> un <strong>itérateur</strong>. Cette variable peut avoir n’importe quel nom. Cette variable prend successivement toutes les valeurs de la séquence, une après l’autre.</p>
+<p><strong>Exercice</strong><br />
+Ajoutez deux noms à la liste et diminuez le temps à 0.5 secondes.</p>
 </div>
-<div class="section" id="le-bloc-repete">
-<h2>Le bloc répété<a class="headerlink" href="#le-bloc-repete" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="vocabulaire">
+<h2>Vocabulaire<a class="headerlink" href="#vocabulaire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On appelle les répétions du <code class="docutils literal notranslate"><span class="pre">bloc</span></code> aussi des <strong>itérations</strong>.<br />
+On dit <strong>itérer sur la séquence</strong>.</p>
+<p>La <strong>séquence</strong> peut être:</p>
+<ul class="simple">
+<li><p>une plage (range)</p></li>
+<li><p>une liste</p></li>
+<li><p>une chaîne de caractères</p></li>
+</ul>
+<p>On appelle la variable <code class="docutils literal notranslate"><span class="pre">x</span></code> un <strong>itérateur</strong>. Cette variable peut avoir n’importe quel nom.<br />
+L’itérateur prend successivement toutes les valeurs de la séquence, une après l’autre.</p>
+</div>
+<div class="section" id="indentation">
+<h2>Indentation<a class="headerlink" href="#indentation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le bloc répété consiste en une ou plusieurs (1+) instructions.
-Toutes les instructions qui font partie du bloc sont indentées.
+Toutes les instructions qui font partie du bloc sont <strong>indentées</strong>.
 La première instruction qui n’est plus indentée ne fait plus partie du bloc.</p>
-<p>Ici <strong>instruction 1</strong> fait partie du bloc d’itération.<br />
+<p>Ici <strong>instruction</strong> fait partie du bloc d’itération.<br />
 Donc, cette instruction est exécutée 3 fois.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;i =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;instruction 1&#39;</span><span class="p">)</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;instruction 2&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;instruction&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i = 0
-instruction 1
+instruction
 i = 1
-instruction 1
+instruction
 i = 2
-instruction 1
-instruction 2
+instruction
 </pre></div>
 </div>
 </div>
 </div>
-<p>Maintenant, <strong>instruction 1</strong> ne fait plus partie du bloc d’itération.<br />
+<p>Maintenant, <strong>instruction</strong> ne fait plus partie du bloc d’itération.<br />
 Cette instruction est exécutée seulement une fois.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;i =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;instruction 1&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;instruction 2&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;instruction&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -620,12 +678,13 @@ Cette instruction est exécutée seulement une fois.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i = 0
 i = 1
 i = 2
-instruction 1
-instruction 2
+instruction
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Que se passe-t-il si l’instruction <code class="docutils literal notranslate"><span class="pre">for</span></code> n’est pas suivi d’une linge indentée?</p>
 </div>
 <div class="section" id="iterer-sur-une-liste">
 <h2>Itérer sur une liste<a class="headerlink" href="#iterer-sur-une-liste" title="Lien permanent vers ce titre">¶</a></h2>
@@ -635,14 +694,14 @@ instruction 2
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pomme&#39;</span><span class="p">,</span> <span class="s1">&#39;poire&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;***&#39;</span><span class="p">,</span> <span class="n">fruit</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*** pomme
-*** poire
-*** orange
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pomme
+poire
+orange
 </pre></div>
 </div>
 </div>
@@ -653,15 +712,16 @@ instruction 2
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premiers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">premiers</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;i =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;  i**2 =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;** 2 =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i = 2   i**2 = 4
-i = 3   i**2 = 9
-i = 5   i**2 = 25
-i = 7   i**2 = 49
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 ** 2 = 4
+3 ** 2 = 9
+5 ** 2 = 25
+7 ** 2 = 49
 </pre></div>
 </div>
 </div>
@@ -672,6 +732,7 @@ i = 7   i**2 = 49
 
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">adjectives</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;elle est&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -683,23 +744,8 @@ elle est intelligente
 </div>
 </div>
 </div>
-<p>Nous pouvons aussi concaténer les textes et la variable avec l’opérateur <code class="docutils literal notranslate"><span class="pre">+</span></code>.<br />
-Attention aux espaces!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">adjectives</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;elle est &#39;</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="s1">&#39;, bien plus &#39;</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="s1">&#39; que lui.&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>elle est belle, bien plus belle que lui.
-elle est riche, bien plus riche que lui.
-elle est intelligente, bien plus intelligente que lui.
-</pre></div>
-</div>
-</div>
-</div>
+<p><strong>Exercice</strong><br />
+Changez la phrase au masculin et ajoutez un adjectif en plus.</p>
 </div>
 <div class="section" id="iterer-sur-une-chaine">
 <h2>Itérer sur une chaine<a class="headerlink" href="#iterer-sur-une-chaine" title="Lien permanent vers ce titre">¶</a></h2>
@@ -708,21 +754,24 @@ L’itérateur prend alors chaque valeur de la séquence.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;Python&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;lettre -&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lettre - P
-lettre - y
-lettre - t
-lettre - h
-lettre - o
-lettre - n
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P
+y
+t
+h
+o
+n
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Faites la phrase plus longue et utilisez l’option <code class="docutils literal notranslate"><span class="pre">end=''</span></code> dans <code class="docutils literal notranslate"><span class="pre">print</span></code> pour écrire sur une même ligne.</p>
 </div>
 <div class="section" id="iterer-sur-une-plage">
 <h2>Itérer sur une plage<a class="headerlink" href="#iterer-sur-une-plage" title="Lien permanent vers ce titre">¶</a></h2>
@@ -763,6 +812,8 @@ lettre - n
 </div>
 </div>
 </div>
+<p><strong>Exercice:</strong><br />
+Calculez les cubes de 200 à 205.</p>
 </div>
 <div class="section" id="boucles-imbriquees">
 <h2>Boucles imbriquées<a class="headerlink" href="#boucles-imbriquees" title="Lien permanent vers ce titre">¶</a></h2>
@@ -830,6 +881,69 @@ Cette fois nous utilisons le caractère spécial <strong>tabulateur</strong> <co
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Créez une table de multiplication jusqu’à 12 x 12.</p>
+</div>
+<div class="section" id="la-boucle-while">
+<h2>La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#la-boucle-while" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> est utilisé pour itérer tandis qu’une condition est vrai.<br />
+Par exemple nous pouvons répéter une fonction <code class="docutils literal notranslate"><span class="pre">input</span></code> jusqu’à ce que la chaine vide est donnée.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;entrez un nom:&#39;</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">x</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;entrez un nom:&#39;</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Game Over&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>entrez un nom: Peter
+entrez un nom: Paul
+entrez un nom: 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Game Over
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Modifiez la condition pour que l’on doit entrer un point <code class="docutils literal notranslate"><span class="pre">.</span></code> pour terminer la boucle.</p>
+</div>
+<div class="section" id="decompte">
+<h2>Décompte<a class="headerlink" href="#decompte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Souvent la condition est basé sur une comparaison. Ici on itère tandis que <code class="docutils literal notranslate"><span class="pre">n</span></code> reste positif.<br />
+Dans ce cas on décremente ou incrémente le compter pendant chaque itération.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">sleep</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🧨&#39;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;💥&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🧨
+3
+2
+1
+💥
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Utilisez la fonction <code class="docutils literal notranslate"><span class="pre">input</span></code> pour choisir le valeur de départ du décompte.</p>
 </div>
 </div>
 
@@ -862,7 +976,7 @@ Cette fois nous utilisons le caractère spécial <strong>tabulateur</strong> <co
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="3_list.html" title="previous page">Listes</a>
-    <a class='right-next' id="next-link" href="4_text2.html" title="next page">Composer des textes</a>
+    <a class='right-next' id="next-link" href="logique.html" title="next page">Logique</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -892,7 +1006,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
     </div>
 
     
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

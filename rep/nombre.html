@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nombres &#8212; Education numérique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -126,6 +126,11 @@
      Markdown
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/rappel.html">
+     Rappel
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -166,11 +171,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../python/4_text2.html">
-     Composer des textes
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../python/logique.html">
      Logique
     </a>
@@ -178,11 +178,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../python/fonction.html">
      Fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/jeu_ppc.html">
-     Jeu : pierre-papier-ciseaux
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -208,6 +203,30 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../jeu/index.html">
+   Jouer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/ppc.html">
+     Pierre-papier-ciseaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/texte.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/japon.html">
+     Culture du Japon
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -585,7 +604,7 @@ Dans cette section nous allons construire des séquences de symboles qui représ
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">choice</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code> permet d’en sélectionner un chiffre aléatoire.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choice</span>
 <span class="n">choice</span><span class="p">(</span><span class="n">digits</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -818,7 +837,7 @@ Dans cette section nous allons construire des séquences de symboles qui représ
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">2</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">04b</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">X</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{i:2}</span><span class="s1"> = </span><span class="si">{i:04b}</span><span class="s1"> = </span><span class="si">{i:X}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -847,7 +866,7 @@ Dans cette section nous allons construire des séquences de symboles qui représ
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">256</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">08b</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">02X</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{i}</span><span class="s1"> = </span><span class="si">{i:08b}</span><span class="s1"> = </span><span class="si">{i:02X}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -924,7 +943,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
     </div>
 
     
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

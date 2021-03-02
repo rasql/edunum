@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fonctions &#8212; Education numérique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -64,7 +64,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Jeu : pierre-papier-ciseaux" href="jeu_ppc.html" />
+    <link rel="next" title="Exercices" href="exercices.html" />
     <link rel="prev" title="Logique" href="logique.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -126,6 +126,11 @@
      Markdown
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/rappel.html">
+     Rappel
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -166,11 +171,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="4_text2.html">
-     Composer des textes
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="logique.html">
      Logique
     </a>
@@ -178,11 +178,6 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="jeu_ppc.html">
-     Jeu : pierre-papier-ciseaux
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -208,6 +203,30 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../jeu/index.html">
+   Jouer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/ppc.html">
+     Pierre-papier-ciseaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/texte.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/japon.html">
+     Culture du Japon
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -489,8 +508,18 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fonctions-natives">
+   Fonctions natives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fonction-avec-argument">
    Fonction avec argument
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformer-un-script-en-fonction">
+   Transformer un script en fonction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -499,13 +528,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fonctions-predefinies">
-   Fonctions prédéfinies
+  <a class="reference internal nav-link" href="#retour-d-une-valeur">
+   Retour d’une valeur
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#retour-d-une-valeur">
-   Retour d’une valeur
+  <a class="reference internal nav-link" href="#fonction-de-conversion">
+   Fonction de conversion
   </a>
  </li>
 </ul>
@@ -529,6 +558,7 @@ Ceci permet d’éviter de devoir réécrire des longues suites d’instructions
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">saluer</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bonjour&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Comment vas-tu?&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -537,88 +567,26 @@ Ceci permet d’éviter de devoir réécrire des longues suites d’instructions
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">saluer</span><span class="p">()</span>
+<span class="n">saluer</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bonjour
 Comment vas-tu?
+...
+Bonjour
+Comment vas-tu?
+...
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="fonction-avec-argument">
-<h2>Fonction avec argument<a class="headerlink" href="#fonction-avec-argument" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une fonction peut avoir un argument. C’est une variable qui lui est passée par les parenthèses</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">saluer</span><span class="p">(</span><span class="n">nom</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bonjour&#39;</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Comment vas-tu?&#39;</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Par la suite je peux appeler cette fonction avec l’argument <code class="docutils literal notranslate"><span class="pre">Guido</span></code> par exemple.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">saluer</span><span class="p">(</span><span class="s1">&#39;Guido&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bonjour Guido
-Comment vas-tu? Guido
-</pre></div>
-</div>
-</div>
-</div>
-<p>Nous pouvons appeler la fonction avec un argument différent.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">saluer</span><span class="p">(</span><span class="s1">&#39;Grace&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bonjour Grace
-Comment vas-tu? Grace
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="la-fonction-minimale">
-<h2>La fonction minimale<a class="headerlink" href="#la-fonction-minimale" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La fonction minimale est</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
-    <span class="k">return</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Elle consiste en</p>
-<ul class="simple">
-<li><p>un mot-clé <code class="docutils literal notranslate"><span class="pre">def</span></code></p></li>
-<li><p>un nom de fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> (une ou plusieurs lettres)</p></li>
-<li><p>des parenthèses <code class="docutils literal notranslate"><span class="pre">()</span></code> avec des arguments optionnels</p></li>
-<li><p>un deux-points <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
-<li><p>un mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code></p></li>
-</ul>
-<p>Nous pouvons appeler (exécuter) cette fonction. Elle ne fait rien.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="fonctions-predefinies">
-<h2>Fonctions prédéfinies<a class="headerlink" href="#fonctions-predefinies" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Plus que 50 fonctions sont prédéfinies dans Python.</p>
+<p><strong>Exercice</strong><br />
+Créez une nouvelle fonction similaire en anglais avec le nom <code class="docutils literal notranslate"><span class="pre">greet()</span></code>.</p>
+<div class="section" id="fonctions-natives">
+<h2>Fonctions natives<a class="headerlink" href="#fonctions-natives" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Python propose toute une série de fonctions natives et déjà prédéfinies.</p>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> affiche une valeur.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -658,20 +626,97 @@ Comment vas-tu? Grace
 </div>
 </div>
 </div>
-<p>La fonction <code class="docutils literal notranslate"><span class="pre">max()</span></code> retourne le maximum d’une liste.</p>
+<p><strong>Exercice</strong><br />
+Trouvez une autre fonction native dans la documentation <a class="reference external" href="https://docs.python.org/fr/3/library/functions.html">Python</a>.</p>
+</div>
+<div class="section" id="fonction-avec-argument">
+<h2>Fonction avec argument<a class="headerlink" href="#fonction-avec-argument" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une fonction peut avoir un argument. C’est une variable qui lui est passée par les parenthèses</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">saluer2</span><span class="p">(</span><span class="n">nom</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bonjour&#39;</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Comment vas-tu&#39;</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Par la suite nous pouvons appeler cette fonction avec un argument.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">saluer2</span><span class="p">(</span><span class="s1">&#39;Guido&#39;</span><span class="p">)</span>
+<span class="n">saluer2</span><span class="p">(</span><span class="s1">&#39;Grace&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bonjour Guido
+Comment vas-tu Guido
+...
+Bonjour Grace
+Comment vas-tu Grace
+...
 </pre></div>
 </div>
 </div>
 </div>
-<p>Dans cet exemple certaines fonctions prédéfinies de python sont appelées. Il est d’usage de stocker la valeur de retour dans une variable.</p>
+<p><strong>Exercice</strong><br />
+Appelez la fonction avec votre propre nom.</p>
+</div>
+<div class="section" id="transformer-un-script-en-fonction">
+<h2>Transformer un script en fonction<a class="headerlink" href="#transformer-un-script-en-fonction" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici 4 lignes de codes qui affichent la phrase <code class="docutils literal notranslate"><span class="pre">bonjour</span> <span class="pre">Ada</span></code> trois fois.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nom</span> <span class="o">=</span> <span class="s1">&#39;Ada&#39;</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bonjour&#39;</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bonjour Ada
+bonjour Ada
+bonjour Ada
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Transformez ce script en fonction avec deux arguments <code class="docutils literal notranslate"><span class="pre">bonjour(nom,</span> <span class="pre">n)</span></code>.
+Ensuite appelez-la avec des arguments appropriés.</p>
+</div>
+<div class="section" id="la-fonction-minimale">
+<h2>La fonction minimale<a class="headerlink" href="#la-fonction-minimale" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction minimale est</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Elle consiste en</p>
+<ul class="simple">
+<li><p>un mot-clé <code class="docutils literal notranslate"><span class="pre">def</span></code></p></li>
+<li><p>un nom de fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> (une ou plusieurs lettres)</p></li>
+<li><p>des parenthèses <code class="docutils literal notranslate"><span class="pre">()</span></code> avec des arguments optionnels</p></li>
+<li><p>un deux-points <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
+<li><p>un mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code></p></li>
+</ul>
+<p>Nous pouvons appeler (exécuter) cette fonction. Elle ne fait rien.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Affichez le resultat de cette fonction avec <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
 </div>
 <div class="section" id="retour-d-une-valeur">
 <h2>Retour d’une valeur<a class="headerlink" href="#retour-d-une-valeur" title="Lien permanent vers ce titre">¶</a></h2>
@@ -699,23 +744,22 @@ Comment vas-tu? Grace
 </div>
 </div>
 </div>
-<p>Dans l’exemple ci-dessus, nous calculons la vitesse à partir de la distance parcourue et le temps.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vitesse</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span> <span class="n">temps</span><span class="p">):</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">distance</span> <span class="o">/</span> <span class="n">temps</span>
-    <span class="k">return</span> <span class="n">v</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">vitesse</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="s1">&#39;km/h&#39;</span><span class="p">)</span>
-</pre></div>
+<p><strong>Exercice</strong><br />
+Définissez une fonction qui multiplie deux nombres et appelez-la.</p>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60.0 km/h
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="fonction-de-conversion">
+<h2>Fonction de conversion<a class="headerlink" href="#fonction-de-conversion" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le <strong>degré Fahrenheit</strong> est une unité de mesure de la température.<br />
+L’échelle de Fahrenheit est utilisée baucoup aux Etats-Unis.</p>
+<div class="math notranslate nohighlight">
+\[ T(°F) = \frac{9}{5}T(°C) + 32 \]</div>
+<p><strong>Exercice</strong><br />
+Définissez deux fonctions</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">F_en_C()</span></code> qui transforme Fahrenheit en Celsius</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C_en_F()</span></code> qui transforme Celsius en Fahrenheit</p></li>
+</ul>
+<p>et appelez-les.</p>
 </div>
 </div>
 
@@ -748,7 +792,7 @@ Comment vas-tu? Grace
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="logique.html" title="previous page">Logique</a>
-    <a class='right-next' id="next-link" href="jeu_ppc.html" title="next page">Jeu : pierre-papier-ciseaux</a>
+    <a class='right-next' id="next-link" href="exercices.html" title="next page">Exercices</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -778,7 +822,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
     </div>
 
     
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

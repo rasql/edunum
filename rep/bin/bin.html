@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Système binaire &#8212; Education numérique</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -126,6 +126,11 @@
      Markdown
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/rappel.html">
+     Rappel
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -166,11 +171,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../python/4_text2.html">
-     Composer des textes
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../python/logique.html">
      Logique
     </a>
@@ -178,11 +178,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../python/fonction.html">
      Fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../python/jeu_ppc.html">
-     Jeu : pierre-papier-ciseaux
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -208,6 +203,30 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../jeu/index.html">
+   Jouer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeu/ppc.html">
+     Pierre-papier-ciseaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeu/texte.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeu/japon.html">
+     Culture du Japon
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -660,7 +679,7 @@ Par exemple voici le code binaire de 9.</p>
 <p>Dans la réponse, le terme <code class="docutils literal notranslate"><span class="pre">0b</span></code> est ajouté au début du code binaire pour le différencier d’un nombre décimal. En utilisant la fonction <code class="docutils literal notranslate"><span class="pre">bin()</span></code> nous pouvons maintenant imprimer les nombres de 0 à 15.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="nb">bin</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -674,14 +693,6 @@ Par exemple voici le code binaire de 9.</p>
 5 = 0b101
 6 = 0b110
 7 = 0b111
-8 = 0b1000
-9 = 0b1001
-10 = 0b1010
-11 = 0b1011
-12 = 0b1100
-13 = 0b1101
-14 = 0b1110
-15 = 0b1111
 </pre></div>
 </div>
 </div>
@@ -699,6 +710,8 @@ Par exemple voici le code binaire de 9.</p>
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Quel est le code binaire pour 11.</p>
 </div>
 <div class="section" id="le-format-string">
 <h2>Le format-string<a class="headerlink" href="#le-format-string" title="Lien permanent vers ce titre">¶</a></h2>
@@ -717,7 +730,7 @@ Par exemple voici le code binaire de 9.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">2</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">4b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{i:2}</span><span class="s1"> = </span><span class="si">{i:4b}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -750,7 +763,7 @@ Par exemple voici le code binaire de 9.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">02</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">04b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{i:02}</span><span class="s1"> = </span><span class="si">{i:04b}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -775,6 +788,8 @@ Par exemple voici le code binaire de 9.</p>
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Affichez les codes binaires pour les nombres 250 à 255.</p>
 </div>
 <div class="section" id="programmer-un-quiz">
 <h2>Programmer un quiz<a class="headerlink" href="#programmer-un-quiz" title="Lien permanent vers ce titre">¶</a></h2>
@@ -796,7 +811,7 @@ Nous commençons par créer une liste de nombres que nous voulons utiliser dans 
 <p>Du module <code class="docutils literal notranslate"><span class="pre">random</span></code> nous importons la fonction <code class="docutils literal notranslate"><span class="pre">shuffle</span></code>.  Cette fonction permet de réarranger une liste de façon aléatoire. L’avantage de cette méthode est que chaque élément est testé une seule fois.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">shuffle</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">shuffle</span>
 <span class="n">shuffle</span><span class="p">(</span><span class="n">nombres</span><span class="p">)</span>
 <span class="n">nombres</span>
 </pre></div>
@@ -808,54 +823,50 @@ Nous commençons par créer une liste de nombres que nous voulons utiliser dans 
 </div>
 </div>
 </div>
-<p>Voici le code de ce quiz. Vous pouvez le copier dans l’éditeur de script de Thonny.</p>
+<p>Voici le code de ce quiz. Vous pouvez le copier et vous entrainer à apprendre le code binaire.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Quiz: décimal en binaire&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">shuffle</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">nombres</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">shuffle</span><span class="p">(</span><span class="n">nombres</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Quiz: binaire en décimal&#39;</span><span class="p">)</span>
 
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nombres</span><span class="p">:</span>
-    <span class="n">dec</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">)</span>
+    <span class="n">dec</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{i:04b}</span><span class="s1">:&#39;</span><span class="p">)</span>
     <span class="n">dec</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">dec</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
         <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;faux! réponse correcte =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
         
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;score =&#39;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;score =&#39;</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="s1">&#39;sur&#39;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Quiz: décimal en binaire
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Quiz: binaire en décimal
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b110: 6
-0b100: 5
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! réponse correcte = 4
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b1: 1
-0b11: 2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! réponse correcte = 3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b0: 0
-0b10: 3
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0000: 0
+0110: 6
+0001: 1
+0111: 7
+0100: 4
+0010: 3
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! réponse correcte = 2
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0b111: 7
-0b101: 5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0101: 5
+0011: 3
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>score = 5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>score = 7 sur 8
 </pre></div>
 </div>
 </div>
@@ -986,6 +997,8 @@ Les poids pour 5 positions décimales est</p>
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Affichez 5 poids du système octal (base 8).</p>
 </div>
 <div class="section" id="du-binaire-en-decimal">
 <h2>Du binaire en décimal<a class="headerlink" href="#du-binaire-en-decimal" title="Lien permanent vers ce titre">¶</a></h2>
@@ -1220,7 +1233,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
     </div>
 
     
-  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

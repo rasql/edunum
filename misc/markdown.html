@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Markdown &#8212; Education numérique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -126,6 +126,11 @@
      Markdown
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/rappel.html">
+     Rappel
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -166,11 +171,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../python/4_text2.html">
-     Composer des textes
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../python/logique.html">
      Logique
     </a>
@@ -178,11 +178,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../python/fonction.html">
      Fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/jeu_ppc.html">
-     Jeu : pierre-papier-ciseaux
     </a>
    </li>
    <li class="toctree-l2 collapsible-parent">
@@ -208,6 +203,30 @@
     </ul>
     <i class="fas fa-chevron-down">
     </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../jeu/index.html">
+   Jouer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/ppc.html">
+     Pierre-papier-ciseaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/texte.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/japon.html">
+     Culture du Japon
+    </a>
    </li>
   </ul>
   <i class="fas fa-chevron-down">
@@ -662,8 +681,8 @@ Les deux textes sont séparés par une barre verticale.</p>
 <p>Il est possible d’intégrer des questions à choix multiples au fil des pages via la directive <code class="docutils literal notranslate"><span class="pre">question</span></code>.
 Dans le corps de la directive, les bonnes et mauvaises réponses sont indiquées via les rôles <code class="docutils literal notranslate"><span class="pre">{v}</span></code> et <code class="docutils literal notranslate"><span class="pre">{f}</span></code> pour <em>vrai</em> et <em>faux</em>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="b3b5dcb2-efa4-44a2-8f7f-49b8acf26eec" name="0c22a77e-221b-4c18-bf96-949c6e023e3d" type="radio">
-</input><label class="tabbed-label" for="b3b5dcb2-efa4-44a2-8f7f-49b8acf26eec">
+<input checked="checked" id="e38ee096-9703-4f44-9b4b-932e4bf78886" name="dd64d27f-3b04-4413-ac49-544651fde0cb" type="radio">
+</input><label class="tabbed-label" for="e38ee096-9703-4f44-9b4b-932e4bf78886">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
@@ -673,8 +692,8 @@ Je pense qu’il y en a <label class="answer incorrect"><input type="checkbox" /
 </div>
 <div class="controls"><input type="button" class="check btn btn-primary" value="Vérifier ma réponse" /><input type="button" class="show btn btn-secondary" value="Afficher la réponse" /></div></div>
 </form></div></div>
-<input id="529fffbb-68a5-4fa7-b300-8a36b1eb47d0" name="0c22a77e-221b-4c18-bf96-949c6e023e3d" type="radio">
-</input><label class="tabbed-label" for="529fffbb-68a5-4fa7-b300-8a36b1eb47d0">
+<input id="a4aa32a8-b82e-405d-81a0-b92246be3a46" name="dd64d27f-3b04-4413-ac49-544651fde0cb" type="radio">
+</input><label class="tabbed-label" for="a4aa32a8-b82e-405d-81a0-b92246be3a46">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{question}
 Combien y a t&#39;il de bits dans un octet ?
@@ -688,8 +707,8 @@ Je pense qu&#39;il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
 Le contenu de la question peut lui-même être structuré en Markdown.
 Dans l’exemple ci-dessous, les réponses sont affichées dans une liste.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="017b6f99-8ec1-4301-81bc-bef3ac0caf23" name="fad78ae3-fff3-48fa-9ceb-35b2e258527d" type="radio">
-</input><label class="tabbed-label" for="017b6f99-8ec1-4301-81bc-bef3ac0caf23">
+<input checked="checked" id="f2ada801-d532-4bfd-996a-2b9b494169c1" name="73ad0279-0e7f-4a19-9646-839c16e130cc" type="radio">
+</input><label class="tabbed-label" for="f2ada801-d532-4bfd-996a-2b9b494169c1">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question avec un titre personnalisé</p>
@@ -704,8 +723,8 @@ Aperçu</label><div class="tabbed-content docutils">
 </div>
 <div class="controls"><input type="button" class="check btn btn-primary" value="Vérifier ma réponse" /><input type="button" class="show btn btn-secondary" value="Afficher la réponse" /></div></div>
 </form></div></div>
-<input id="1db29b04-55c8-4eb2-856a-3a2f15d83318" name="fad78ae3-fff3-48fa-9ceb-35b2e258527d" type="radio">
-</input><label class="tabbed-label" for="1db29b04-55c8-4eb2-856a-3a2f15d83318">
+<input id="73d705b9-06ab-48d9-8f2b-5cb2931daa80" name="73ad0279-0e7f-4a19-9646-839c16e130cc" type="radio">
+</input><label class="tabbed-label" for="73d705b9-06ab-48d9-8f2b-5cb2931daa80">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{question} Question avec un titre personnalisé
 Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turing ?
@@ -725,13 +744,13 @@ Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turin
 Dans le texte du rôle, les différentes options de réponses sont séparées par un caractère <code class="docutils literal notranslate"><span class="pre">|</span></code>.
 Une réponse valable est précédée d’un caractère <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="4dc6ee12-9db6-4a99-92c0-ac2de56485ca" name="a1d92e22-b6ad-4692-8bdd-5e7dfecfb370" type="radio">
-</input><label class="tabbed-label" for="4dc6ee12-9db6-4a99-92c0-ac2de56485ca">
+<input checked="checked" id="b7da8924-e702-44df-a67a-2ab8b8547cf6" name="5c7f3bd1-5a0e-4c01-b730-7e1d173b0db5" type="radio">
+</input><label class="tabbed-label" for="b7da8924-e702-44df-a67a-2ab8b8547cf6">
 Aperçu</label><div class="tabbed-content docutils">
 <p>Dans le texte suivant, certains <select class="blank"><option class="blank_option" value="-1" selected="selected"></option><option class="correct_option" value="1">mots</option><option class="incorrect_option" value="0">trucs</option><option class="incorrect_option" value="0">machins</option></select> sont laissés <select class="blank"><option class="blank_option" value="-1" selected="selected"></option><option class="incorrect_option" value="0">pour compte</option><option class="correct_option" value="1">blancs</option><option class="incorrect_option" value="0">verts</option><option class="incorrect_option" value="0">seuls</option></select>.</p>
 </div>
-<input id="bfdf5fbb-3f68-45d4-b662-be56ed14c2fa" name="a1d92e22-b6ad-4692-8bdd-5e7dfecfb370" type="radio">
-</input><label class="tabbed-label" for="bfdf5fbb-3f68-45d4-b662-be56ed14c2fa">
+<input id="ae5b1465-f645-4b81-a27c-26ab58fbe34a" name="5c7f3bd1-5a0e-4c01-b730-7e1d173b0db5" type="radio">
+</input><label class="tabbed-label" for="ae5b1465-f645-4b81-a27c-26ab58fbe34a">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Dans le texte suivant, certains {bl}`&gt;mots|trucs|machins` sont laissés {bl}`pour compte|&gt;blancs|verts|seuls`.
 </pre></div>
@@ -800,7 +819,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
     </div>
 
     
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

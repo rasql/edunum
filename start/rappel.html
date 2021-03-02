@@ -1,0 +1,895 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rappel &#8212; Education numérique</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Programmer" href="../python/index.html" />
+    <link rel="prev" title="Markdown" href="markdown.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Education numérique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="index.html">
+   Démarrer
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="why.html">
+     Á quoi ça sert?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thonny/thonny.html">
+     Thonny
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="markdown.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Rappel
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../python/index.html">
+   Programmer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/1_intro.html">
+     Introduction à Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/1_calc.html">
+     Calcul numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/1_text.html">
+     Texte (string)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/2_struct.html">
+     L’instruction conditionnelle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/3_list.html">
+     Listes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/4_loop.html">
+     Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/fonction.html">
+     Fonctions
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../python/exercices.html">
+     Exercices
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/ex1.html">
+       Exercices Boucles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/ex2.html">
+       Exercices if-else
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/quiz.html">
+       Quiz
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../jeu/index.html">
+   Jouer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/ppc.html">
+     Pierre-papier-ciseaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/texte.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/japon.html">
+     Culture du Japon
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../plot/intro.html">
+   Visualiser
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/plot.html">
+     Graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/param.html">
+     Paramètres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/numpy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/hist.html">
+     Histogrammes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/bar.html">
+     Diagrammes à barres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/polar.html">
+     Coordonnées polaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/text.html">
+     Text
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/style.html">
+     Style
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/color.html">
+     Couleurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/subplot.html">
+     Sous-graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/file.html">
+     Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     Animated GIF
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rep/index.html">
+   Encoder
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/bin/bin.html">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algo/algo.html">
+   Algorithmique
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/jupyter.html">
+   Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/thonny.html">
+   Thonny
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/github.html">
+   GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/style.html">
+   Style
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/start/rappel.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fstart/rappel.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/start/rappel.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/start/rappel.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rasql/edunum/blob/main/doc/start/rappel.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="lancement Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lancer-jupyter-lab">
+   Lancer Jupyter Lab
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteres-speciaux">
+   Caractères spéciaux
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inserer-des-emoji">
+   Insérer des emoji
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#raccourcis-jupyter-lab">
+   Raccourcis Jupyter Lab
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#balises-markdown">
+   Balises Markdown
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instructions-python">
+   Instructions Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#affectation">
+     Affectation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boucle-for">
+     Boucle
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boucle-while">
+     Boucle
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instruction-conditionnelle">
+     Instruction conditionnelle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fonction">
+     Fonction
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="rappel">
+<h1>Rappel<a class="headerlink" href="#rappel" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ce chapitre résume les concepts comme:</p>
+<ul class="simple">
+<li><p>les raccourcis Jupyter Lab</p></li>
+<li><p>les balises Markdown</p></li>
+<li><p>les mot-clés Python</p></li>
+</ul>
+<div class="section" id="lancer-jupyter-lab">
+<h2>Lancer Jupyter Lab<a class="headerlink" href="#lancer-jupyter-lab" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>Dans Thonny, le menu <strong>Outils &gt; Ouvrir la console du système…</strong></p></li>
+<li><p>Dans la console, la commande <code class="docutils literal notranslate"><span class="pre">cd</span></code> (+retour)</p></li>
+<li><p>Ensuite, la commande <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> (+ retour)</p></li>
+</ul>
+</div>
+<div class="section" id="caracteres-speciaux">
+<h2>Caractères spéciaux<a class="headerlink" href="#caracteres-speciaux" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>hashtag <code class="docutils literal notranslate"><span class="pre">#</span></code> - alt+3</p></li>
+<li><p>crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code> - alt+5/6</p></li>
+<li><p>accolades <code class="docutils literal notranslate"><span class="pre">{}</span></code> - alt+8/9</p></li>
+<li><p>chevrons <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code></p></li>
+</ul>
+<p>Les barres</p>
+<ul class="simple">
+<li><p>barre oblique <code class="docutils literal notranslate"><span class="pre">/</span></code> maj+7</p></li>
+<li><p>barre verticale <code class="docutils literal notranslate"><span class="pre">|</span></code> alt+7</p></li>
+<li><p>barre oblique inversée <code class="docutils literal notranslate"><span class="pre">\</span></code> alt+maj+7</p></li>
+</ul>
+</div>
+<div class="section" id="inserer-des-emoji">
+<h2>Insérer des emoji<a class="headerlink" href="#inserer-des-emoji" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Raccourci: <code class="docutils literal notranslate"><span class="pre">ctrl+cmd+espace</span></code></p>
+<p><img alt="" src="../_images/emoji.png" /></p>
+</div>
+<div class="section" id="raccourcis-jupyter-lab">
+<h2>Raccourcis Jupyter Lab<a class="headerlink" href="#raccourcis-jupyter-lab" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Insérer une cellule</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">A</span></code> en-dessus (Above)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">B</span></code> en-dessous (Below)</p></li>
+</ul>
+<p>Editer des cellules</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code> copier</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">X</span></code> couper</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">V</span></code> coller</p></li>
+</ul>
+<p>Choisir le style de cellule</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">M</span></code> Markdown</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Y</span></code> Code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">R</span></code> Raw</p></li>
+</ul>
+</div>
+<div class="section" id="balises-markdown">
+<h2>Balises Markdown<a class="headerlink" href="#balises-markdown" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Styles</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">**</span></code> pour <strong>gras</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> pour <em>italique</em></p></li>
+<li><p>`` pour <code class="docutils literal notranslate"><span class="pre">code</span></code></p></li>
+</ul>
+<p>Listes</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> pour puces</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1.</span></code> pour numérotation</p></li>
+</ul>
+<p>Image et hyperlien</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">![](image)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[texte](url)</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="instructions-python">
+<h2>Instructions Python<a class="headerlink" href="#instructions-python" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Cette section résume les instructions les plus importantes.<br />
+Toutes les instructions sont fonctionnels.</p>
+<div class="section" id="affectation">
+<h3>Affectation<a class="headerlink" href="#affectation" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une affectation a la forme</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>var = valeur
+var = expression
+</pre></div>
+</div>
+<p>Par exemple</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La variable <code class="docutils literal notranslate"><span class="pre">compteur</span></code> est incrémentée de 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">compteur</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ceci peut être écrit plus compact avec une <strong>affectation augmentée</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">compteur</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="boucle-for">
+<h3>Boucle <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#boucle-for" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La variable <code class="docutils literal notranslate"><span class="pre">i</span></code> itère sur une <strong>plage</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+</pre></div>
+</div>
+</div>
+</div>
+<p>La variable <code class="docutils literal notranslate"><span class="pre">x</span></code> itère sur une <strong>liste</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;egg&#39;</span><span class="p">,</span> <span class="s1">&#39;ham&#39;</span><span class="p">,</span> <span class="s1">&#39;spam&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>egg
+ham
+spam
+</pre></div>
+</div>
+</div>
+</div>
+<p>La variable <code class="docutils literal notranslate"><span class="pre">c</span></code> itère sur une <strong>chaîne</strong> de caractères.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;ham&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>h
+a
+m
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="boucle-while">
+<h3>Boucle <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#boucle-while" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> itère tandis qu’une condition est vrai</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+2
+1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="instruction-conditionnelle">
+<h3>Instruction conditionnelle<a class="headerlink" href="#instruction-conditionnelle" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une instruction conditionnel fait un <strong>choix entre plusieurs options</strong>, basé sur un test.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+
+<span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;positif&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;négatif&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>négatif
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fonction">
+<h3>Fonction<a class="headerlink" href="#fonction" title="Lien permanent vers ce titre">¶</a></h3>
+<p><strong>Définition</strong> d’une fonction avec deux arguments et valeur de retour.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">c</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Appel</strong> d’une fonction avec deux arguments et valeur de retour.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./start"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="markdown.html" title="previous page">Markdown</a>
+    <a class='right-next' id="next-link" href="../python/index.html" title="next page">Programmer</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Holzer<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
