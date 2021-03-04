@@ -9,6 +9,7 @@
       - file: start/thonny/thonny
       - file: start/jupyterlab
       - file: start/markdown
+      - file: start/rappel
       
   - file: python/index
     sections:
@@ -18,16 +19,20 @@
       - file: python/2_struct
       - file: python/3_list
       - file: python/4_loop
-      - file: python/4_text2
       - file: python/logique
       - file: python/fonction
-      - file: python/jeu_ppc
         
       - file: python/exercices
         sections:
           - file: python/ex1
           - file: python/ex2
           - file: python/quiz
+      
+  - file: jeu/index
+    sections:
+      - file: jeu/ppc
+      - file: jeu/texte
+      - file: jeu/japon
       
   - file: plot/intro
     sections:
