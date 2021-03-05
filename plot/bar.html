@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diagrammes à barres &#8212; Education numérique</title>
+    <title>Diagramme à barres &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -64,8 +64,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Nuage de points" href="scatter.html" />
-    <link rel="prev" title="Histogrammes" href="hist.html" />
+    <link rel="next" title="Images" href="image.html" />
+    <link rel="prev" title="NumPy" href="numpy.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -239,17 +239,27 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="plot.html">
-     Graphes
+     Graphe
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="param.html">
-     Paramètres
+    <a class="reference internal" href="figure.html">
+     Figure et Axes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="format.html">
+     Format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="numpy.html">
      NumPy
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Diagramme à barres
     </a>
    </li>
    <li class="toctree-l2">
@@ -259,12 +269,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="hist.html">
-     Histogrammes
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Diagrammes à barres
+     Histogramme
     </a>
    </li>
    <li class="toctree-l2">
@@ -274,32 +279,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="polar.html">
-     Coordonnées polaires
+     Graphe polaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pie.html">
+     Diagramme en secteurs
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="text.html">
      Text
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="style.html">
-     Style
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="color.html">
-     Couleurs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="subplot.html">
-     Sous-graphes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="file.html">
-     Fichiers
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,13 +498,13 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vertical">
-   Vertical
+  <a class="reference internal nav-link" href="#barres-verticales">
+   Barres verticales
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#horizontal">
-   Horizontal
+  <a class="reference internal nav-link" href="#barres-horizontales">
+   Barres horizontales
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -523,13 +513,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#epaisseur">
-   Epaisseur
+  <a class="reference internal nav-link" href="#epaisseur-des-barres">
+   Epaisseur des barres
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#alignement">
-   Alignement
+  <a class="reference internal nav-link" href="#alignement-des-barres">
+   Alignement des barres
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -543,8 +533,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#graphas-justaposes">
-   Graphas justaposés
+  <a class="reference internal nav-link" href="#graphes-juxtaposes">
+   Graphes juxtaposés
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -553,13 +543,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#groupe">
-   Groupé
+  <a class="reference internal nav-link" href="#barres-groupees">
+   Barres groupées
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contour-plot">
-   Contour plot
+  <a class="reference internal nav-link" href="#barres-dans-2-directions">
+   Barres dans 2 directions
   </a>
  </li>
 </ul>
@@ -573,8 +563,8 @@
         
               <div>
                 
-  <div class="section" id="diagrammes-a-barres">
-<h1>Diagrammes à barres<a class="headerlink" href="#diagrammes-a-barres" title="Lien permanent vers ce titre">¶</a></h1>
+  <div class="section" id="diagramme-a-barres">
+<h1>Diagramme à barres<a class="headerlink" href="#diagramme-a-barres" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Un diagramme à barre est un graphique qui présente des catégories avec des barres rectangulaires.
 La taille du rectangle est proportionnelle à la valeur.
 Les barres peuvent être tracés horizontalement ou verticalement.</p>
@@ -585,9 +575,9 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">bottom</span></code> - base de barres</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">aligne</span></code> - center/edge</p></li>
 </ul>
-<div class="section" id="vertical">
-<h2>Vertical<a class="headerlink" href="#vertical" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Voici un graph vertical</p>
+<div class="section" id="barres-verticales">
+<h2>Barres verticales<a class="headerlink" href="#barres-verticales" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici un graph vertical avec la fonction <code class="docutils literal notranslate"><span class="pre">bar</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Jim&#39;</span><span class="p">,</span> <span class="s1">&#39;Kim&#39;</span><span class="p">,</span> <span class="s1">&#39;Lee&#39;</span><span class="p">,</span> <span class="s1">&#39;Tim&#39;</span><span class="p">,</span> <span class="s1">&#39;Edy&#39;</span><span class="p">]</span>
@@ -605,9 +595,9 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 </div>
-<div class="section" id="horizontal">
-<h2>Horizontal<a class="headerlink" href="#horizontal" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Voici un graph vertical</p>
+<div class="section" id="barres-horizontales">
+<h2>Barres horizontales<a class="headerlink" href="#barres-horizontales" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici un graph horizontal avec la fonction <code class="docutils literal notranslate"><span class="pre">barh</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
@@ -638,8 +628,8 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 </div>
-<div class="section" id="epaisseur">
-<h2>Epaisseur<a class="headerlink" href="#epaisseur" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="epaisseur-des-barres">
+<h2>Epaisseur des barres<a class="headerlink" href="#epaisseur-des-barres" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">errors</span><span class="p">);</span>
@@ -662,8 +652,8 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 </div>
-<div class="section" id="alignement">
-<h2>Alignement<a class="headerlink" href="#alignement" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="alignement-des-barres">
+<h2>Alignement des barres<a class="headerlink" href="#alignement-des-barres" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’alignement peut être <code class="docutils literal notranslate"><span class="pre">center</span></code> ou <code class="docutils literal notranslate"><span class="pre">edge</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -718,8 +708,8 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 </div>
-<div class="section" id="graphas-justaposes">
-<h2>Graphas justaposés<a class="headerlink" href="#graphas-justaposes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="graphes-juxtaposes">
+<h2>Graphes juxtaposés<a class="headerlink" href="#graphes-juxtaposes" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">);</span>
@@ -773,8 +763,8 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 </div>
-<div class="section" id="groupe">
-<h2>Groupé<a class="headerlink" href="#groupe" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="barres-groupees">
+<h2>Barres groupées<a class="headerlink" href="#barres-groupees" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous pouvons déplacer les deux courbes pour créer un graphique avec multiple</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -812,6 +802,9 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 <img alt="../_images/bar_29_0.png" src="../_images/bar_29_0.png" />
 </div>
 </div>
+</div>
+<div class="section" id="barres-dans-2-directions">
+<h2>Barres dans 2 directions<a class="headerlink" href="#barres-dans-2-directions" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">12</span>
@@ -831,29 +824,7 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/bar_30_0.png" src="../_images/bar_30_0.png" />
-</div>
-</div>
-</div>
-<div class="section" id="contour-plot">
-<h2>Contour plot<a class="headerlink" href="#contour-plot" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span> <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">x</span><span class="o">**</span><span class="mi">5</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="n">n</span> <span class="o">=</span> <span class="mi">256</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
-<span class="n">X</span><span class="p">,</span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">),</span> <span class="mi">8</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">75</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
-<span class="n">C</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">),</span> <span class="mi">8</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/bar_32_0.png" src="../_images/bar_32_0.png" />
+<img alt="../_images/bar_31_0.png" src="../_images/bar_31_0.png" />
 </div>
 </div>
 </div>
@@ -887,8 +858,8 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="hist.html" title="previous page">Histogrammes</a>
-    <a class='right-next' id="next-link" href="scatter.html" title="next page">Nuage de points</a>
+    <a class='left-prev' id="prev-link" href="numpy.html" title="previous page">NumPy</a>
+    <a class='right-next' id="next-link" href="image.html" title="next page">Images</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -64,8 +64,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Histogrammes" href="hist.html" />
-    <link rel="prev" title="NumPy" href="numpy.html" />
+    <link rel="next" title="Histogramme" href="hist.html" />
+    <link rel="prev" title="Diagramme à barres" href="bar.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -239,17 +239,27 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="plot.html">
-     Graphes
+     Graphe
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="param.html">
-     Paramètres
+    <a class="reference internal" href="figure.html">
+     Figure et Axes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="format.html">
+     Format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="numpy.html">
      NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bar.html">
+     Diagramme à barres
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -259,12 +269,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="hist.html">
-     Histogrammes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="bar.html">
-     Diagrammes à barres
+     Histogramme
     </a>
    </li>
    <li class="toctree-l2">
@@ -274,32 +279,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="polar.html">
-     Coordonnées polaires
+     Graphe polaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pie.html">
+     Diagramme en secteurs
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="text.html">
      Text
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="style.html">
-     Style
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="color.html">
-     Couleurs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="subplot.html">
-     Sous-graphes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="file.html">
-     Fichiers
     </a>
    </li>
    <li class="toctree-l2">
@@ -513,18 +503,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#indexage">
-   Indexage
+  <a class="reference internal nav-link" href="#indexer-des-pixels">
+   Indexer des pixels
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#annotation">
-   Annotation
+  <a class="reference internal nav-link" href="#annoter-l-image">
+   Annoter l’image
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sans-les-axes">
-   Sans les axes
+  <a class="reference internal nav-link" href="#afficher-sans-les-axes">
+   Afficher sans les axes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -538,13 +528,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#afficher-la-barre-des-couleurs">
-   Afficher la barre des couleurs
+  <a class="reference internal nav-link" href="#la-barre-des-couleurs">
+   La barre des couleurs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#origin-de-l-image">
-   Origin de l’image
+  <a class="reference internal nav-link" href="#inverser">
+   Inverser
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -634,8 +624,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="indexage">
-<h2>Indexage<a class="headerlink" href="#indexage" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="indexer-des-pixels">
+<h2>Indexer des pixels<a class="headerlink" href="#indexer-des-pixels" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous pouvons extraire une tranche d’une image. Dans une matrice, le premier indice est l’axe vertical (y) et le deuxième indice l’axe horizontal (x).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -648,8 +638,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="annotation">
-<h2>Annotation<a class="headerlink" href="#annotation" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="annoter-l-image">
+<h2>Annoter l’image<a class="headerlink" href="#annoter-l-image" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous pouvons superposer du text à une image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -664,8 +654,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="sans-les-axes">
-<h2>Sans les axes<a class="headerlink" href="#sans-les-axes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="afficher-sans-les-axes">
+<h2>Afficher sans les axes<a class="headerlink" href="#afficher-sans-les-axes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">axis('off')</span></code> permet de ne pas afficher les axes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -746,8 +736,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="afficher-la-barre-des-couleurs">
-<h2>Afficher la barre des couleurs<a class="headerlink" href="#afficher-la-barre-des-couleurs" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="la-barre-des-couleurs">
+<h2>La barre des couleurs<a class="headerlink" href="#la-barre-des-couleurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">colorbar()</span></code> affiche une barre de couleur qui indique la correspondance des valeurs numérique et des couleurs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -773,8 +763,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="origin-de-l-image">
-<h2>Origin de l’image<a class="headerlink" href="#origin-de-l-image" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="inverser">
+<h2>Inverser<a class="headerlink" href="#inverser" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour inverser l’image nous utilison l’option <code class="docutils literal notranslate"><span class="pre">origin</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -877,8 +867,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="numpy.html" title="previous page">NumPy</a>
-    <a class='right-next' id="next-link" href="hist.html" title="next page">Histogrammes</a>
+    <a class='left-prev' id="prev-link" href="bar.html" title="previous page">Diagramme à barres</a>
+    <a class='right-next' id="next-link" href="hist.html" title="next page">Histogramme</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

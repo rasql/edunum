@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Histogrammes &#8212; Education numérique</title>
+    <title>Histogramme &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -64,7 +64,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Diagrammes à barres" href="bar.html" />
+    <link rel="next" title="Nuage de points" href="scatter.html" />
     <link rel="prev" title="Images" href="image.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -239,17 +239,27 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="plot.html">
-     Graphes
+     Graphe
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="param.html">
-     Paramètres
+    <a class="reference internal" href="figure.html">
+     Figure et Axes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="format.html">
+     Format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="numpy.html">
      NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bar.html">
+     Diagramme à barres
     </a>
    </li>
    <li class="toctree-l2">
@@ -259,12 +269,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Histogrammes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="bar.html">
-     Diagrammes à barres
+     Histogramme
     </a>
    </li>
    <li class="toctree-l2">
@@ -274,32 +279,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="polar.html">
-     Coordonnées polaires
+     Graphe polaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pie.html">
+     Diagramme en secteurs
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="text.html">
      Text
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="style.html">
-     Style
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="color.html">
-     Couleurs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="subplot.html">
-     Sous-graphes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="file.html">
-     Fichiers
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,8 +498,8 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#histogramme">
-   Histogramme
+  <a class="reference internal nav-link" href="#analyse-de-10000-points">
+   Analyse de 10000 points
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -543,9 +533,9 @@
         
               <div>
                 
-  <div class="section" id="histogrammes">
-<h1>Histogrammes<a class="headerlink" href="#histogrammes" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Le module <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> permet d’afficher des graphes. Au début du notebook nous importons ces modules.</p>
+  <div class="section" id="histogramme">
+<h1>Histogramme<a class="headerlink" href="#histogramme" title="Lien permanent vers ce titre">¶</a></h1>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">hist</span></code> permet de visualiser la répartition d’une variable. Elle distribue les échantillons en un certain nombre de classes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -554,8 +544,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="histogramme">
-<h2>Histogramme<a class="headerlink" href="#histogramme" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="analyse-de-10000-points">
+<h2>Analyse de 10000 points<a class="headerlink" href="#analyse-de-10000-points" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous analysons une distribution Gaussienne de 10’000 points.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -567,17 +557,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the histogram of the data</span>
-<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
-                            <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Smarts&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probability&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histogram of IQ&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="o">.</span><span class="mi">025</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\mu=100$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="o">.</span><span class="mi">022</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\sigma=15$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -585,6 +565,7 @@
 <img alt="../_images/hist_4_0.png" src="../_images/hist_4_0.png" />
 </div>
 </div>
+<p>Ces points sont situé autour d’une moyenne de 100, avec une déviation standard de 15.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
@@ -598,31 +579,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/hist_5_0.png" src="../_images/hist_5_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>51
-</pre></div>
-</div>
+<img alt="../_images/hist_6_0.png" src="../_images/hist_6_0.png" />
 </div>
 </div>
 </div>
@@ -630,7 +587,8 @@
 <h2>Distribution normale<a class="headerlink" href="#distribution-normale" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">1000</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribution normale&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">40</span><span class="p">);</span>
@@ -638,7 +596,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/hist_10_0.png" src="../_images/hist_10_0.png" />
+<img alt="../_images/hist_8_0.png" src="../_images/hist_8_0.png" />
 </div>
 </div>
 </div>
@@ -646,15 +604,16 @@
 <h2>Distribution uniforme<a class="headerlink" href="#distribution-uniforme" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribution uniforme&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/hist_12_0.png" src="../_images/hist_12_0.png" />
+<img alt="../_images/hist_10_0.png" src="../_images/hist_10_0.png" />
 </div>
 </div>
 </div>
@@ -679,7 +638,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/hist_16_0.png" src="../_images/hist_16_0.png" />
+<img alt="../_images/hist_14_0.png" src="../_images/hist_14_0.png" />
 </div>
 </div>
 </div>
@@ -711,7 +670,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/hist_18_0.png" src="../_images/hist_18_0.png" />
+<img alt="../_images/hist_16_0.png" src="../_images/hist_16_0.png" />
 </div>
 </div>
 </div>
@@ -746,7 +705,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="image.html" title="previous page">Images</a>
-    <a class='right-next' id="next-link" href="bar.html" title="next page">Diagrammes à barres</a>
+    <a class='right-next' id="next-link" href="scatter.html" title="next page">Nuage de points</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

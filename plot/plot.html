@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Graphes &#8212; Education numérique</title>
+    <title>Graphe &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -64,7 +64,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Paramètres" href="param.html" />
+    <link rel="next" title="Figure et Axes" href="figure.html" />
     <link rel="prev" title="Visualiser" href="intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -239,17 +239,27 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Graphes
+     Graphe
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="param.html">
-     Paramètres
+    <a class="reference internal" href="figure.html">
+     Figure et Axes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="format.html">
+     Format
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="numpy.html">
      NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bar.html">
+     Diagramme à barres
     </a>
    </li>
    <li class="toctree-l2">
@@ -259,12 +269,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="hist.html">
-     Histogrammes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="bar.html">
-     Diagrammes à barres
+     Histogramme
     </a>
    </li>
    <li class="toctree-l2">
@@ -274,32 +279,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="polar.html">
-     Coordonnées polaires
+     Graphe polaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pie.html">
+     Diagramme en secteurs
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="text.html">
      Text
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="style.html">
-     Style
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="color.html">
-     Couleurs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="subplot.html">
-     Sous-graphes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="file.html">
-     Fichiers
     </a>
    </li>
    <li class="toctree-l2">
@@ -513,13 +503,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#un-graphique-dans-jupyter">
-   Un graphique dans Jupyter
+  <a class="reference internal nav-link" href="#graphique-dans-jupyter">
+   Graphique dans Jupyter
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#titres-et-legendes">
-   Titres et légendes
+  <a class="reference internal nav-link" href="#titre-et-legende">
+   Titre et légende
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -538,8 +528,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coordonnees-dans-x">
-   Coordonnées dans x
+  <a class="reference internal nav-link" href="#coordonnees-en-x">
+   Coordonnées en x
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -553,8 +543,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multiples-lignes">
-   Multiples lignes
+  <a class="reference internal nav-link" href="#multiples-courbes">
+   Multiples courbes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#segments-aleatoires">
+   Segments aléatoires
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -568,18 +563,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#echelle-logarithmiques">
-   Echelle logarithmiques
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#formater-un-graphique">
-   Formater un graphique
+  <a class="reference internal nav-link" href="#echelle-logarithmique">
+   Echelle logarithmique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#la-grille">
    La grille
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#marques-de-graduation">
+   Marques de graduation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -603,8 +598,8 @@
         
               <div>
                 
-  <div class="section" id="graphes">
-<h1>Graphes<a class="headerlink" href="#graphes" title="Lien permanent vers ce titre">¶</a></h1>
+  <div class="section" id="graphe">
+<h1>Graphe<a class="headerlink" href="#graphe" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Le module <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> permet d’afficher des graphes. Le module <code class="docutils literal notranslate"><span class="pre">numpy</span></code> permet de faire du calcul numérique avec des matrices.</p>
 <p>Pour utiliser ces modules nous devons les importer. Il est tradition de les importer sous les noms raccourcis suivants.</p>
 <ul class="simple">
@@ -634,8 +629,8 @@
 <p>Une fenêtre avec le titre <strong>Figure 1</strong> s’ouvre. En bas se trouvent 7 boutons pour zoomer, sauvegarder, etc.</p>
 <p><img alt="" src="../_images/plot1.png" /></p>
 </div>
-<div class="section" id="un-graphique-dans-jupyter">
-<h2>Un graphique dans Jupyter<a class="headerlink" href="#un-graphique-dans-jupyter" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="graphique-dans-jupyter">
+<h2>Graphique dans Jupyter<a class="headerlink" href="#graphique-dans-jupyter" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Créons une liste de données que nous pouvons afficher. Ici nous créons un Numpy array. L’avantage est que nous pouvons y additionner facilement un nombre pour le décaler.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -663,8 +658,8 @@ Dorénavant nous terminons la dernière ligne avec un point-virgule <code class=
 <p><strong>Attention:</strong><br />
 Pour afficher un graphique dans votre éditeur Python standard, vous devez ajouter la commande <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> pour l’afficher dans une fenêtre à part.</p>
 </div>
-<div class="section" id="titres-et-legendes">
-<h2>Titres et légendes<a class="headerlink" href="#titres-et-legendes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="titre-et-legende">
+<h2>Titre et légende<a class="headerlink" href="#titre-et-legende" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous pouvons ajouter un <strong>titre</strong> ainsi que des <strong>légendes</strong> pour les deux axes x et y.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -758,8 +753,8 @@ Pour afficher un graphique dans votre éditeur Python standard, vous devez ajout
 </div>
 </div>
 </div>
-<div class="section" id="coordonnees-dans-x">
-<h2>Coordonnées dans x<a class="headerlink" href="#coordonnees-dans-x" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="coordonnees-en-x">
+<h2>Coordonnées en x<a class="headerlink" href="#coordonnees-en-x" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Si nous affichons un graphe à partir d’un seul vecteur, les valeurs x sont des entiers commençant à 0. Nous pouvons définir notre propre plage x, par exemple avec un vecteur <strong>x</strong> allant de -2 à +2.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -827,9 +822,9 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 </div>
-<div class="section" id="multiples-lignes">
-<h2>Multiples lignes<a class="headerlink" href="#multiples-lignes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous pouvons placer multiples lignes sur un plot.</p>
+<div class="section" id="multiples-courbes">
+<h2>Multiples courbes<a class="headerlink" href="#multiples-courbes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous pouvons placer multiples courbes sur un plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
@@ -839,6 +834,19 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/plot_27_0.png" src="../_images/plot_27_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="segments-aleatoires">
+<h2>Segments aléatoires<a class="headerlink" href="#segments-aleatoires" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/plot_29_0.png" src="../_images/plot_29_0.png" />
 </div>
 </div>
 </div>
@@ -856,7 +864,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_29_0.png" src="../_images/plot_29_0.png" />
+<img alt="../_images/plot_31_0.png" src="../_images/plot_31_0.png" />
 </div>
 </div>
 <p>Ici nous affichons le carré du sinus.</p>
@@ -874,7 +882,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_31_0.png" src="../_images/plot_31_0.png" />
+<img alt="../_images/plot_33_0.png" src="../_images/plot_33_0.png" />
 </div>
 </div>
 </div>
@@ -890,7 +898,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_33_0.png" src="../_images/plot_33_0.png" />
+<img alt="../_images/plot_35_0.png" src="../_images/plot_35_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -901,7 +909,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_34_0.png" src="../_images/plot_34_0.png" />
+<img alt="../_images/plot_36_0.png" src="../_images/plot_36_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -912,7 +920,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_35_0.png" src="../_images/plot_35_0.png" />
+<img alt="../_images/plot_37_0.png" src="../_images/plot_37_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -923,12 +931,12 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_36_0.png" src="../_images/plot_36_0.png" />
+<img alt="../_images/plot_38_0.png" src="../_images/plot_38_0.png" />
 </div>
 </div>
 </div>
-<div class="section" id="echelle-logarithmiques">
-<h2>Echelle logarithmiques<a class="headerlink" href="#echelle-logarithmiques" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="echelle-logarithmique">
+<h2>Echelle logarithmique<a class="headerlink" href="#echelle-logarithmique" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous pouvons afficher un des deux axes ou les deux en echelle logarithmique.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -940,7 +948,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_38_0.png" src="../_images/plot_38_0.png" />
+<img alt="../_images/plot_40_0.png" src="../_images/plot_40_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -952,7 +960,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_39_0.png" src="../_images/plot_39_0.png" />
+<img alt="../_images/plot_41_0.png" src="../_images/plot_41_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -965,12 +973,12 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_40_0.png" src="../_images/plot_40_0.png" />
+<img alt="../_images/plot_42_0.png" src="../_images/plot_42_0.png" />
 </div>
 </div>
 </div>
-<div class="section" id="formater-un-graphique">
-<h2>Formater un graphique<a class="headerlink" href="#formater-un-graphique" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="la-grille">
+<h2>La grille<a class="headerlink" href="#la-grille" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Normalement la grille est alignés avec des entiers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -982,12 +990,12 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_42_0.png" src="../_images/plot_42_0.png" />
+<img alt="../_images/plot_44_0.png" src="../_images/plot_44_0.png" />
 </div>
 </div>
 </div>
-<div class="section" id="la-grille">
-<h2>La grille<a class="headerlink" href="#la-grille" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="marques-de-graduation">
+<h2>Marques de graduation<a class="headerlink" href="#marques-de-graduation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous pouvons aligner la grille avec des multiples de <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -999,7 +1007,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_44_0.png" src="../_images/plot_44_0.png" />
+<img alt="../_images/plot_46_0.png" src="../_images/plot_46_0.png" />
 </div>
 </div>
 <p>Nous pouvons places des étiquettes en LaTeX.</p>
@@ -1013,7 +1021,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_46_0.png" src="../_images/plot_46_0.png" />
+<img alt="../_images/plot_48_0.png" src="../_images/plot_48_0.png" />
 </div>
 </div>
 </div>
@@ -1035,7 +1043,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_48_0.png" src="../_images/plot_48_0.png" />
+<img alt="../_images/plot_50_0.png" src="../_images/plot_50_0.png" />
 </div>
 </div>
 </div>
@@ -1058,7 +1066,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_50_0.png" src="../_images/plot_50_0.png" />
+<img alt="../_images/plot_52_0.png" src="../_images/plot_52_0.png" />
 </div>
 </div>
 </div>
@@ -1093,7 +1101,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Visualiser</a>
-    <a class='right-next' id="next-link" href="param.html" title="next page">Paramètres</a>
+    <a class='right-next' id="next-link" href="figure.html" title="next page">Figure et Axes</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
