@@ -557,6 +557,11 @@
    Superposer
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mandelbrot">
+   Mandelbrot
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -615,7 +620,7 @@
 </div>
 </div>
 </div>
-<p>Voici le pixel à la position (25, 25). C’est dans la région ciel et de couleur cyan. Les composant bleu et vert sont au maximum</p>
+<p>Voici le pixel à la position (25, 25). C’est dans la région ciel et de couleur cyan. Les composant bleu et vert sont au maximum.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
@@ -727,6 +732,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;winter&#39;</span><span class="p">,</span> <span class="s1">&#39;summer&#39;</span><span class="p">,</span> <span class="s1">&#39;autumn&#39;</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">]</span>
 
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">maps</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
@@ -742,6 +748,7 @@
 </div>
 <div class="section" id="afficher-la-barre-des-couleurs">
 <h2>Afficher la barre des couleurs<a class="headerlink" href="#afficher-la-barre-des-couleurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">colorbar()</span></code> affiche une barre de couleur qui indique la correspondance des valeurs numérique et des couleurs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hot&#39;</span><span class="p">)</span>
@@ -754,25 +761,24 @@
 <img alt="../_images/image_25_0.png" src="../_images/image_25_0.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;terrain&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/image_26_0.png" src="../_images/image_26_0.png" />
+</div>
+</div>
 </div>
 <div class="section" id="origin-de-l-image">
 <h2>Origin de l’image<a class="headerlink" href="#origin-de-l-image" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour inverser l’image nous utilison l’option <code class="docutils literal notranslate"><span class="pre">origin</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">gray</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hot&#39;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/image_27_0.png" src="../_images/image_27_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;terrain&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hot&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -783,6 +789,7 @@
 </div>
 <div class="section" id="juxtaposer">
 <h2>Juxtaposer<a class="headerlink" href="#juxtaposer" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec la commande <code class="docutils literal notranslate"><span class="pre">hstack</span></code> (horizontal stack) nous pouvons juxtaposer des images.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">img</span><span class="p">,</span> <span class="n">img</span><span class="p">])</span>
@@ -797,6 +804,7 @@
 </div>
 <div class="section" id="superposer">
 <h2>Superposer<a class="headerlink" href="#superposer" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec la commande <code class="docutils literal notranslate"><span class="pre">vstack</span></code> (horizontal stack) nous pouvons superposer des images.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">img</span><span class="p">,</span> <span class="n">img</span><span class="p">])</span>
@@ -806,6 +814,36 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/image_32_0.png" src="../_images/image_32_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="mandelbrot">
+<h2>Mandelbrot<a class="headerlink" href="#mandelbrot" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour terminer calculons un fractal de Mandelbrot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mandelbrot</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">maxit</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns an image of the Mandelbrot fractal of size (h,w).&quot;&quot;&quot;</span>
+    <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ogrid</span><span class="p">[</span><span class="o">-</span><span class="mf">1.4</span><span class="p">:</span><span class="mf">1.4</span><span class="p">:</span><span class="n">h</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="mf">0.8</span><span class="p">:</span><span class="n">w</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="p">]</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">c</span>
+    <span class="n">divtime</span> <span class="o">=</span> <span class="n">maxit</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">maxit</span><span class="p">):</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">c</span>
+        <span class="n">diverge</span> <span class="o">=</span> <span class="n">z</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">**</span><span class="mi">2</span>         <span class="c1"># who is diverging</span>
+        <span class="n">div_now</span> <span class="o">=</span> <span class="n">diverge</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">divtime</span><span class="o">==</span><span class="n">maxit</span><span class="p">)</span>  <span class="c1"># who is diverging now</span>
+        <span class="n">divtime</span><span class="p">[</span><span class="n">div_now</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>                  <span class="c1"># note when</span>
+        <span class="n">z</span><span class="p">[</span><span class="n">diverge</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>                        <span class="c1"># avoid diverging too much</span>
+
+    <span class="k">return</span> <span class="n">divtime</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mandelbrot</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/image_34_0.png" src="../_images/image_34_0.png" />
 </div>
 </div>
 </div>

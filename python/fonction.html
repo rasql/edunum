@@ -537,6 +537,18 @@
    Fonction de conversion
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-avance">
+   Python avancé
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#info-pour-une-fonction">
+     Info pour une fonction
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
         </nav>
@@ -760,6 +772,87 @@ Définissez deux fonctions</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">C_en_F()</span></code> qui transforme Celsius en Fahrenheit</p></li>
 </ul>
 <p>et appelez-les.</p>
+</div>
+<div class="section" id="python-avance">
+<h2>Python avancé<a class="headerlink" href="#python-avance" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici encore quelque infos avancés.</p>
+<div class="section" id="info-pour-une-fonction">
+<h3>Info pour une fonction<a class="headerlink" href="#info-pour-une-fonction" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Nous pouvons ajouter un <strong>docstring</strong> dans la définition d’une fonction. C’est une description qui suit immédaitement la signature (première ligne de la définition), entouré de triples apostrophes <code class="docutils literal notranslate"><span class="pre">'''</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;adds 2 to a number&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ajouter un point d’interrogation <code class="docutils literal notranslate"><span class="pre">?</span></code> au nom de la fonction retourne des informations sur l’objet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>add2<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> add2<span class=" -Color -Color-Blue">(</span>x<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Docstring:</span> adds 2 to a number
+<span class=" -Color -Color-Red">File:</span>      ~/GitHub/edunum/doc/python/&lt;ipython-input-1-52b82a4ce8ea&gt;
+<span class=" -Color -Color-Red">Type:</span>      function
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ajouter deux points d’interrogation <code class="docutils literal notranslate"><span class="pre">??</span></code> au nom de la fonction retourne son code source.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>add2<span class="o">??</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> add2<span class=" -Color -Color-Blue">(</span>x<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Source:</span>   
+<span class=" -Color -Color-Green">def</span> add2<span class=" -Color -Color-Blue">(</span>x<span class=" -Color -Color-Blue">):</span>
+    <span class=" -Color -Color-Blue">&quot;&quot;&quot;adds 2 to a number&quot;&quot;&quot;</span>
+    <span class=" -Color -Color-Green">return</span> x <span class=" -Color -Color-Blue">+</span> <span class=" -Color -Color-Cyan">2</span>
+<span class=" -Color -Color-Red">File:</span>      ~/GitHub/edunum/doc/python/&lt;ipython-input-1-52b82a4ce8ea&gt;
+<span class=" -Color -Color-Red">Type:</span>      function
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ceci fonctionne avec toutes les fonctions, aussi les fonctions natives.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>len<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> len<span class=" -Color -Color-Blue">(</span>obj<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">/)</span>
+<span class=" -Color -Color-Red">Docstring:</span> Return the number of items in a container.
+<span class=" -Color -Color-Red">Type:</span>      builtin_function_or_method
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>abs<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> abs<span class=" -Color -Color-Blue">(</span>x<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">/)</span>
+<span class=" -Color -Color-Red">Docstring:</span> Return the absolute value of the argument.
+<span class=" -Color -Color-Red">Type:</span>      builtin_function_or_method
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

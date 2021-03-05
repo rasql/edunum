@@ -559,6 +559,16 @@
    Matplotlib
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#console-systeme">
+   Console système
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#utiliser-un-shell-script">
+   Utiliser un shell script
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -678,6 +688,38 @@ Il installe un environnement virtuel pour Python et permet d’y installer facil
 </pre></div>
 </div>
 <p><img alt="plot" src="../_images/plot.png" /></p>
+</div>
+<div class="section" id="console-systeme">
+<h2>Console système<a class="headerlink" href="#console-systeme" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Quand on choisit le menu <strong>Outils &gt; Ouvrir la console du système…</strong><br />
+les commandes suivantes sont executées d’abord.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export THOPR=/Applications/Thonny.app/Contents/Frameworks/Python.framework/Versions/3.7 ; 
+clear; 
+cd /Users/ho/Desktop; 
+export TCL_LIBRARY=$THOPR/lib/tcl8.6; 
+export TK_LIBRARY=$THOPR/lib/tk8.6; 
+export SSL_CERT_DIR=$THOPR/lib/python3.7/site-packages/certifi; 
+export SSL_CERT_FILE=$THOPR/lib/python3.7/site-packages/certifi/cacert.pem; 
+export PATH=$THOPR/bin:/Users/ho/Library/Python/3.7/bin:$THOPR/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin; 
+$THOPR/bin/python3.7 
+$THOPR/lib/python3.7/site-packages/thonny/plugins/system_shell/explain_environment.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="utiliser-un-shell-script">
+<h2>Utiliser un shell script<a class="headerlink" href="#utiliser-un-shell-script" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Créez un nouveau document <code class="docutils literal notranslate"><span class="pre">jupyterlab.sh</span></code> avec le contenu suivant:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
+cd
+~/Library/Python/3.7/bin/jupyter labM300-01:Desktop ho$`
+</pre></div>
+</div>
+<p>Sur un Mac</p>
+<ul class="simple">
+<li><p>clic-droit <strong>Lire les informations</strong></p></li>
+<li><p>Ouvrir avec: Terminal</p></li>
+</ul>
+<p><img alt="" src="../_images/sh_script.png" /></p>
 </div>
 </div>
 

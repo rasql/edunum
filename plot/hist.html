@@ -554,51 +554,6 @@
 </div>
 </div>
 </div>
-<p>Créons un vecteur avec des données que nous pouvons afficher.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">a</span><span class="o">*</span><span class="mf">0.5</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0. , 0.5, 1. , 1.5, 2. ])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;line 1&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;line 2&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
-</pre></div>
-</div>
-<img alt="../_images/hist_4_1.png" src="../_images/hist_4_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">line_1</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s1">&#39;or--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Line 1&#39;</span><span class="p">)</span>
-<span class="n">line_2</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;g:&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Line 2&#39;</span><span class="p">)</span>
-<span class="n">line_3</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Line 3&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="p">[</span><span class="n">line_1</span><span class="p">,</span> <span class="n">line_2</span><span class="p">,</span> <span class="n">line_3</span><span class="p">]);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/hist_5_0.png" src="../_images/hist_5_0.png" />
-</div>
-</div>
 <div class="section" id="histogramme">
 <h2>Histogramme<a class="headerlink" href="#histogramme" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous analysons une distribution Gaussienne de 10’000 points.</p>
@@ -613,7 +568,8 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the histogram of the data</span>
-<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+                            <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Smarts&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probability&#39;</span><span class="p">)</span>
@@ -626,7 +582,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/hist_8_0.png" src="../_images/hist_8_0.png" />
+<img alt="../_images/hist_4_0.png" src="../_images/hist_4_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -642,7 +598,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/hist_9_0.png" src="../_images/hist_9_0.png" />
+<img alt="../_images/hist_5_0.png" src="../_images/hist_5_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -682,7 +638,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/hist_14_0.png" src="../_images/hist_14_0.png" />
+<img alt="../_images/hist_10_0.png" src="../_images/hist_10_0.png" />
 </div>
 </div>
 </div>
@@ -698,7 +654,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/hist_16_0.png" src="../_images/hist_16_0.png" />
+<img alt="../_images/hist_12_0.png" src="../_images/hist_12_0.png" />
 </div>
 </div>
 </div>
@@ -707,7 +663,7 @@
 <p>Un dictionnaire est une structure qui permet de compter facilement les lettres dans une phrase.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Introduction to python programming&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Introduction to Python programming&#39;</span>
 <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
     <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
@@ -723,12 +679,13 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/hist_20_0.png" src="../_images/hist_20_0.png" />
+<img alt="../_images/hist_16_0.png" src="../_images/hist_16_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="histogramme-superpose">
 <h2>Histogramme superposé<a class="headerlink" href="#histogramme-superpose" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec l’option <code class="docutils literal notranslate"><span class="pre">bottom</span></code> nous pouvons superposer un graphique en barre sur un autre. Avec l’option <code class="docutils literal notranslate"><span class="pre">yerr</span></code>nous ajoutons une barre d’erreur.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;G1&#39;</span><span class="p">,</span> <span class="s1">&#39;G2&#39;</span><span class="p">,</span> <span class="s1">&#39;G3&#39;</span><span class="p">,</span> <span class="s1">&#39;G4&#39;</span><span class="p">,</span> <span class="s1">&#39;G5&#39;</span><span class="p">]</span>
@@ -754,7 +711,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/hist_22_0.png" src="../_images/hist_22_0.png" />
+<img alt="../_images/hist_18_0.png" src="../_images/hist_18_0.png" />
 </div>
 </div>
 </div>
