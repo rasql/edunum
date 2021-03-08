@@ -34,7 +34,7 @@
       - file: jeu/texte
       - file: jeu/japon
       
-  - file: plot/intro
+  - file: plot/index
     sections:
       - file: plot/plot
       - file: plot/figure
