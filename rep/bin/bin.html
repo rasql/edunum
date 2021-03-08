@@ -233,7 +233,7 @@
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../../plot/intro.html">
+  <a class="reference internal" href="../../plot/index.html">
    Visualiser
   </a>
   <ul class="collapse-ul">
@@ -244,7 +244,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../plot/figure.html">
-     Figure et Axes
+     Figure et axes
     </a>
    </li>
    <li class="toctree-l2">
@@ -289,12 +289,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../plot/text.html">
-     Text
+     Texte
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../plot/gif/gif.html">
-     Animated GIF
+     GIF animé
     </a>
    </li>
   </ul>
@@ -523,8 +523,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-format-string">
-   Le format-string
+  <a class="reference internal nav-link" href="#la-chaine-avec-formatage">
+   La chaîne avec formatage
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -610,15 +610,15 @@ Pensez à un nombre entre 0 et 15, mais ne le dites pas.</p>
 <li><p>troisième carte ? – non</p></li>
 <li><p>quatrième carte ? – oui</p></li>
 </ul>
-<p>Alors vous avez pensé à 11.</p>
+<p>Alors vous avez pensé à 13.</p>
 <p>Encore une fois!<br />
 Pensez à une autre nombre entre 0 et 15.<br />
 Votre nombre, se trouve-t-il sur la</p>
 <ul class="simple">
-<li><p>première carte ? – oui</p></li>
+<li><p>première carte ? – non</p></li>
 <li><p>deuxième carte ? – oui</p></li>
 <li><p>troisième carte ? – oui</p></li>
-<li><p>quatrième carte ? – non</p></li>
+<li><p>quatrième carte ? – oui</p></li>
 </ul>
 <p>Alors vous avez pensé à 7.</p>
 <p><strong>Astuce:</strong> Vous pouvez imprimer ces 4 cartes pour présenter le tour de magie à vos amis.</p>
@@ -643,12 +643,61 @@ Mais vous avez maintenant assez d’indices pour trouver la solution par vous m�
 <p>Voici les quatre questions. Est-ce que le</p>
 <ul class="simple">
 <li><p>premier chiffre est 1 - oui</p></li>
-<li><p>deuxième chiffre est 1 - non</p></li>
-<li><p>troisièe chiffre est 1 - oui</p></li>
-<li><p>uatrième chiffre est 1 - oui</p></li>
+<li><p>deuxième chiffre est 1 - oui</p></li>
+<li><p>troisième chiffre est 1 - non</p></li>
+<li><p>quatrième chiffre est 1 - oui</p></li>
 </ul>
-<p>Alors, le nombre auquel vous avez pensé est <code class="docutils literal notranslate"><span class="pre">1011</span></code>.<br />
-Ceci correspond au nombre décimal 11.</p>
+<p>Alors, le nombre auquel vous avez pensé est <code class="docutils literal notranslate"><span class="pre">1101</span></code>.<br />
+Ceci correspond au nombre décimal 13 (comme dans l’exemple du début).</p>
+<p>En fait chaque symbole du code binaire correspond à un puissance de 2.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(2^3\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(2^2\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(2^1\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(2^0\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p>Pour trouver la valeur du code <code class="docutils literal notranslate"><span class="pre">1101</span></code> nous devons additionner leur poid, donc 8 + 4 + 1 = 13.</p>
+<p>L’autre exemple était:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(2^3\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(2^2\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(2^1\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(2^0\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p>Pour trouver sa valeur nous faisons le calcul 4 + 2 + 1 = 7.</p>
+<p><strong>Exercice</strong><br />
+Quelle est la valeur du code binaire <code class="docutils literal notranslate"><span class="pre">1010</span></code> ?
+Du code binaire <code class="docutils literal notranslate"><span class="pre">10000</span></code> ?</p>
 </div>
 <div class="section" id="la-fonction-bin">
 <h2>La fonction <code class="docutils literal notranslate"><span class="pre">bin</span></code><a class="headerlink" href="#la-fonction-bin" title="Lien permanent vers ce titre">¶</a></h2>
@@ -703,17 +752,17 @@ Par exemple voici le code binaire de 9.</p>
 <p><strong>Exercice</strong><br />
 Quel est le code binaire pour 11.</p>
 </div>
-<div class="section" id="le-format-string">
-<h2>Le format-string<a class="headerlink" href="#le-format-string" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La notation <strong>f-string</strong> (chaîne avec formatage) est très utile pour afficher des codes binaires, et c’est une méthode plus puissante que la fonction <code class="docutils literal notranslate"><span class="pre">bin()</span></code>.</p>
+<div class="section" id="la-chaine-avec-formatage">
+<h2>La chaîne avec formatage<a class="headerlink" href="#la-chaine-avec-formatage" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La chaîne avec formatage (<strong>f-string</strong> en anglais) est très utile pour afficher des codes binaires, et c’est une méthode plus puissante que la fonction <code class="docutils literal notranslate"><span class="pre">bin()</span></code>.</p>
 <p>Un <strong>f-string</strong> est une chaîne de caractères qui</p>
 <ul class="simple">
 <li><p>commence par <code class="docutils literal notranslate"><span class="pre">f</span></code></p></li>
-<li><p>contient des accolades <code class="docutils literal notranslate"><span class="pre">{}</span></code> qui peuvent contenir des variables avec description de format</p></li>
+<li><p>contient des accolades <code class="docutils literal notranslate"><span class="pre">{}</span></code> (alt+8/9) qui peuvent contenir des variables avec description de format</p></li>
 </ul>
 <p>Par exemple:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">{i:2}</span></code> imprime la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> sur 2 positions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{i:2}</span></code> imprime la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> sur 2 positions (en décimal)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">{i:4b}</span></code> imprime la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> sur 4 positions en binaire</p></li>
 </ul>
 <p>Ceci nous permet d’aligner les nombres décimaux et binaires à droite.</p>
@@ -826,9 +875,8 @@ Nous commençons par créer une liste de nombres que nous voulons utiliser dans 
 
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nombres</span><span class="p">:</span>
-    <span class="n">dec</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{i:04b}</span><span class="s1">:&#39;</span><span class="p">)</span>
-    <span class="n">dec</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">dec</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
+    <span class="n">reponse</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{i:04b}</span><span class="s1">:&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">reponse</span><span class="p">)</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
         <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;faux! réponse correcte =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
@@ -841,19 +889,19 @@ Nous commençons par créer une liste de nombres que nous voulons utiliser dans 
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Quiz: binaire en décimal
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0000: 0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0001: 1
 0110: 6
-0001: 1
 0111: 7
-0100: 4
-0010: 3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! réponse correcte = 2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0101: 5
 0011: 3
+0101: 5
+0000: 8
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! réponse correcte = 0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0010: 2
+0100: 4
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>score = 7 sur 8

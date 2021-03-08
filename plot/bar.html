@@ -233,7 +233,7 @@
   </i>
  </li>
  <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="index.html">
    Visualiser
   </a>
   <ul class="current collapse-ul">
@@ -244,7 +244,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="figure.html">
-     Figure et Axes
+     Figure et axes
     </a>
    </li>
    <li class="toctree-l2">
@@ -289,12 +289,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="text.html">
-     Text
+     Texte
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="gif/gif.html">
-     Animated GIF
+     GIF animé
     </a>
    </li>
   </ul>
@@ -508,13 +508,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#avec-barre-d-erreurs">
-   Avec barre d’erreurs
+  <a class="reference internal nav-link" href="#barres-d-erreur">
+   Barres d’erreur
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#epaisseur-des-barres">
-   Epaisseur des barres
+   Épaisseur des barres
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -524,12 +524,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#etiquette">
-   Etiquette
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#empile">
-   Empilé
+   Étiquette
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -543,13 +538,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#barres-empilees">
+   Barres empilées
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#barres-groupees">
    Barres groupées
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#barres-dans-2-directions">
-   Barres dans 2 directions
+  <a class="reference internal nav-link" href="#barres-en-2-directions">
+   Barres en 2 directions
   </a>
  </li>
 </ul>
@@ -567,13 +567,11 @@
 <h1>Diagramme à barres<a class="headerlink" href="#diagramme-a-barres" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Un diagramme à barre est un graphique qui présente des catégories avec des barres rectangulaires.
 La taille du rectangle est proportionnelle à la valeur.
-Les barres peuvent être tracés horizontalement ou verticalement.</p>
-<p>Les commandes pour barres horizontale/verticale sont similiare:</p>
+Les barres peuvent être tracées horizontalement ou verticalement.</p>
+<p>Les commandes pour des barres horizontales/verticales sont similiares:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bar(x,</span> <span class="pre">height,</span> <span class="pre">width=0.8,</span> <span class="pre">bottom=None,</span> <span class="pre">*,</span> <span class="pre">align='center',</span> <span class="pre">**kwargs)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">barh(y,</span> <span class="pre">width,</span> <span class="pre">height=0.8,</span> <span class="pre">left=None,</span> <span class="pre">*,</span> <span class="pre">align='center',</span> <span class="pre">**kwargs)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bottom</span></code> - base de barres</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">aligne</span></code> - center/edge</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bar(x,</span> <span class="pre">height,</span> <span class="pre">width=0.8)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">barh(y,</span> <span class="pre">width,</span> <span class="pre">height=0.8)</span></code></p></li>
 </ul>
 <div class="section" id="barres-verticales">
 <h2>Barres verticales<a class="headerlink" href="#barres-verticales" title="Lien permanent vers ce titre">¶</a></h2>
@@ -597,7 +595,7 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 <div class="section" id="barres-horizontales">
 <h2>Barres horizontales<a class="headerlink" href="#barres-horizontales" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Voici un graph horizontal avec la fonction <code class="docutils literal notranslate"><span class="pre">barh</span></code>.</p>
+<p>Voici un graphe horizontal avec la fonction <code class="docutils literal notranslate"><span class="pre">barh</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
@@ -610,8 +608,8 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 </div>
-<div class="section" id="avec-barre-d-erreurs">
-<h2>Avec barre d’erreurs<a class="headerlink" href="#avec-barre-d-erreurs" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="barres-d-erreur">
+<h2>Barres d’erreur<a class="headerlink" href="#barres-d-erreur" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">errors</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]</span>
@@ -629,7 +627,7 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 <div class="section" id="epaisseur-des-barres">
-<h2>Epaisseur des barres<a class="headerlink" href="#epaisseur-des-barres" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Épaisseur des barres<a class="headerlink" href="#epaisseur-des-barres" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">errors</span><span class="p">);</span>
@@ -667,7 +665,7 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 <div class="section" id="etiquette">
-<h2>Etiquette<a class="headerlink" href="#etiquette" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Étiquette<a class="headerlink" href="#etiquette" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">);</span>
@@ -677,34 +675,6 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/bar_16_0.png" src="../_images/bar_16_0.png" />
-</div>
-</div>
-</div>
-<div class="section" id="empile">
-<h2>Empilé<a class="headerlink" href="#empile" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/bar_18_0.png" src="../_images/bar_18_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/bar_19_0.png" src="../_images/bar_19_0.png" />
 </div>
 </div>
 </div>
@@ -719,7 +689,7 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/bar_21_0.png" src="../_images/bar_21_0.png" />
+<img alt="../_images/bar_18_0.png" src="../_images/bar_18_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -731,7 +701,7 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/bar_22_0.png" src="../_images/bar_22_0.png" />
+<img alt="../_images/bar_19_0.png" src="../_images/bar_19_0.png" />
 </div>
 </div>
 </div>
@@ -747,7 +717,7 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/bar_24_0.png" src="../_images/bar_24_0.png" />
+<img alt="../_images/bar_21_0.png" src="../_images/bar_21_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -755,6 +725,34 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/bar_22_0.png" src="../_images/bar_22_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="barres-empilees">
+<h2>Barres empilées<a class="headerlink" href="#barres-empilees" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/bar_24_0.png" src="../_images/bar_24_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -803,8 +801,8 @@ Les barres peuvent être tracés horizontalement ou verticalement.</p>
 </div>
 </div>
 </div>
-<div class="section" id="barres-dans-2-directions">
-<h2>Barres dans 2 directions<a class="headerlink" href="#barres-dans-2-directions" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="barres-en-2-directions">
+<h2>Barres en 2 directions<a class="headerlink" href="#barres-en-2-directions" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">12</span>

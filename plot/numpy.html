@@ -233,7 +233,7 @@
   </i>
  </li>
  <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="index.html">
    Visualiser
   </a>
   <ul class="current collapse-ul">
@@ -244,7 +244,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="figure.html">
-     Figure et Axes
+     Figure et axes
     </a>
    </li>
    <li class="toctree-l2">
@@ -289,12 +289,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="text.html">
-     Text
+     Texte
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="gif/gif.html">
-     Animated GIF
+     GIF animé
     </a>
    </li>
   </ul>
@@ -538,8 +538,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#changement-de-forme">
-   Changement de forme
+  <a class="reference internal nav-link" href="#changer-de-forme">
+   Changer de forme
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -581,7 +581,7 @@
 </div>
 <div class="section" id="matrice-homogene">
 <h2>Matrice homogène<a class="headerlink" href="#matrice-homogene" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’objet principal de NumPy est la <strong>matrice homogène</strong> multi-dimensionel <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>.</p>
+<p>L’objet principal de NumPy est la <strong>matrice homogène</strong> multi-dimensionelle <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>.</p>
 <p>Voici d’abord une liste Python traditionnelle.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -790,8 +790,8 @@
 </div>
 <div class="section" id="distribution-uniforme">
 <h2>Distribution uniforme<a class="headerlink" href="#distribution-uniforme" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le module <code class="docutils literal notranslate"><span class="pre">np.random</span></code> contient les fonctions aléatoires.
-La fonction <code class="docutils literal notranslate"><span class="pre">rand(n)</span></code> retourn n valeur aléatoire dans l’intervalle [0, 1].</p>
+<p>Le module <code class="docutils literal notranslate"><span class="pre">np.random</span></code> contient des fonctions pour créer des valeurs aléatoires.<br />
+La fonction <code class="docutils literal notranslate"><span class="pre">rand(n)</span></code> retourne n valeurs aléatoires dans l’intervalle [0, 1].</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">500</span>
@@ -804,7 +804,7 @@ La fonction <code class="docutils literal notranslate"><span class="pre">rand(n)
 <img alt="../_images/numpy_30_0.png" src="../_images/numpy_30_0.png" />
 </div>
 </div>
-<p>Faisons un histogrammes avec 10 récipients. En moyenne nous avons 50 valeurs dans chaque récipient. On reconnait une distribution uniforme.</p>
+<p>Faisons un histogramme avec 10 récipients. En moyenne nous avons 50 valeurs dans chaque récipient. On reconnait une distribution uniforme.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
@@ -819,7 +819,7 @@ La fonction <code class="docutils literal notranslate"><span class="pre">rand(n)
 </div>
 <div class="section" id="distribution-normale">
 <h2>Distribution normale<a class="headerlink" href="#distribution-normale" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La distribution od</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">randn(n)</span></code> retourne n valeurs avec une distribution normale.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -844,7 +844,7 @@ La fonction <code class="docutils literal notranslate"><span class="pre">rand(n)
 </div>
 <div class="section" id="operations-sur-un-vecteur">
 <h2>Opérations sur un vecteur<a class="headerlink" href="#operations-sur-un-vecteur" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous pouvons effecteur des opérations sur un vecteur <strong>numpy</strong>.</p>
+<p>Nous pouvons effectuer des opérations sur un vecteur <strong>numpy</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">);</span>
@@ -858,7 +858,7 @@ La fonction <code class="docutils literal notranslate"><span class="pre">rand(n)
 </div>
 <div class="section" id="matrice-2d">
 <h2>Matrice 2D<a class="headerlink" href="#matrice-2d" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Avec <strong>numpy</strong> nous pouvons créer facilement des matrices de nome</p>
+<p>Avec <strong>numpy</strong> nous pouvons créer facilement des matrices avec de nombres aléatoires avec la fonction <code class="docutils literal notranslate"><span class="pre">randint</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">36</span><span class="p">])</span>
@@ -886,9 +886,9 @@ La fonction <code class="docutils literal notranslate"><span class="pre">rand(n)
 </div>
 </div>
 </div>
-<div class="section" id="changement-de-forme">
-<h2>Changement de forme<a class="headerlink" href="#changement-de-forme" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous ré-arrangeons 60 valeurs croissantes sous forme de matrices:</p>
+<div class="section" id="changer-de-forme">
+<h2>Changer de forme<a class="headerlink" href="#changer-de-forme" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous réarrangeons (<strong>reshape</strong>) 60 valeurs croissantes sous forme de matrices:</p>
 <ul class="simple">
 <li><p>10 x 6</p></li>
 <li><p>5 x 12</p></li>
@@ -937,7 +937,7 @@ La fonction <code class="docutils literal notranslate"><span class="pre">rand(n)
 </div>
 <div class="section" id="valeurs-uniques">
 <h2>Valeurs uniques<a class="headerlink" href="#valeurs-uniques" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Quand on choisis des valeurs aléatoires, certaines valeurs peuvent apparaitres plusieurs fois.</p>
+<p>Quand on choisit des valeurs aléatoires, certaines valeurs peuvent apparaitres plusieurs fois.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
@@ -979,7 +979,7 @@ La fonction <code class="docutils literal notranslate"><span class="pre">rand(n)
 </div>
 </div>
 </div>
-<p>Cette fonction permet aussi de retrouver les indices dans l’array originale.</p>
+<p>Cette fonction permet aussi de retrouver les indices vers le tableau <code class="docutils literal notranslate"><span class="pre">y</span></code> original.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">return_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1047,7 +1047,7 @@ La fonction <code class="docutils literal notranslate"><span class="pre">rand(n)
 </div>
 </div>
 </div>
-<p>C’est un fichier binare, qui n’est pas lisible pour l’humain (à part l’entête).</p>
+<p>C’est un fichier binaire, qui n’est pas lisible pour l’humain (à part l’entête).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">data</span><span class="o">.</span><span class="n">npy</span>
@@ -1121,7 +1121,7 @@ La fonction <code class="docutils literal notranslate"><span class="pre">rand(n)
 </div>
 </div>
 </div>
-<p>Le fichier <code class="docutils literal notranslate"><span class="pre">csv</span></code> n’occupe seuelement 10 octets. Les autres 10 fois plus.</p>
+<p>Le fichier <code class="docutils literal notranslate"><span class="pre">csv</span></code> n’occupe seulement 10 octets. Les autres 10 fois plus.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ll</span> <span class="n">data</span><span class="o">*</span>

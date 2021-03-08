@@ -64,7 +64,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Text" href="text.html" />
+    <link rel="next" title="Texte" href="text.html" />
     <link rel="prev" title="Graphe polaire" href="polar.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -233,7 +233,7 @@
   </i>
  </li>
  <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="index.html">
    Visualiser
   </a>
   <ul class="current collapse-ul">
@@ -244,7 +244,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="figure.html">
-     Figure et Axes
+     Figure et axes
     </a>
    </li>
    <li class="toctree-l2">
@@ -289,12 +289,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="text.html">
-     Text
+     Texte
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="gif/gif.html">
-     Animated GIF
+     GIF animé
     </a>
    </li>
   </ul>
@@ -498,18 +498,18 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pie-chart-de-base">
-   Pie chart de base
+  <a class="reference internal nav-link" href="#graphe-camembert">
+   Graphe “camembert”
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tranches-qui-ressortent">
-   Tranches qui ressortent
+  <a class="reference internal nav-link" href="#tranches-explosees">
+   Tranches explosées
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diagramme-en-escalier">
-   Diagramme en escalier
+  <a class="reference internal nav-link" href="#diagramme-escalier">
+   Diagramme escalier
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -543,9 +543,9 @@
 </div>
 </div>
 </div>
-<div class="section" id="pie-chart-de-base">
-<h2>Pie chart de base<a class="headerlink" href="#pie-chart-de-base" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le graphique basic affiche des tranches.</p>
+<div class="section" id="graphe-camembert">
+<h2>Graphe “camembert”<a class="headerlink" href="#graphe-camembert" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le graphique circulaire ou graphique circulaire affiche des valeurs numériques sous forme de tranches de gâteau (<strong>pie chart</strong> en anglais).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
@@ -572,9 +572,9 @@
 </div>
 </div>
 </div>
-<div class="section" id="tranches-qui-ressortent">
-<h2>Tranches qui ressortent<a class="headerlink" href="#tranches-qui-ressortent" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’option <code class="docutils literal notranslate"><span class="pre">explode</span></code> permet de faire ressortir les tranches. C’est une liste avec le même nombre d’élément qu’il y a des tranches. La valeur est de 0 à 1 et indique la fraction du rayon pour laquelle la tranche ressort.</p>
+<div class="section" id="tranches-explosees">
+<h2>Tranches explosées<a class="headerlink" href="#tranches-explosees" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’option <code class="docutils literal notranslate"><span class="pre">explode</span></code> permet de faire ressortir les tranches. C’est une liste avec le même nombre d’éléments qu’il y a des tranches. La valeur est de 0 à 1 et indique la fraction du rayon pour laquelle la tranche ressort.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">);</span>
@@ -597,9 +597,10 @@
 </div>
 </div>
 </div>
-<div class="section" id="diagramme-en-escalier">
-<h2>Diagramme en escalier<a class="headerlink" href="#diagramme-en-escalier" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La valeur par défaut est <code class="docutils literal notranslate"><span class="pre">where='pre'</span></code>. La marche commence avec le point.</p>
+<div class="section" id="diagramme-escalier">
+<h2>Diagramme escalier<a class="headerlink" href="#diagramme-escalier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le diagramme escalier (<strong>step chart</strong> en anglais) relie deux points de données avec des lignes horizontales et verticales.</p>
+<p>La valeur par défaut de l’option <code class="docutils literal notranslate"><span class="pre">where='pre'</span></code>. La marche commence avec le point.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">7</span>
@@ -612,7 +613,7 @@
 <img alt="../_images/pie_11_0.png" src="../_images/pie_11_0.png" />
 </div>
 </div>
-<p>Avec <code class="docutils literal notranslate"><span class="pre">where='mid'</span></code> la marche est au milieu.</p>
+<p>Avec <code class="docutils literal notranslate"><span class="pre">where='mid'</span></code> le point est au milieu de la marche, et le déplacement vertical est au milieu entre deux points.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">);</span>
@@ -714,7 +715,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="polar.html" title="previous page">Graphe polaire</a>
-    <a class='right-next' id="next-link" href="text.html" title="next page">Text</a>
+    <a class='right-next' id="next-link" href="text.html" title="next page">Texte</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

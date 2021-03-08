@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Figure et Axes &#8212; Education numérique</title>
+    <title>Figure et axes &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -233,7 +233,7 @@
   </i>
  </li>
  <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="index.html">
    Visualiser
   </a>
   <ul class="current collapse-ul">
@@ -244,7 +244,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Figure et Axes
+     Figure et axes
     </a>
    </li>
    <li class="toctree-l2">
@@ -289,12 +289,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="text.html">
-     Text
+     Texte
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="gif/gif.html">
-     Animated GIF
+     GIF animé
     </a>
    </li>
   </ul>
@@ -538,8 +538,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#valeurs-par-default">
-   Valeurs par défault
+  <a class="reference internal nav-link" href="#valeurs-par-defaut">
+   Valeurs par défaut
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -584,8 +584,8 @@
               <div>
                 
   <div class="section" id="figure-et-axes">
-<h1>Figure et Axes<a class="headerlink" href="#figure-et-axes" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Un graphique consiste des objets</p>
+<h1>Figure et axes<a class="headerlink" href="#figure-et-axes" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Un graphique consiste en objets</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Figure</span></code> l’espace total du graphique</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Axes</span></code> la partie qui présente les données</p></li>
@@ -607,7 +607,7 @@
 <img alt="../_images/figure_3_0.png" src="../_images/figure_3_0.png" />
 </div>
 </div>
-<p>La figure a environs 150 methodes.</p>
+<p>La classe Figure a environ 150 méthodes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)]</span>
@@ -674,7 +674,7 @@
 </div>
 <div class="section" id="couleur">
 <h2>Couleur<a class="headerlink" href="#couleur" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La couleur du graphique est choisi avec <code class="docutils literal notranslate"><span class="pre">facecolor</span></code>.</p>
+<p>La couleur du graphique est choisie avec <code class="docutils literal notranslate"><span class="pre">facecolor</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
@@ -685,7 +685,7 @@
 <img alt="../_images/figure_11_0.png" src="../_images/figure_11_0.png" />
 </div>
 </div>
-<p>La couleur du contour et son épaisseur peuvent être choisis.</p>
+<p>La couleur du contour et son épaisseur peuvent être choisies.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> 
@@ -713,7 +713,7 @@
 </div>
 <div class="section" id="ligne">
 <h2>Ligne<a class="headerlink" href="#ligne" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Des lignes peuvent être ajoutés.</p>
+<p>Des lignes horizontales et verticales peuvent être ajoutées.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
@@ -738,7 +738,7 @@
 <img alt="../_images/figure_17_0.png" src="../_images/figure_17_0.png" />
 </div>
 </div>
-<p>Une ligne générale est indiqué avec <code class="docutils literal notranslate"><span class="pre">axline</span></code> et deux points.</p>
+<p>Une ligne d’orientation générale est indiquée avec <code class="docutils literal notranslate"><span class="pre">axline</span></code> et deux points de référence.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">);</span>
@@ -779,7 +779,7 @@
 </div>
 <div class="section" id="bandes">
 <h2>Bandes<a class="headerlink" href="#bandes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La méthode <code class="docutils literal notranslate"><span class="pre">axhspan</span></code> et <code class="docutils literal notranslate"><span class="pre">axvspan</span></code> permet de placer des bandes horzontales ou verticales.</p>
+<p>La méthode <code class="docutils literal notranslate"><span class="pre">axhspan</span></code> et <code class="docutils literal notranslate"><span class="pre">axvspan</span></code> permet de placer des bandes horizontales ou verticales.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">axhspan</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lime&#39;</span><span class="p">)</span>
@@ -805,7 +805,7 @@
 </div>
 <div class="section" id="boite-de-contour">
 <h2>Boîte de contour<a class="headerlink" href="#boite-de-contour" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La boite de contour est optionnel.</p>
+<p>La boite de contour est optionnelle.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
@@ -858,9 +858,9 @@
 </div>
 </div>
 </div>
-<div class="section" id="valeurs-par-default">
-<h2>Valeurs par défault<a class="headerlink" href="#valeurs-par-default" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Toutes les valeurs par défault sont définis dans <strong>rc</strong> (runtime configuration).</p>
+<div class="section" id="valeurs-par-defaut">
+<h2>Valeurs par défaut<a class="headerlink" href="#valeurs-par-defaut" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Toutes les valeurs par défaut sont définis dans <strong>rc</strong> (runtime configuration).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
