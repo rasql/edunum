@@ -503,18 +503,23 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pixels">
-   Pixels
+  <a class="reference internal nav-link" href="#afficher-une-image">
+   Afficher une image
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#marice-ones">
-   Marice
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     ones
-    </span>
-   </code>
+  <a class="reference internal nav-link" href="#les-attributs-d-image">
+   Les attributs d’image
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-pixel">
+   Le pixel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-blanche">
+   Image blanche
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -523,8 +528,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creation-de-texte">
-   Création de texte
+  <a class="reference internal nav-link" href="#definir-une-lettre">
+   Définir une lettre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#juxtaposer-des-images">
+   Juxtaposer des images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#empiler-des-images">
+   Empiler des images
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -543,8 +558,28 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#niveaux-de-gris">
+   Niveaux de gris
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#image-monochrome">
    Image monochrome
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lire-une-image">
+   Lire une image
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-valeur-d-un-pixel">
+   La valeur d’un pixel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#afficher-une-sous-region">
+   Afficher une sous-région
   </a>
  </li>
 </ul>
@@ -571,6 +606,8 @@ En termes de science d’informatique il s’agit de <strong>l’encodage d’un
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Si le code ci-dessus produit l’erreur <code class="docutils literal notranslate"><span class="pre">ModuleNotFoundError</span></code> vous devez installer les modules <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> et <code class="docutils literal notranslate"><span class="pre">numpy</span></code>. Dans Thonny choisissez le menu <strong>Outils &gt; Gérer les paquets…</strong> et installez les deux paquets nécessaires.</p>
 <div class="section" id="matrice-2d">
 <h2>Matrice 2D<a class="headerlink" href="#matrice-2d" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une image est un tableau en 2 dimension composé de petits rectangles. On appelle ces points élémentaires des pixels, de l’anglais <strong>picture element</strong>.</p>
@@ -597,6 +634,11 @@ En termes de science d’informatique il s’agit de <strong>l’encodage d’un
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Créez une nouvelle variable <code class="docutils literal notranslate"><span class="pre">img2</span></code> qui contient une matrice de 0s de taille 4 x 12.</p>
+</div>
+<div class="section" id="afficher-une-image">
+<h2>Afficher une image<a class="headerlink" href="#afficher-une-image" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous pouvons afficher une matrice 2D sous forme d’image avec la fonction <code class="docutils literal notranslate"><span class="pre">np.imshow()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -606,9 +648,14 @@ En termes de science d’informatique il s’agit de <strong>l’encodage d’un
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_6_0.png" src="../_images/image_6_0.png" />
+<img alt="../_images/image_8_0.png" src="../_images/image_8_0.png" />
 </div>
 </div>
+<p><strong>Attention</strong><br />
+Ici les lignes ne démarquent pas des pixels. Les lignes passent au milieu des pixels.</p>
+</div>
+<div class="section" id="les-attributs-d-image">
+<h2>Les attributs d’image<a class="headerlink" href="#les-attributs-d-image" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’attribut <code class="docutils literal notranslate"><span class="pre">shape</span></code> retourne les dimensions de l’image. Ici nous avons 5 lignes et 8 colonnes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -635,10 +682,13 @@ En termes de science d’informatique il s’agit de <strong>l’encodage d’un
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Affichez les attributs <strong>shape</strong> et <strong>size</strong> de l’image <code class="docutils literal notranslate"><span class="pre">img2</span></code> que vous avez définit ci-dessus.</p>
 </div>
-<div class="section" id="pixels">
-<h2>Pixels<a class="headerlink" href="#pixels" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les éléments d’une image sont appelé des pixels. Nous pouvons les adresser avec les indices <code class="docutils literal notranslate"><span class="pre">img[y,</span> <span class="pre">x]</span></code>. Voici comment changer deux pixels en blanc.</p>
+<div class="section" id="le-pixel">
+<h2>Le pixel<a class="headerlink" href="#le-pixel" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les éléments d’une image sont appelé des pixels. Le nom <strong>pixel</strong> vient de l’anglais <em>picture element</em>.</p>
+<p>Nous pouvons adresser un pixel individuel avec ses indices <code class="docutils literal notranslate"><span class="pre">img[y,</span> <span class="pre">x]</span></code>. Voici comment changer deux pixels en blanc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -665,28 +715,48 @@ En termes de science d’informatique il s’agit de <strong>l’encodage d’un
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_14_0.png" src="../_images/image_14_0.png" />
+<img alt="../_images/image_18_01.png" src="../_images/image_18_01.png" />
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Ajoutez un pixel blanc en haut à droite, et un autre pixel blanc en bas à gauche.</p>
+</div>
+<div class="section" id="image-blanche">
+<h2>Image blanche<a class="headerlink" href="#image-blanche" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La matrice <code class="docutils literal notranslate"><span class="pre">np.ones()</span></code> permet de créer une matrice avec des <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 1 1 1 1]
+ [1 1 1 1 1]
+ [1 1 1 1 1]
+ [1 1 1 1 1]
+ [1 1 1 1 1]]
+</pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="marice-ones">
-<h2>Marice <code class="docutils literal notranslate"><span class="pre">ones</span></code><a class="headerlink" href="#marice-ones" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La matrice <code class="docutils literal notranslate"><span class="pre">np.ones()</span></code> permet de créer une matrice avec des <code class="docutils literal notranslate"><span class="pre">1</span></code>.
-Nous l’utilisons pour créer un <strong>smiley</strong> minimaliste.</p>
+<p>Nous l’utilisons pour créer un <strong>smiley</strong> en noir sur fond blanc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
 <span class="n">img</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">img</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">img</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_16_0.png" src="../_images/image_16_0.png" />
+<img alt="../_images/image_23_01.png" src="../_images/image_23_01.png" />
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Ajoutez le deuxième oeuil qui manque.</p>
 </div>
 <div class="section" id="affichage-matricielle">
 <h2>Affichage matricielle<a class="headerlink" href="#affichage-matricielle" title="Lien permanent vers ce titre">¶</a></h2>
@@ -707,7 +777,7 @@ Nous l’utilisons pour créer un <strong>smiley</strong> minimaliste.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_18_01.png" src="../_images/image_18_01.png" />
+<img alt="../_images/image_26_01.png" src="../_images/image_26_01.png" />
 </div>
 </div>
 <p>La dimension de la lettre est bien 6 x 5.</p>
@@ -723,6 +793,11 @@ Nous l’utilisons pour créer un <strong>smiley</strong> minimaliste.</p>
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+A partir d’une copie du code ci-dessus, définissez une image <code class="docutils literal notranslate"><span class="pre">F</span></code> qui représente la lettre F.</p>
+</div>
+<div class="section" id="definir-une-lettre">
+<h2>Définir une lettre<a class="headerlink" href="#definir-une-lettre" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici encore la lettre L</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -738,12 +813,14 @@ Nous l’utilisons pour créer un <strong>smiley</strong> minimaliste.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_22_0.png" src="../_images/image_22_0.png" />
+<img alt="../_images/image_31_0.png" src="../_images/image_31_0.png" />
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+A partir d’une copie du code ci-dessus, définissez une image <code class="docutils literal notranslate"><span class="pre">O</span></code> qui représente la lettre O.</p>
 </div>
-<div class="section" id="creation-de-texte">
-<h2>Création de texte<a class="headerlink" href="#creation-de-texte" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="juxtaposer-des-images">
+<h2>Juxtaposer des images<a class="headerlink" href="#juxtaposer-des-images" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un ordinateur affiche un texte en juxtaposant les pixels d’une lettre.</p>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">np.hstack()</span></code> (=horizontal stack) permet d’empiler des images horizontalement.</p>
 <div class="cell docutils container">
@@ -754,9 +831,14 @@ Nous l’utilisons pour créer un <strong>smiley</strong> minimaliste.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_24_0.png" src="../_images/image_24_0.png" />
+<img alt="../_images/image_34_01.png" src="../_images/image_34_01.png" />
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Avec les lettres que vous avez définits, écrivez le mot <code class="docutils literal notranslate"><span class="pre">FOLLE</span></code>.</p>
+</div>
+<div class="section" id="empiler-des-images">
+<h2>Empiler des images<a class="headerlink" href="#empiler-des-images" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">np.vstack()</span></code> permet d’empiler des images verticalement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -766,8 +848,15 @@ Nous l’utilisons pour créer un <strong>smiley</strong> minimaliste.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_26_01.png" src="../_images/image_26_01.png" />
+<img alt="../_images/image_37_0.png" src="../_images/image_37_0.png" />
 </div>
+</div>
+<p><strong>Exercice</strong><br />
+Définissez les lettres manquantes pour écrire</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>BELLE
+FILLE
+FOLLE
+</pre></div>
 </div>
 </div>
 <div class="section" id="lignes">
@@ -790,9 +879,11 @@ Nous l’utilisons pour créer un <strong>smiley</strong> minimaliste.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_28_01.png" src="../_images/image_28_01.png" />
+<img alt="../_images/image_40_0.png" src="../_images/image_40_0.png" />
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Créez une image avec 3 lignes horizontales noires.</p>
 </div>
 <div class="section" id="colonnes">
 <h2>Colonnes<a class="headerlink" href="#colonnes" title="Lien permanent vers ce titre">¶</a></h2>
@@ -807,24 +898,42 @@ Nous l’utilisons pour créer un <strong>smiley</strong> minimaliste.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_30_01.png" src="../_images/image_30_01.png" />
+<img alt="../_images/image_43_0.png" src="../_images/image_43_0.png" />
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Créez une image de 5x7 pixels avec une croix passant par le centre.</p>
 </div>
 <div class="section" id="pixels-aleatoires">
 <h2>Pixels aléatoires<a class="headerlink" href="#pixels-aleatoires" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">np.random.randint(2)</span></code> crée des valeurs aléatoires entre 0 et 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_32_01.png" src="../_images/image_32_01.png" />
+<img alt="../_images/image_46_0.png" src="../_images/image_46_0.png" />
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Créez une image de 5x10 pixels avec 3 niveaux de gris aléatoires.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/image_48_0.png" src="../_images/image_48_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="niveaux-de-gris">
+<h2>Niveaux de gris<a class="headerlink" href="#niveaux-de-gris" title="Lien permanent vers ce titre">¶</a></h2>
 <p>De plus nous pourrions choisir des valeurs aléatoires sur un spectre de gris avec 256 valeurs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -835,13 +944,20 @@ Nous l’utilisons pour créer un <strong>smiley</strong> minimaliste.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_34_01.png" src="../_images/image_34_01.png" />
+<img alt="../_images/image_50_0.png" src="../_images/image_50_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="image-monochrome">
 <h2>Image monochrome<a class="headerlink" href="#image-monochrome" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les images se trouvent dans un sous-dossier <strong>img</strong></p>
+<p>Une image monochrome est composé de pixels en niveaux de gris variants.</p>
+<p><img alt="" src="../_images/house.jpg" /></p>
+<p><strong>Exercice</strong><br />
+Tirez l’image de la maison ci-dessus vers le navigateur de Jupyter Lab.</p>
+</div>
+<div class="section" id="lire-une-image">
+<h2>Lire une image<a class="headerlink" href="#lire-une-image" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">imread</span></code> permet de lire une image à partir d’une image stockée dans un fichier.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">img</span>
@@ -869,13 +985,19 @@ house.jpg        lcd_display.jpg  unaire.png
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_39_0.png" src="../_images/image_39_0.png" />
+<img alt="../_images/image_55_0.png" src="../_images/image_55_0.png" />
 </div>
 </div>
-<p>Voici les 10 premiers pixels.</p>
+<p><strong>Exercice</strong><br />
+Utilisez la fonction <code class="docutils literal notranslate"><span class="pre">imread</span></code> pour lire une image dans le dossier actuel.<br />
+Quel est le format de cette image, et quel est le nombre total des pixels?</p>
+</div>
+<div class="section" id="la-valeur-d-un-pixel">
+<h2>La valeur d’un pixel<a class="headerlink" href="#la-valeur-d-un-pixel" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici les 9 premiers pixels de la première ligne toute en haut.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:</span><span class="mi">8</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -887,27 +1009,42 @@ house.jpg        lcd_display.jpg  unaire.png
        [232, 232, 232],
        [170, 170, 170],
        [ 78,  78,  78],
-       [ 38,  38,  38],
-       [ 46,  46,  46],
-       [113, 113, 113]], dtype=uint8)
+       [ 38,  38,  38]], dtype=uint8)
 </pre></div>
 </div>
 </div>
 </div>
-<p>pour accéder à un pixel</p>
+<p>Voici ces 9 pixels affichés comme image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="p">:</span><span class="mi">8</span><span class="p">]);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[72 72 72]
+<img alt="../_images/image_60_0.png" src="../_images/image_60_0.png" />
+</div>
+</div>
+<p>Voici la valeur numérique du 3e pixel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[158 158 158]
 </pre></div>
 </div>
 </div>
 </div>
-<p>Nous povons extraire un sous-ensemble de pixels 20 x 30.</p>
+<p><strong>Exercice</strong><br />
+Quel est la valeur numérique du pixel à la position (100, 100).<br />
+Ce pixel est-il plutôt noir ou blanc ?</p>
+</div>
+<div class="section" id="afficher-une-sous-region">
+<h2>Afficher une sous-région<a class="headerlink" href="#afficher-une-sous-region" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous pouvons extraire un sous-ensemble de pixels de taille 20 x 30 en utilisant l’opérateur de tranche <code class="docutils literal notranslate"><span class="pre">[m:n]</span></code> pour l’indice.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">40</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span><span class="mi">50</span><span class="p">]);</span>
@@ -915,9 +1052,11 @@ house.jpg        lcd_display.jpg  unaire.png
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/image_45_0.png" src="../_images/image_45_0.png" />
+<img alt="../_images/image_65_0.png" src="../_images/image_65_0.png" />
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Trouez la sous-région qui contient la fenêtre à gauche et affichez-la.</p>
 </div>
 </div>
 
