@@ -48,6 +48,7 @@
       - file: plot/pie
       - file: plot/text
       - file: plot/gif/gif
+      - file: python/le/7/mri
         
   - file: rep/index
     sections:
