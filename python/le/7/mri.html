@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Imagerie médicale &#8212; Education numérique</title>
     
-  <link rel="stylesheet" href="../../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -53,8 +53,6 @@
     <script src="../../../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -302,6 +300,11 @@
      Imagerie médicale
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="#classification">
+     Classification
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -502,40 +505,54 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#importer-une-image">
-   Importer une image
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Imagerie médicale
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importer-une-image">
+     Importer une image
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#afficher-une-image">
+     Afficher une image
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coder-l-image-en-niveaux-de-gris">
+     Coder l’image en niveaux de gris
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colormap">
+     Colormap
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#barre-de-couleurs">
+     Barre de couleurs
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#histogramme-d-une-image">
+     Histogramme d’une image
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#afficher-une-image">
-   Afficher une image
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classification">
+   Classification
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coder-l-image-en-niveaux-de-gris">
-   Coder l’image en niveaux de gris
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#colormap">
-   Colormap
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#barre-de-couleurs">
-   Barre de couleurs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#histogramme-d-une-image">
-   Histogramme d’une image
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#appliquer-un-masque-a-l-image">
-   Appliquer un masque à l’image
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#appliquer-un-masque-a-l-image">
+     Appliquer un masque à l’image
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -570,14 +587,15 @@ L’objectif est de séparer les trois classes:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Histog_IRM.png   brain.jpg        mask.png
-Untitled.ipynb   brain2.jpg       mri.ipynb
-Untitled1.ipynb  mask.bmp         tumor.png
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Histog_IRM.png   Untitled2.ipynb  imagerie.ipynb   mri.ipynb
+Untitled.ipynb   brain.jpg        mask.bmp         tumor.png
+Untitled1.ipynb  brain2.jpg       mask.png
 </pre></div>
 </div>
 </div>
 </div>
-<p>Nous voyons plusiers fichiers en forme image avec les extensions</p>
+<p>Les fichiers avec l’extension <code class="docutils literal notranslate"><span class="pre">.ipyjnb</span></code> correspondent aux fichiers iPython Notebook.
+Nous voyons plusieurs fichiers en format images avec les extensions</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.png</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.jpg</span></code></p></li>
@@ -588,7 +606,7 @@ Untitled1.ipynb  mask.bmp         tumor.png
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.image</span> <span class="k">import</span> <span class="n">imread</span>
+<span class="kn">from</span> <span class="nn">matplotlib.image</span> <span class="kn">import</span> <span class="n">imread</span>
 </pre></div>
 </div>
 </div>
@@ -671,6 +689,11 @@ Vérifions que l’image <code class="docutils literal notranslate"><span class=
 </div>
 <p><strong>Exercice</strong><br />
 Transformez les matrices <code class="docutils literal notranslate"><span class="pre">tumor</span></code> et <code class="docutils literal notranslate"><span class="pre">brain2</span></code> en image avec 1 seul canal.  Affichez leur dimension avec <code class="docutils literal notranslate"><span class="pre">shape</span></code>.</p>
+<p>On remarque que:</p>
+<ul class="simple">
+<li><p>certains fichiers sont codés sur 3 canaux, et certains sur 4 canaux.</p></li>
+<li><p>certains fichiers sont quantifiés avec des valeurs entre 0 et 1 (Tumeur) et d’autres entre 0 et 255.</p></li>
+</ul>
 </div>
 <div class="section" id="colormap">
 <h2>Colormap<a class="headerlink" href="#colormap" title="Lien permanent vers ce titre">¶</a></h2>
@@ -721,6 +744,8 @@ Affichez les matrices <code class="docutils literal notranslate"><span class="pr
 <img alt="../../../_images/mri_27_0.png" src="../../../_images/mri_27_0.png" />
 </div>
 </div>
+<p><strong>Exercice</strong></p>
+<p>Donnez la valeur du pixel de coordonnées (100, 100) avec la commande <code class="docutils literal notranslate"><span class="pre">brain[100,</span> <span class="pre">100]</span></code></p>
 </div>
 <div class="section" id="histogramme-d-une-image">
 <h2>Histogramme d’une image<a class="headerlink" href="#histogramme-d-une-image" title="Lien permanent vers ce titre">¶</a></h2>
@@ -731,63 +756,56 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 <p>Observons l’histogramme de l’image <code class="docutils literal notranslate"><span class="pre">brain</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">hist</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">brain</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">256</span><span class="p">));</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">brain</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_32_0.png" src="../../../_images/mri_32_0.png" />
+<img alt="../../../_images/mri_35_0.png" src="../../../_images/mri_35_0.png" />
 </div>
 </div>
-<p>On rapelle que les trois tissus sont notés par :</p>
+<p><strong>Exercice</strong></p>
+<p>Refaites l’histogramme en faisant varier:</p>
+<ul class="simple">
+<li><p>le nombre de bins (80, 50, 25 par exemple)</p></li>
+<li><p>le range ((5, 200) ou (25,200) par exemple)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="classification">
+<h1>Classification<a class="headerlink" href="#classification" title="Lien permanent vers ce titre">¶</a></h1>
+<p>On s’intéresse principalement à extraire les 2 tissus :</p>
 <ul class="simple">
 <li><p>gm (gray matter)</p></li>
 <li><p>wm (white matter)</p></li>
-<li><p>csf (cerebrospinal fluid)</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span> <span class="o">=</span> <span class="n">brain</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mi">0</span>
-<span class="n">wm</span> <span class="o">=</span> <span class="n">brain</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mi">0</span> 
-<span class="n">csf</span> <span class="o">=</span> <span class="n">brain</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">brain</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">brain</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">brain</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
-        <span class="k">if</span> <span class="mi">15</span> <span class="o">&lt;=</span> <span class="n">brain</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">:</span>
-            <span class="n">csf</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">elif</span> <span class="mi">70</span> <span class="o">&lt;=</span> <span class="n">brain</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">150</span><span class="p">:</span>
+<span class="n">seuil1</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">seuil2</span> <span class="o">=</span> <span class="mi">150</span>
+
+<span class="n">gm</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mi">0</span>
+<span class="n">wm</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mi">0</span> 
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="n">seuil1</span> <span class="o">&lt;=</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">seuil2</span><span class="p">:</span>
             <span class="n">gm</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">elif</span> <span class="mi">150</span> <span class="o">&lt;=</span> <span class="n">brain</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">255</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">seuil2</span> <span class="o">&lt;=</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">255</span><span class="p">:</span>
             <span class="n">wm</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Affichez chacune des classes (tissus)  dans une image; On peut changer les <code class="docutils literal notranslate"><span class="pre">cmap</span></code> (gray, jet, hsv,Pastel1…)</p>
+<p>Affichons les 2 tissus dans une même image; puis chacun des tissus cérébraux avec la commande  hstack</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(202, 165)
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Exercice</strong></p>
-<p>Modifiez le code ci-dessus en le mettant dans une fonction<br />
-<code class="docutils literal notranslate"><span class="pre">classification(img,</span> <span class="pre">seuil1,</span> <span class="pre">seuil2,</span> <span class="pre">seuil3)</span></code></p>
-<p>Vérifiez la fonction en l’appelant avec:<code class="docutils literal notranslate"><span class="pre">gm,</span> <span class="pre">wm,</span> <span class="pre">csf</span> <span class="pre">=classification(brain2,</span> <span class="pre">17,50,150)</span></code></p>
-<p><strong>Remarque</strong><br />
-La fonction retournera les 3 tissus gm, wm et csf avec l’instruction <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">gm,wm,csf</span></code></p>
-<p>Affichez chacune des classes (tissus)  dans une image; On peut changer les cmap (gray, jet, hsv,Pastel1…)</p>
-<p>Affichons les 3 tissus dans une même image; puis chacun des tissus cérébraux avec la commande  hstack</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span> <span class="o">*</span> <span class="mi">3</span>
-<span class="n">wm</span> <span class="o">=</span> <span class="n">wm</span> <span class="o">*</span> <span class="mi">2</span>
-<span class="n">segmentation</span> <span class="o">=</span> <span class="n">gm</span><span class="o">+</span><span class="n">csf</span><span class="o">+</span><span class="n">wm</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="n">wm</span> <span class="o">=</span> <span class="n">wm</span> <span class="o">*</span> <span class="mi">1</span>
+<span class="n">segmentation</span> <span class="o">=</span> <span class="n">gm</span><span class="o">+</span><span class="n">wm</span>
 </pre></div>
 </div>
 </div>
@@ -802,25 +820,27 @@ La fonction retournera les 3 tissus gm, wm et csf avec l’instruction <code cla
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_41_0.png" src="../../../_images/mri_41_0.png" />
+<img alt="../../../_images/mri_44_0.png" src="../../../_images/mri_44_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">All</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">gm</span><span class="p">,</span> <span class="n">wm</span><span class="p">,</span> <span class="n">csf</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">All</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">gm</span><span class="p">,</span> <span class="n">wm</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">All</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;hot&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_42_0.png" src="../../../_images/mri_42_0.png" />
+<img alt="../../../_images/mri_45_0.png" src="../../../_images/mri_45_0.png" />
 </div>
 </div>
-</div>
+<p><strong>Exercice</strong></p>
+<p>Affichez l’histogramme de <code class="docutils literal notranslate"><span class="pre">tumor</span></code>, cherchez les nouveaux seuils de classification.</p>
+<p>En modifiant le code de classification, extraire la matière blanche et grise de <code class="docutils literal notranslate"><span class="pre">tumor</span></code> et affichez-les.</p>
 <div class="section" id="appliquer-un-masque-a-l-image">
 <h2>Appliquer un masque à l’image<a class="headerlink" href="#appliquer-un-masque-a-l-image" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’image brain2 contient le crâne et les tissus cérébraux: pour faire la classification enlevons le crâne avec un mask binaire.</p>
-<p>L’image mask.jpg contient le masque à appliquer pour extraire seulement le cerveau sans le crâne.</p>
+<p>L’image <em>brain2</em> contient le crâne et les tissus cérébraux: pour faire la classification enlevons le crâne avec un mask binaire.</p>
+<p>L’image <em>mask.jpg</em> contient le masque à appliquer pour extraire seulement le cerveau sans le crâne.</p>
 <p>Importons l’image <em>mask.jpg</em> et mettons la dans une variable <code class="docutils literal notranslate"><span class="pre">mask</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -850,7 +870,7 @@ La fonction retournera les 3 tissus gm, wm et csf avec l’instruction <code cla
 </div>
 </div>
 <p><strong>Exercice</strong></p>
-<p>Affichez les deux images <code class="docutils literal notranslate"><span class="pre">brain2</span></code> et <code class="docutils literal notranslate"><span class="pre">mask</span></code> avec la fonction hstack et imshow</p>
+<p>Affichez les deux images <code class="docutils literal notranslate"><span class="pre">brain2</span></code> et <code class="docutils literal notranslate"><span class="pre">mask</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">hstack</span></code> et <code class="docutils literal notranslate"><span class="pre">imshow</span></code></p>
 <p>Affichez les dimensions de <code class="docutils literal notranslate"><span class="pre">brain2</span></code> et <code class="docutils literal notranslate"><span class="pre">mask</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">shape</span></code> et vérifiez qu’elles sont identiques</p>
 <p>Changeons <code class="docutils literal notranslate"><span class="pre">mask</span></code> avec les valeurs 0 et 1 pour pouvoir l’appliquer sur <code class="docutils literal notranslate"><span class="pre">brain2</span></code> avec une simple multiplication</p>
 <div class="cell docutils container">
@@ -874,9 +894,9 @@ La fonction retournera les 3 tissus gm, wm et csf avec l’instruction <code cla
 </div>
 </div>
 <p><strong>Exercice</strong></p>
-<p>Pour appliquer le mask et extraire le cerveau, créez une variable <code class="docutils literal notranslate"><span class="pre">brain_only</span></code> qui contient la multiplication des deux variables <code class="docutils literal notranslate"><span class="pre">mask</span></code> et <code class="docutils literal notranslate"><span class="pre">brain2</span></code>.</p>
+<p>Pour appliquer le masque et extraire le cerveau, créez une variable <code class="docutils literal notranslate"><span class="pre">brain_only</span></code> qui contient la multiplication des deux variables <code class="docutils literal notranslate"><span class="pre">mask</span></code> et <code class="docutils literal notranslate"><span class="pre">brain2</span></code>.</p>
 <p>Affichez <code class="docutils literal notranslate"><span class="pre">brain_only</span></code></p>
-<p>Affichon l’histogramme de cette image.</p>
+<p>Affichons l’histogramme de cette image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">brain_only</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">256</span><span class="p">));</span>
@@ -884,27 +904,27 @@ La fonction retournera les 3 tissus gm, wm et csf avec l’instruction <code cla
 </div>
 </div>
 </div>
-<p><strong>Exercice</strong>
-Choisir les nouveaux seuils dans l’histogramme pour extraire les 3 tissus avec la fonction <code class="docutils literal notranslate"><span class="pre">classification</span></code>. Puis affichez chacune des classes.</p>
+<p><strong>Exercice</strong></p>
+<p>Choisir les nouveaux seuils dans l’histogramme pour extraire les 2 tissus avec le code <code class="docutils literal notranslate"><span class="pre">classification</span></code>. Puis affichez chacune des classes.</p>
 <p>Les Ratios de chacun tissus par rapport au volume entier du cerveau sont des marqueurs permettent d’analyser les images IRM pour détécter certaines anomalies telles que la dégénérescence cérébrale.</p>
 <p>Calculons le ratio de matière grise.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nombre_gm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">gm</span><span class="p">)</span>
-<span class="n">surf_total</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">gm</span> <span class="o">+</span> <span class="n">wm</span> <span class="o">+</span> <span class="n">csf</span><span class="p">)</span>
+<span class="n">surf_total</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">gm</span> <span class="o">+</span> <span class="n">wm</span><span class="p">)</span>
 <span class="n">ratio_gm</span> <span class="o">=</span> <span class="n">nombre_gm</span> <span class="o">/</span> <span class="n">surf_total</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ratio_gm</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4199632014719411
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7304045029574509
 </pre></div>
 </div>
 </div>
 </div>
 <p><strong>Exercice</strong>
-Calculez les ratios de matière blanche et de csf.</p>
+Calculez le ratio de matière blanche.</p>
 </div>
 </div>
 
@@ -967,7 +987,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
     </div>
 
     
-  <script src="../../../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     
