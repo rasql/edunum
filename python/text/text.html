@@ -1,0 +1,2133 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jouer avec des mots &#8212; Education numérique</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/questions.js"></script>
+    <script src="../../_static/blanks.js"></script>
+    <script src="../../_static/reactions.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="Algorithmique" href="../../algo/algo.html" />
+    <link rel="prev" title="Rappels" href="../le/2/Seance8/Rappels.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Education numérique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../widget.html">
+   Widgets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unix.html">
+   Unix
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../fonc_natifs.html">
+   Fonctions natives
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../plot/index.html">
+   Visualiser
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/figure.html">
+     Figure et axes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/text.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/polar.html">
+     Graphe polaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/plot.html">
+     Graphe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/hist.html">
+     Histogramme
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/pie.html">
+     Diagramme en secteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/numpy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/bar.html">
+     Diagramme à barres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/format.html">
+     Format
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../plot/gif/animate_decay.html">
+     Decay
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../plot/gif/gif.html">
+       GIF animé
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../turtle/turtle.html">
+   Dessiner avec la tortue
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../jeu/index.html">
+   Jouer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeu/ppc.html">
+     Pierre-papier-ciseaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeu/japon.html">
+     Culture du Japon
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeu/texte.html">
+     Composer des textes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../index.html">
+   Programmer
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_calc.html">
+     Calcul numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_loop.html">
+     Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fonction.html">
+     Fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_struct.html">
+     L’instruction conditionnelle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_intro.html">
+     Introduction à Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_list.html">
+     Listes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ex2.html">
+     Exercices if-else
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_text.html">
+     Texte (string)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../quiz.html">
+     Quiz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ex1.html">
+     Exercices Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../le/Rappels.html">
+     Rappels
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../le/7/imagerie.html">
+       Imagerie médicale
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../le/7/mri.html">
+       Imagerie médicale
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../le/7/mri.html#classification">
+       Classification
+      </a>
+     </li>
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="../le/4/Seance10.html">
+       Séance 10:
+      </a>
+      <ul class="collapse-ul">
+       <li class="toctree-l4">
+        <a class="reference internal" href="../le/4/Old/Untitled.html">
+         Séance 8
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../le/4/Old/Untitled.html#demande-a-l-utilisateur-un-nombre-entre-1-et-10">
+         1. Demande à l’utilisateur un nombre entre 1 et 10
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../le/4/Old/Untitled.html#verifie-que-ce-nombre-est-compris-entre-1-et-10">
+         2. Verifie que ce nombre est compris entre 1 et 10.
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../le/4/Old/Untitled.html#affiche-le-livret-de-ce-nombre-table-de-multiplication">
+         3. Affiche le livret de ce nombre (table de multiplication)
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../le/4/Old/fonctions.html">
+         Fonctions
+        </a>
+       </li>
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="../le/3/S%C3%A9ance9.html">
+       Séance 9:
+      </a>
+      <ul class="simple collapse-ul">
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="../le/2/exemple.html">
+       Rappels
+      </a>
+      <ul class="collapse-ul">
+       <li class="toctree-l4">
+        <a class="reference internal" href="../le/2/S%C3%A9ance8.html">
+         Séance 8
+        </a>
+       </li>
+       <li class="toctree-l4 collapsible-parent">
+        <a class="reference internal" href="../le/2/old/Untitled.html">
+         Cours 9: Python 3
+        </a>
+        <ul class="collapse-ul">
+         <li class="toctree-l5">
+          <a class="reference internal" href="../le/2/old/seance8.html">
+           Séance 8
+          </a>
+         </li>
+         <li class="toctree-l5">
+          <a class="reference internal" href="../le/2/old/seance8old.html">
+           Séance 8
+          </a>
+         </li>
+        </ul>
+        <i class="fas fa-chevron-down">
+        </i>
+       </li>
+       <li class="toctree-l4 collapsible-parent">
+        <a class="reference internal" href="../le/2/Seance8/S%C3%A9ance8.html">
+         Séance 8
+        </a>
+        <ul class="collapse-ul">
+         <li class="toctree-l5">
+          <a class="reference internal" href="../le/2/Seance8/Rappels.html">
+           Rappels
+          </a>
+         </li>
+        </ul>
+        <i class="fas fa-chevron-down">
+        </i>
+       </li>
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Jouer avec des mots
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../algo/algo.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../start/index.html">
+   Démarrer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/markdown.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/rappel.html">
+     Rappel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/why.html">
+     Á quoi ça sert?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/thonny/thonny.html">
+     Thonny
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../prog/prog1.html">
+   Programmation
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../rep/index.html">
+   Encoder
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/morse.html">
+     Code Morse
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/son.html">
+     Son
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/bin/bin.html">
+     Système binaire
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../nlp/Untitled.html">
+   Processing Raw Text
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/python/text/text.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fpython/text/text.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/python/text/text.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/python/text/text.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rasql/edunum/blob/main/doc/python/text/text.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="lancement Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acceder-a-des-mots">
+   Accéder à des mots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acceder-a-des-tranches">
+   Accéder à des tranches
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trouver-des-mots">
+   Trouver des mots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scrabble">
+   Scrabble
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#francais">
+   Français
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="jouer-avec-des-mots">
+<h1>Jouer avec des mots<a class="headerlink" href="#jouer-avec-des-mots" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Le fichier <code class="docutils literal notranslate"><span class="pre">scrabble.txt</span></code> continent plus que 200 000 mots en anglais, permis pour scrabble.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;scrabble.txt&#39;</span><span class="p">)</span>
+<span class="n">mots</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">mots</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">mots</span> <span class="o">=</span> <span class="n">mots</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">mots</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>279496
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="acceder-a-des-mots">
+<h2>Accéder à des mots<a class="headerlink" href="#acceder-a-des-mots" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Afficher le dernier mot</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mots</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;AA&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Et voici le mot avec l’index 10 (qui est effectivement le 11e mot).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mots</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;AARDVARKS&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Et voici le dernier mot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mots</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;ZZZS&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="acceder-a-des-tranches">
+<h2>Accéder à des tranches<a class="headerlink" href="#acceder-a-des-tranches" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les dix premiers mots</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mots</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;AA&#39;,
+ &#39;AAH&#39;,
+ &#39;AAHED&#39;,
+ &#39;AAHING&#39;,
+ &#39;AAHS&#39;,
+ &#39;AAL&#39;,
+ &#39;AALII&#39;,
+ &#39;AALIIS&#39;,
+ &#39;AALS&#39;,
+ &#39;AARDVARK&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Les mots avec l’indice 1000 à 1009</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mots</span><span class="p">[</span><span class="mi">1000</span><span class="p">:</span><span class="mi">1010</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ACAUDAL&#39;,
+ &#39;ACAUDATE&#39;,
+ &#39;ACAULESCENT&#39;,
+ &#39;ACAULINE&#39;,
+ &#39;ACAULOSE&#39;,
+ &#39;ACAULOUS&#39;,
+ &#39;ACCA&#39;,
+ &#39;ACCABLE&#39;,
+ &#39;ACCAS&#39;,
+ &#39;ACCEDE&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Les 10 derniers mots.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mots</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ZYMOTICALLY&#39;,
+ &#39;ZYMOTICS&#39;,
+ &#39;ZYMURGIES&#39;,
+ &#39;ZYMURGY&#39;,
+ &#39;ZYTHUM&#39;,
+ &#39;ZYTHUMS&#39;,
+ &#39;ZYZZYVA&#39;,
+ &#39;ZYZZYVAS&#39;,
+ &#39;ZZZ&#39;,
+ &#39;ZZZS&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="trouver-des-mots">
+<h2>Trouver des mots<a class="headerlink" href="#trouver-des-mots" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Trouve les mots qui contiennent la lettre <strong>Q</strong> et se terminent par X</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">mot</span> <span class="ow">in</span> <span class="n">mots</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">&#39;Q&#39;</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">mot</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;X&#39;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>EQUINOX
+QUADPLEX
+QUADRATRIX
+QUADRUPLEX
+QUINCUNX
+</pre></div>
+</div>
+</div>
+</div>
+<p>Trouve les mots qui contiennent la lettre <strong>Q</strong> et dont la 2e lettre est <strong>Y</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">mot</span> <span class="ow">in</span> <span class="n">mots</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">&#39;Q&#39;</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">mot</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CYBERSQUATTER
+CYBERSQUATTERS
+CYBERSQUATTING
+CYBERSQUATTINGS
+GYROFREQUENCIES
+GYROFREQUENCY
+HYDROQUINOL
+HYDROQUINOLS
+HYDROQUINONE
+HYDROQUINONES
+MYSTIQUE
+MYSTIQUES
+SYMPATHIQUE
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="scrabble">
+<h2>Scrabble<a class="headerlink" href="#scrabble" title="Lien permanent vers ce titre">¶</a></h2>
+<p>https://allen-downey.developpez.com/livres/python/pensez-python/</p>
+<p>Liste des mots: http://jph.durand.free.fr/scrabble.txt</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;scrabble_fr.txt&#39;</span><span class="p">)</span>
+<span class="n">mots</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">mots</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">mots</span> <span class="o">=</span> <span class="n">mots</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">mots</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>130557
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="francais">
+<h2>Français<a class="headerlink" href="#francais" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il y a 102 jetons. Les diacritiques ne sont pas pris en compte</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">points</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;EAINORSTUL&#39;</span><span class="p">:</span>
+    <span class="n">points</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;DMG&#39;</span><span class="p">:</span>
+    <span class="n">points</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;BCP&#39;</span><span class="p">:</span>
+    <span class="n">points</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;FHV&#39;</span><span class="p">:</span>
+    <span class="n">points</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;JQ&#39;</span><span class="p">:</span>
+    <span class="n">points</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;KWXYZ&#39;</span><span class="p">:</span>
+    <span class="n">points</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+    
+<span class="n">points</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;E&#39;: 1,
+ &#39;A&#39;: 1,
+ &#39;I&#39;: 1,
+ &#39;N&#39;: 1,
+ &#39;O&#39;: 1,
+ &#39;R&#39;: 1,
+ &#39;S&#39;: 1,
+ &#39;T&#39;: 1,
+ &#39;U&#39;: 1,
+ &#39;L&#39;: 1,
+ &#39;D&#39;: 2,
+ &#39;M&#39;: 2,
+ &#39;G&#39;: 2,
+ &#39;B&#39;: 3,
+ &#39;C&#39;: 3,
+ &#39;P&#39;: 3,
+ &#39;F&#39;: 4,
+ &#39;H&#39;: 4,
+ &#39;V&#39;: 4,
+ &#39;J&#39;: 8,
+ &#39;Q&#39;: 8,
+ &#39;K&#39;: 10,
+ &#39;W&#39;: 10,
+ &#39;X&#39;: 10,
+ &#39;Y&#39;: 10,
+ &#39;Z&#39;: 10}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+        <span class="n">val</span> <span class="o">+=</span> <span class="n">points</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">val</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;QUARK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;DIGRAPHE&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;E&#39;</span><span class="o">*</span><span class="mi">15</span> <span class="o">+</span> <span class="s1">&#39;A&#39;</span><span class="o">*</span><span class="mi">9</span> <span class="o">+</span> <span class="s1">&#39;I&#39;</span><span class="o">*</span><span class="mi">8</span> <span class="o">+</span> <span class="s1">&#39;NORSTU&#39;</span><span class="o">*</span><span class="mi">6</span> <span class="o">+</span> <span class="s1">&#39;L&#39;</span><span class="o">*</span><span class="mi">5</span> <span class="o">+</span> <span class="s1">&#39;DM&#39;</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="s1">&#39;GBCPFHV&#39;</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="s1">&#39;JQKWXYZ&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;EEEEEEEEEEEEEEEAAAAAAAAAIIIIIIIINORSTUNORSTUNORSTUNORSTUNORSTUNORSTULLLLLDMDMDMGBCPFHVGBCPFHVJQKWXYZ&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">letters</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFG&#39;</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">mots</span><span class="p">)</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">value</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;FAXES&#39;, 17)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">value</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;FAXES&#39;, 17)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;bug&#39;</span>
+
+<span class="s1">&#39;ba&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abd&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">letters</span> <span class="o">=</span> <span class="s1">&#39;GRACE&#39;</span>
+<span class="k">for</span> <span class="n">mot</span> <span class="ow">in</span> <span class="n">mots</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">mot</span> <span class="ow">in</span> <span class="n">letters</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CE
+RA
+ACE
+RAC
+RACE
+GRACE
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mots</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;AA&#39;,
+ &#39;AH&#39;,
+ &#39;AI&#39;,
+ &#39;AN&#39;,
+ &#39;AS&#39;,
+ &#39;AU&#39;,
+ &#39;AY&#39;,
+ &#39;BI&#39;,
+ &#39;BU&#39;,
+ &#39;CA&#39;,
+ &#39;CE&#39;,
+ &#39;CI&#39;,
+ &#39;DA&#39;,
+ &#39;DE&#39;,
+ &#39;DO&#39;,
+ &#39;DU&#39;,
+ &#39;EH&#39;,
+ &#39;EN&#39;,
+ &#39;ES&#39;,
+ &#39;ET&#39;,
+ &#39;EU&#39;,
+ &#39;EX&#39;,
+ &#39;FA&#39;,
+ &#39;FI&#39;,
+ &#39;GO&#39;,
+ &#39;HA&#39;,
+ &#39;HE&#39;,
+ &#39;HI&#39;,
+ &#39;HO&#39;,
+ &#39;IF&#39;,
+ &#39;IL&#39;,
+ &#39;IN&#39;,
+ &#39;JE&#39;,
+ &#39;KA&#39;,
+ &#39;LA&#39;,
+ &#39;LE&#39;,
+ &#39;LI&#39;,
+ &#39;LU&#39;,
+ &#39;MA&#39;,
+ &#39;ME&#39;,
+ &#39;MI&#39;,
+ &#39;MU&#39;,
+ &#39;NA&#39;,
+ &#39;NE&#39;,
+ &#39;NI&#39;,
+ &#39;NO&#39;,
+ &#39;NU&#39;,
+ &#39;OC&#39;,
+ &#39;OH&#39;,
+ &#39;ON&#39;,
+ &#39;OR&#39;,
+ &#39;OS&#39;,
+ &#39;OU&#39;,
+ &#39;PI&#39;,
+ &#39;PU&#39;,
+ &#39;RA&#39;,
+ &#39;RE&#39;,
+ &#39;RI&#39;,
+ &#39;RU&#39;,
+ &#39;SA&#39;,
+ &#39;SE&#39;,
+ &#39;SI&#39;,
+ &#39;SU&#39;,
+ &#39;TA&#39;,
+ &#39;TE&#39;,
+ &#39;TU&#39;,
+ &#39;UN&#39;,
+ &#39;US&#39;,
+ &#39;UT&#39;,
+ &#39;VA&#39;,
+ &#39;VE&#39;,
+ &#39;VS&#39;,
+ &#39;VU&#39;,
+ &#39;WU&#39;,
+ &#39;XI&#39;,
+ &#39;AAS&#39;,
+ &#39;ACE&#39;,
+ &#39;ADA&#39;,
+ &#39;ADO&#39;,
+ &#39;AGA&#39;,
+ &#39;AGE&#39;,
+ &#39;AGI&#39;,
+ &#39;AIE&#39;,
+ &#39;AIL&#39;,
+ &#39;AIR&#39;,
+ &#39;AIS&#39;,
+ &#39;AIT&#39;,
+ &#39;ALE&#39;,
+ &#39;ALU&#39;,
+ &#39;AME&#39;,
+ &#39;AMI&#39;,
+ &#39;ANA&#39;,
+ &#39;AND&#39;,
+ &#39;ANE&#39;,
+ &#39;ANS&#39;,
+ &#39;API&#39;,
+ &#39;ARA&#39;,
+ &#39;ARC&#39;,
+ &#39;ARE&#39;,
+ &#39;ARS&#39;,
+ &#39;ART&#39;,
+ &#39;ASA&#39;,
+ &#39;ASE&#39;,
+ &#39;AUX&#39;,
+ &#39;AVE&#39;,
+ &#39;AXA&#39;,
+ &#39;AXE&#39;,
+ &#39;AYS&#39;,
+ &#39;BAC&#39;,
+ &#39;BAH&#39;,
+ &#39;BAI&#39;,
+ &#39;BAL&#39;,
+ &#39;BAN&#39;,
+ &#39;BAR&#39;,
+ &#39;BAS&#39;,
+ &#39;BAT&#39;,
+ &#39;BAU&#39;,
+ &#39;BEA&#39;,
+ &#39;BEC&#39;,
+ &#39;BEE&#39;,
+ &#39;BEL&#39;,
+ &#39;BEN&#39;,
+ &#39;BER&#39;,
+ &#39;BEY&#39;,
+ &#39;BIC&#39;,
+ &#39;BIO&#39;,
+ &#39;BIP&#39;,
+ &#39;BIS&#39;,
+ &#39;BIT&#39;,
+ &#39;BLE&#39;,
+ &#39;BOA&#39;,
+ &#39;BOB&#39;,
+ &#39;BOF&#39;,
+ &#39;BOG&#39;,
+ &#39;BOL&#39;,
+ &#39;BON&#39;,
+ &#39;BOP&#39;,
+ &#39;BOT&#39;,
+ &#39;BOX&#39;,
+ &#39;BOY&#39;,
+ &#39;BRU&#39;,
+ &#39;BUE&#39;,
+ &#39;BUG&#39;,
+ &#39;BUN&#39;,
+ &#39;BUS&#39;,
+ &#39;BUT&#39;,
+ &#39;BYE&#39;,
+ &#39;CAB&#39;,
+ &#39;CAF&#39;,
+ &#39;CAL&#39;,
+ &#39;CAP&#39;,
+ &#39;CAR&#39;,
+ &#39;CAS&#39;,
+ &#39;CEP&#39;,
+ &#39;CES&#39;,
+ &#39;CET&#39;,
+ &#39;CHU&#39;,
+ &#39;CIF&#39;,
+ &#39;CIL&#39;,
+ &#39;CIS&#39;,
+ &#39;CLE&#39;,
+ &#39;COB&#39;,
+ &#39;COI&#39;,
+ &#39;COL&#39;,
+ &#39;CON&#39;,
+ &#39;COQ&#39;,
+ &#39;COR&#39;,
+ &#39;COU&#39;,
+ &#39;CPT&#39;,
+ &#39;CRE&#39;,
+ &#39;CRI&#39;,
+ &#39;CRU&#39;,
+ &#39;CUL&#39;,
+ &#39;CUT&#39;,
+ &#39;DAB&#39;,
+ &#39;DAL&#39;,
+ &#39;DAM&#39;,
+ &#39;DAN&#39;,
+ &#39;DAO&#39;,
+ &#39;DAW&#39;,
+ &#39;DEB&#39;,
+ &#39;DER&#39;,
+ &#39;DES&#39;,
+ &#39;DEY&#39;,
+ &#39;DIA&#39;,
+ &#39;DIN&#39;,
+ &#39;DIS&#39;,
+ &#39;DIT&#39;,
+ &#39;DIX&#39;,
+ &#39;DOC&#39;,
+ &#39;DOL&#39;,
+ &#39;DOM&#39;,
+ &#39;DON&#39;,
+ &#39;DOS&#39;,
+ &#39;DOT&#39;,
+ &#39;DRU&#39;,
+ &#39;DRY&#39;,
+ &#39;DUC&#39;,
+ &#39;DUE&#39;,
+ &#39;DUO&#39;,
+ &#39;DUR&#39;,
+ &#39;DUS&#39;,
+ &#39;DUT&#39;,
+ &#39;EAU&#39;,
+ &#39;ECU&#39;,
+ &#39;EGO&#39;,
+ &#39;ELU&#39;,
+ &#39;EME&#39;,
+ &#39;EMU&#39;,
+ &#39;EON&#39;,
+ &#39;EPI&#39;,
+ &#39;ERE&#39;,
+ &#39;ERG&#39;,
+ &#39;ERS&#39;,
+ &#39;EST&#39;,
+ &#39;ETA&#39;,
+ &#39;ETE&#39;,
+ &#39;EUE&#39;,
+ &#39;EUH&#39;,
+ &#39;EUS&#39;,
+ &#39;EUT&#39;,
+ &#39;EUX&#39;,
+ &#39;FAC&#39;,
+ &#39;FAF&#39;,
+ &#39;FAN&#39;,
+ &#39;FAR&#39;,
+ &#39;FAT&#39;,
+ &#39;FAX&#39;,
+ &#39;FCO&#39;,
+ &#39;FEE&#39;,
+ &#39;FER&#39;,
+ &#39;FEU&#39;,
+ &#39;FEZ&#39;,
+ &#39;FIA&#39;,
+ &#39;FIC&#39;,
+ &#39;FIE&#39;,
+ &#39;FIL&#39;,
+ &#39;FIN&#39;,
+ &#39;FIS&#39;,
+ &#39;FIT&#39;,
+ &#39;FLA&#39;,
+ &#39;FOB&#39;,
+ &#39;FOC&#39;,
+ &#39;FOG&#39;,
+ &#39;FOI&#39;,
+ &#39;FOL&#39;,
+ &#39;FOR&#39;,
+ &#39;FOU&#39;,
+ &#39;FOX&#39;,
+ &#39;FUI&#39;,
+ &#39;FUN&#39;,
+ &#39;FUR&#39;,
+ &#39;FUS&#39;,
+ &#39;FUT&#39;,
+ &#39;GAG&#39;,
+ &#39;GAI&#39;,
+ &#39;GAL&#39;,
+ &#39;GAN&#39;,
+ &#39;GAP&#39;,
+ &#39;GAY&#39;,
+ &#39;GAZ&#39;,
+ &#39;GEL&#39;,
+ &#39;GEO&#39;,
+ &#39;GIN&#39;,
+ &#39;GIS&#39;,
+ &#39;GIT&#39;,
+ &#39;GLU&#39;,
+ &#39;GOI&#39;,
+ &#39;GON&#39;,
+ &#39;GOS&#39;,
+ &#39;GOY&#39;,
+ &#39;GRE&#39;,
+ &#39;GUE&#39;,
+ &#39;GUI&#39;,
+ &#39;GUS&#39;,
+ &#39;GYM&#39;,
+ &#39;HAI&#39;,
+ &#39;HAN&#39;,
+ &#39;HEM&#39;,
+ &#39;HEP&#39;,
+ &#39;HEU&#39;,
+ &#39;HIA&#39;,
+ &#39;HIC&#39;,
+ &#39;HIE&#39;,
+ &#39;HIP&#39;,
+ &#39;HIT&#39;,
+ &#39;HOP&#39;,
+ &#39;HOT&#39;,
+ &#39;HOU&#39;,
+ &#39;HUA&#39;,
+ &#39;HUE&#39;,
+ &#39;HUI&#39;,
+ &#39;HUM&#39;,
+ &#39;HUN&#39;,
+ &#39;IBN&#39;,
+ &#39;IBO&#39;,
+ &#39;ICI&#39;,
+ &#39;IDE&#39;,
+ &#39;IFS&#39;,
+ &#39;ILE&#39;,
+ &#39;ILS&#39;,
+ &#39;ION&#39;,
+ &#39;IPE&#39;,
+ &#39;IRA&#39;,
+ &#39;IRE&#39;,
+ &#39;ISO&#39;,
+ &#39;IVE&#39;,
+ &#39;IXA&#39;,
+ &#39;IXE&#39;,
+ &#39;JAB&#39;,
+ &#39;JAM&#39;,
+ &#39;JAN&#39;,
+ &#39;JAR&#39;,
+ &#39;JAS&#39;,
+ &#39;JET&#39;,
+ &#39;JEU&#39;,
+ &#39;JOB&#39;,
+ &#39;JUS&#39;,
+ &#39;KAN&#39;,
+ &#39;KAS&#39;,
+ &#39;KHI&#39;,
+ &#39;KID&#39;,
+ &#39;KIF&#39;,
+ &#39;KIL&#39;,
+ &#39;KIP&#39;,
+ &#39;KIR&#39;,
+ &#39;KIT&#39;,
+ &#39;KOB&#39;,
+ &#39;KOP&#39;,
+ &#39;KOT&#39;,
+ &#39;KSI&#39;,
+ &#39;KWA&#39;,
+ &#39;KYU&#39;,
+ &#39;LAC&#39;,
+ &#39;LAD&#39;,
+ &#39;LAI&#39;,
+ &#39;LAO&#39;,
+ &#39;LAS&#39;,
+ &#39;LEI&#39;,
+ &#39;LEK&#39;,
+ &#39;LEM&#39;,
+ &#39;LES&#39;,
+ &#39;LET&#39;,
+ &#39;LEU&#39;,
+ &#39;LEV&#39;,
+ &#39;LEZ&#39;,
+ &#39;LIA&#39;,
+ &#39;LIE&#39;,
+ &#39;LIN&#39;,
+ &#39;LIS&#39;,
+ &#39;LIT&#39;,
+ &#39;LOB&#39;,
+ &#39;LOF&#39;,
+ &#39;LOG&#39;,
+ &#39;LOI&#39;,
+ &#39;LOS&#39;,
+ &#39;LOT&#39;,
+ &#39;LUE&#39;,
+ &#39;LUI&#39;,
+ &#39;LUS&#39;,
+ &#39;LUT&#39;,
+ &#39;LUX&#39;,
+ &#39;LYS&#39;,
+ &#39;MAC&#39;,
+ &#39;MAI&#39;,
+ &#39;MAL&#39;,
+ &#39;MAN&#39;,
+ &#39;MAO&#39;,
+ &#39;MAS&#39;,
+ &#39;MAT&#39;,
+ &#39;MAX&#39;,
+ &#39;MEC&#39;,
+ &#39;MEN&#39;,
+ &#39;MEO&#39;,
+ &#39;MER&#39;,
+ &#39;MES&#39;,
+ &#39;MET&#39;,
+ &#39;MIE&#39;,
+ &#39;MIL&#39;,
+ &#39;MIN&#39;,
+ &#39;MIR&#39;,
+ &#39;MIS&#39;,
+ &#39;MIT&#39;,
+ &#39;MIX&#39;,
+ &#39;MOA&#39;,
+ &#39;MOB&#39;,
+ &#39;MOI&#39;,
+ &#39;MOL&#39;,
+ &#39;MON&#39;,
+ &#39;MOS&#39;,
+ &#39;MOT&#39;,
+ &#39;MOU&#39;,
+ &#39;MOX&#39;,
+ &#39;MUA&#39;,
+ &#39;MUE&#39;,
+ &#39;MUR&#39;,
+ &#39;MUS&#39;,
+ &#39;MUT&#39;,
+ &#39;MYE&#39;,
+ &#39;NAY&#39;,
+ &#39;NEE&#39;,
+ &#39;NEF&#39;,
+ &#39;NEM&#39;,
+ &#39;NEO&#39;,
+ &#39;NES&#39;,
+ &#39;NET&#39;,
+ &#39;NEY&#39;,
+ &#39;NEZ&#39;,
+ &#39;NIA&#39;,
+ &#39;NIB&#39;,
+ &#39;NID&#39;,
+ &#39;NIE&#39;,
+ &#39;NIF&#39;,
+ &#39;NIT&#39;,
+ &#39;NOM&#39;,
+ &#39;NON&#39;,
+ &#39;NOS&#39;,
+ &#39;NUA&#39;,
+ &#39;NUE&#39;,
+ &#39;NUI&#39;,
+ &#39;NUL&#39;,
+ &#39;NUS&#39;,
+ &#39;OBI&#39;,
+ &#39;ODE&#39;,
+ &#39;OFF&#39;,
+ &#39;OHE&#39;,
+ &#39;OHM&#39;,
+ &#39;OIE&#39;,
+ &#39;OIL&#39;,
+ &#39;OKA&#39;,
+ &#39;OLA&#39;,
+ &#39;OLE&#39;,
+ &#39;ONC&#39;,
+ &#39;ONT&#39;,
+ &#39;OPE&#39;,
+ &#39;ORE&#39;,
+ &#39;ORS&#39;,
+ &#39;OSA&#39;,
+ &#39;OSE&#39;,
+ &#39;OST&#39;,
+ &#39;OTA&#39;,
+ &#39;OTE&#39;,
+ &#39;OUD&#39;,
+ &#39;OUF&#39;,
+ &#39;OUH&#39;,
+ &#39;OUI&#39;,
+ &#39;OUT&#39;,
+ &#39;OVE&#39;,
+ &#39;OXO&#39;,
+ &#39;OYE&#39;,
+ &#39;PAF&#39;,
+ &#39;PAL&#39;,
+ &#39;PAN&#39;,
+ &#39;PAR&#39;,
+ &#39;PAS&#39;,
+ &#39;PAT&#39;,
+ &#39;PEC&#39;,
+ &#39;PEP&#39;,
+ &#39;PET&#39;,
+ &#39;PEU&#39;,
+ &#39;PFF&#39;,
+ &#39;PHI&#39;,
+ &#39;PIC&#39;,
+ &#39;PIE&#39;,
+ &#39;PIF&#39;,
+ &#39;PIN&#39;,
+ &#39;PIS&#39;,
+ &#39;PIU&#39;,
+ &#39;PLI&#39;,
+ &#39;PLU&#39;,
+ &#39;POP&#39;,
+ &#39;POT&#39;,
+ &#39;POU&#39;,
+ &#39;PRE&#39;,
+ &#39;PRO&#39;,
+ &#39;PSI&#39;,
+ &#39;PST&#39;,
+ &#39;PSY&#39;,
+ &#39;PUA&#39;,
+ &#39;PUB&#39;,
+ &#39;PUE&#39;,
+ &#39;PUR&#39;,
+ &#39;PUS&#39;,
+ &#39;PUT&#39;,
+ &#39;PUY&#39;,
+ &#39;QAT&#39;,
+ &#39;QUE&#39;,
+ &#39;QUI&#39;,
+ &#39;QUO&#39;,
+ &#39;RAB&#39;,
+ &#39;RAC&#39;,
+ &#39;RAD&#39;,
+ &#39;RAI&#39;,
+ &#39;RAM&#39;,
+ &#39;RAP&#39;,
+ &#39;RAS&#39;,
+ &#39;RAT&#39;,
+ &#39;RAY&#39;,
+ &#39;RAZ&#39;,
+ &#39;REA&#39;,
+ &#39;REE&#39;,
+ &#39;REG&#39;,
+ &#39;REM&#39;,
+ &#39;REZ&#39;,
+ &#39;RHE&#39;,
+ &#39;RHO&#39;,
+ &#39;RIA&#39;,
+ &#39;RIE&#39;,
+ &#39;RIF&#39;,
+ &#39;RIO&#39;,
+ &#39;RIS&#39;,
+ &#39;RIT&#39;,
+ &#39;RIZ&#39;,
+ &#39;ROB&#39;,
+ &#39;ROC&#39;,
+ &#39;ROI&#39;,
+ &#39;ROM&#39;,
+ &#39;ROS&#39;,
+ &#39;ROT&#39;,
+ &#39;RUA&#39;,
+ &#39;RUE&#39;,
+ &#39;RUS&#39;,
+ &#39;RUT&#39;,
+ &#39;RUZ&#39;,
+ &#39;RYE&#39;,
+ &#39;SAC&#39;,
+ &#39;SAI&#39;,
+ &#39;SAL&#39;,
+ &#39;SAR&#39;,
+ &#39;SAS&#39;,
+ &#39;SAX&#39;,
+ &#39;SEC&#39;,
+ &#39;SEL&#39;,
+ &#39;SEN&#39;,
+ &#39;SEP&#39;,
+ &#39;SES&#39;,
+ &#39;SET&#39;,
+ &#39;SIC&#39;,
+ &#39;SIL&#39;,
+ &#39;SIR&#39;,
+ &#39;SIS&#39;,
+ &#39;SIX&#39;,
+ &#39;SKA&#39;,
+ &#39;SKI&#39;,
+ &#39;SOC&#39;,
+ &#39;SOI&#39;,
+ &#39;SOL&#39;,
+ &#39;SON&#39;,
+ &#39;SOT&#39;,
+ &#39;SOU&#39;,
+ &#39;SPA&#39;,
+ &#39;SPI&#39;,
+ &#39;SUA&#39;,
+ &#39;SUC&#39;,
+ &#39;SUD&#39;,
+ &#39;SUE&#39;,
+ &#39;SUR&#39;,
+ &#39;SUS&#39;,
+ &#39;SUT&#39;,
+ &#39;TAC&#39;,
+ &#39;TAG&#39;,
+ &#39;TAN&#39;,
+ &#39;TAO&#39;,
+ &#39;TAR&#39;,
+ &#39;TAS&#39;,
+ &#39;TAU&#39;,
+ &#39;TEC&#39;,
+ &#39;TEE&#39;,
+ &#39;TEK&#39;,
+ &#39;TEL&#39;,
+ &#39;TEP&#39;,
+ &#39;TER&#39;,
+ &#39;TES&#39;,
+ &#39;TET&#39;,
+ &#39;TEX&#39;,
+ &#39;THE&#39;,
+ &#39;TIC&#39;,
+ &#39;TIF&#39;,
+ &#39;TIN&#39;,
+ &#39;TIP&#39;,
+ &#39;TIR&#39;,
+ &#39;TOC&#39;,
+ &#39;TOI&#39;,
+ &#39;TOM&#39;,
+ &#39;TON&#39;,
+ &#39;TOP&#39;,
+ &#39;TOT&#39;,
+ &#39;TRI&#39;,
+ &#39;TUA&#39;,
+ &#39;TUB&#39;,
+ &#39;TUE&#39;,
+ &#39;TUF&#39;,
+ &#39;TUS&#39;,
+ &#39;TUT&#39;,
+ &#39;UNE&#39;,
+ &#39;UNI&#39;,
+ &#39;UNS&#39;,
+ &#39;URE&#39;,
+ &#39;USA&#39;,
+ &#39;USE&#39;,
+ &#39;UTE&#39;,
+ &#39;VAL&#39;,
+ &#39;VAN&#39;,
+ &#39;VAR&#39;,
+ &#39;VAS&#39;,
+ &#39;VAU&#39;,
+ &#39;VER&#39;,
+ &#39;VES&#39;,
+ &#39;VET&#39;,
+ &#39;VIA&#39;,
+ &#39;VIE&#39;,
+ &#39;VIF&#39;,
+ &#39;VIL&#39;,
+ &#39;VIN&#39;,
+ &#39;VIS&#39;,
+ &#39;VIT&#39;,
+ &#39;VOL&#39;,
+ &#39;VOS&#39;,
+ &#39;VUE&#39;,
+ &#39;VUS&#39;,
+ &#39;WAX&#39;,
+ &#39;WEB&#39;,
+ &#39;WOK&#39;,
+ &#39;WON&#39;,
+ &#39;WUS&#39;,
+ &#39;YAK&#39;,
+ &#39;YAM&#39;,
+ &#39;YEN&#39;,
+ &#39;YIN&#39;,
+ &#39;YOD&#39;,
+ &#39;YUE&#39;,
+ &#39;ZEE&#39;,
+ &#39;ZEF&#39;,
+ &#39;ZEN&#39;,
+ &#39;ZIG&#39;,
+ &#39;ZIP&#39;,
+ &#39;ZOB&#39;,
+ &#39;ZOE&#39;,
+ &#39;ZOO&#39;,
+ &#39;ZOU&#39;,
+ &#39;ZUT&#39;,
+ &#39;ABAT&#39;,
+ &#39;ABBE&#39;,
+ &#39;ABRI&#39;,
+ &#39;ABUS&#39;,
+ &#39;ACES&#39;,
+ &#39;ACRE&#39;,
+ &#39;ACTE&#39;,
+ &#39;AERA&#39;,
+ &#39;AERE&#39;,
+ &#39;AFIN&#39;,
+ &#39;AGEE&#39;,
+ &#39;AGES&#39;,
+ &#39;AGIO&#39;,
+ &#39;AGIR&#39;,
+ &#39;AGIS&#39;,
+ &#39;AGIT&#39;,
+ &#39;AIDA&#39;,
+ &#39;AIDE&#39;,
+ &#39;AIES&#39;,
+ &#39;AIGU&#39;,
+ &#39;AILE&#39;,
+ &#39;AIMA&#39;,
+ &#39;AIME&#39;,
+ &#39;AINE&#39;,
+ &#39;AIRE&#39;,
+ &#39;AIRS&#39;,
+ &#39;AISE&#39;,
+ &#39;AISY&#39;,
+ &#39;AJUT&#39;,
+ &#39;ALEA&#39;,
+ &#39;ALFA&#39;,
+ &#39;ALLA&#39;,
+ &#39;ALLE&#39;,
+ &#39;ALLO&#39;,
+ &#39;ALOI&#39;,
+ &#39;ALTO&#39;,
+ &#39;AMAS&#39;,
+ &#39;AMEN&#39;,
+ &#39;AMER&#39;,
+ &#39;AMES&#39;,
+ &#39;AMIE&#39;,
+ &#39;AMIS&#39;,
+ &#39;AMOK&#39;,
+ &#39;ANES&#39;,
+ &#39;ANGE&#39;,
+ &#39;ANIS&#39;,
+ &#39;ANON&#39;,
+ &#39;ANSE&#39;,
+ &#39;ANUS&#39;,
+ &#39;AOUT&#39;,
+ &#39;APAX&#39;,
+ &#39;APEX&#39;,
+ &#39;APRE&#39;,
+ &#39;APTE&#39;,
+ &#39;ARAK&#39;,
+ &#39;ARCS&#39;,
+ &#39;ARDU&#39;,
+ &#39;ARES&#39;,
+ &#39;ARIA&#39;,
+ &#39;ARMA&#39;,
+ &#39;ARME&#39;,
+ &#39;ARTS&#39;,
+ &#39;ATRE&#39;,
+ &#39;AUBE&#39;,
+ &#39;AUGE&#39;,
+ &#39;AULX&#39;,
+ &#39;AUNE&#39;,
+ &#39;AURA&#39;,
+ &#39;AUTO&#39;,
+ &#39;AVAL&#39;,
+ &#39;AVEC&#39;,
+ &#39;AVEU&#39;,
+ &#39;AVEZ&#39;,
+ &#39;AVIS&#39;,
+ &#39;AXAI&#39;,
+ &#39;AXAS&#39;,
+ &#39;AXAT&#39;,
+ &#39;AXEE&#39;,
+ &#39;AXEL&#39;,
+ &#39;AXER&#39;,
+ &#39;AXES&#39;,
+ &#39;AXEZ&#39;,
+ &#39;AXIS&#39;,
+ &#39;AYEZ&#39;,
+ &#39;AZUR&#39;,
+ &#39;BABA&#39;,
+ &#39;BABY&#39;,
+ &#39;BACS&#39;,
+ &#39;BAIE&#39;,
+ &#39;BAIL&#39;,
+ &#39;BAIN&#39;,
+ &#39;BAIS&#39;,
+ &#39;BALS&#39;,
+ &#39;BANC&#39;,
+ &#39;BANG&#39;,
+ &#39;BANS&#39;,
+ &#39;BARS&#39;,
+ &#39;BASA&#39;,
+ &#39;BASE&#39;,
+ &#39;BATE&#39;,
+ &#39;BATI&#39;,
+ &#39;BATS&#39;,
+ &#39;BAUX&#39;,
+ &#39;BAVA&#39;,
+ &#39;BAVE&#39;,
+ &#39;BAYA&#39;,
+ &#39;BAYE&#39;,
+ &#39;BEAT&#39;,
+ &#39;BEAU&#39;,
+ &#39;BEBE&#39;,
+ &#39;BECS&#39;,
+ &#39;BEER&#39;,
+ &#39;BEES&#39;,
+ &#39;BEEZ&#39;,
+ &#39;BEKE&#39;,
+ &#39;BENI&#39;,
+ &#39;BERK&#39;,
+ &#39;BETE&#39;,
+ &#39;BEYS&#39;,
+ &#39;BIEN&#39;,
+ &#39;BILE&#39;,
+ &#39;BINZ&#39;,
+ &#39;BISE&#39;,
+ &#39;BITS&#39;,
+ &#39;BIWA&#39;,
+ &#39;BLES&#39;,
+ &#39;BLET&#39;,
+ &#39;BLEU&#39;,
+ &#39;BLOC&#39;,
+ &#39;BOAS&#39;,
+ &#39;BOBS&#39;,
+ &#39;BOCK&#39;,
+ &#39;BODY&#39;,
+ &#39;BOIS&#39;,
+ &#39;BOIT&#39;,
+ &#39;BOLS&#39;,
+ &#39;BOND&#39;,
+ &#39;BONI&#39;,
+ &#39;BONS&#39;,
+ &#39;BOOK&#39;,
+ &#39;BOOM&#39;,
+ &#39;BORD&#39;,
+ &#39;BOTS&#39;,
+ &#39;BOUC&#39;,
+ &#39;BOUE&#39;,
+ &#39;BOUS&#39;,
+ &#39;BOUT&#39;,
+ &#39;BOXA&#39;,
+ &#39;BOXE&#39;,
+ &#39;BOYS&#39;,
+ &#39;BRAS&#39;,
+ &#39;BREF&#39;,
+ &#39;BRIC&#39;,
+ &#39;BRIE&#39;,
+ &#39;BRIK&#39;,
+ &#39;BRIN&#39;,
+ &#39;BRIO&#39;,
+ &#39;BRIS&#39;,
+ &#39;BROC&#39;,
+ &#39;BROU&#39;,
+ &#39;BRUN&#39;,
+ &#39;BRUS&#39;,
+ &#39;BRUT&#39;,
+ &#39;BUEE&#39;,
+ &#39;BUES&#39;,
+ &#39;BUIS&#39;,
+ &#39;BURE&#39;,
+ &#39;BUSE&#39;,
+ &#39;BUTA&#39;,
+ &#39;BUTE&#39;,
+ &#39;BUTS&#39;,
+ &#39;BYTE&#39;,
+ &#39;CADE&#39;,
+ &#39;CADI&#39;,
+ &#39;CAFE&#39;,
+ &#39;CAGE&#39;,
+ &#39;CAID&#39;,
+ &#39;CAKE&#39;,
+ &#39;CALA&#39;,
+ &#39;CALE&#39;,
+ &#39;CALS&#39;,
+ &#39;CAME&#39;,
+ &#39;CAMP&#39;,
+ &#39;CANE&#39;,
+ &#39;CAPE&#39;,
+ &#39;CAPS&#39;,
+ &#39;CARS&#39;,
+ &#39;CARY&#39;,
+ &#39;CASA&#39;,
+ &#39;CASE&#39;,
+ &#39;CAVE&#39;,
+ &#39;CECI&#39;,
+ &#39;CEDA&#39;,
+ &#39;CEDE&#39;,
+ &#39;CELA&#39;,
+ &#39;CENE&#39;,
+ &#39;CENS&#39;,
+ &#39;CENT&#39;,
+ &#39;CEPE&#39;,
+ &#39;CEPS&#39;,
+ &#39;CERF&#39;,
+ &#39;CEUX&#39;,
+ &#39;CHAH&#39;,
+ &#39;CHAI&#39;,
+ &#39;CHAR&#39;,
+ &#39;CHAS&#39;,
+ &#39;CHAT&#39;,
+ &#39;CHEF&#39;,
+ &#39;CHER&#39;,
+ &#39;CHEZ&#39;,
+ &#39;CHIC&#39;,
+ &#39;CHOC&#39;,
+ &#39;CHOU&#39;,
+ &#39;CHUT&#39;,
+ &#39;CIEL&#39;,
+ &#39;CILS&#39;,
+ &#39;CIME&#39;,
+ &#39;CINQ&#39;,
+ &#39;CIRA&#39;,
+ &#39;CIRE&#39;,
+ &#39;CITA&#39;,
+ &#39;CITE&#39;,
+ &#39;CLAM&#39;,
+ &#39;CLAN&#39;,
+ &#39;CLAY&#39;,
+ &#39;CLEF&#39;,
+ &#39;CLES&#39;,
+ &#39;CLIN&#39;,
+ &#39;CLIP&#39;,
+ &#39;CLOS&#39;,
+ &#39;CLOT&#39;,
+ &#39;CLOU&#39;,
+ &#39;CLUB&#39;,
+ &#39;COCO&#39;,
+ &#39;CODA&#39;,
+ &#39;CODE&#39;,
+ &#39;COIN&#39;,
+ &#39;COIS&#39;,
+ &#39;COIT&#39;,
+ &#39;COKE&#39;,
+ &#39;COLA&#39;,
+ &#39;COLS&#39;,
+ &#39;COLT&#39;,
+ &#39;COMA&#39;,
+ &#39;CONE&#39;,
+ &#39;COQS&#39;,
+ &#39;CORS&#39;,
+ &#39;COSY&#39;,
+ &#39;COTA&#39;,
+ &#39;COTE&#39;,
+ &#39;COUD&#39;,
+ &#39;COUP&#39;,
+ &#39;COUR&#39;,
+ &#39;COUS&#39;,
+ &#39;COUT&#39;,
+ &#39;CRAN&#39;,
+ &#39;CREA&#39;,
+ &#39;CREE&#39;,
+ &#39;CRIA&#39;,
+ &#39;CRIC&#39;,
+ &#39;CRIE&#39;,
+ &#39;CRIN&#39;,
+ &#39;CRIS&#39;,
+ &#39;CROC&#39;,
+ &#39;CRUE&#39;,
+ &#39;CRUS&#39;,
+ &#39;CRUT&#39;,
+ &#39;CUBA&#39;,
+ &#39;CUBE&#39;,
+ &#39;CUIR&#39;,
+ &#39;CUIS&#39;,
+ &#39;CUIT&#39;,
+ &#39;CULS&#39;,
+ &#39;CURE&#39;,
+ &#39;CUTI&#39;,
+ &#39;CUVA&#39;,
+ &#39;CUVE&#39;,
+ &#39;CYAN&#39;,
+ &#39;CYME&#39;,
+ &#39;CYON&#39;,
+ &#39;CZAR&#39;,
+ &#39;DADA&#39;,
+ &#39;DAIM&#39;,
+ &#39;DAIS&#39;,
+ &#39;DAME&#39;,
+ &#39;DANS&#39;,
+ &#39;DARD&#39;,
+ &#39;DATA&#39;,
+ &#39;DATE&#39;,
+ &#39;DAUW&#39;,
+ &#39;DAWS&#39;,
+ &#39;DECA&#39;,
+ &#39;DECU&#39;,
+ &#39;DEFI&#39;,
+ &#39;DEJA&#39;,
+ &#39;DELA&#39;,
+ &#39;DEMI&#39;,
+ &#39;DENI&#39;,
+ &#39;DENT&#39;,
+ &#39;DESK&#39;,
+ &#39;DEUX&#39;,
+ &#39;DEYS&#39;,
+ &#39;DIEU&#39;,
+ &#39;DIME&#39;,
+ &#39;DINA&#39;,
+ &#39;DINE&#39;,
+ &#39;DIRA&#39;,
+ &#39;DIRE&#39;,
+ &#39;DISE&#39;,
+ &#39;DITE&#39;,
+ &#39;DITO&#39;,
+ &#39;DITS&#39;,
+ &#39;DOCK&#39;,
+ &#39;DODU&#39;,
+ &#39;DOIS&#39;,
+ &#39;DOIT&#39;,
+ &#39;DOJO&#39;,
+ &#39;DOME&#39;,
+ &#39;DONC&#39;,
+ &#39;DONS&#39;,
+ &#39;DONT&#39;,
+ &#39;DOPA&#39;,
+ &#39;DOPE&#39;,
+ &#39;DORA&#39;,
+ &#39;DORE&#39;,
+ &#39;DORS&#39;,
+ &#39;DORT&#39;,
+ &#39;DOSA&#39;,
+ &#39;DOSE&#39;,
+ &#39;DOTA&#39;,
+ &#39;DOTE&#39;,
+ &#39;DOTS&#39;,
+ &#39;DOUE&#39;,
+ &#39;DOUX&#39;,
+ &#39;DRAP&#39;,
+ &#39;DROP&#39;,
+ &#39;DRUE&#39;,
+ &#39;DRUS&#39;,
+ &#39;DUCS&#39;,
+ &#39;DUEL&#39;,
+ &#39;DUES&#39;,
+ &#39;DUNE&#39;,
+ &#39;DUNK&#39;,
+ &#39;DUOS&#39;,
+ &#39;DUPA&#39;,
+ &#39;DUPE&#39;,
+ &#39;DURA&#39;,
+ &#39;DURE&#39;,
+ &#39;DURS&#39;,
+ &#39;DYKE&#39;,
+ &#39;DYNE&#39;,
+ &#39;EAUX&#39;,
+ &#39;EBAT&#39;,
+ &#39;ECHO&#39;,
+ &#39;ECHU&#39;,
+ &#39;ECOT&#39;,
+ &#39;ECRU&#39;,
+ &#39;ECUS&#39;,
+ &#39;EDAM&#39;,
+ ...]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python/text"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../le/2/Seance8/Rappels.html" title="previous page">Rappels</a>
+    <a class='right-next' id="next-link" href="../../algo/algo.html" title="next page">Algorithmique</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Holzer<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

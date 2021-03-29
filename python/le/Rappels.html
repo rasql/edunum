@@ -1,0 +1,1053 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rappels &#8212; Education numérique</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/questions.js"></script>
+    <script src="../../_static/blanks.js"></script>
+    <script src="../../_static/reactions.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="7/Untitled1.html" />
+    <link rel="prev" title="Exercices" href="../exercices.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Education numérique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../widget.html">
+   Widgets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../unix.html">
+   Unix
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../fonc_natifs.html">
+   Fonctions natives
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../plot/index.html">
+   Visualiser
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/figure.html">
+     Figure et axes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/text.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/polar.html">
+     Graphe polaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/plot.html">
+     Graphe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/hist.html">
+     Histogramme
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/pie.html">
+     Diagramme en secteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/numpy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/bar.html">
+     Diagramme à barres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../plot/format.html">
+     Format
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../plot/gif/animate_decay.html">
+     Decay
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../plot/gif/gif.html">
+       GIF animé
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../turtle/turtle.html">
+   Dessiner avec la tortue
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../jeu/index.html">
+   Jouer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeu/ppc.html">
+     Pierre-papier-ciseaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeu/japon.html">
+     Culture du Japon
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../jeu/texte.html">
+     Composer des textes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../index.html">
+   Programmer
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_calc.html">
+     Calcul numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_loop.html">
+     Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fonction.html">
+     Fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_struct.html">
+     L’instruction conditionnelle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_intro.html">
+     Introduction à Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_list.html">
+     Listes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ex2.html">
+     Exercices if-else
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_text.html">
+     Texte (string)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../quiz.html">
+     Quiz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ex1.html">
+     Exercices Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="current reference internal" href="#">
+     Rappels
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="7/imagerie.html">
+       Imagerie médicale
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="7/mri.html">
+       Imagerie médicale
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="7/mri.html#classification">
+       Classification
+      </a>
+     </li>
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="4/Seance10.html">
+       Séance 10:
+      </a>
+      <ul class="collapse-ul">
+       <li class="toctree-l4">
+        <a class="reference internal" href="4/Old/Untitled.html">
+         Séance 8
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="4/Old/Untitled.html#demande-a-l-utilisateur-un-nombre-entre-1-et-10">
+         1. Demande à l’utilisateur un nombre entre 1 et 10
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="4/Old/Untitled.html#verifie-que-ce-nombre-est-compris-entre-1-et-10">
+         2. Verifie que ce nombre est compris entre 1 et 10.
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="4/Old/Untitled.html#affiche-le-livret-de-ce-nombre-table-de-multiplication">
+         3. Affiche le livret de ce nombre (table de multiplication)
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="4/Old/fonctions.html">
+         Fonctions
+        </a>
+       </li>
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="3/S%C3%A9ance9.html">
+       Séance 9:
+      </a>
+      <ul class="simple collapse-ul">
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="2/exemple.html">
+       Rappels
+      </a>
+      <ul class="collapse-ul">
+       <li class="toctree-l4">
+        <a class="reference internal" href="2/S%C3%A9ance8.html">
+         Séance 8
+        </a>
+       </li>
+       <li class="toctree-l4 collapsible-parent">
+        <a class="reference internal" href="2/old/Untitled.html">
+         Cours 9: Python 3
+        </a>
+        <ul class="collapse-ul">
+         <li class="toctree-l5">
+          <a class="reference internal" href="2/old/seance8.html">
+           Séance 8
+          </a>
+         </li>
+         <li class="toctree-l5">
+          <a class="reference internal" href="2/old/seance8old.html">
+           Séance 8
+          </a>
+         </li>
+        </ul>
+        <i class="fas fa-chevron-down">
+        </i>
+       </li>
+       <li class="toctree-l4 collapsible-parent">
+        <a class="reference internal" href="2/Seance8/S%C3%A9ance8.html">
+         Séance 8
+        </a>
+        <ul class="collapse-ul">
+         <li class="toctree-l5">
+          <a class="reference internal" href="2/Seance8/Rappels.html">
+           Rappels
+          </a>
+         </li>
+        </ul>
+        <i class="fas fa-chevron-down">
+        </i>
+       </li>
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../text/text.html">
+     Jouer avec des mots
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../algo/algo.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../start/index.html">
+   Démarrer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/markdown.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/rappel.html">
+     Rappel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/why.html">
+     Á quoi ça sert?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/thonny/thonny.html">
+     Thonny
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../prog/prog1.html">
+   Programmation
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../rep/index.html">
+   Encoder
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/morse.html">
+     Code Morse
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/son.html">
+     Son
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rep/bin/bin.html">
+     Système binaire
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../nlp/Untitled.html">
+   Processing Raw Text
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/python/le/Rappels.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fpython/le/Rappels.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/python/le/Rappels.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/python/le/Rappels.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rasql/edunum/blob/main/doc/python/le/Rappels.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="lancement Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#symbole-egal">
+   Symbole égal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#input">
+   input()
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#print">
+   print()
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-fonctions-int-et-str">
+   Les fonctions
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     int()
+    </span>
+   </code>
+   et
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     str()
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-fonction-range">
+   La fonction range()
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list">
+   list
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chaines-de-caracteres">
+   Chaines de caractères
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-elif-else">
+   if elif else
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-boucle-for">
+   La boucle for
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-boucle-while">
+   La boucle while
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-fonction">
+   La fonction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#priorite-des-operateurs">
+   Priorité des opérateurs
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="rappels">
+<h1>Rappels<a class="headerlink" href="#rappels" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="symbole-egal">
+<h2>Symbole égal<a class="headerlink" href="#symbole-egal" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">4</span></code> : Affectation de la valeur 4 à la variable <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">1</span></code> : Incrémentation de la variable x de 1. <code class="docutils literal notranslate"><span class="pre">x</span></code> devient 5.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">5</span></code> : Teste si la valeur de <code class="docutils literal notranslate"><span class="pre">x</span></code> est égale à 5 (<code class="docutils literal notranslate"><span class="pre">True</span></code>).</p></li>
+</ul>
+<p>L’expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">5</span></code> revient à poser la question: est-ce que <code class="docutils literal notranslate"><span class="pre">x</span></code> est égal à 5?</p>
+</div>
+<div class="section" id="input">
+<h2>input()<a class="headerlink" href="#input" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">input</span></code> (entrée en français) permet d’entrer un texte</p></li>
+<li><p>Elle peut avoir un texte explicatif</p></li>
+<li><p>Elle s’utilise avec une variable à sa gauche qui va garder le contenu du texte entré</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez votre nom : &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entrez votre nom :  toto
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="print">
+<h2>print()<a class="headerlink" href="#print" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">print</span></code> (imprimer en français) permet d’afficher ce qui se trouve dans les parenthèses</p></li>
+<li><p>Elle peut afficher du texte, ou le contenu d’une variables</p></li>
+<li><p>Elle peut imprimer plusieurs paramètres, séparés par des virgules</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Il s&#39;appelle : &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il s&#39;appelle :  toto
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="les-fonctions-int-et-str">
+<h2>Les fonctions <code class="docutils literal notranslate"><span class="pre">int()</span></code> et <code class="docutils literal notranslate"><span class="pre">str()</span></code><a class="headerlink" href="#les-fonctions-int-et-str" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">int('3')</span></code> convertit le caractère <code class="docutils literal notranslate"><span class="pre">'3'</span></code> en nombre <code class="docutils literal notranslate"><span class="pre">3</span></code> (quand c’est possible)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str(3)</span></code>convertit le nombre `3 en caractèrer “3”</p></li>
+</ul>
+</div>
+<div class="section" id="la-fonction-range">
+<h2>La fonction range()<a class="headerlink" href="#la-fonction-range" title="Lien permanent vers ce titre">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">range(n)</span></code> génère la suite de nombre 0..(n-1)</p>
+<p><code class="docutils literal notranslate"><span class="pre">range(debut,</span> <span class="pre">fin,</span> <span class="pre">pas)</span></code> génère la suite de nombre <strong>debut</strong> .. (<strong>fin</strong> - 1) avec un le pas de <strong>pas</strong></p>
+</div>
+<div class="section" id="list">
+<h2>list<a class="headerlink" href="#list" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une liste est une séquence de plusieurs valeurs (nombres, texte, booléen, etc.).<br />
+<strong>Attention</strong>
+le premier élément a l’index <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arbres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sapin&#39;</span><span class="p">,</span> <span class="s1">&#39;cedre&#39;</span><span class="p">,</span> <span class="s1">&#39;meleze&#39;</span><span class="p">,</span> <span class="s1">&#39;bouleau&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arbres</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;sapin&#39;, &#39;cedre&#39;, &#39;meleze&#39;, &#39;bouleau&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">arbres</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sapin
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">arbres</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="chaines-de-caracteres">
+<h2>Chaines de caractères<a class="headerlink" href="#chaines-de-caracteres" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On peut aussi parcourir la chaine de caractère comme une séquence</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Une chaîne&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le premier caractère, a l&#39;index&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;, il est = &quot;</span><span class="p">,</span><span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le dernier a l&#39;index&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le caractère espace a l&#39;index 3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Le premier caractère, a l&#39;index 0 , il est =  U
+Le dernier a l&#39;index 9
+Le caractère espace a l&#39;index 3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="if-elif-else">
+<h2>if elif else<a class="headerlink" href="#if-elif-else" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un seul chemin est exécuté celui du if, du elif ou du else</p>
+<p><strong>Attention</strong></p>
+<ul class="simple">
+<li><p>Indentation</p></li>
+<li><p>les deux points</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n est strictement négatif&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n est positif&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n vaut zéro&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>n est positif
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="la-boucle-for">
+<h2>La boucle for<a class="headerlink" href="#la-boucle-for" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> permet de <strong>répéter une suite d’instructions</strong> (que l’on appelle un <strong>bloc d’instructions</strong>) en itérant (parcourant) chaque éléments d’un <code class="docutils literal notranslate"><span class="pre">objet</span></code>. Cet <code class="docutils literal notranslate"><span class="pre">objet</span></code> est soit :</p>
+<ul class="simple">
+<li><p>une liste</p></li>
+<li><p>une chaîne de caractères</p></li>
+<li><p>le retour de la fonction <code class="docutils literal notranslate"><span class="pre">range()</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arbres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sapin&#39;</span><span class="p">,</span> <span class="s1">&#39;cedre&#39;</span><span class="p">,</span> <span class="s1">&#39;meleze&#39;</span><span class="p">,</span> <span class="s1">&#39;bouleau&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">arbres</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sapin
+cedre
+meleze
+bouleau
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t
+e
+s
+t
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="la-boucle-while">
+<h2>La boucle while<a class="headerlink" href="#la-boucle-while" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> répète un bloc d’instructions (une suite d’instructions) tant qu’une <strong>condition</strong> du test est vrai:</p>
+<ul class="simple">
+<li><p>incrémenter le compteur dans la boucle</p></li>
+<li><p>s’assurer que la condition d’arret de la boucle est satsfaite durant l’execution du programme, pour ne pas avoir une boucle infinie</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="la-fonction">
+<h2>La fonction<a class="headerlink" href="#la-fonction" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une fonction est une partie de code qui accomplit une tâche précise.
+Elle reçoit des données à traiter et renvoie une ou plusieurs résultats.
+En voici un exemple:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nbreCaractere</span> <span class="p">(</span><span class="n">ch</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span>  <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">ch</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Une fois définie, la fonction peut être appelée, autant de fois qu’on veut dans le programme principal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ch</span> <span class="o">=</span> <span class="s2">&quot;c&#39;est trop cool&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nbreCaractere</span><span class="p">(</span><span class="n">ch</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="priorite-des-operateurs">
+<h2>Priorité des opérateurs<a class="headerlink" href="#priorite-des-operateurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La priorité des opérateurs de base est</p>
+<ol class="simple">
+<li><p>exposant (<code class="docutils literal notranslate"><span class="pre">**</span></code>)</p></li>
+<li><p>multiplication, division</p></li>
+<li><p>addition, soustraction</p></li>
+</ol>
+<p>Pour donner priorité à l’addition, nous utilisons des parenthèses.</p>
+<p>4 – 2 * (9 / 3 ** 2 + 1) = ?</p>
+<p>4 – 2 *(9 / 9 +1) =</p>
+<p>4 – 2 * ( 1 + 1) =</p>
+<p>4 – 2 * 2 =</p>
+<p>4 – 4 = 0</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python/le"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../exercices.html" title="previous page">Exercices</a>
+    <a class='right-next' id="next-link" href="7/Untitled1.html" title="next page">&lt;no title&gt;</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Holzer<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
