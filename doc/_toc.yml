@@ -49,6 +49,8 @@
       - file: plot/text
       - file: plot/gif/gif
       - file: python/le/7/mri
+      
+  - file: bokeh/bokeh
         
   - file: rep/index
     sections:
