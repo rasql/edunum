@@ -51,6 +51,7 @@
       - file: python/le/7/mri
       
   - file: bokeh/bokeh
+  - file: bokeh/bokeh2
         
   - file: rep/index
     sections:
