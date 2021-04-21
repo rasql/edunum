@@ -62,7 +62,7 @@
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Recherche" href="../../../search.html" />
-    <link rel="next" title="Encoder" href="../../../rep/index.html" />
+    <link rel="next" title="Bokeh" href="../../../bokeh/bokeh.html" />
     <link rel="prev" title="GIF animé" href="../../../plot/gif/gif.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -304,6 +304,16 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../bokeh/bokeh.html">
+   Bokeh
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../bokeh/bokeh2.html">
+   Bokeh
+  </a>
+ </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../../../rep/index.html">
    Encoder
@@ -511,11 +521,6 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coder-l-image-en-niveaux-de-gris">
-   Coder l’image en niveaux de gris
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#colormap">
    Colormap
   </a>
@@ -536,8 +541,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#appliquer-un-masque-a-l-image">
-   Appliquer un masque à l’image
+  <a class="reference internal nav-link" href="#combinaison-des-deux-images">
+   Combinaison des deux images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#juxtaposer-deux-images">
+   Juxtaposer deux images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#appliquer-un-masque">
+   Appliquer un masque
   </a>
  </li>
 </ul>
@@ -553,7 +568,7 @@
                 
   <div class="section" id="imagerie-medicale">
 <h1>Imagerie médicale<a class="headerlink" href="#imagerie-medicale" title="Lien permanent vers ce titre">¶</a></h1>
-<p>L’IRM cérébrale (imagerie par résonance magnétique) est un examen permettant de détecter des anomalies cérébrales et d’en déterminer les causes.</p>
+<p>L”<strong>imagerie par résonance magnétque</strong> (IRM) est une téchnique pour obtenir des vues de l’intérieur du corps humain. L”<strong>IRM cérébrale</strong> est un examen permettant de détecter des anomalies dans le cerveau et d’en déterminer les causes.</p>
 <p><img alt="" src="https://media1.tenor.com/images/540756001c2405111acb87742f3cd18a/tenor.gif?itemid=9565732" /></p>
 <p>Un des avantages de cette modalité d’imagerie est qu’elle permet de visualiser la matière blanche, la matière grise et le liquide rachidien avec des contrastes différents.</p>
 <p>On verra dans ce qui suit comment pouvoir segmenter ces images. Une étape très importante dans le domaine biomédical.
@@ -573,21 +588,24 @@ L’objectif est de séparer les trois classes:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Histog_IRM.png   Untitled2.ipynb  imagerie.ipynb   mri.ipynb
-Untitled.ipynb   brain.jpg        mask.bmp         tumor.png
-Untitled1.ipynb  brain2.jpg       mask.png
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Histog_IRM.png  brain.jpeg      brain2.jpg      mask.png        tumor.png
+MRI_Images.zip  brain.jpg       mask.bmp        mri.ipynb
 </pre></div>
 </div>
 </div>
 </div>
 <p>Les fichiers avec l’extension <code class="docutils literal notranslate"><span class="pre">.ipyjnb</span></code> correspondent aux fichiers iPython Notebook.
-Nous voyons plusieurs fichiers en format images avec les extensions</p>
+Nous voyons plusieurs fichiers en format image avec les extensions</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.png</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.jpg</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.bmp</span></code></p></li>
 </ul>
-<p>Maintenant nous pouvons importer les images dans une matrice</p>
+<p>La première étappe est d’importer les modules</p>
+<ul class="simple">
+<li><p><strong>numpy</strong> (calcul numérique matriciel) et</p></li>
+<li><p><strong>matplotlib</strong> (affichange d’images).</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -597,59 +615,17 @@ Nous voyons plusieurs fichiers en format images avec les extensions</p>
 </div>
 </div>
 </div>
+<p>Maintenant nous pouvons importer les images dans une matrice</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">brain</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;brain.jpg&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">brain</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;brain.jpg&#39;</span><span class="p">)[:,:,</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>La variable <code class="docutils literal notranslate"><span class="pre">brain</span></code> (<em>cerveau</em> en anglais) contient une matrice de l’image.<br />
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">imread</span></code> (=image read) permet de lire une image a partir d’un fichier et de retourner une matrice numérique 2D. L’opérateur de tranche <code class="docutils literal notranslate"><span class="pre">[:,</span> <span class="pre">:,</span> <span class="pre">0]</span></code> selectionne toutes les pixels mais seulement le premier canal (0).</p>
+<p>La variable <code class="docutils literal notranslate"><span class="pre">brain</span></code> (<em>cerveau</em> en anglais) contient une matrice de l’image.
 Regardons sa dimension.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">brain</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(202, 165, 3)
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Exercice</strong><br />
-Créez une variable <code class="docutils literal notranslate"><span class="pre">tumor</span></code> et une variable <code class="docutils literal notranslate"><span class="pre">brain2</span></code> et importez les images correspondantes. Affichez leurs dimensions.</p>
-</div>
-<div class="section" id="afficher-une-image">
-<h2>Afficher une image<a class="headerlink" href="#afficher-une-image" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Affichons maintenant l’image.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">brain</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/mri_12_0.png" src="../../../_images/mri_12_0.png" />
-</div>
-</div>
-<p><strong>Exercice</strong><br />
-Affichez les matrices <code class="docutils literal notranslate"><span class="pre">tumor</span></code> et <code class="docutils literal notranslate"><span class="pre">brain2</span></code> comme images.</p>
-</div>
-<div class="section" id="coder-l-image-en-niveaux-de-gris">
-<h2>Coder l’image en niveaux de gris<a class="headerlink" href="#coder-l-image-en-niveaux-de-gris" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Dans ces images les couleurs ne sont pas utiles, elles sont pourtant codées en mode couleurs.
-Vérifions que l’image <code class="docutils literal notranslate"><span class="pre">brain</span></code> est codée en mode couleurs.</p>
-<p>Au lieu de prendre 3 canaux, on va prendre un seul.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">brain</span> <span class="o">=</span> <span class="n">brain</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Affichons sa nouvelle dimension</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">brain</span><span class="o">.</span><span class="n">shape</span>
@@ -662,29 +638,12 @@ Vérifions que l’image <code class="docutils literal notranslate"><span class=
 </div>
 </div>
 </div>
-<p>Affichons de nouveau cette image noir et blanc</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">brain</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/mri_19_0.png" src="../../../_images/mri_19_0.png" />
-</div>
-</div>
 <p><strong>Exercice</strong><br />
-Transformez les matrices <code class="docutils literal notranslate"><span class="pre">tumor</span></code> et <code class="docutils literal notranslate"><span class="pre">brain2</span></code> en image avec 1 seul canal.  Affichez leur dimension avec <code class="docutils literal notranslate"><span class="pre">shape</span></code>.</p>
-<p>On remarque que:</p>
-<ul class="simple">
-<li><p>certains fichiers sont codés sur 3 canaux, et certains sur 4 canaux.</p></li>
-<li><p>certains fichiers sont quantifiés avec des valeurs entre 0 et 1 (Tumeur) et d’autres entre 0 et 255.</p></li>
-</ul>
+Créez une variable <code class="docutils literal notranslate"><span class="pre">tumor</span></code> et une variable <code class="docutils literal notranslate"><span class="pre">brain2</span></code> et importez les images correspondantes. Affichez leurs dimensions.</p>
 </div>
-<div class="section" id="colormap">
-<h2>Colormap<a class="headerlink" href="#colormap" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La palette de couleur peut être choisie en fonction des besoins de l’affichage.
-Essaysons les palettes <code class="docutils literal notranslate"><span class="pre">gray</span></code> et <code class="docutils literal notranslate"><span class="pre">hot</span></code></p>
+<div class="section" id="afficher-une-image">
+<h2>Afficher une image<a class="headerlink" href="#afficher-une-image" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Affichons maintenant l’image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">brain</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">);</span>
@@ -692,7 +651,30 @@ Essaysons les palettes <code class="docutils literal notranslate"><span class="p
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_23_0.png" src="../../../_images/mri_23_0.png" />
+<img alt="../../../_images/mri_13_0.png" src="../../../_images/mri_13_0.png" />
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Affichez les matrices <code class="docutils literal notranslate"><span class="pre">tumor</span></code> et <code class="docutils literal notranslate"><span class="pre">brain2</span></code> comme images.</p>
+</div>
+<div class="section" id="colormap">
+<h2>Colormap<a class="headerlink" href="#colormap" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une image noir et blanc possède des pixels qui ont des valeurs dans une plage [0…255] avec:</p>
+<ul class="simple">
+<li><p>0 noir</p></li>
+<li><p>127 gris intermédiaire</p></li>
+<li><p>255 blanc</p></li>
+</ul>
+<p>La palette de couleur permet d’associer d’autres couleurs à ces valeurs de 0 à 255.
+Essaysons les palettes <code class="docutils literal notranslate"><span class="pre">jet</span></code> et <code class="docutils literal notranslate"><span class="pre">hot</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">brain</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/mri_17_0.png" src="../../../_images/mri_17_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -702,7 +684,7 @@ Essaysons les palettes <code class="docutils literal notranslate"><span class="p
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_24_0.png" src="../../../_images/mri_24_0.png" />
+<img alt="../../../_images/mri_18_0.png" src="../../../_images/mri_18_0.png" />
 </div>
 </div>
 <p><strong>Exercice</strong><br />
@@ -712,7 +694,7 @@ Affichez les matrices <code class="docutils literal notranslate"><span class="pr
 <div class="section" id="barre-de-couleurs">
 <h2>Barre de couleurs<a class="headerlink" href="#barre-de-couleurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">colorbar</span></code> ajoute une échelle de couleurs à l’image.</p>
-<p>La barre des couleurs associe une couleur spécifique à chaque luminosité :</p>
+<p>La barre des couleurs associe une couleur spécifique à chaque luminosité. Par exemple pour la barre <code class="docutils literal notranslate"><span class="pre">hot</span></code> nous avons :</p>
 <ul class="simple">
 <li><p>0 - noir</p></li>
 <li><p>75 - rouge</p></li>
@@ -727,11 +709,43 @@ Affichez les matrices <code class="docutils literal notranslate"><span class="pr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_27_0.png" src="../../../_images/mri_27_0.png" />
+<img alt="../../../_images/mri_21_0.png" src="../../../_images/mri_21_0.png" />
 </div>
 </div>
-<p><strong>Exercice</strong></p>
-<p>Donnez la valeur du pixel de coordonnées (100, 100) avec la commande <code class="docutils literal notranslate"><span class="pre">brain[100,</span> <span class="pre">100]</span></code></p>
+<p>Voici un pixel noir:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">brain</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voici un pixel jaune:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">brain</span><span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>171
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Cherchez un pixel avec une valeur d’environ 100 (rouge). Indexez avec l’expression <code class="docutils literal notranslate"><span class="pre">brain[y,</span> <span class="pre">x]</span></code></p>
+<p><strong>Attention</strong><br />
+Dans une matrice,</p>
+<ul class="simple">
+<li><p>le premier indice indique la ligne (y)</p></li>
+<li><p>le deuxième indice la colonne (x)</p></li>
+</ul>
 </div>
 <div class="section" id="histogramme-d-une-image">
 <h2>Histogramme d’une image<a class="headerlink" href="#histogramme-d-une-image" title="Lien permanent vers ce titre">¶</a></h2>
@@ -747,7 +761,7 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_35_0.png" src="../../../_images/mri_35_0.png" />
+<img alt="../../../_images/mri_31_0.png" src="../../../_images/mri_31_0.png" />
 </div>
 </div>
 <p><strong>Exercice</strong></p>
@@ -774,8 +788,10 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 <span class="n">gm</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mi">0</span>
 <span class="n">wm</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mi">0</span> 
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+<span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">seuil1</span> <span class="o">&lt;=</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">seuil2</span><span class="p">:</span>
             <span class="n">gm</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">1</span>
         <span class="k">elif</span> <span class="n">seuil2</span> <span class="o">&lt;=</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">255</span><span class="p">:</span>
@@ -784,58 +800,116 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 </div>
 </div>
 </div>
-<p>Affichez chacune des classes (tissus)  dans une image; On peut changer les <code class="docutils literal notranslate"><span class="pre">cmap</span></code> (gray, jet, hsv,Pastel1…)</p>
-<p>Affichons les 2 tissus dans une même image; puis chacun des tissus cérébraux avec la commande  hstack</p>
+<p>Nous pouvons maintenant afficher la matière grise (gm = gray matter):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gm</span> <span class="o">=</span> <span class="n">gm</span> <span class="o">*</span> <span class="mi">2</span>
-<span class="n">wm</span> <span class="o">=</span> <span class="n">wm</span> <span class="o">*</span> <span class="mi">1</span>
-<span class="n">segmentation</span> <span class="o">=</span> <span class="n">gm</span><span class="o">+</span><span class="n">wm</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">gm</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/mri_38_0.png" src="../../../_images/mri_38_0.png" />
 </div>
+</div>
+<p>Nous pouvons maintenant afficher la matière blanche (wm = white matter):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">segmentation</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">segmentation</span><span class="p">,</span><span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">)</span>
-
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wm</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/mri_40_0.png" src="../../../_images/mri_40_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="combinaison-des-deux-images">
+<h2>Combinaison des deux images<a class="headerlink" href="#combinaison-des-deux-images" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Combinons les 2 tissus dans une même image. Ceci est possible car les deux images not seulement des valeurs 0 et 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">segmentation</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">gm</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">wm</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">segmentation</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_44_0.png" src="../../../_images/mri_44_0.png" />
+<img alt="../../../_images/mri_42_0.png" src="../../../_images/mri_42_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">All</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">gm</span><span class="p">,</span> <span class="n">wm</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">All</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;hot&#39;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">segmentation</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_45_0.png" src="../../../_images/mri_45_0.png" />
+<img alt="../../../_images/mri_43_0.png" src="../../../_images/mri_43_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="juxtaposer-deux-images">
+<h2>Juxtaposer deux images<a class="headerlink" href="#juxtaposer-deux-images" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">np.hstack</span></code> permet de juxtaposer deux matrices et d’en créer une plus grande.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">both</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">gm</span><span class="p">,</span> <span class="n">wm</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">both</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(202, 330)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">both</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/mri_47_0.png" src="../../../_images/mri_47_0.png" />
 </div>
 </div>
 <p><strong>Exercice</strong></p>
 <p>Affichez l’histogramme de <code class="docutils literal notranslate"><span class="pre">tumor</span></code>, cherchez les nouveaux seuils de classification.</p>
 <p>En modifiant le code de classification, extraire la matière blanche et grise de <code class="docutils literal notranslate"><span class="pre">tumor</span></code> et affichez-les.</p>
 </div>
-<div class="section" id="appliquer-un-masque-a-l-image">
-<h2>Appliquer un masque à l’image<a class="headerlink" href="#appliquer-un-masque-a-l-image" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="appliquer-un-masque">
+<h2>Appliquer un masque<a class="headerlink" href="#appliquer-un-masque" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’image <em>brain2</em> contient le crâne et les tissus cérébraux: pour faire la classification enlevons le crâne avec un mask binaire.</p>
 <p>L’image <em>mask.jpg</em> contient le masque à appliquer pour extraire seulement le cerveau sans le crâne.</p>
 <p>Importons l’image <em>mask.jpg</em> et mettons la dans une variable <code class="docutils literal notranslate"><span class="pre">mask</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;mask.bmp&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;mask.bmp&#39;</span><span class="p">)[:,:,</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Vérifions que l’image est binaire et gardons un seul canal puisque l’image est en noir et blanc</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(279, 216)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vérifions que l’image est binaire</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
@@ -850,9 +924,12 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mask</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/mri_56_0.png" src="../../../_images/mri_56_0.png" />
 </div>
 </div>
 <p><strong>Exercice</strong></p>
@@ -943,7 +1020,7 @@ Calculez le ratio de matière blanche.</p>
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../../../plot/gif/gif.html" title="previous page">GIF animé</a>
-    <a class='right-next' id="next-link" href="../../../rep/index.html" title="next page">Encoder</a>
+    <a class='right-next' id="next-link" href="../../../bokeh/bokeh.html" title="next page">Bokeh</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
