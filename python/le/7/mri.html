@@ -551,8 +551,23 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creer-un-masque">
+   Créer un masque
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#appliquer-un-masque">
    Appliquer un masque
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyser-l-image-masquee">
+   Analyser l’image masquée
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-ratios">
+   Les ratios
   </a>
  </li>
 </ul>
@@ -907,46 +922,37 @@ Ensuite nous pouvons les additionner pour avoir l’image segmentée.</p>
 <li><p>Affichez-les</p></li>
 </ul>
 </div>
-<div class="section" id="appliquer-un-masque">
-<h2>Appliquer un masque<a class="headerlink" href="#appliquer-un-masque" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’image <em>brain2</em> contient le crâne et les tissus cérébraux: pour faire la classification enlevons le crâne avec un mask binaire.</p>
-<p>L’image <em>mask.jpg</em> contient le masque à appliquer pour extraire seulement le cerveau sans le crâne.</p>
-<p>Importons l’image <em>mask.jpg</em> et mettons la dans une variable <code class="docutils literal notranslate"><span class="pre">mask</span></code>.</p>
+<div class="section" id="creer-un-masque">
+<h2>Créer un masque<a class="headerlink" href="#creer-un-masque" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’image <code class="docutils literal notranslate"><span class="pre">brain2</span></code> contient le crâne et les tissus cérébraux: pour faire la classification enlevons le crâne avec un masque.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;mask.bmp&#39;</span><span class="p">)[:,:,</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span><span class="o">.</span><span class="n">shape</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">brain2</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;brain2.jpg&#39;</span><span class="p">)[:,:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">brain2</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(279, 216)
-</pre></div>
+<img alt="../../../_images/mri_51_0.png" src="../../../_images/mri_51_0.png" />
 </div>
 </div>
-</div>
-<p>Vérifions que l’image est binaire</p>
+<p>Pour créer un masque, nous commençons avec une matrice de zéro de la même dimension.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">brain2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mask</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  0, 255], dtype=uint8)
-</pre></div>
+<img alt="../../../_images/mri_53_0.png" src="../../../_images/mri_53_0.png" />
 </div>
 </div>
-</div>
+<p>Toutes les pixels sont zéro. Nous pouvons maintenant mettre certains pixels à 1. Par exemple nous pouvons mettre à 1 les pixels de la ligne 100 à 200.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mask</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mask</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -954,61 +960,121 @@ Ensuite nous pouvons les additionner pour avoir l’image segmentée.</p>
 <img alt="../../../_images/mri_55_0.png" src="../../../_images/mri_55_0.png" />
 </div>
 </div>
-<p><strong>Exercice</strong></p>
-<p>Affichez les deux images <code class="docutils literal notranslate"><span class="pre">brain2</span></code> et <code class="docutils literal notranslate"><span class="pre">mask</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">hstack</span></code> et <code class="docutils literal notranslate"><span class="pre">imshow</span></code></p>
-<p>Affichez les dimensions de <code class="docutils literal notranslate"><span class="pre">brain2</span></code> et <code class="docutils literal notranslate"><span class="pre">mask</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">shape</span></code> et vérifiez qu’elles sont identiques</p>
-<p>Changeons <code class="docutils literal notranslate"><span class="pre">mask</span></code> avec les valeurs 0 et 1 pour pouvoir l’appliquer sur <code class="docutils literal notranslate"><span class="pre">brain2</span></code> avec une simple multiplication</p>
+<p>Multiplier ce mask avec une image va <em>masquer</em> tous les pixels qui sont 0 dans le masque, et afficher seuelemment les pixels qui sont à 1 dans le masque.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span> <span class="o">&gt;</span> <span class="mi">0</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Vérifions que <code class="docutils literal notranslate"><span class="pre">mask</span></code>contient seulement des 0 et 1</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">brain2</span> <span class="o">*</span> <span class="n">mask</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False,  True])
+<img alt="../../../_images/mri_57_0.png" src="../../../_images/mri_57_0.png" />
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Créer un masque avec une barre verticale et appliquez la à l’image <code class="docutils literal notranslate"><span class="pre">brain2</span></code>.</p>
+</div>
+<div class="section" id="appliquer-un-masque">
+<h2>Appliquer un masque<a class="headerlink" href="#appliquer-un-masque" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le fichier <em>mask.jpg</em> contient le masque à appliquer pour extraire seulement le cerveau sans le crâne pour l’image <code class="docutils literal notranslate"><span class="pre">brain2</span></code>.</p>
+<p>A la base les pixels blancs ont la valeur 255. Pour obtenir des pixels avec la valeur 1, nous divisions la matrce par 255.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;mask.bmp&#39;</span><span class="p">)[:,:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="o">/</span><span class="mi">255</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/mri_60_0.png" src="../../../_images/mri_60_0.png" />
 </div>
-<p><strong>Exercice</strong></p>
-<p>Pour appliquer le masque et extraire le cerveau, créez une variable <code class="docutils literal notranslate"><span class="pre">brain_only</span></code> qui contient la multiplication des deux variables <code class="docutils literal notranslate"><span class="pre">mask</span></code> et <code class="docutils literal notranslate"><span class="pre">brain2</span></code>.</p>
-<p>Affichez <code class="docutils literal notranslate"><span class="pre">brain_only</span></code></p>
+</div>
+<p>Vérifions que l’image est binaire</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">brain2</span> <span class="o">*</span> <span class="n">mask</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/mri_62_0.png" src="../../../_images/mri_62_0.png" />
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Affichez les 3 images <code class="docutils literal notranslate"><span class="pre">brain2</span></code>,  <code class="docutils literal notranslate"><span class="pre">mask</span></code> et <code class="docutils literal notranslate"><span class="pre">brain2</span> <span class="pre">*</span> <span class="pre">mask</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">hstack</span></code> et <code class="docutils literal notranslate"><span class="pre">imshow</span></code>.
+Si mask n’est pas visible, multipliez-le par 255.</p>
+<p>Vérifions que <code class="docutils literal notranslate"><span class="pre">mask</span></code>contient seulement des 0 et 1</p>
+</div>
+<div class="section" id="analyser-l-image-masquee">
+<h2>Analyser l’image masquée<a class="headerlink" href="#analyser-l-image-masquee" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour appliquer le masque et extraire le cerveau, nous créons une variable <code class="docutils literal notranslate"><span class="pre">brain_only</span></code> qui contient la multiplication des deux variables <code class="docutils literal notranslate"><span class="pre">mask</span></code> et <code class="docutils literal notranslate"><span class="pre">brain2</span></code>.</p>
 <p>Affichons l’histogramme de cette image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">brain_only</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">256</span><span class="p">));</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Exercice</strong></p>
-<p>Choisir les nouveaux seuils dans l’histogramme pour extraire les 2 tissus avec le code <code class="docutils literal notranslate"><span class="pre">classification</span></code>. Puis affichez chacune des classes.</p>
-<p>Les Ratios de chacun tissus par rapport au volume entier du cerveau sont des marqueurs permettent d’analyser les images IRM pour détécter certaines anomalies telles que la dégénérescence cérébrale.</p>
-<p>Calculons le ratio de matière grise.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nombre_gm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">gm</span><span class="p">)</span>
-<span class="n">surf_total</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">gm</span> <span class="o">+</span> <span class="n">wm</span><span class="p">)</span>
-<span class="n">ratio_gm</span> <span class="o">=</span> <span class="n">nombre_gm</span> <span class="o">/</span> <span class="n">surf_total</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ratio_gm</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">brain_only</span> <span class="o">=</span> <span class="n">brain2</span> <span class="o">*</span> <span class="n">mask</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">brain_only</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">200</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7304045029574509
+<img alt="../../../_images/mri_66_0.png" src="../../../_images/mri_66_0.png" />
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Choissez des seuils approprié pour extraire les 2 tissus avec avec un code que vous écrivez. Puis affichez chacune des classes.</p>
+</div>
+<div class="section" id="les-ratios">
+<h2>Les ratios<a class="headerlink" href="#les-ratios" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les ratios de chacun tissus par rapport au volume entier du cerveau sont des marqueurs permettent d’analyser les images IRM pour détécter certaines anomalies telles que la dégénérescence cérébrale.</p>
+<p>Calculons le nombre de pixels de la matière grise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">gm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10043
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Exercice</strong>
+<p>Le nombre total des pixels du cerveau est:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">gm</span> <span class="o">+</span> <span class="n">wm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21785
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Donc</span> <span class="n">le</span> <span class="n">ratio</span> <span class="n">de</span> <span class="n">la</span> <span class="n">matière</span> <span class="n">grise</span> <span class="n">est</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">gm</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">gm</span> <span class="o">+</span> <span class="n">wm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.46100527886160203
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
 Calculez le ratio de matière blanche.</p>
 </div>
 </div>
