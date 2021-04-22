@@ -521,8 +521,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#colormap">
-   Colormap
+  <a class="reference internal nav-link" href="#palette-de-couleurs">
+   Palette de couleurs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -657,8 +657,8 @@ Créez une variable <code class="docutils literal notranslate"><span class="pre"
 <p><strong>Exercice</strong><br />
 Affichez les matrices <code class="docutils literal notranslate"><span class="pre">tumor</span></code> et <code class="docutils literal notranslate"><span class="pre">brain2</span></code> comme images.</p>
 </div>
-<div class="section" id="colormap">
-<h2>Colormap<a class="headerlink" href="#colormap" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="palette-de-couleurs">
+<h2>Palette de couleurs<a class="headerlink" href="#palette-de-couleurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une image noir et blanc possède des pixels qui ont des valeurs dans une plage [0…255] avec:</p>
 <ul class="simple">
 <li><p>0 noir</p></li>
@@ -753,10 +753,10 @@ Dans une matrice,</p>
 en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une intensité apparait dans l’image.</p>
 <p>Dans une image IRM la distribution des trois tissus (ou classes) est comme suit:</p>
 <p><img alt="" src="../../../_images/Histog_IRM.png" /></p>
-<p>Observons l’histogramme de l’image <code class="docutils literal notranslate"><span class="pre">brain</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">hist</span></code></p>
+<p>Observons l’histogramme de l’image <code class="docutils literal notranslate"><span class="pre">brain</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">hist</span></code>. Par défaut la fonction <code class="docutils literal notranslate"><span class="pre">hist</span></code> compte les pixels pour 10 catégories (bins).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">brain</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">));</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">brain</span><span class="o">.</span><span class="n">ravel</span><span class="p">());</span>
 </pre></div>
 </div>
 </div>
@@ -764,11 +764,26 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 <img alt="../../../_images/mri_31_0.png" src="../../../_images/mri_31_0.png" />
 </div>
 </div>
-<p><strong>Exercice</strong></p>
-<p>Refaites l’histogramme en faisant varier:</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">hist</span></code> a deux options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bins</span></code> pour indiquer le nombre de catégories</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> pour indiquer la plage analysée</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">brain</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/mri_33_0.png" src="../../../_images/mri_33_0.png" />
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Refaites l’histogramme en faisant varier:</p>
 <ul class="simple">
 <li><p>le nombre de bins (80, 50, 25 par exemple)</p></li>
-<li><p>le range ((5, 200) ou (25,200) par exemple)</p></li>
+<li><p>le range ((5, 200) ou (25, 200) par exemple)</p></li>
 </ul>
 </div>
 <div class="section" id="classification">
@@ -778,6 +793,12 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 <li><p>gm (gray matter)</p></li>
 <li><p>wm (white matter)</p></li>
 </ul>
+<p>Pour la classification il faut balayer tous les pixels:</p>
+<ul class="simple">
+<li><p>toutes les lignes (i)</p></li>
+<li><p>toutes les colonnes (j)</p></li>
+</ul>
+<p>Ensuite il faut comparer la valeur du pixel avec les deux seuils.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">brain</span>
@@ -785,47 +806,46 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 <span class="n">seuil1</span> <span class="o">=</span> <span class="mi">70</span>
 <span class="n">seuil2</span> <span class="o">=</span> <span class="mi">150</span>
 
-<span class="n">gm</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mi">0</span>
-<span class="n">wm</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mi">0</span> 
-
+<span class="n">gm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">seuil1</span> <span class="o">&lt;=</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">seuil2</span><span class="p">:</span>
-            <span class="n">gm</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">elif</span> <span class="n">seuil2</span> <span class="o">&lt;=</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">255</span><span class="p">:</span>
-            <span class="n">wm</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Nous pouvons maintenant afficher la matière grise (gm = gray matter):</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">gm</span><span class="p">);</span>
+            <span class="n">gm</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">gm</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_38_0.png" src="../../../_images/mri_38_0.png" />
+<img alt="../../../_images/mri_37_0.png" src="../../../_images/mri_37_0.png" />
 </div>
 </div>
-<p>Nous pouvons maintenant afficher la matière blanche (wm = white matter):</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">zeros_like</span></code> crée und nouvelle matrice avec des zéros de la même taille que <code class="docutils literal notranslate"><span class="pre">img</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wm</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">seuil2</span> <span class="o">&lt;=</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]:</span>
+            <span class="n">wm</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wm</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_40_0.png" src="../../../_images/mri_40_0.png" />
+<img alt="../../../_images/mri_39_0.png" src="../../../_images/mri_39_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="combinaison-des-deux-images">
 <h2>Combinaison des deux images<a class="headerlink" href="#combinaison-des-deux-images" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Combinons les 2 tissus dans une même image. Ceci est possible car les deux images not seulement des valeurs 0 et 1.</p>
+<p>Les matrices <code class="docutils literal notranslate"><span class="pre">gm</span></code> et <code class="docutils literal notranslate"><span class="pre">wm</span></code> ne contiennent que des valeurs 0 et 1.
+Nous pouvons muliplier la matrice avec un nombre.
+Ensuite nous pouvons les additionner pour avoir l’image segmentée.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">segmentation</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">gm</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">wm</span>
@@ -835,12 +855,15 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_42_0.png" src="../../../_images/mri_42_0.png" />
+<img alt="../../../_images/mri_41_0.png" src="../../../_images/mri_41_0.png" />
 </div>
 </div>
+<p>Il est possible de pondérer de façon inverse.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">segmentation</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">segmentation</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">gm</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">wm</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">segmentation</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -855,10 +878,15 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">both</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">gm</span><span class="p">,</span> <span class="n">wm</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">both</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/mri_45_0.png" src="../../../_images/mri_45_0.png" />
 </div>
+</div>
+<p>La largeur est le double.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">both</span><span class="o">.</span><span class="n">shape</span>
@@ -871,19 +899,13 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">both</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/mri_47_0.png" src="../../../_images/mri_47_0.png" />
-</div>
-</div>
 <p><strong>Exercice</strong></p>
-<p>Affichez l’histogramme de <code class="docutils literal notranslate"><span class="pre">tumor</span></code>, cherchez les nouveaux seuils de classification.</p>
-<p>En modifiant le code de classification, extraire la matière blanche et grise de <code class="docutils literal notranslate"><span class="pre">tumor</span></code> et affichez-les.</p>
+<ul class="simple">
+<li><p>Affichez l’histogramme de <code class="docutils literal notranslate"><span class="pre">tumor</span></code></p></li>
+<li><p>Cherchez les seuils appropriés</p></li>
+<li><p>Modifiez le code de classification pour extraire la matière blanche et grise</p></li>
+<li><p>Affichez-les</p></li>
+</ul>
 </div>
 <div class="section" id="appliquer-un-masque">
 <h2>Appliquer un masque<a class="headerlink" href="#appliquer-un-masque" title="Lien permanent vers ce titre">¶</a></h2>
@@ -929,7 +951,7 @@ en abscisse on trouve les intensités et en ordonnée le nombre de fois qu’une
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/mri_56_0.png" src="../../../_images/mri_56_0.png" />
+<img alt="../../../_images/mri_55_0.png" src="../../../_images/mri_55_0.png" />
 </div>
 </div>
 <p><strong>Exercice</strong></p>
