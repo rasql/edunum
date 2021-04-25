@@ -1,6 +1,6 @@
 # Visualiser
 
-Dans cette section, nous introduisons deux modules qui nous permettent de faire du calcul numérique et de **visualiser des donnes sous forme de graphique**.
+Dans cette section, nous introduisons des modules pour **visualiser des donnes sous forme de graphique**.
 
 ![](sincos.gif)
 
