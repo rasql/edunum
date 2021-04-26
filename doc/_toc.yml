@@ -65,7 +65,8 @@
       - file: rep/son
         
   - file: algo/algo
-  - file: python/vi/5/Cracker_un_mot_de_passe
+  - file: python/vi/5/SystemeDeFichiers
+  - file: python/vi/5/MotsDePasse
     
 - part: Reference
   chapters:
