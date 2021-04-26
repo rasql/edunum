@@ -1,0 +1,1456 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Composer des textes &#8212; Education numérique</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Introduction à Python" href="1_intro.html" />
+    <link rel="prev" title="Fonction avec argument" href="fonction.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Education numérique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Untitled.html">
+   Widgets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fonc_natifs.html">
+   Fonctions natives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unix.html">
+   Unix
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algo/algo.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nlp/Untitled.html">
+   Processing Raw Text
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../plot/hist.html">
+   Histogrammes
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/Untitled.html">
+     Diagramme en secteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/file.html">
+     Fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/style.html">
+     Style
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/text.html">
+     Text
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/color.html">
+     Couleurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/numpy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/subplot.html">
+     Sous-graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/polar.html">
+     Coordonnées polaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/param.html">
+     Paramètres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/bar.html">
+     Diagrammes à barres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/intro.html">
+     Visualiser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/plot.html">
+     Graphes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     Animated GIF
+    </a>
+    <ul class="simple collapse-ul">
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../misc/thonny.html">
+   Thonny
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/style.html">
+     Style
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/test.html">
+     Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/markdown.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc/jupyter.html">
+     Jupyter
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../turtle/turtle.html">
+   Dessiner avec la tortue
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rep/index.html">
+   Encoder
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/son.html">
+     Son
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/bin/bin.html">
+     Système binaire
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../start/index.html">
+   Démarrer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/markdown.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/why.html">
+     Á quoi ça sert?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/thonny/thonny.html">
+     Thonny
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="index.html">
+   Programmer
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="quiz.html">
+     Quiz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex2.html">
+     Exercices if-else
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_calc.html">
+     Calcul numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html">
+     Fonction avec argument
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#la-fonction-minimale">
+     La fonction minimale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#fonctions-predefinies">
+     Fonctions prédéfinies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fonction.html#retour-d-une-valeur">
+     Retour d’une valeur
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_intro.html">
+     Introduction à Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_text.html">
+     Texte (string)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2_struct.html">
+     Les branchements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_list.html">
+     Listes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex1.html">
+     Exercices Boucles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4_loop.html">
+     Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="text/text.html">
+     Jouer avec des mots
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="le/Rappels.html">
+     Rappels
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="le/2/exemple.html">
+       Rappels
+      </a>
+      <ul class="collapse-ul">
+       <li class="toctree-l4">
+        <a class="reference internal" href="le/2/S%C3%A9ance8.html">
+         Séance 8
+        </a>
+       </li>
+       <li class="toctree-l4 collapsible-parent">
+        <a class="reference internal" href="le/2/Seance8/Rappels.html">
+         Rappels
+        </a>
+        <ul class="collapse-ul">
+         <li class="toctree-l5">
+          <a class="reference internal" href="le/2/Seance8/S%C3%A9ance8.html">
+           Séance 8
+          </a>
+         </li>
+        </ul>
+        <i class="fas fa-chevron-down">
+        </i>
+       </li>
+       <li class="toctree-l4 collapsible-parent">
+        <a class="reference internal" href="le/2/old/Untitled.html">
+         Cours 9: Python 3
+        </a>
+        <ul class="collapse-ul">
+         <li class="toctree-l5">
+          <a class="reference internal" href="le/2/old/seance8old.html">
+           Séance 8
+          </a>
+         </li>
+         <li class="toctree-l5">
+          <a class="reference internal" href="le/2/old/seance8.html">
+           Séance 8
+          </a>
+         </li>
+        </ul>
+        <i class="fas fa-chevron-down">
+        </i>
+       </li>
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="le/4/Seance10.html">
+       Séance 10:
+      </a>
+      <ul class="collapse-ul">
+       <li class="toctree-l4">
+        <a class="reference internal" href="le/4/Old/Untitled.html">
+         Séance 8
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="le/4/Old/Untitled.html#demande-a-l-utilisateur-un-nombre-entre-1-et-10">
+         1. Demande à l’utilisateur un nombre entre 1 et 10
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="le/4/Old/Untitled.html#verifie-que-ce-nombre-est-compris-entre-1-et-10">
+         2. Verifie que ce nombre est compris entre 1 et 10.
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="le/4/Old/Untitled.html#affiche-le-livret-de-ce-nombre-table-de-multiplication">
+         3. Affiche le livret de ce nombre (table de multiplication)
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="le/4/Old/fonctions.html">
+         Fonctions
+        </a>
+       </li>
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="le/3/S%C3%A9ance9.html">
+       Séance 9:
+      </a>
+      <ul class="simple collapse-ul">
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/python/4_text2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fpython/4_text2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/python/4_text2.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/python/4_text2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rasql/edunum/blob/main/doc/python/4_text2.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="lancement Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-module-random">
+   Le module random
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creer-des-phrases">
+   Créer des phrases
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ecrire-un-horoscope">
+   Écrire un horoscope
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conjuguer-un-verbe">
+   Conjuguer un verbe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zodiac-japonais">
+   Zodiac japonais
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-cycle-des-5-elements">
+   Le cycle des 5 éléments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compter-en-japonais">
+   Compter en japonais
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apprendre-a-compter">
+   Apprendre à compter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compter-jusqu-a-99">
+   Compter jusqu’à 99
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calendrier-japonais">
+   Calendrier japonais
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="composer-des-textes">
+<h1>Composer des textes<a class="headerlink" href="#composer-des-textes" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans cette section nous allons mettre en pratique les concepts</p>
+<ul class="simple">
+<li><p>listes de mots</p></li>
+<li><p>choix aléatoire dans une liste avec <code class="docutils literal notranslate"><span class="pre">choice()</span></code></p></li>
+<li><p>nombre entier aléatoire avec <code class="docutils literal notranslate"><span class="pre">randint(a,</span> <span class="pre">b)</span></code></p></li>
+<li><p>reste de la division (modulo) <code class="docutils literal notranslate"><span class="pre">%</span></code></p></li>
+<li><p>boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
+<li><p>fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code></p></li>
+</ul>
+<div class="section" id="le-module-random">
+<h2>Le module random<a class="headerlink" href="#le-module-random" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le module <code class="docutils literal notranslate"><span class="pre">random</span></code> met à disposition des fonctions pour calculer des valeurs aléatoires. Nous importons deux fonctions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span><span class="p">,</span> <span class="n">randint</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">choice</span></code> permet de choisir un élément aléatoire d’une liste.<br />
+On pourrait l’utiliser pour programmer un jeu de pierre-papier-ciseaux.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;pierre&#39;</span><span class="p">,</span> <span class="s1">&#39;papier&#39;</span><span class="p">,</span> <span class="s1">&#39;ciseaux&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;ciseaux&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">randint(a,</span> <span class="pre">b)</span></code> permet de choisir un entier aléatoire dans l’intervalle [a, b].
+On pourrait l’utiliser pour simuler un dé.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creer-des-phrases">
+<h2>Créer des phrases<a class="headerlink" href="#creer-des-phrases" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous définissons des listes pour différentes catégories de mots:</p>
+<ul class="simple">
+<li><p>noms de personne</p></li>
+<li><p>villes</p></li>
+<li><p>adverbes</p></li>
+<li><p>verbes</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">noms</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bill&#39;</span><span class="p">,</span> <span class="s1">&#39;Steve&#39;</span><span class="p">,</span> <span class="s1">&#39;Guido&#39;</span><span class="p">,</span> <span class="s1">&#39;Ada&#39;</span><span class="p">,</span> <span class="s1">&#39;Grace&#39;</span><span class="p">]</span>
+<span class="n">villes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Paris&#39;</span><span class="p">,</span> <span class="s1">&#39;Tokyo&#39;</span><span class="p">,</span> <span class="s1">&#39;Lausanne&#39;</span><span class="p">,</span> <span class="s1">&#39;Lutry&#39;</span><span class="p">,</span> <span class="s1">&#39;Dubai&#39;</span><span class="p">]</span>
+<span class="n">adverbes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;joyeusement&#39;</span><span class="p">,</span> <span class="s1">&#39;tristement&#39;</span><span class="p">,</span> <span class="s1">&#39;temporairement&#39;</span><span class="p">,</span> <span class="s1">&#39;toujours&#39;</span><span class="p">]</span>
+<span class="n">verbes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dort&#39;</span><span class="p">,</span> <span class="s1">&#39;vit&#39;</span><span class="p">,</span> <span class="s1">&#39;séjourne&#39;</span><span class="p">,</span> <span class="s1">&#39;travaille&#39;</span><span class="p">,</span> <span class="s1">&#39;voyage&#39;</span><span class="p">,</span> <span class="s1">&#39;se balade&#39;</span><span class="p">,</span> <span class="s1">&#39;étudie&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Avec des mots choisis aléatoirement dans ces listes, nous créons des phrases aléatoires.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">nom</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">noms</span><span class="p">)</span>
+    <span class="n">ville</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">villes</span><span class="p">)</span>
+    <span class="n">verbe</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">verbes</span><span class="p">)</span>
+    <span class="n">adverbe</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">adverbes</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="n">verbe</span><span class="p">,</span> <span class="n">adverbe</span><span class="p">,</span> <span class="s1">&#39;à&#39;</span><span class="p">,</span> <span class="n">ville</span><span class="o">+</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Grace dort temporairement à Tokyo.
+Bill se balade temporairement à Paris.
+Steve séjourne toujours à Paris.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ecrire-un-horoscope">
+<h2>Écrire un horoscope<a class="headerlink" href="#ecrire-un-horoscope" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le premier horoscope basé sur les signes du zodiaque dans la presse française serait paru dans <strong>Marie-Claire</strong> en 1935.</p>
+<p>En général les horoscopes sont plus souvent positifs que négatifs et incitent à la conformité.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">signes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bélier&#39;</span><span class="p">,</span> <span class="s1">&#39;Taureau&#39;</span><span class="p">,</span> <span class="s1">&#39;Gémeaux&#39;</span><span class="p">,</span> <span class="s1">&#39;Cancer&#39;</span><span class="p">,</span> <span class="s1">&#39;Lion&#39;</span><span class="p">,</span> <span class="s1">&#39;Vierge&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;Balance&#39;</span><span class="p">,</span> <span class="s1">&#39;Scorption&#39;</span><span class="p">,</span> <span class="s1">&#39;Sagittaire&#39;</span><span class="p">,</span> <span class="s1">&#39;Capricorne&#39;</span><span class="p">,</span> <span class="s1">&#39;Verseau&#39;</span><span class="p">,</span> <span class="s1">&#39;Poissons&#39;</span><span class="p">]</span>
+
+<span class="n">sujets</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;amour&#39;</span><span class="p">,</span> <span class="s1">&#39;argent&#39;</span><span class="p">,</span> <span class="s1">&#39;travail&#39;</span><span class="p">,</span> <span class="s1">&#39;famille&#39;</span><span class="p">,</span> <span class="s1">&#39;santé&#39;</span><span class="p">]</span>
+<span class="n">adverbes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;très&#39;</span><span class="p">,</span> <span class="s1">&#39;peu&#39;</span><span class="p">,</span> <span class="s1">&#39;souvent&#39;</span><span class="p">,</span> <span class="s1">&#39;rarement&#39;</span><span class="p">,</span> <span class="s1">&#39;incroyablement&#39;</span><span class="p">,</span> <span class="s1">&#39;absolument&#39;</span><span class="p">]</span>
+<span class="n">adjectifs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;avantageux&#39;</span><span class="p">,</span> <span class="s1">&#39;profitable&#39;</span><span class="p">,</span> <span class="s1">&#39;rebondissant&#39;</span><span class="p">,</span> <span class="s1">&#39;variable&#39;</span><span class="p">,</span> 
+             <span class="s1">&#39;avantageux&#39;</span><span class="p">,</span> <span class="s1">&#39;magnifique&#39;</span><span class="p">,</span> <span class="s1">&#39;fluctuant&#39;</span><span class="p">]</span>
+<span class="n">conseils</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;continuer&#39;</span><span class="p">,</span> <span class="s1">&#39;faire attention&#39;</span><span class="p">,</span> <span class="s1">&#39;faire attention&#39;</span><span class="p">,</span> <span class="s1">&#39;profiter&#39;</span><span class="p">,</span> <span class="s1">&#39;se dépêcher&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous composons un horoscope en choisissant aléatoirement:</p>
+<ul class="simple">
+<li><p>un sujet</p></li>
+<li><p>adverbe</p></li>
+<li><p>adjectif</p></li>
+</ul>
+<p>et en ajoutant un conseil (encourageant une conformité).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">signe</span> <span class="ow">in</span> <span class="n">signes</span><span class="p">[:</span><span class="mi">6</span><span class="p">]:</span>
+    <span class="n">sujet</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">sujets</span><span class="p">)</span>
+    <span class="n">adverbe</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">adverbes</span><span class="p">)</span>
+    <span class="n">adjectif</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">adjectifs</span><span class="p">)</span>
+    <span class="n">conseil</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">conseils</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">signe</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">sujet</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">adverbe</span><span class="p">,</span> <span class="n">adjectif</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">conseil</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bélier
+- amour: incroyablement variable, faire attention!
+
+Taureau
+- famille: très avantageux, se dépêcher!
+
+Gémeaux
+- amour: rarement avantageux, faire attention!
+
+Cancer
+- famille: souvent variable, faire attention!
+
+Lion
+- santé: très avantageux, faire attention!
+
+Vierge
+- amour: souvent variable, se dépêcher!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conjuguer-un-verbe">
+<h2>Conjuguer un verbe<a class="headerlink" href="#conjuguer-un-verbe" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La conjugaison de beaucoup de verbes est régulière.<br />
+Voici une fonction pour conjuguer un verbe en <em>er</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conjuger</span><span class="p">(</span><span class="n">verbe</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;je&#39;</span><span class="p">,</span> <span class="n">verbe</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tu&#39;</span><span class="p">,</span> <span class="n">verbe</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;es&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;elle&#39;</span><span class="p">,</span> <span class="n">verbe</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;nous&#39;</span><span class="p">,</span> <span class="n">verbe</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;ons&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vous&#39;</span><span class="p">,</span> <span class="n">verbe</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;ez&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;elles&#39;</span><span class="p">,</span> <span class="n">verbe</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;ent&#39;</span><span class="p">)</span>
+    
+<span class="n">conjuger</span><span class="p">(</span><span class="s1">&#39;parler&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>je parle
+tu parles
+elle parle
+
+nous parlons
+vous parlez
+elles parlent
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conjuger</span><span class="p">(</span><span class="s1">&#39;programmer&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>je programme
+tu programmes
+elle programme
+
+nous programmons
+vous programmez
+elles programment
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="zodiac-japonais">
+<h2>Zodiac japonais<a class="headerlink" href="#zodiac-japonais" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les 12 signes du zodiaque japonais sont empruntés du calendrier lunaire chinois. On retrouve ainsi le rat, le bœuf, le tigre, le lapin, le dragon, le serpent, le cheval, la chèvre, le singe, le coq, le chien et le cochon.</p>
+<p>Le rat est le premier animal, et l’année 1900 était l’année du rat. 1901 celui du boeuf, etc.</p>
+<p>Référence: <a class="reference external" href="https://www.vivrelejapon.com/a-savoir/comprendre-le-japon/junishi-zodiaque-astrologie">Jûnishi: les 12 signes du zodiaque</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zodiaque</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rat&#39;</span><span class="p">,</span> <span class="s1">&#39;buffle&#39;</span><span class="p">,</span> <span class="s1">&#39;tigre&#39;</span><span class="p">,</span> <span class="s1">&#39;lapin&#39;</span><span class="p">,</span> <span class="s1">&#39;dragon&#39;</span><span class="p">,</span> <span class="s1">&#39;serpent&#39;</span><span class="p">,</span> 
+            <span class="s1">&#39;cheval&#39;</span><span class="p">,</span> <span class="s1">&#39;mouton&#39;</span><span class="p">,</span> <span class="s1">&#39;singe&#39;</span><span class="p">,</span> <span class="s1">&#39;coq&#39;</span><span class="p">,</span> <span class="s1">&#39;chien&#39;</span><span class="p">,</span> <span class="s1">&#39;porc&#39;</span><span class="p">,</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous pouvons parcourir et imprimer cette liste.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">zodiaque</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>rat
+buffle
+tigre
+lapin
+dragon
+serpent
+cheval
+mouton
+singe
+coq
+chien
+porc
+</pre></div>
+</div>
+</div>
+</div>
+<p>En décalant l’année avec une soustraction <code class="docutils literal notranslate"><span class="pre">year</span> <span class="pre">-</span> <span class="pre">1900</span></code> nous pouvons aligner avec le début de la liste, le rat ayant l’indice 0.
+Avec la fonction modulo <code class="docutils literal notranslate"><span class="pre">%</span></code> nous obtenons des indices cycliques allant de 0 à 11. Ceci nous permet d’afficher un tableau avec des années et l’animal correspondant.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1960</span><span class="p">,</span> <span class="mi">2025</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="p">(</span><span class="n">year</span> <span class="o">-</span> <span class="mi">1900</span><span class="p">)</span> <span class="o">%</span> <span class="mi">12</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">zodiaque</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1960 : rat
+1961 : buffle
+1962 : tigre
+1963 : lapin
+1964 : dragon
+1965 : serpent
+1966 : cheval
+1967 : mouton
+1968 : singe
+1969 : coq
+1970 : chien
+1971 : porc
+1972 : rat
+1973 : buffle
+1974 : tigre
+1975 : lapin
+1976 : dragon
+1977 : serpent
+1978 : cheval
+1979 : mouton
+1980 : singe
+1981 : coq
+1982 : chien
+1983 : porc
+1984 : rat
+1985 : buffle
+1986 : tigre
+1987 : lapin
+1988 : dragon
+1989 : serpent
+1990 : cheval
+1991 : mouton
+1992 : singe
+1993 : coq
+1994 : chien
+1995 : porc
+1996 : rat
+1997 : buffle
+1998 : tigre
+1999 : lapin
+2000 : dragon
+2001 : serpent
+2002 : cheval
+2003 : mouton
+2004 : singe
+2005 : coq
+2006 : chien
+2007 : porc
+2008 : rat
+2009 : buffle
+2010 : tigre
+2011 : lapin
+2012 : dragon
+2013 : serpent
+2014 : cheval
+2015 : mouton
+2016 : singe
+2017 : coq
+2018 : chien
+2019 : porc
+2020 : rat
+2021 : buffle
+2022 : tigre
+2023 : lapin
+2024 : dragon
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="le-cycle-des-5-elements">
+<h2>Le cycle des 5 éléments<a class="headerlink" href="#le-cycle-des-5-elements" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On peut combiner le cycle des animaux avec le cycle binaire</p>
+<ul class="simple">
+<li><p>Yin (buffle, tigre, serpent, cheval, coq, chien)</p></li>
+<li><p>Yan (rat, lapon, dragon, chèvre, singe, cochon)</p></li>
+</ul>
+<p>On peut combiner le cycle des animaux avec les 5 éléments</p>
+<ul class="simple">
+<li><p>métal</p></li>
+<li><p>eau</p></li>
+<li><p>bois</p></li>
+<li><p>feu</p></li>
+<li><p>terre</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elements</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;métal&#39;</span><span class="p">,</span> <span class="s1">&#39;eau&#39;</span><span class="p">,</span> <span class="s1">&#39;bois&#39;</span><span class="p">,</span> <span class="s1">&#39;feu&#39;</span><span class="p">,</span> <span class="s1">&#39;terre&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2025</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="p">(</span><span class="n">year</span> <span class="o">-</span> <span class="mi">1900</span><span class="p">)</span> <span class="o">%</span> <span class="mi">12</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="n">year</span> <span class="o">-</span> <span class="mi">1900</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">%</span> <span class="mi">5</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">zodiaque</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39; - &#39;</span><span class="p">,</span> <span class="n">elements</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2000 : dragon  -  métal
+2001 : serpent  -  métal
+2002 : cheval  -  eau
+2003 : mouton  -  eau
+2004 : singe  -  bois
+2005 : coq  -  bois
+2006 : chien  -  feu
+2007 : porc  -  feu
+2008 : rat  -  terre
+2009 : buffle  -  terre
+2010 : tigre  -  métal
+2011 : lapin  -  métal
+2012 : dragon  -  eau
+2013 : serpent  -  eau
+2014 : cheval  -  bois
+2015 : mouton  -  bois
+2016 : singe  -  feu
+2017 : coq  -  feu
+2018 : chien  -  terre
+2019 : porc  -  terre
+2020 : rat  -  métal
+2021 : buffle  -  métal
+2022 : tigre  -  eau
+2023 : lapin  -  eau
+2024 : dragon  -  bois
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compter-en-japonais">
+<h2>Compter en japonais<a class="headerlink" href="#compter-en-japonais" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous mettons les nombres de 1 à 10 dans une liste.
+Pour faire coïncider l’index de la liste avec le nombre, nous mettons <em>zero</em> en première position.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nombres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="s1">&#39;ichi&#39;</span><span class="p">,</span> <span class="s1">&#39;ni&#39;</span><span class="p">,</span> <span class="s1">&#39;san&#39;</span><span class="p">,</span> <span class="s1">&#39;yon&#39;</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="s1">&#39;roku&#39;</span><span class="p">,</span> <span class="s1">&#39;nana&#39;</span><span class="p">,</span> <span class="s1">&#39;hachi&#39;</span><span class="p">,</span> <span class="s1">&#39;kyu&#39;</span><span class="p">,</span> <span class="s1">&#39;ju&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>L’index d’un élément de la liste correspond maintenant au texte de l’élément.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">nombres</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 zero
+1 ichi
+2 ni
+3 san
+4 yon
+5 go
+6 roku
+7 nana
+8 hachi
+9 kyu
+10 ju
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="apprendre-a-compter">
+<h2>Apprendre à compter<a class="headerlink" href="#apprendre-a-compter" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons faire un petit programme, ou les nombres de 0 à 10 sont présentés en japonais, de façon aléatoire. Vous devez les reconnaitre et répondre avec un nombre de 0 à 10.</p>
+<p>Nous utilisons la fonction <code class="docutils literal notranslate"><span class="pre">randint(0,</span> <span class="pre">10)</span></code> pour trouver un entier aléatoire entre 0 et 10.
+Voici 20 nombres aléatoires affichés sur la même ligne.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7, 1, 6, 3, 2, 6, 0, 0, 7, 10, 6, 8, 4, 9, 3, 2, 8, 4, 3, 7, 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voici le code pour le jeu. Nous commençons à initialiser le score à 0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Apprenez les nombres 0 à 10 en japonais&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombres</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">reponse</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">nombre</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">reponse</span><span class="p">)</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;faux! la bonne réponse est&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;votre score:&#39;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aprenez les nombres 0 à 10 en japonais
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ichi:  1
+roku:  6
+ichi:  1
+hachi:  7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! la bonne réponse est 8
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nana:  7
+kyu:  9
+ni:  2
+kyu:  9
+ni:  3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>faux! la bonne réponse est 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nana:  7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>votre score: 8
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compter-jusqu-a-99">
+<h2>Compter jusqu’à 99<a class="headerlink" href="#compter-jusqu-a-99" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le système de numération en japonais est complètement régulier.<br />
+Un utilisant les nombres 1 à 10 vous arrivez a compter jusqu’à 99.</p>
+<ul class="simple">
+<li><p>11 = <strong>ju ichi</strong> (dix-un)</p></li>
+<li><p>12 = <strong>ju ni</strong> (dix-deux)</p></li>
+<li><p>13 = <strong>ju san</strong> (dix-trois)</p></li>
+</ul>
+<p>A partir de 20:</p>
+<ul class="simple">
+<li><p>20 = <strong>ni ju</strong> (deux-dix)</p></li>
+<li><p>21 = <strong>ni ju ichi</strong> (deux-dix-un)</p></li>
+<li><p>22 = <strong>ni ju ni</strong> (deux-dix-deux)</p></li>
+</ul>
+<p>et ainsi de suite jusqu’à</p>
+<ul class="simple">
+<li><p>99 = <strong>kyu ju kyu</strong> (neuf-dix-neuf)</p></li>
+</ul>
+<p>Nous pouvons donc afficher les nombres en japonais de 0 à 99.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span>    <span class="c1"># unité</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">i</span> <span class="o">//</span> <span class="mi">10</span>   <span class="c1"># dizaine</span>
+    
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="n">nombres</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;ju&#39;</span><span class="p">,</span> <span class="n">nombres</span><span class="p">[</span><span class="n">u</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">u</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="n">nombres</span><span class="p">[</span><span class="n">d</span><span class="p">],</span> <span class="s1">&#39;ju&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="n">nombres</span><span class="p">[</span><span class="n">d</span><span class="p">],</span> <span class="s1">&#39;ju&#39;</span><span class="p">,</span> <span class="n">nombres</span><span class="p">[</span><span class="n">u</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 = zero
+1 = ichi
+2 = ni
+3 = san
+4 = yon
+5 = go
+6 = roku
+7 = nana
+8 = hachi
+9 = kyu
+10 = ju
+11 = ju ichi
+12 = ju ni
+13 = ju san
+14 = ju yon
+15 = ju go
+16 = ju roku
+17 = ju nana
+18 = ju hachi
+19 = ju kyu
+20 = ni ju
+21 = ni ju ichi
+22 = ni ju ni
+23 = ni ju san
+24 = ni ju yon
+25 = ni ju go
+26 = ni ju roku
+27 = ni ju nana
+28 = ni ju hachi
+29 = ni ju kyu
+30 = san ju
+31 = san ju ichi
+32 = san ju ni
+33 = san ju san
+34 = san ju yon
+35 = san ju go
+36 = san ju roku
+37 = san ju nana
+38 = san ju hachi
+39 = san ju kyu
+40 = yon ju
+41 = yon ju ichi
+42 = yon ju ni
+43 = yon ju san
+44 = yon ju yon
+45 = yon ju go
+46 = yon ju roku
+47 = yon ju nana
+48 = yon ju hachi
+49 = yon ju kyu
+50 = go ju
+51 = go ju ichi
+52 = go ju ni
+53 = go ju san
+54 = go ju yon
+55 = go ju go
+56 = go ju roku
+57 = go ju nana
+58 = go ju hachi
+59 = go ju kyu
+60 = roku ju
+61 = roku ju ichi
+62 = roku ju ni
+63 = roku ju san
+64 = roku ju yon
+65 = roku ju go
+66 = roku ju roku
+67 = roku ju nana
+68 = roku ju hachi
+69 = roku ju kyu
+70 = nana ju
+71 = nana ju ichi
+72 = nana ju ni
+73 = nana ju san
+74 = nana ju yon
+75 = nana ju go
+76 = nana ju roku
+77 = nana ju nana
+78 = nana ju hachi
+79 = nana ju kyu
+80 = hachi ju
+81 = hachi ju ichi
+82 = hachi ju ni
+83 = hachi ju san
+84 = hachi ju yon
+85 = hachi ju go
+86 = hachi ju roku
+87 = hachi ju nana
+88 = hachi ju hachi
+89 = hachi ju kyu
+90 = kyu ju
+91 = kyu ju ichi
+92 = kyu ju ni
+93 = kyu ju san
+94 = kyu ju yon
+95 = kyu ju go
+96 = kyu ju roku
+97 = kyu ju nana
+98 = kyu ju hachi
+99 = kyu ju kyu
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="calendrier-japonais">
+<h2>Calendrier japonais<a class="headerlink" href="#calendrier-japonais" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les années au Japon sont comptées selon les ères de l’empereur.</p>
+<ul class="simple">
+<li><p>1868 ère Meishi</p></li>
+<li><p>1912 ère Taisho</p></li>
+<li><p>1926 ère Showa</p></li>
+<li><p>1989 ère Heisei</p></li>
+<li><p>2019 ère Reiwa</p></li>
+</ul>
+<p>Nous pouvons afficher les ères en utilisant des tests <strong>if-elif</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1980</span><span class="p">,</span> <span class="mi">2025</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">year</span> <span class="o">&gt;=</span> <span class="mi">2019</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="s1">&#39;= Reiwa&#39;</span><span class="p">,</span> <span class="n">year</span><span class="o">-</span><span class="mi">2019</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">year</span> <span class="o">&gt;=</span> <span class="mi">1989</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="s1">&#39;= Heisei&#39;</span><span class="p">,</span> <span class="n">year</span><span class="o">-</span><span class="mi">1989</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">year</span> <span class="o">&gt;=</span> <span class="mi">1926</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="s1">&#39;= Showa&#39;</span><span class="p">,</span> <span class="n">year</span><span class="o">-</span><span class="mi">1926</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1980 = Showa 55
+1981 = Showa 56
+1982 = Showa 57
+1983 = Showa 58
+1984 = Showa 59
+1985 = Showa 60
+1986 = Showa 61
+1987 = Showa 62
+1988 = Showa 63
+1989 = Heisei 1
+1990 = Heisei 2
+1991 = Heisei 3
+1992 = Heisei 4
+1993 = Heisei 5
+1994 = Heisei 6
+1995 = Heisei 7
+1996 = Heisei 8
+1997 = Heisei 9
+1998 = Heisei 10
+1999 = Heisei 11
+2000 = Heisei 12
+2001 = Heisei 13
+2002 = Heisei 14
+2003 = Heisei 15
+2004 = Heisei 16
+2005 = Heisei 17
+2006 = Heisei 18
+2007 = Heisei 19
+2008 = Heisei 20
+2009 = Heisei 21
+2010 = Heisei 22
+2011 = Heisei 23
+2012 = Heisei 24
+2013 = Heisei 25
+2014 = Heisei 26
+2015 = Heisei 27
+2016 = Heisei 28
+2017 = Heisei 29
+2018 = Heisei 30
+2019 = Reiwa 1
+2020 = Reiwa 2
+2021 = Reiwa 3
+2022 = Reiwa 4
+2023 = Reiwa 5
+2024 = Reiwa 6
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="fonction.html" title="previous page">Fonction avec argument</a>
+    <a class='right-next' id="next-link" href="1_intro.html" title="next page">Introduction à Python</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Holzer<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
