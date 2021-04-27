@@ -75,3 +75,4 @@
   - file: misc/thonny
   - file: misc/github
   - file: misc/style
+  - file: dev/sympy
