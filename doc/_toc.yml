@@ -9,6 +9,7 @@
       - file: start/thonny/thonny
       - file: start/jupyterlab
       - file: start/markdown
+      - file: start/rappel
       
   - file: python/index
     sections:
@@ -18,10 +19,8 @@
       - file: python/2_struct
       - file: python/3_list
       - file: python/4_loop
-      - file: python/4_text2
       - file: python/logique
       - file: python/fonction
-      - file: python/jeu_ppc
         
       - file: python/exercices
         sections:
@@ -29,22 +28,30 @@
           - file: python/ex2
           - file: python/quiz
       
-  - file: plot/intro
+  - file: jeu/index
+    sections:
+      - file: jeu/ppc
+      - file: jeu/texte
+      - file: jeu/japon
+      
+  - file: plot/index
     sections:
       - file: plot/plot
-      - file: plot/param
+      - file: plot/figure
+      - file: plot/format
       - file: plot/numpy
+      - file: plot/bar
       - file: plot/image
       - file: plot/hist
-      - file: plot/bar
       - file: plot/scatter
       - file: plot/polar
+      - file: plot/pie
       - file: plot/text
-      - file: plot/style
-      - file: plot/color
-      - file: plot/subplot
-      - file: plot/file
       - file: plot/gif/gif
+      - file: python/le/7/mri
+      
+  - file: bokeh/bokeh
+  - file: bokeh/bokeh2
         
   - file: rep/index
     sections:
@@ -58,6 +65,8 @@
       - file: rep/son
         
   - file: algo/algo
+  - file: python/vi/5/SystemeDeFichiers
+  - file: python/vi/5/MotsDePasse
     
 - part: Reference
   chapters:
@@ -66,3 +75,4 @@
   - file: misc/thonny
   - file: misc/github
   - file: misc/style
+  - file: dev/sympy
