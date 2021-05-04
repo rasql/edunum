@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le système de fichiers UNIX &#8212; Education numérique</title>
+    <title>Le système de fichiers &#8212; Education numérique</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -33,8 +33,8 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/questions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/blanks.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -53,8 +53,6 @@
     <script src="../../../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -372,7 +370,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Le système de fichiers UNIX
+   Le système de fichiers
   </a>
  </li>
  <li class="toctree-l1">
@@ -410,6 +408,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../../misc/style.html">
    Style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../dev/sympy.html">
+   Calcul symbolique
   </a>
  </li>
 </ul>
@@ -523,23 +526,33 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectif">
-   Objectif
+  <a class="reference internal nav-link" href="#objectifs">
+   Objectifs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bien-ranger-pour-mieux-retrouver">
-   Bien ranger pour mieux retrouver
+  <a class="reference internal nav-link" href="#fichier-informatique">
+   Fichier informatique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#se-deplacer-dans-l-arborescence">
-   Se déplacer dans l’arborescence
+  <a class="reference internal nav-link" href="#dossiers">
+   Dossiers
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creer-et-supprimer-des-dossier">
-   Créer et supprimer des dossier
+  <a class="reference internal nav-link" href="#structure-en-arbre">
+   Structure en arbre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#se-deplacer">
+   Se déplacer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creer-des-dossier">
+   Créer des dossier
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -553,13 +566,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
+  <a class="reference internal nav-link" href="#exercices">
+   Exercices
   </a>
  </li>
 </ul>
@@ -573,26 +581,50 @@
         
               <div>
                 
-  <div class="section" id="le-systeme-de-fichiers-unix">
-<h1>Le système de fichiers UNIX<a class="headerlink" href="#le-systeme-de-fichiers-unix" title="Lien permanent vers ce titre">¶</a></h1>
+  <div class="section" id="le-systeme-de-fichiers">
+<h1>Le système de fichiers<a class="headerlink" href="#le-systeme-de-fichiers" title="Lien permanent vers ce titre">¶</a></h1>
+<p>On appelle <strong>système de fichier</strong> l’organisation hierarchique des fichiers au sein d’un <strong>système d’exploitation</strong>.</p>
 <p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Baobab_and_elephant%2C_Tanzania.jpg/640px-Baobab_and_elephant%2C_Tanzania.jpg" /></p>
-<div class="section" id="objectif">
-<h2>Objectif<a class="headerlink" href="#objectif" title="Lien permanent vers ce titre">¶</a></h2>
-<ol class="simple">
+<div class="section" id="objectifs">
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
 <li><p>Comprendre le système de fichiers UNIX (MacOS X)</p></li>
-</ol>
+<li><p>Se déplacer dans un système de fichiers</p></li>
+<li><p>Créer et supprimer des dossiers</p></li>
+</ul>
 </div>
-<div class="section" id="bien-ranger-pour-mieux-retrouver">
-<h2>Bien ranger pour mieux retrouver<a class="headerlink" href="#bien-ranger-pour-mieux-retrouver" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Votre ordinateur stocke des données localement. Sur un ordinateur Mac, chaque donnée est un fichier. Chaque fichier peut se trouver dans un dossier qui lui même peut se trouver dans un autre dossier. C’est une structure en arbre ou une <strong>arborescence</strong> où la racine est représentée par le signe <code class="docutils literal notranslate"><span class="pre">/</span></code>:</p>
+<div class="section" id="fichier-informatique">
+<h2>Fichier informatique<a class="headerlink" href="#fichier-informatique" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un fichier informatique est un ensemble de données numériques réunies sous un même nom, enregistrées sur un support de stockage permanent. On peut distinguer différents types de fichies tel que:</p>
+<ul class="simple">
+<li><p>programmes</p></li>
+<li><p>textes</p></li>
+<li><p>images</p></li>
+</ul>
+</div>
+<div class="section" id="dossiers">
+<h2>Dossiers<a class="headerlink" href="#dossiers" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans un ordinateur on a vite des milliers de fichiers. Nous utilisons des dossiers pour les organiser.
+Un <strong>dossier</strong> est un contenant de fichiers et de sous-dossiers.</p>
+</div>
+<div class="section" id="structure-en-arbre">
+<h2>Structure en arbre<a class="headerlink" href="#structure-en-arbre" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les ordinateurs organisent les dossiers et fichiers sous forme d”<strong>arbre</strong>, où</p>
+<ul class="simple">
+<li><p>un dossier est un <strong>noeud</strong></p></li>
+<li><p>un fichier est une <strong>feuille</strong></p></li>
+</ul>
+<p>On appelle cette structure une <strong>arborescence</strong>.<br />
+La <strong>racine</strong> de cet arbre est désigné par le symbole <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
 <p><img alt="" src="https://pixees.fr/informatiquelycee/n_site/img/nsi_prem_base_linux_2.png" /></p>
-<p>Vous pouvez retrouver cette arborescence sous forme graphique dans le finder:</p>
+<p>Vous pouvez retrouver cette arborescence dans l”<strong>interface graphique</strong> de votre système d’exploitation.<br />
+Voici une fenêtre du <strong>gestionnaire des fichiers</strong>.</p>
 <p><img alt="" src="https://osxdaily.com/wp-content/uploads/2010/02/mac-os-x-finder-column-view.JPG" /></p>
-<p>où chaque colonne représente un niveau dans la structure représentée par un nouveau dossier.</p>
+<p>Chaque colonne représente un niveau dans la structure hiérarchique du système des fichiers.</p>
 </div>
-<div class="section" id="se-deplacer-dans-l-arborescence">
-<h2>Se déplacer dans l’arborescence<a class="headerlink" href="#se-deplacer-dans-l-arborescence" title="Lien permanent vers ce titre">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">pwd</span></code> (<em>print working directory</em>) : affiche le chemin du répertoire où nous nous trouvons</p>
+<div class="section" id="se-deplacer">
+<h2>Se déplacer<a class="headerlink" href="#se-deplacer" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (print working directory) affiche le chemin du répertoire où nous nous trouvons.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
@@ -600,25 +632,51 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/vkeller/edunum/doc/python/vi/5/dossier-a-cracker&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/Users/ho/Downloads/dossier-a-cracker&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">cd</span></code> (<em>change directory</em>) : change de répertoire</p>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">cd</span></code> (change directory) change de répertoire. Si vous l’utilisez sans argument vous changez vers votre dossier personnel (home).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">confidentiel</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/vkeller/edunum/doc/python/vi/5/dossier-a-cracker/confidentiel
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/ho
 </pre></div>
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">ls</span></code> (<em>list</em>) : affiche le contenu du répertoire. Un dossier apparaît en <span style="color:blue">bleu</span>, un fichier en noir et une archive en <span style="color:red">rouge</span></p>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">dossier</span></code> permet de se déplacer vers un autre dossier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">Downloads</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/ho/Downloads
+</pre></div>
+</div>
+</div>
+</div>
+<p>Et on peut encore aller vers un sous-dossier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">dossier</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">cracker</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/ho/Downloads/dossier-a-cracker
+</pre></div>
+</div>
+</div>
+</div>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">ls</span></code> (list) affiche le contenu du dossier actuel. Sur certains systèmes les dossiers sont affichés dans une autre couleur.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
@@ -626,15 +684,30 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">business</span>/  <span class=" -Color -Color-Bold -Color-Bold-Red">mails_FBI.zip</span>  <span class=" -Color -Color-Bold -Color-Bold-Blue">original</span>/
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>README.txt     <span class=" -Color -Color-Blue">confidentiel</span>/  passwords.txt
 </pre></div>
 </div>
 </div>
 </div>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">dossier</span></code> affiche le contenu du dossier indiqué.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">confidentiel</span>
+</pre></div>
 </div>
-<div class="section" id="creer-et-supprimer-des-dossier">
-<h2>Créer et supprimer des dossier<a class="headerlink" href="#creer-et-supprimer-des-dossier" title="Lien permanent vers ce titre">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">mkdir</span></code> : (<em>make directory</em>) créé un nouveau dossier</p>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Blue">business</span>/      mails_FBI.txt  mails_FBI.zip  <span class=" -Color -Color-Blue">original</span>/
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Utilisez <code class="docutils literal notranslate"><span class="pre">ls</span></code> pour afficher le contenue de <code class="docutils literal notranslate"><span class="pre">business</span></code>.</p>
+</div>
+<div class="section" id="creer-des-dossier">
+<h2>Créer des dossier<a class="headerlink" href="#creer-des-dossier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> (make directory) créé un nouveau dossier. Ici on va créer un nouveau dossier appelé <code class="docutils literal notranslate"><span class="pre">informatique</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">informatique</span>
@@ -642,7 +715,7 @@
 </div>
 </div>
 </div>
-<p>on peut à nouveau afficher le contenu du dossier avec la commande <code class="docutils literal notranslate"><span class="pre">ls</span></code>. Le dossier <code class="docutils literal notranslate"><span class="pre">informatique</span></code> a été créé</p>
+<p>Avec la commande <code class="docutils literal notranslate"><span class="pre">ls</span></code> nous pouvons vérifier que le dossier <code class="docutils literal notranslate"><span class="pre">informatique</span></code> a été créé.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
@@ -655,7 +728,7 @@
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">rmdir</span></code> : (<em>remove directory</em>) supprime un dossier</p>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">rmdir</span></code> (remove directory) supprime un dossier.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmdir</span> <span class="n">informatique</span>
@@ -663,7 +736,7 @@
 </div>
 </div>
 </div>
-<p>on peut à nouveau afficher le contenu du dossier avec la commande <code class="docutils literal notranslate"><span class="pre">ls</span></code>. Le dossier <code class="docutils literal notranslate"><span class="pre">informatique</span></code> a été supprimé</p>
+<p>Le dossier <code class="docutils literal notranslate"><span class="pre">informatique</span></code> a été supprimé.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
@@ -679,8 +752,14 @@
 </div>
 <div class="section" id="dossiers-speciaux">
 <h2>Dossiers spéciaux<a class="headerlink" href="#dossiers-speciaux" title="Lien permanent vers ce titre">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">/</span></code> root (racine)</p>
-<p>Afficher la racine de l’ordinateur :</p>
+<p>Des symboles spéciaux sont utilisées pour designer des dossiers spéciaux:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> racine (root)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.</span></code> dossier actuel</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">..</span></code> dossier parent</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">~</span></code> (alt+n) dossier personnel (home)</p></li>
+</ul>
+<p>Avec <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/</span></code> vous pouvez afficher le contenue de la racine du système des fichiers:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span>
@@ -702,7 +781,25 @@
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">.</span></code> dossier actuel</p>
+<p>Avec <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/bin</span></code> vous pouvez afficher le dossier bin (=binary) qui contient le code pour les commande UNIX. Vous y trouvez les commandes <code class="docutils literal notranslate"><span class="pre">pwd</span></code> et <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span><span class="nb">bin</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">[</span>*          <span class=" -Color -Color-Red">date</span>*       <span class=" -Color -Color-Red">expr</span>*       <span class=" -Color -Color-Red">ln</span>*         <span class=" -Color -Color-Red">pwd</span>*        <span class=" -Color -Color-Red">sync</span>*
+<span class=" -Color -Color-Red">bash</span>*       <span class=" -Color -Color-Red">dd</span>*         <span class=" -Color -Color-Red">hostname</span>*   <span class=" -Color -Color-Red">ls</span>*         <span class=" -Color -Color-Red">rm</span>*         <span class=" -Color -Color-Red">tcsh</span>*
+<span class=" -Color -Color-Red">cat</span>*        <span class=" -Color -Color-Red">df</span>*         <span class=" -Color -Color-Red">kill</span>*       <span class=" -Color -Color-Red">mkdir</span>*      <span class=" -Color -Color-Red">rmdir</span>*      <span class=" -Color -Color-Red">test</span>*
+<span class=" -Color -Color-Red">chmod</span>*      <span class=" -Color -Color-Red">domainname</span>* <span class=" -Color -Color-Red">ksh</span>*        <span class=" -Color -Color-Red">mv</span>*         <span class=" -Color -Color-Red">sh</span>*         <span class=" -Color -Color-Red">unlink</span>*
+<span class=" -Color -Color-Red">cp</span>*         <span class=" -Color -Color-Red">echo</span>*       <span class=" -Color -Color-Red">launchctl</span>*  <span class=" -Color -Color-Red">pax</span>*        <span class=" -Color -Color-Red">sleep</span>*      <span class=" -Color -Color-Red">wait4path</span>*
+<span class=" -Color -Color-Red">csh</span>*        <span class=" -Color -Color-Red">ed</span>*         <span class=" -Color -Color-Red">link</span>*       <span class=" -Color -Color-Black -Color-Black-BGRed">ps</span>*         <span class=" -Color -Color-Red">stty</span>*       <span class=" -Color -Color-Red">zsh</span>*
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le symbole <code class="docutils literal notranslate"><span class="pre">.</span></code> desinge le dossier actuel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">.</span>
@@ -710,12 +807,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">business</span>/  <span class=" -Color -Color-Bold -Color-Bold-Red">mails_FBI.zip</span>  <span class=" -Color -Color-Bold -Color-Bold-Blue">original</span>/
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>README.txt     <span class=" -Color -Color-Blue">confidentiel</span>/  passwords.txt
 </pre></div>
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">..</span></code> dossier parent</p>
+<p>Le symbole <code class="docutils literal notranslate"><span class="pre">..</span></code> désigne le dossier parent.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">..</span>
@@ -723,7 +820,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>README.txt  <span class=" -Color -Color-Bold -Color-Bold-Blue">confidentiel</span>/  passwords.txt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Blue">dossier-a-cracker</span>/ <span class=" -Color -Color-Blue">images</span>/
 </pre></div>
 </div>
 </div>
@@ -736,7 +833,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/vkeller/edunum/doc/python/vi/5/dossier-a-cracker
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/ho/Downloads
 </pre></div>
 </div>
 </div>
@@ -753,11 +850,56 @@
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">~</span></code> home (alt+n) : c’est le dossier personnel.</p>
+<p>Le symbole <code class="docutils literal notranslate"><span class="pre">~</span></code> (alt+n) désigne le dossier personnel (home). Vous pouvez l’utiliser en combinaison pour des commandes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">~</span></code> lister le contenu du dossier personnel</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code> aller vers le dossier personnel</p></li>
+</ul>
 </div>
 <div class="section" id="afficher-le-contenu-d-un-fichier">
 <h2>Afficher le contenu d’un fichier<a class="headerlink" href="#afficher-le-contenu-d-un-fichier" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La commande <code class="docutils literal notranslate"><span class="pre">cat</span></code> suivie du nom d’un fichier affiche son contenu. Pour afficher le contenu du fichier <code class="docutils literal notranslate"><span class="pre">README.txt</span></code>, la commande est <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">README.txt</span></code> :</p>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">cat</span></code> suivie du nom d’un fichier affiche son contenu. On va</p>
+<ul class="simple">
+<li><p>aller dans le dossier <code class="docutils literal notranslate"><span class="pre">dossier-à-cracker</span></code></p></li>
+<li><p>lister son contenu</p></li>
+<li><p>afficher le contenu du fichier <code class="docutils literal notranslate"><span class="pre">README.txt</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/Users/ho/Downloads&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">dossier</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">cracker</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/ho/Downloads/dossier-a-cracker
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>README.txt     <span class=" -Color -Color-Blue">confidentiel</span>/  passwords.txt
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">README</span><span class="o">.</span><span class="n">txt</span>
@@ -771,15 +913,13 @@
 </div>
 </div>
 </div>
-<div class="section" id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Utilisez les commandes <code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">ls</span></code>, <code class="docutils literal notranslate"><span class="pre">cat</span></code> pour cet exercice</p>
-<p>Un fichier appelé <code class="docutils literal notranslate"><span class="pre">ctf.txt</span></code> se trouve dans le dossier <code class="docutils literal notranslate"><span class="pre">dossier-a-cracker/confidentiel/business/Avril</span></code>. Quel est son contenu ?</p>
-</div>
-<div class="section" id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Utilisez les commandes <code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">ls</span></code>, <code class="docutils literal notranslate"><span class="pre">cat</span></code>, <code class="docutils literal notranslate"><span class="pre">pwd</span></code> pour cet exercice</p>
-<p>Créez un dossier <code class="docutils literal notranslate"><span class="pre">math</span></code> dans le répertoire dossier-a-cracker/confidentiel.</p>
+<div class="section" id="exercices">
+<h2>Exercices<a class="headerlink" href="#exercices" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour cet exercice, n’utilisez pas l’interface graphique de votre ordinateur, mais seulement les commandes <code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">ls</span></code>, <code class="docutils literal notranslate"><span class="pre">cat</span></code>.</p>
+<p><strong>Afficher le contenu d’un fichier</strong><br />
+Un fichier appelé <code class="docutils literal notranslate"><span class="pre">ctf.txt</span></code> se trouve dans le dossier <code class="docutils literal notranslate"><span class="pre">dossier-a-cracker/confidentiel/business/Avril</span></code>. Quel est son contenu ?</p>
+<p><strong>Créer un dossier</strong><br />
+Créez un dossier <code class="docutils literal notranslate"><span class="pre">math</span></code> dans le répertoire <code class="docutils literal notranslate"><span class="pre">dossier-a-cracker/confidentiel</span></code>.</p>
 </div>
 </div>
 

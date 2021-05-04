@@ -33,8 +33,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -53,8 +53,6 @@
     <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -62,6 +60,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Figure et axes" href="figure.html" />
@@ -372,7 +372,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../python/vi/5/SystemeDeFichiers.html">
-   Le système de fichiers UNIX
+   Le système de fichiers
   </a>
  </li>
  <li class="toctree-l1">
@@ -410,6 +410,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/style.html">
    Style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dev/sympy.html">
+   Calcul symbolique
   </a>
  </li>
 </ul>
@@ -637,8 +642,8 @@
 <div class="section" id="creer-un-graphe">
 <h2>Créer un graphe<a class="headerlink" href="#creer-un-graphe" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Copiez ce code dans un éditeur de Python et exécutez-le.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 
@@ -667,7 +672,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fbf049bd2d0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fea8f2aaf10&gt;]
 </pre></div>
 </div>
 <img alt="../_images/plot_6_1.png" src="../_images/plot_6_1.png" />
@@ -805,24 +810,6 @@ Pour afficher un graphique dans votre éditeur Python standard, vous devez ajout
 <img alt="../_images/plot_21_0.png" src="../_images/plot_21_0.png" />
 </div>
 </div>
-<p>Un diagramme à barres produit un objet <code class="docutils literal notranslate"><span class="pre">BarContainer</span></code> qui contient des objets <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">_</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rectangle(xy=(-2.4, 0), width=0.8, height=2, angle=0)
-Rectangle(xy=(-1.4, 0), width=0.8, height=4, angle=0)
-Rectangle(xy=(-0.4, 0), width=0.8, height=3, angle=0)
-Rectangle(xy=(0.6, 0), width=0.8, height=6, angle=0)
-Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="legende">
 <h2>Légende<a class="headerlink" href="#legende" title="Lien permanent vers ce titre">¶</a></h2>
@@ -838,7 +825,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_25_0.png" src="../_images/plot_25_0.png" />
+<img alt="../_images/plot_23_0.png" src="../_images/plot_23_0.png" />
 </div>
 </div>
 </div>
@@ -853,20 +840,21 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_27_0.png" src="../_images/plot_27_0.png" />
+<img alt="../_images/plot_25_0.png" src="../_images/plot_25_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="segments-aleatoires">
 <h2>Segments aléatoires<a class="headerlink" href="#segments-aleatoires" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec 20 tuples à 2 valeurs, nous pouvons afficher 10 segments aléatories.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_29_0.png" src="../_images/plot_29_0.png" />
+<img alt="../_images/plot_27_0.png" src="../_images/plot_27_0.png" />
 </div>
 </div>
 </div>
@@ -884,7 +872,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_31_0.png" src="../_images/plot_31_0.png" />
+<img alt="../_images/plot_29_0.png" src="../_images/plot_29_0.png" />
 </div>
 </div>
 <p>Ici nous affichons le carré du sinus.</p>
@@ -902,7 +890,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_33_0.png" src="../_images/plot_33_0.png" />
+<img alt="../_images/plot_31_0.png" src="../_images/plot_31_0.png" />
 </div>
 </div>
 </div>
@@ -918,7 +906,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_35_0.png" src="../_images/plot_35_0.png" />
+<img alt="../_images/plot_33_0.png" src="../_images/plot_33_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -929,7 +917,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_36_0.png" src="../_images/plot_36_0.png" />
+<img alt="../_images/plot_34_0.png" src="../_images/plot_34_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -940,7 +928,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_37_0.png" src="../_images/plot_37_0.png" />
+<img alt="../_images/plot_35_0.png" src="../_images/plot_35_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -951,7 +939,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_38_0.png" src="../_images/plot_38_0.png" />
+<img alt="../_images/plot_36_0.png" src="../_images/plot_36_0.png" />
 </div>
 </div>
 </div>
@@ -968,7 +956,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_40_0.png" src="../_images/plot_40_0.png" />
+<img alt="../_images/plot_38_0.png" src="../_images/plot_38_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -980,7 +968,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_41_0.png" src="../_images/plot_41_0.png" />
+<img alt="../_images/plot_39_0.png" src="../_images/plot_39_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -993,7 +981,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_42_0.png" src="../_images/plot_42_0.png" />
+<img alt="../_images/plot_40_0.png" src="../_images/plot_40_0.png" />
 </div>
 </div>
 </div>
@@ -1010,7 +998,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_44_0.png" src="../_images/plot_44_0.png" />
+<img alt="../_images/plot_42_0.png" src="../_images/plot_42_0.png" />
 </div>
 </div>
 </div>
@@ -1027,7 +1015,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_46_0.png" src="../_images/plot_46_0.png" />
+<img alt="../_images/plot_44_0.png" src="../_images/plot_44_0.png" />
 </div>
 </div>
 <p>Nous pouvons places des étiquettes en LaTeX.</p>
@@ -1041,7 +1029,7 @@ Rectangle(xy=(1.6, 0), width=0.8, height=3, angle=0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_48_0.png" src="../_images/plot_48_0.png" />
+<img alt="../_images/plot_46_0.png" src="../_images/plot_46_0.png" />
 </div>
 </div>
 </div>
@@ -1065,7 +1053,7 @@ Nous supprimons l’axe en haut et à droite et déplaçons les deux autres vers
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/plot_50_0.png" src="../_images/plot_50_0.png" />
+<img alt="../_images/plot_48_0.png" src="../_images/plot_48_0.png" />
 </div>
 </div>
 </div>

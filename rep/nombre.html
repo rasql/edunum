@@ -33,8 +33,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -53,8 +53,6 @@
     <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -372,7 +370,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../python/vi/5/SystemeDeFichiers.html">
-   Le système de fichiers UNIX
+   Le système de fichiers
   </a>
  </li>
  <li class="toctree-l1">
@@ -410,6 +408,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../misc/style.html">
    Style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dev/sympy.html">
+   Calcul symbolique
   </a>
  </li>
 </ul>
@@ -619,7 +622,7 @@ Dans cette section nous allons construire des séquences de symboles qui représ
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">choice</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code> permet d’en sélectionner un chiffre aléatoire.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choice</span>
 <span class="n">choice</span><span class="p">(</span><span class="n">digits</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -852,7 +855,7 @@ Dans cette section nous allons construire des séquences de symboles qui représ
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">2</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">04b</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">X</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{i:2}</span><span class="s1"> = </span><span class="si">{i:04b}</span><span class="s1"> = </span><span class="si">{i:X}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -881,7 +884,7 @@ Dans cette section nous allons construire des séquences de symboles qui représ
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">256</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">08b</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">02X</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{i}</span><span class="s1"> = </span><span class="si">{i:08b}</span><span class="s1"> = </span><span class="si">{i:02X}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
