@@ -1,6 +1,75 @@
 # Markdown
 
-Ce document est écrit en Markdown.
+Markdown est un **langage de balisage léger**, avec une syntaxe facile à lire et facile à écrire. Un document balisé par Markdown peut être transformé en HTML ou en PDF. Les fichiers Markdown ont une extension `.md`.
+
+
+Markdown est utilisé pour formatter les fichiers README sur GitHub.
+
+
+## Emphase
+
+Les caractères `_` ou `*` sont utilisés pour entourer les mots à mettre en **emphase**.
+
+    _mot_ en *italique*. 
+    
+_mot_ en *italique*. 
+
+Les caractères  `__` ou `**` sont utilisés pour mettre des mots en **grande emphase**. 
+
+    __mot__ en **gras**. 
+    
+__mot__ en **gras**. 
+
+
+## Espaces
+
+Les **espaces multiples** ou des simples retours à la lignes sont tous remplacés par une seule espace.
+
+    Des            grands                espaces
+    et
+    des
+    retours.
+
+    
+Des            grands                espaces
+et
+des
+retours.
+
+
+## Paragraphe
+
+Une **ligne vide** crée un paragraphe.
+
+    Ceci est le premier paragraphe.
+
+    Ceci est le paragraphe suivant.
+
+
+Ceci est le premier paragraphe.
+
+Ceci est le paragraphe suivant.
+
+
+## Retour à la ligne forcé
+
+Ajouter **deux espaces** en fin de ligne insère un retour à la ligne forcé.
+
+    Les deux espaces en fin de cette ligne  
+    forcent un retour à la ligne.
+
+Les deux espaces en fin de cette ligne  
+forcent un retour à la ligne.
+
+## Code
+
+Le caractère ` (backquote) indique des éléments de code.
+
+    La fonction `print(x)` imprime la valeur de la variable `x`. 
+    
+La fonction `print(x)` imprime la valeur de la variable `x`. 
+
+    
 
 ## Directives
 
@@ -8,11 +77,7 @@ Pour mettre un paragraphe en évidence, voici quelques directives:
 
 - note
 - tip
-- caution
-- attention
 - warning
-- danger
-- error
 
 Le code Markdown pour utiliser une directive est:
 
@@ -28,36 +93,32 @@ This is a note.
 This is a tip.
 ```
 
-```{caution}
-This is a warning.
-```
-
-```{attention}
-This is attention info.
-```
-
 ```{warning}
 This is a warning.
 ```
 
-```{danger}
-This is danger info.
-```
+## Insérer une image
 
-```{error}
-This is error info.
-```
+Le code suivant insère une image.
 
-## Insert an image
+    ![](../img/logo.png)
+
 ![](../img/logo.png)
 
 ## Math
+
+Le code suivant insère une formule mathématique en LaTeX.
+
+    $$\frac{a + b}{1+x^2}$$
+
+
 $$\frac{a + b}{1+x^2}$$
 
 
 ## Sidebar
 Vous pouvez intégrer un texte dans le côté gauche du texte. 
 Les deux textes sont séparés par une barre verticale.
+Ceci est à éviter si le document est destiné pour smartphone.
 
 ```{sidebar} My sidebar title
 My sidebar content
@@ -65,22 +126,21 @@ My sidebar content
 
 ## Margin content
 Vous pouvez placer un texte dans la marge.
+Ceci est à éviter si le document est destiné pour smartphone.
 
 ```{margin} An optional title
 My margin content
 ```
 
-## Full-width
-
-````{div} full-width
-```{note}
-Here's a note that will take the full width
-```
-````
-
 --- 
 ## Notebook Statistics
-Voici les statistiques des Jupyter notebooks.
+
+Le code
+
+    ```{nb-exec-table}
+    ```
+    
+affiche les statistiques des Jupyter notebooks.
 
 ```{nb-exec-table}
 ```
@@ -88,12 +148,23 @@ Voici les statistiques des Jupyter notebooks.
 
 ## Inclure un document
 
-Inclure le fichier **hello.py**
+Le code
+
+    ``` {literalinclude} hello.py
+    ```
+
+inclut le fichier **hello.py**
 
 ``` {literalinclude} hello.py
 ```
 
-Inclure à partir de la ligne 2.
+Le code
+
+    ``` {literalinclude} hello.py
+    :lines: 2-
+    ```
+    
+inclut le fichier à partir de la ligne 2.
 
 ``` {literalinclude} hello.py
 :lines: 2-
@@ -101,8 +172,11 @@ Inclure à partir de la ligne 2.
 
 ## Télécharger un document
 
+Le code
+
     {download}`hello.py <hello.py>`
 
+permet de télécharger un fichier.  
 {download}`download <hello.py>`
 
     {download}`demo.txt <demo.txt>`
