@@ -49,9 +49,8 @@
       - file: plot/text
       - file: plot/gif/gif
       - file: python/le/7/mri
-      
-  - file: bokeh/bokeh
-  - file: bokeh/bokeh2
+      - file: bokeh/bokeh
+      - file: bokeh/bokeh2
         
   - file: rep/index
     sections:
@@ -70,9 +69,9 @@
     
 - part: Reference
   chapters:
-  - file: misc/markdown
-  - file: misc/jupyter
-  - file: misc/thonny
-  - file: misc/github
-  - file: misc/style
+  - file: ref/markdown
+  - file: ref/jupyter
+  - file: ref/thonny
+  - file: ref/github
+  - file: ref/style
   - file: dev/sympy
