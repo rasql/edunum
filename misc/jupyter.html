@@ -603,18 +603,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hide-input">
-   Hide input
+  <a class="reference internal nav-link" href="#cacher-l-entree">
+   Cacher l’entrée
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hide-output">
-   Hide output
+  <a class="reference internal nav-link" href="#id1">
+   Cacher l’entrée
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hide-cell">
-   Hide cell
+  <a class="reference internal nav-link" href="#cacher-la-cellule">
+   Cacher la cellule
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -635,12 +635,19 @@
                 
   <div class="section" id="jupyter-notebook">
 <h1>Jupyter notebook<a class="headerlink" href="#jupyter-notebook" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Un document Jupyter Notebook est un document <strong>JSON</strong>.
-Il est composé de cellules d’entrée/sortie. Celles-ci peuvent contenir du code, du texte (à l’aide de Markdown), des formules mathématiques, des graphiques et des médias interactifs.</p>
-<p>Il se termine généralement par l’extension « .ipynb ».</p>
+<p>Le Jupyter notebook est un document <strong>JSON</strong>.
+Il est composé de cellules d’entrée/sortie. Celles-ci peuvent contenir</p>
+<ul class="simple">
+<li><p>du code,</p></li>
+<li><p>du texte (à l’aide de Markdown),</p></li>
+<li><p>des formules mathématiques,</p></li>
+<li><p>des graphiques et</p></li>
+<li><p>des médias interactifs.</p></li>
+</ul>
+<p>Il se termine généralement par l’extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>.</p>
 <div class="section" id="styles">
 <h2>Styles<a class="headerlink" href="#styles" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les styles <em>italic</em>  <strong>bold</strong> et <code class="docutils literal notranslate"><span class="pre">code</span></code> peuvent être appliqués dans un text.</p>
+<p>Les styles <em>italic</em>  <strong>bold</strong> et <code class="docutils literal notranslate"><span class="pre">code</span></code> peuvent être appliqués dans un texte.</p>
 </div>
 <div class="section" id="listes">
 <h2>Listes<a class="headerlink" href="#listes" title="Lien permanent vers ce titre">¶</a></h2>
@@ -660,7 +667,7 @@ Il est composé de cellules d’entrée/sortie. Celles-ci peuvent contenir du co
 </div>
 <div class="section" id="texte-litteral">
 <h2>Texte littéral<a class="headerlink" href="#texte-litteral" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour afficher un texte littéral il suffit d’indenter ces lignes.</p>
+<p>Pour afficher un texte littéral il suffit d’indenter ses lignes.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># text littéral
 x = &#39;hello&#39;
 print(x)
@@ -669,7 +676,8 @@ print(x)
 </div>
 <div class="section" id="commandes-magiques">
 <h2>Commandes magiques<a class="headerlink" href="#commandes-magiques" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les commandes magiques permettent d’appeler certaines commandes UNIX. La commande <code class="docutils literal notranslate"><span class="pre">pwd</span></code> affiche le dossier actuel.</p>
+<p>Les commandes magiques permettent d’appeler certaines commandes UNIX.</p>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">pwd</span></code> affiche le dossier actuel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
@@ -682,7 +690,7 @@ print(x)
 </div>
 </div>
 </div>
-<p>La commande <code class="docutils literal notranslate"><span class="pre">ls</span></code> pour afficher les dossiers et fichiers.</p>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">ls</span></code> affiche les dossiers et fichiers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">*.</span><span class="n">ipynb</span>
@@ -707,7 +715,7 @@ print(x)
 </div>
 </div>
 </div>
-<p>La commande <code class="docutils literal notranslate"><span class="pre">%save</span></code> permet de sauvegarder les lignes qui suivent dans un fichier.</p>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">%save</span></code> sauvegarde les lignes qui suivent dans un fichier.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">save</span> hello.py
@@ -798,6 +806,12 @@ for (i=0; i++, i&lt;3)
 <h2>Tableau<a class="headerlink" href="#tableau" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un tableau est centré avec des bandes alternés en Jupyter.<br />
 Il s’afficher plus aéré et aligné à gauche dans le site web.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>| x     | not x |
+|-------|-------|
+| False | True  |
+| True  | False |
+</pre></div>
+</div>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>x</p></th>
@@ -939,7 +953,7 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "98ca02b07f0e4199834a2dce67dface6", "version_major": 2, "version_minor": 0}
+{"model_id": "cc749f9a1a0f48158d8963878f5bb763", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -979,24 +993,17 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </ul>
 <p>Le résultat n’est pas visible dans le Jupyter notebook, seulement dans la page HTML.</p>
 </div>
-<div class="section" id="hide-input">
-<h2>Hide input<a class="headerlink" href="#hide-input" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour cacher la cellule d’entrée, il faut ajouter ceci aux méta-données de la celule:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
-    &quot;tags&quot;: [
-        &quot;hide-input&quot;
-    ]
-}
-</pre></div>
-</div>
+<div class="section" id="cacher-l-entree">
+<h2>Cacher l’entrée<a class="headerlink" href="#cacher-l-entree" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour cacher l’entrée de la cellue (intput), ajoutez le tag hide-input.</p>
 <p>Dans Jupyter Lab il faut</p>
 <ul class="simple">
 <li><p>choisir la cellule</p></li>
 <li><p>ouvrir <strong>Property Inspector</strong> (icône avec deux rouages à droite en haut)</p></li>
-<li><p>cliquer sur un <strong>Cell Tag</strong> existant ou ajouter un nouveau tag</p></li>
+<li><p>cliquer sur un <strong>cell tag</strong> existant ou ajouter un nouveau tag</p></li>
 </ul>
-<p><img alt="" src="../_images/hide-input-tag.png" /></p>
-<p>Pour afficher cliquer sur <strong>Click to show (+)</strong></p>
+<p><img alt="" src="../_images/jupyter_tags.png" /></p>
+<p>Pour afficher l’entrée de la cellule cliquz sur <strong>Click to show (+)</strong>.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
@@ -1013,16 +1020,9 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 </div>
 </div>
-<div class="section" id="hide-output">
-<h2>Hide output<a class="headerlink" href="#hide-output" title="Lien permanent vers ce titre">¶</a></h2>
-<p>To hide the output add this to the Cell Metadata:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
-    &quot;tags&quot;: [
-        &quot;hide-output&quot;
-    ]
-}
-</pre></div>
-</div>
+<div class="section" id="id1">
+<h2>Cacher l’entrée<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour cacher la sortie de la cellule (output), ajoutez le tag <code class="docutils literal notranslate"><span class="pre">hide-output</span></code>.</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
@@ -1039,16 +1039,9 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 </div>
 </div>
-<div class="section" id="hide-cell">
-<h2>Hide cell<a class="headerlink" href="#hide-cell" title="Lien permanent vers ce titre">¶</a></h2>
-<p>To hide the cell add this to the Cell Metadata:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
-    &quot;tags&quot;: [
-        &quot;hide-cell&quot;
-    ]
-}
-</pre></div>
-</div>
+<div class="section" id="cacher-la-cellule">
+<h2>Cacher la cellule<a class="headerlink" href="#cacher-la-cellule" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour cacher la cellule entière (input+output), ajoutez le tag <code class="docutils literal notranslate"><span class="pre">hide-cell</span></code>.</p>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>

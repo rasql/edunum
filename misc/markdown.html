@@ -521,8 +521,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#retour-a-la-ligne-force">
-   Retour à la ligne forcé
+  <a class="reference internal nav-link" href="#retour-a-la-ligne">
+   Retour à la ligne
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ligne-de-separation">
+   Ligne de séparation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#commentaire">
+   Commentaire
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -531,33 +541,38 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#directives">
-   Directives
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inserer-une-image">
    Insérer une image
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#math">
-   Math
+  <a class="reference internal nav-link" href="#inserer-une-formule">
+   Insérer une formule
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sidebar">
-   Sidebar
+  <a class="reference internal nav-link" href="#directives">
+   Directives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#margin-content">
-   Margin content
+  <a class="reference internal nav-link" href="#paragraphe-en-evidence">
+   Paragraphe en évidence
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notebook-statistics">
-   Notebook Statistics
+  <a class="reference internal nav-link" href="#texte-a-cote">
+   Texte à côté
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#texte-dans-la-marge">
+   Texte dans la marge
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistiques-des-notebooks">
+   Statistiques des notebooks
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -593,48 +608,54 @@
                 
   <div class="section" id="markdown">
 <h1>Markdown<a class="headerlink" href="#markdown" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Markdown est un <strong>langage de balisage léger</strong>, avec une syntaxe facile à lire et facile à écrire. Un document balisé par Markdown peut être transformé en HTML ou en PDF. Les fichiers Markdown ont une extension <code class="docutils literal notranslate"><span class="pre">.md</span></code>.</p>
-<p>Markdown est utilisé pour formatter les fichiers README sur GitHub.</p>
+<p>Markdown est un <strong>langage de balisage léger</strong>, avec une syntaxe</p>
+<ul class="simple">
+<li><p>facile à lire</p></li>
+<li><p>facile à écrire.</p></li>
+</ul>
+<p>Un document balisé par Markdown peut être transformé en HTML ou en PDF. Les fichiers Markdown ont une extension <code class="docutils literal notranslate"><span class="pre">.md</span></code>.</p>
+<p>Ce texte que vous êtes en train de lire est écrit en Markdown. Vous pouvez télécharger son fichier source avec le bouton <strong>Télécharger</strong> en haut à droite.</p>
+<p><img alt="" src="../_images/md_button.png" /></p>
 <div class="section" id="emphase">
 <h2>Emphase<a class="headerlink" href="#emphase" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les caractères <code class="docutils literal notranslate"><span class="pre">_</span></code> ou <code class="docutils literal notranslate"><span class="pre">*</span></code> sont utilisés pour entourer les mots à mettre en <strong>emphase</strong>.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>_mot_ en *italique*. 
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Ce _mot_ est en *italique*. 
 </pre></div>
 </div>
-<p><em>mot</em> en <em>italique</em>.</p>
+<p>Ce <em>mot</em> est en <em>italique</em>.</p>
 <p>Les caractères  <code class="docutils literal notranslate"><span class="pre">__</span></code> ou <code class="docutils literal notranslate"><span class="pre">**</span></code> sont utilisés pour mettre des mots en <strong>grande emphase</strong>.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>__mot__ en **gras**. 
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Ce __mot__ est en **gras**. 
 </pre></div>
 </div>
-<p><strong>mot</strong> en <strong>gras</strong>.</p>
+<p>Ce <strong>mot</strong> est en <strong>gras</strong>.</p>
 </div>
 <div class="section" id="espaces">
 <h2>Espaces<a class="headerlink" href="#espaces" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les <strong>espaces multiples</strong> ou des simples retours à la lignes sont tous remplacés par une seule espace.</p>
+<p>Les <strong>espaces multiples</strong> ou un <strong>simple retour à la ligne</strong> sont tous remplacés par une seule espace.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Des            grands                espaces
 et
 des
-retours.
+retours à la ligne.
 </pre></div>
 </div>
 <p>Des            grands                espaces
 et
 des
-retours.</p>
+retours à la ligne.</p>
 </div>
 <div class="section" id="paragraphe">
 <h2>Paragraphe<a class="headerlink" href="#paragraphe" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une <strong>ligne vide</strong> crée un paragraphe.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Ceci est le premier paragraphe.
 
-Ceci est le paragraphe suivant.
+Ceci est le deuxième paragraphe.
 </pre></div>
 </div>
 <p>Ceci est le premier paragraphe.</p>
-<p>Ceci est le paragraphe suivant.</p>
+<p>Ceci est le deuxième paragraphe.</p>
 </div>
-<div class="section" id="retour-a-la-ligne-force">
-<h2>Retour à la ligne forcé<a class="headerlink" href="#retour-a-la-ligne-force" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="retour-a-la-ligne">
+<h2>Retour à la ligne<a class="headerlink" href="#retour-a-la-ligne" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ajouter <strong>deux espaces</strong> en fin de ligne insère un retour à la ligne forcé.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Les deux espaces en fin de cette ligne  
 forcent un retour à la ligne.
@@ -642,6 +663,23 @@ forcent un retour à la ligne.
 </div>
 <p>Les deux espaces en fin de cette ligne<br />
 forcent un retour à la ligne.</p>
+</div>
+<div class="section" id="ligne-de-separation">
+<h2>Ligne de séparation<a class="headerlink" href="#ligne-de-separation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ajouter <strong>trois traits-d’union</strong> crée une ligne de séparation.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>---
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="commentaire">
+<h2>Commentaire<a class="headerlink" href="#commentaire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez utiliser des balises HTML pour insérer un commentaire.
+Le commentaire ne sera pas affiché dans la page web.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;!--- Ceci est un commentaire ---&gt;
+</pre></div>
+</div>
+<!--- Ceci est un commentaire --->
 </div>
 <div class="section" id="code">
 <h2>Code<a class="headerlink" href="#code" title="Lien permanent vers ce titre">¶</a></h2>
@@ -651,33 +689,6 @@ forcent un retour à la ligne.</p>
 </div>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> imprime la valeur de la variable <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </div>
-<div class="section" id="directives">
-<h2>Directives<a class="headerlink" href="#directives" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour mettre un paragraphe en évidence, voici quelques directives:</p>
-<ul class="simple">
-<li><p>note</p></li>
-<li><p>tip</p></li>
-<li><p>warning</p></li>
-</ul>
-<p>Le code Markdown pour utiliser une directive est:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{note}
-This is a note.
-```
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a note.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Astuce</p>
-<p>This is a tip.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Avertissement</p>
-<p>This is a warning.</p>
-</div>
-</div>
 <div class="section" id="inserer-une-image">
 <h2>Insérer une image<a class="headerlink" href="#inserer-une-image" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le code suivant insère une image.</p>
@@ -686,43 +697,103 @@ This is a note.
 </div>
 <p><img alt="" src="../_images/logo.png" /></p>
 </div>
-<div class="section" id="math">
-<h2>Math<a class="headerlink" href="#math" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="inserer-une-formule">
+<h2>Insérer une formule<a class="headerlink" href="#inserer-une-formule" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le code suivant insère une formule mathématique en LaTeX.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$$\frac{a + b}{1+x^2}$$
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$$ 
+\frac{a + b}{1+x^2}
+$$ 
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
-\[\frac{a + b}{1+x^2}\]</div>
+\[
+\frac{a + b}{1+x^2}
+\]</div>
 </div>
-<div class="section" id="sidebar">
-<h2>Sidebar<a class="headerlink" href="#sidebar" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Vous pouvez intégrer un texte dans le côté gauche du texte.
-Les deux textes sont séparés par une barre verticale.
-Ceci est à éviter si le document est destiné pour smartphone.</p>
+<div class="section" id="directives">
+<h2>Directives<a class="headerlink" href="#directives" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les <strong>directives</strong> permettent d’appliquer une fonction (directive) sur un bout de texte (contenu).</p>
+<ul class="simple">
+<li><p>elle est entourée par des triples back-quotes</p></li>
+<li><p>les options sont entourés par des deux-points</p></li>
+</ul>
+<p>Voici le format d’une directive</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{directive}
+:option: valeur
+
+contenu
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="paragraphe-en-evidence">
+<h2>Paragraphe en évidence<a class="headerlink" href="#paragraphe-en-evidence" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour mettre un paragraphe en évidence, voici quelques directives:</p>
+<ul class="simple">
+<li><p>note</p></li>
+<li><p>tip</p></li>
+<li><p>warning</p></li>
+</ul>
+<p>Voici le code:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{note}
+Ceci est une directive **note**.
+```
+</pre></div>
+</div>
+<p>Voici trois exemples:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ceci est une directive <strong>note</strong>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Ceci est une directive <strong>tip</strong>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Ceci est une directive <strong>warning</strong>.</p>
+</div>
+</div>
+<div class="section" id="texte-a-cote">
+<h2>Texte à côté<a class="headerlink" href="#texte-a-cote" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="sidebar">
-<p class="sidebar-title">My sidebar title</p>
-<p>My sidebar content</p>
+<p class="sidebar-title">Titre</p>
+<p>Mon texte à côté.</p>
+</div>
+<p>Le directive <code class="docutils literal notranslate"><span class="pre">sidebar</span></code> intègre un texte dans le côté droite du texte.
+Les deux textes sont séparés par une barre verticale.<br />
+<strong>Attention:</strong><br />
+Evitez cette directive si le document est destiné pour smartphone.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{sidebar} Titre
+Mon texte à côté.
+```
+</pre></div>
 </div>
 </div>
-<div class="section" id="margin-content">
-<h2>Margin content<a class="headerlink" href="#margin-content" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Vous pouvez placer un texte dans la marge.
-Ceci est à éviter si le document est destiné pour smartphone.</p>
+<div class="section" id="texte-dans-la-marge">
+<h2>Texte dans la marge<a class="headerlink" href="#texte-dans-la-marge" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="margin sidebar">
-<p class="sidebar-title">An optional title</p>
-<p>My margin content</p>
+<p class="sidebar-title">Titre</p>
+<p>Mon texte en marge.</p>
+</div>
+<p>Le directive <code class="docutils literal notranslate"><span class="pre">margin</span></code> place un texte dans la marge.
+Ce texte peut couvrir la barre de navigation à droite.
+<strong>Attention:</strong><br />
+Evitez cette directive si le document est destiné pour smartphone.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{margin} Titre
+Mon texte en marge.
+```
+</pre></div>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="notebook-statistics">
-<h2>Notebook Statistics<a class="headerlink" href="#notebook-statistics" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le code</p>
+<div class="section" id="statistiques-des-notebooks">
+<h2>Statistiques des notebooks<a class="headerlink" href="#statistiques-des-notebooks" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le directive <code class="docutils literal notranslate"><span class="pre">nb-exec-table</span></code> affiche les statistiques des Jupyter notebooks.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{nb-exec-table}
 ```
 </pre></div>
 </div>
-<p>affiche les statistiques des Jupyter notebooks.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Document</p></th>
@@ -738,47 +809,41 @@ Ceci est à éviter si le document est destiné pour smartphone.</p>
 </div>
 <div class="section" id="inclure-un-document">
 <h2>Inclure un document<a class="headerlink" href="#inclure-un-document" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le code</p>
+<p>Le directive <code class="docutils literal notranslate"><span class="pre">literalinclude</span></code> permet d’incure un fichier.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>``` {literalinclude} hello.py
 ```
 </pre></div>
 </div>
-<p>inclut le fichier <strong>hello.py</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Le code</p>
+<p>L’option <code class="docutils literal notranslate"><span class="pre">:lines:</span></code> permet de specifier une plage de lignes.<br />
+Ici, le fichier est inclu à partir de la ligne 2.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>``` {literalinclude} hello.py
 :lines: 2-
 ```
 </pre></div>
 </div>
-<p>inclut le fichier à partir de la ligne 2.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="telecharger-un-document">
 <h2>Télécharger un document<a class="headerlink" href="#telecharger-un-document" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le code</p>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">{download}</span></code> permet de télécharger un fichier.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{download}`hello.py &lt;hello.py&gt;`
 </pre></div>
 </div>
-<p>permet de télécharger un fichier.<br />
-<a class="reference download internal" download="" href="../_downloads/fc717d182895f20dc56f3cc5f69da37d/hello.py"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{download}`demo.txt &lt;demo.txt&gt;`
-</pre></div>
-</div>
-<p><a class="reference download internal" download="" href="../_downloads/85b9acf98b2b8c9ee6c513b7c5126ee1/demo.txt"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/fc717d182895f20dc56f3cc5f69da37d/hello.py"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a></p>
 </div>
 <div class="section" id="questions-a-choix-multiples">
 <h2>Questions à choix multiples<a class="headerlink" href="#questions-a-choix-multiples" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est possible d’intégrer des questions à choix multiples au fil des pages via la directive <code class="docutils literal notranslate"><span class="pre">question</span></code>.
 Dans le corps de la directive, les bonnes et mauvaises réponses sont indiquées via les rôles <code class="docutils literal notranslate"><span class="pre">{v}</span></code> et <code class="docutils literal notranslate"><span class="pre">{f}</span></code> pour <em>vrai</em> et <em>faux</em>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="94ae374d-5465-41f3-b6d0-a65159579492" name="cbee1096-4d64-45e9-914f-d103e7098916" type="radio">
-</input><label class="tabbed-label" for="94ae374d-5465-41f3-b6d0-a65159579492">
+<input checked="checked" id="07ee5e95-90ef-487f-a796-1fdc77a8b18d" name="858ab386-e55c-41ac-876b-b7d7eaa1af7c" type="radio">
+</input><label class="tabbed-label" for="07ee5e95-90ef-487f-a796-1fdc77a8b18d">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
@@ -788,8 +853,8 @@ Je pense qu’il y en a <label class="answer incorrect"><input type="checkbox" /
 </div>
 <div class="controls"><input type="button" class="check btn btn-primary" value="Vérifier ma réponse" /><input type="button" class="show btn btn-secondary" value="Afficher la réponse" /></div></div>
 </form></div></div>
-<input id="99ca32f9-6ccc-4eb6-9673-f94d2aabdb90" name="cbee1096-4d64-45e9-914f-d103e7098916" type="radio">
-</input><label class="tabbed-label" for="99ca32f9-6ccc-4eb6-9673-f94d2aabdb90">
+<input id="ec41d3ac-c578-4eb9-baff-4f3dd9a8f1ec" name="858ab386-e55c-41ac-876b-b7d7eaa1af7c" type="radio">
+</input><label class="tabbed-label" for="ec41d3ac-c578-4eb9-baff-4f3dd9a8f1ec">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{question}
 Combien y a t&#39;il de bits dans un octet ?
@@ -803,8 +868,8 @@ Je pense qu&#39;il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
 Le contenu de la question peut lui-même être structuré en Markdown.
 Dans l’exemple ci-dessous, les réponses sont affichées dans une liste.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="4bbd603c-f5c7-4835-878d-9495c91636c1" name="67142737-5c86-430e-8383-79dd4d3636ec" type="radio">
-</input><label class="tabbed-label" for="4bbd603c-f5c7-4835-878d-9495c91636c1">
+<input checked="checked" id="31223c79-c0c3-4cb5-91e5-fc1cb36e5561" name="a445eaec-63d9-4f0d-abe6-7e47881c2462" type="radio">
+</input><label class="tabbed-label" for="31223c79-c0c3-4cb5-91e5-fc1cb36e5561">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question avec un titre personnalisé</p>
@@ -819,8 +884,8 @@ Aperçu</label><div class="tabbed-content docutils">
 </div>
 <div class="controls"><input type="button" class="check btn btn-primary" value="Vérifier ma réponse" /><input type="button" class="show btn btn-secondary" value="Afficher la réponse" /></div></div>
 </form></div></div>
-<input id="81104920-605b-445f-9011-b19e9821130c" name="67142737-5c86-430e-8383-79dd4d3636ec" type="radio">
-</input><label class="tabbed-label" for="81104920-605b-445f-9011-b19e9821130c">
+<input id="ae411929-fee8-40e2-97f3-246e569c0e6a" name="a445eaec-63d9-4f0d-abe6-7e47881c2462" type="radio">
+</input><label class="tabbed-label" for="ae411929-fee8-40e2-97f3-246e569c0e6a">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{question} Question avec un titre personnalisé
 Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turing ?
@@ -840,13 +905,13 @@ Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turin
 Dans le texte du rôle, les différentes options de réponses sont séparées par un caractère <code class="docutils literal notranslate"><span class="pre">|</span></code>.
 Une réponse valable est précédée d’un caractère <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f880b985-04df-4701-85de-5bdb7761a533" name="b0c998ac-fc5a-4ba5-ac37-7407fd6f5487" type="radio">
-</input><label class="tabbed-label" for="f880b985-04df-4701-85de-5bdb7761a533">
+<input checked="checked" id="b241625f-f598-416c-a21e-29964bea3b50" name="12373833-cea9-4108-b023-7269e131cf93" type="radio">
+</input><label class="tabbed-label" for="b241625f-f598-416c-a21e-29964bea3b50">
 Aperçu</label><div class="tabbed-content docutils">
 <p>Dans le texte suivant, certains <select class="blank"><option class="blank_option" value="-1" selected="selected"></option><option class="correct_option" value="1">mots</option><option class="incorrect_option" value="0">trucs</option><option class="incorrect_option" value="0">machins</option></select> sont laissés <select class="blank"><option class="blank_option" value="-1" selected="selected"></option><option class="incorrect_option" value="0">pour compte</option><option class="correct_option" value="1">blancs</option><option class="incorrect_option" value="0">verts</option><option class="incorrect_option" value="0">seuls</option></select>.</p>
 </div>
-<input id="48bea513-ccd6-4011-9dc0-4d59e99f44bb" name="b0c998ac-fc5a-4ba5-ac37-7407fd6f5487" type="radio">
-</input><label class="tabbed-label" for="48bea513-ccd6-4011-9dc0-4d59e99f44bb">
+<input id="053a8f56-c3bc-44ae-989e-3214b37b1916" name="12373833-cea9-4108-b023-7269e131cf93" type="radio">
+</input><label class="tabbed-label" for="053a8f56-c3bc-44ae-989e-3214b37b1916">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Dans le texte suivant, certains {bl}`&gt;mots|trucs|machins` sont laissés {bl}`pour compte|&gt;blancs|verts|seuls`.
 </pre></div>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calcul symbolique &#8212; Education num√©rique</title>
+    <title>SymPy &#8212; Education num√©rique</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -64,7 +64,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="prev" title="Style" href="../misc/style.html" />
+    <link rel="prev" title="Style" href="../ref/style.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -301,19 +301,19 @@
      Imagerie m√©dicale
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bokeh/bokeh.html">
+     Bokeh
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bokeh/bokeh2.html">
+     Bokeh
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../bokeh/bokeh.html">
-   Bokeh
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../bokeh/bokeh2.html">
-   Bokeh
-  </a>
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../rep/index.html">
@@ -387,33 +387,33 @@
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../misc/markdown.html">
+  <a class="reference internal" href="../ref/markdown.html">
    Markdown
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../misc/jupyter.html">
-   Jupyter notebook
+  <a class="reference internal" href="../ref/jupyter.html">
+   Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../misc/thonny.html">
+  <a class="reference internal" href="../ref/thonny.html">
    Thonny
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../misc/github.html">
+  <a class="reference internal" href="../ref/github.html">
    GitHub
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../misc/style.html">
+  <a class="reference internal" href="../ref/style.html">
    Style
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Calcul symbolique
+   SymPy
   </a>
  </li>
 </ul>
@@ -527,7 +527,7 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+  <a class="reference internal nav-link" href="#calcul-symbolique">
    Calcul symbolique ?
   </a>
  </li>
@@ -577,7 +577,7 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#id1">
      Op√©rations de base
     </a>
    </li>
@@ -619,34 +619,28 @@
         
               <div>
                 
-  <div class="section" id="calcul-symbolique">
-<h1>Calcul symbolique<a class="headerlink" href="#calcul-symbolique" title="Lien permanent vers ce titre">¬∂</a></h1>
-<p><strong>SymPy</strong> est une biblioth√®que en Python sp√©cialis√©e dans le <strong>calcul formel</strong> qui ne d√©pend d‚Äôaucune biblioth√®que suppl√©mentaire. Elle permet de faire</p>
+  <div class="section" id="sympy">
+<h1>SymPy<a class="headerlink" href="#sympy" title="Lien permanent vers ce titre">¬∂</a></h1>
+<p>La biblioth√®que <strong>SymPy</strong> est sp√©cialis√©e dans le <strong>calcul symbolique</strong>.  Elle ne d√©pend d‚Äôaucune biblioth√®que suppl√©mentaire. Elle permet de faire</p>
 <ul class="simple">
-<li><p>calcul arithm√©tique formel</p></li>
-<li><p>calcul matriciel formel</p></li>
+<li><p>arithm√©tique</p></li>
 <li><p>alg√®bre</p></li>
+<li><p>calcul matriciel</p></li>
+<li><p>r√©solution d‚Äô√©quations</p></li>
 </ul>
 <p><a class="reference external" href="https://docs.sympy.org/latest/tutorial">Source</a></p>
+<p>Tout d‚Äôabord nous importons toutes les m√©thodes (<code class="docutils literal notranslate"><span class="pre">*</span></code>) depuis le module <code class="docutils literal notranslate"><span class="pre">sympy</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
-<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="n">init_printing</span><span class="p">()</span>
-<span class="n">sympy</span><span class="o">.</span><span class="n">__version__</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.8&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p><strong>Exercice</strong><br />
 Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚Äôabord installer le module <strong>sympy</strong>.</p>
-<div class="section" id="id1">
-<h2>Calcul symbolique ?<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¬∂</a></h2>
+<div class="section" id="calcul-symbolique">
+<h2>Calcul symbolique ?<a class="headerlink" href="#calcul-symbolique" title="Lien permanent vers ce titre">¬∂</a></h2>
 <p>C‚Äôest quoi le calcul symbolique?</p>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> du module <code class="docutils literal notranslate"><span class="pre">math</span></code> permet de calculer une racine carr√©e. Le nombre affich√© n‚Äôest pas la valeur exacte. La racine de 2 ne peux pas √™tre repr√©sent√© par un nombre √† virgule flottante.</p>
 <div class="cell docutils container">
@@ -657,7 +651,9 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_4_0.png" src="../_images/sympy_4_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.4142135623730951
+</pre></div>
+</div>
 </div>
 </div>
 <p>Si nous faisons l‚Äôop√©ration inverses, le carr√©, il reste une petite erreur.</p>
@@ -668,7 +664,9 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_6_0.png" src="../_images/sympy_6_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4.440892098500626e-16
+</pre></div>
+</div>
 </div>
 </div>
 <p>Par contre si nous utilisons la fonction <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> que nous venons d‚Äôimporter du module <code class="docutils literal notranslate"><span class="pre">sympy</span></code> nous gardons une expression symbolique pour la racine.</p>
@@ -679,7 +677,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_8_0.png" src="../_images/sympy_8_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sqrt{2}\]</div>
 </div>
 </div>
 <p>Si nous faisons l‚Äôop√©ration inverse, il n‚Äôy a pas d‚Äôerreur d‚Äôarrondi.</p>
@@ -690,7 +689,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_10_0.png" src="../_images/sympy_10_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 0\]</div>
 </div>
 </div>
 <p>En plus, le calcul symbolique peut √™tre simplifi√©.</p>
@@ -701,7 +701,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_12_0.png" src="../_images/sympy_12_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 \sqrt{2}\]</div>
 </div>
 </div>
 </div>
@@ -717,7 +718,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_14_0.png" src="../_images/sympy_14_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x + 2 y\]</div>
 </div>
 </div>
 <p>Voici une fonction compos√©e.</p>
@@ -729,7 +731,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_16_0.png" src="../_images/sympy_16_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle e^{x} \sin{\left(x \right)}\]</div>
 </div>
 </div>
 <p>Nous pouvons la diff√©rencier par rapport √† x.</p>
@@ -740,7 +743,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_18_0.png" src="../_images/sympy_18_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle e^{x} \sin{\left(x \right)} + e^{x} \cos{\left(x \right)}\]</div>
 </div>
 </div>
 </div>
@@ -756,7 +760,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_20_0.png" src="../_images/sympy_20_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(a + b\right)^{5}\]</div>
 </div>
 </div>
 <p>La m√©thode <code class="docutils literal notranslate"><span class="pre">expand</span></code> permet de d√©velopper l‚Äôexpression.</p>
@@ -767,7 +772,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_22_0.png" src="../_images/sympy_22_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle a^{5} + 5 a^{4} b + 10 a^{3} b^{2} + 10 a^{2} b^{3} + 5 a b^{4} + b^{5}\]</div>
 </div>
 </div>
 <p>La m√©thode <code class="docutils literal notranslate"><span class="pre">factor</span></code> permet de la factoriser.</p>
@@ -778,7 +784,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_24_0.png" src="../_images/sympy_24_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(a + b\right)^{5}\]</div>
 </div>
 </div>
 </div>
@@ -800,7 +807,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_27_0.png" src="../_images/sympy_27_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{x^{2}}{y} + 2 x - \log{\left(y \right)}\]</div>
 </div>
 </div>
 <p>Nous pouvons diff√©rencier la fonction par rapport √† x.</p>
@@ -811,7 +819,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_29_0.png" src="../_images/sympy_29_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{2 x}{y} + 2\]</div>
 </div>
 </div>
 <p>Et une deuxi√®me fois par rapport √† y.</p>
@@ -822,7 +831,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_31_0.png" src="../_images/sympy_31_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \frac{2 x}{y^{2}}\]</div>
 </div>
 </div>
 </div>
@@ -837,7 +847,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_33_0.png" src="../_images/sympy_33_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \int e^{x} \cos{\left(x \right)}\, dx = \frac{e^{x} \sin{\left(x \right)}}{2} + \frac{e^{x} \cos{\left(x \right)}}{2}\]</div>
 </div>
 </div>
 </div>
@@ -853,7 +864,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_35_0.png" src="../_images/sympy_35_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x + 2 y\]</div>
 </div>
 </div>
 <p>Nous poumvons soustraire un terme.</p>
@@ -866,7 +878,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_39_0.png" src="../_images/sympy_39_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x \left(x + 2 y\right)\]</div>
 </div>
 </div>
 <p>Nous pouvons d√©velopper le r√©sultat.</p>
@@ -877,7 +890,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_41_0.png" src="../_images/sympy_41_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} + 2 x y\]</div>
 </div>
 </div>
 <p>Nous pouvons factoriser une expression.</p>
@@ -888,7 +902,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_43_0.png" src="../_images/sympy_43_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x - y\right) \left(x + y\right)\]</div>
 </div>
 </div>
 <p>Nous pouvons diff√©rencier une expression.</p>
@@ -900,7 +915,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_45_0.png" src="../_images/sympy_45_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle e^{x} \sin{\left(x \right)} + e^{x} \cos{\left(x \right)}\]</div>
 </div>
 </div>
 <p>Et nous pouvons l‚Äôint√©grer de nouveau.</p>
@@ -911,7 +927,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_47_0.png" src="../_images/sympy_47_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle e^{x} \sin{\left(x \right)}\]</div>
 </div>
 </div>
 <p>Nous pouvons int√©grer sur une intervalle infinie.</p>
@@ -922,7 +939,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_49_0.png" src="../_images/sympy_49_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{\sqrt{2} \sqrt{\pi}}{2}\]</div>
 </div>
 </div>
 <p>Calculer une limite.</p>
@@ -933,7 +951,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_51_0.png" src="../_images/sympy_51_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
 </div>
 </div>
 <p>R√©soudre une √©cuation quadratique</p>
@@ -944,7 +963,9 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_53_0.png" src="../_images/sympy_53_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3/2 - sqrt(17)/2, 3/2 + sqrt(17)/2]
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -955,7 +976,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_54_0.png" src="../_images/sympy_54_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle y{\left(t \right)} = C_{2} e^{- t} + \left(C_{1} + \frac{t}{2}\right) e^{t}\]</div>
 </div>
 </div>
 <p>D√©finir une matrice.</p>
@@ -968,7 +990,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 2\\2 &amp; 2\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 2\\2 &amp; 2\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Calculer sa valeur propre.</p>
@@ -979,12 +1001,15 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_58_0.png" src="../_images/sympy_58_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{3/2 - sqrt(17)/2: 1, 3/2 + sqrt(17)/2: 1}
+</pre></div>
+</div>
 </div>
 </div>
 </div>
 <div class="section" id="simplification">
 <h2>Simplification<a class="headerlink" href="#simplification" title="Lien permanent vers ce titre">¬∂</a></h2>
+<p>Les m√©thodes <code class="docutils literal notranslate"><span class="pre">simplify</span></code>, <code class="docutils literal notranslate"><span class="pre">factor</span></code> et <code class="docutils literal notranslate"><span class="pre">expand</span></code> permettent de transformer des expressions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
@@ -993,7 +1018,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_60_0.png" src="../_images/sympy_60_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sin^{2}{\left(x \right)} + \cos^{2}{\left(x \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1003,7 +1029,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_61_0.png" src="../_images/sympy_61_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1014,7 +1041,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_62_0.png" src="../_images/sympy_62_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} + 2 x + 1\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1024,7 +1052,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_63_0.png" src="../_images/sympy_63_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x + 1\right)^{2}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1035,7 +1064,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_64_0.png" src="../_images/sympy_64_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x - 1\right)^{5}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1045,7 +1075,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_65_0.png" src="../_images/sympy_65_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{5} - 5 x^{4} + 10 x^{3} - 10 x^{2} + 5 x - 1\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1055,7 +1086,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_66_0.png" src="../_images/sympy_66_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x + 1\right) \left(x^{2} - x + 1\right) \left(x^{2} + x + 1\right)\]</div>
 </div>
 </div>
 </div>
@@ -1071,7 +1103,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; -1\\3 &amp; 4\\0 &amp; 2\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; -1\\3 &amp; 4\\0 &amp; 2\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Pour cr√©er une <strong>matrice-colonne</strong>, une liste simple d‚Äô√©l√©ments est suffisant.</p>
@@ -1083,7 +1115,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1\\2\\3\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1\\2\\3\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Pour cr√©er une <strong>matrice-ligne</strong>, une double-liste d‚Äô√©l√©ments est n√©cessaire.</p>
@@ -1095,7 +1127,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\left[\begin{matrix}1 &amp; 2 &amp; 3\end{matrix}\right]\]</div>
+\[\displaystyle \left[\begin{matrix}1 &amp; 2 &amp; 3\end{matrix}\right]\]</div>
 </div>
 </div>
 <p>Matrices peuvet √™tre multipli√©es avec l‚Äôop√©rateur <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
@@ -1108,7 +1140,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 2 &amp; 3\\3 &amp; 2 &amp; 1\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 2 &amp; 3\\3 &amp; 2 &amp; 1\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1120,7 +1152,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}0\\1\\1\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}0\\1\\1\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Voici le <strong>produit matriciel</strong> de deux matrices.</p>
@@ -1132,7 +1164,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}5\\3\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}5\\3\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Voici le <strong>produit avec un scalaire</strong>.</p>
@@ -1145,7 +1177,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}k &amp; 2 k &amp; 3 k\\3 k &amp; 2 k &amp; k\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}k &amp; 2 k &amp; 3 k\\3 k &amp; 2 k &amp; k\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Contrairement aux autres objets dans SymPy, les matrice sont mutables. Donc elles peuvent √™tre modifi√©s en place.</p>
@@ -1161,7 +1193,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 2 &amp; 3\\-2 &amp; 0 &amp; 4\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 2 &amp; 3\\-2 &amp; 0 &amp; 4\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>La m√©thode <code class="docutils literal notranslate"><span class="pre">shape</span></code> retourne le nombre de lignes et colonnes <span class="math notranslate nohighlight">\((n, m)\)</span></p>
@@ -1172,7 +1204,9 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_85_0.png" src="../_images/sympy_85_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 3)
+</pre></div>
+</div>
 </div>
 </div>
 <p>La m√©thode <code class="docutils literal notranslate"><span class="pre">len</span></code> retourne le nombre total de co√©fficients (<span class="math notranslate nohighlight">\(n \times m\)</span>)</p>
@@ -1183,7 +1217,9 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_87_0.png" src="../_images/sympy_87_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
 </div>
 </div>
 <p>On peut acc√©der √† un √©l√©ment de la matrice par son indices.</p>
@@ -1194,7 +1230,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_89_0.png" src="../_images/sympy_89_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 4\]</div>
 </div>
 </div>
 <p>It√©rer avec l‚Äôinstruction <code class="docutils literal notranslate"><span class="pre">for</span></code> sur une matrice acc√®de √† tout ses √©l√©ments, lignes par ligne.</p>
@@ -1223,7 +1260,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\left[\begin{matrix}1 &amp; 2 &amp; 3\end{matrix}\right]\]</div>
+\[\displaystyle \left[\begin{matrix}1 &amp; 2 &amp; 3\end{matrix}\right]\]</div>
 </div>
 </div>
 <p>La m√©thode <code class="docutils literal notranslate"><span class="pre">col</span></code> permet d‚Äôextraire une colonne.</p>
@@ -1235,7 +1272,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1\\-2\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1\\-2\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>La m√©thode <code class="docutils literal notranslate"><span class="pre">col_del</span></code>permet de supprimer une colonne.</p>
@@ -1248,7 +1285,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}2 &amp; 3\\0 &amp; 4\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}2 &amp; 3\\0 &amp; 4\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>La m√©thode <code class="docutils literal notranslate"><span class="pre">row_del</span></code> permet de supprimer une ligne. Cette op√©ration modifie la matrice <strong>en place</strong> et retourne <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
@@ -1261,7 +1298,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\left[\begin{matrix}2 &amp; 3\end{matrix}\right]\]</div>
+\[\displaystyle \left[\begin{matrix}2 &amp; 3\end{matrix}\right]\]</div>
 </div>
 </div>
 <p>Les m√©thodes <code class="docutils literal notranslate"><span class="pre">row_insert</span></code> et <code class="docutils literal notranslate"><span class="pre">col_insert</span></code> ins√®rent une ligne ou une colonne, mais pas en pace. Elle retournent une nouvelle matrice.</p>
@@ -1273,7 +1310,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}2 &amp; 3\\0 &amp; 4\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}2 &amp; 3\\0 &amp; 4\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>V√©rfions que la matrice <span class="math notranslate nohighlight">\(M\)</span> n‚Äôa pas chang√©.</p>
@@ -1285,7 +1322,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\left[\begin{matrix}2 &amp; 3\end{matrix}\right]\]</div>
+\[\displaystyle \left[\begin{matrix}2 &amp; 3\end{matrix}\right]\]</div>
 </div>
 </div>
 <p>Pour changer la matrice, nous devons affecter l‚Äôop√©ration √† son symbole.</p>
@@ -1298,12 +1335,12 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}2 &amp; 3\\0 &amp; 4\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}2 &amp; 3\\0 &amp; 4\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 </div>
-<div class="section" id="id2">
-<h3>Op√©rations de base<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¬∂</a></h3>
+<div class="section" id="id1">
+<h3>Op√©rations de base<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¬∂</a></h3>
 <p>Soient deux matrices <span class="math notranslate nohighlight">\(M\)</span> et <span class="math notranslate nohighlight">\(N\)</span> de taille <span class="math notranslate nohighlight">\(2 \times 2\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1314,7 +1351,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 3\\-2 &amp; 3\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 3\\-2 &amp; 3\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1326,7 +1363,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}0 &amp; 3\\0 &amp; 7\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}0 &amp; 3\\0 &amp; 7\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Voici l‚Äù<strong>addition</strong></p>
@@ -1338,7 +1375,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 6\\-2 &amp; 10\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 6\\-2 &amp; 10\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Voici la <strong>soustraction</strong></p>
@@ -1350,7 +1387,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 0\\-2 &amp; -4\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0\\-2 &amp; -4\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Voici la <strong>multiplication</strong></p>
@@ -1362,10 +1399,10 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}0 &amp; 24\\0 &amp; 15\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}0 &amp; 24\\0 &amp; 15\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
-<p>Voici la <strong>puissance 3</strong></p>
+<p>Voici la <strong>puissance 2</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="o">**</span><span class="mi">2</span>
@@ -1374,7 +1411,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}-5 &amp; 12\\-8 &amp; 3\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}-5 &amp; 12\\-8 &amp; 3\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>La puissance -1 donne l‚Äù<strong>inverse</strong> d‚Äôune matrice.</p>
@@ -1386,7 +1423,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}\frac{1}{3} &amp; - \frac{1}{3}\\\frac{2}{9} &amp; \frac{1}{9}\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}\frac{1}{3} &amp; - \frac{1}{3}\\\frac{2}{9} &amp; \frac{1}{9}\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 </div>
@@ -1402,7 +1439,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 2 &amp; 3\\4 &amp; 5 &amp; 6\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 2 &amp; 3\\4 &amp; 5 &amp; 6\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1413,7 +1450,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 4\\2 &amp; 5\\3 &amp; 6\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 4\\2 &amp; 5\\3 &amp; 6\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 </div>
@@ -1428,7 +1465,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">zeros(n,</span> <span class="pre">m)</span></code> retourne une <strong>matrice z√©ro</strong>.</p>
@@ -1440,7 +1477,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">ones(n,</span> <span class="pre">m)</span></code> retourne une matrice dont tous les √©l√©ments valent 1.</p>
@@ -1452,7 +1489,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 1 &amp; 1 &amp; 1\\1 &amp; 1 &amp; 1 &amp; 1\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 1 &amp; 1 &amp; 1\\1 &amp; 1 &amp; 1 &amp; 1\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">diag</span></code> retourne une matrice diagonale.</p>
@@ -1464,7 +1501,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 0 &amp; 0\\0 &amp; 2 &amp; 0\\0 &amp; 0 &amp; 3\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0\\0 &amp; 2 &amp; 0\\0 &amp; 0 &amp; 3\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Tous ces m√©thodes fonction aussi avec des symboles.</p>
@@ -1477,7 +1514,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}x &amp; 0 &amp; 0\\0 &amp; y &amp; 0\\0 &amp; 0 &amp; z\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}x &amp; 0 &amp; 0\\0 &amp; y &amp; 0\\0 &amp; 0 &amp; z\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 </div>
@@ -1493,7 +1530,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 0 &amp; 1\\2 &amp; -1 &amp; 3\\4 &amp; 3 &amp; 2\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 1\\2 &amp; -1 &amp; 3\\4 &amp; 3 &amp; 2\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1503,7 +1540,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_135_0.png" src="../_images/sympy_135_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -1\]</div>
 </div>
 </div>
 <p>Dans le cas d‚Äôune matrice <span class="math notranslate nohighlight">\(2 \times 2\)</span> le d√©terminant est:</p>
@@ -1516,7 +1554,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_137_0.png" src="../_images/sympy_137_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle a d - b c\]</div>
 </div>
 </div>
 <p>Le d√©terminant d‚Äôune matrice identi√© est</p>
@@ -1527,7 +1566,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_139_0.png" src="../_images/sympy_139_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1537,7 +1577,9 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_140_0.png" src="../_images/sympy_140_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1549,7 +1591,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 2\\-1 &amp; 3\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 2\\-1 &amp; 3\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1559,7 +1601,9 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_142_0.png" src="../_images/sympy_142_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{2 - I: 1, 2 + I: 1}
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1569,8 +1613,18 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left [ \left ( 2 - i, \quad 1, \quad \left [ \left[\begin{matrix}1 + i\\1\end{matrix}\right]\right ]\right ), \quad \left ( 2 + i, \quad 1, \quad \left [ \left[\begin{matrix}1 - i\\1\end{matrix}\right]\right ]\right )\right ]\end{split}\]</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(2 - I,
+  1,
+  [Matrix([
+   [1 + I],
+   [    1]])]),
+ (2 + I,
+  1,
+  [Matrix([
+   [1 - I],
+   [    1]])])]
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1584,7 +1638,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_145_0.png" src="../_images/sympy_145_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x = y\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1595,7 +1650,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_146_0.png" src="../_images/sympy_146_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} + 2 x + 1 = 0\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1605,7 +1661,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_147_0.png" src="../_images/sympy_147_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{-1\right\}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1615,7 +1672,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_148_0.png" src="../_images/sympy_148_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{\left( - y - 1, \  y, \  2\right)\right\}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1625,7 +1683,8 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/sympy_149_0.png" src="../_images/sympy_149_0.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x + y + z - 1 = x + y + 2 z - 3\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1636,7 +1695,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}a &amp; b\\2 c &amp; 2 d\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}a &amp; b\\2 c &amp; 2 d\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1647,7 +1706,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}0 &amp; 3\\0 &amp; 7\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}0 &amp; 3\\0 &amp; 7\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 </div>
@@ -1662,7 +1721,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 2 &amp; 3\\4 &amp; 5 &amp; 6\\7 &amp; 8 &amp; 9\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 2 &amp; 3\\4 &amp; 5 &amp; 6\\7 &amp; 8 &amp; 9\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Une matrice <em>anti-diagonale</em> permet de <strong>basculer</strong> une matrice.</p>
@@ -1675,7 +1734,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}0 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 0\\1 &amp; 0 &amp; 0\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}0 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 0\\1 &amp; 0 &amp; 0\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Permutation des colonnes de <span class="math notranslate nohighlight">\((2, 1, 0)\)</span></p>
@@ -1687,7 +1746,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}3 &amp; 2 &amp; 1\\6 &amp; 5 &amp; 4\\9 &amp; 8 &amp; 7\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}3 &amp; 2 &amp; 1\\6 &amp; 5 &amp; 4\\9 &amp; 8 &amp; 7\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Permutation des lignes de (2, 1, 0)</p>
@@ -1699,7 +1758,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}7 &amp; 8 &amp; 9\\4 &amp; 5 &amp; 6\\1 &amp; 2 &amp; 3\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}7 &amp; 8 &amp; 9\\4 &amp; 5 &amp; 6\\1 &amp; 2 &amp; 3\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Horizontalement et verticalement</p>
@@ -1711,7 +1770,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}9 &amp; 8 &amp; 7\\6 &amp; 5 &amp; 4\\3 &amp; 2 &amp; 1\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}9 &amp; 8 &amp; 7\\6 &amp; 5 &amp; 4\\3 &amp; 2 &amp; 1\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1723,7 +1782,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\\1 &amp; 0 &amp; 0\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\\1 &amp; 0 &amp; 0\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Les colonnes sont permut√© de <span class="math notranslate nohighlight">\((2, 0, 1)\)</span></p>
@@ -1735,7 +1794,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}3 &amp; 1 &amp; 2\\6 &amp; 4 &amp; 5\\9 &amp; 7 &amp; 8\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}3 &amp; 1 &amp; 2\\6 &amp; 4 &amp; 5\\9 &amp; 7 &amp; 8\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Les lignes sont permut√© de <span class="math notranslate nohighlight">\((1, 2, 0)\)</span></p>
@@ -1747,7 +1806,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}4 &amp; 5 &amp; 6\\7 &amp; 8 &amp; 9\\1 &amp; 2 &amp; 3\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}4 &amp; 5 &amp; 6\\7 &amp; 8 &amp; 9\\1 &amp; 2 &amp; 3\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1759,7 +1818,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 0\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 0\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 <p>Permutation des colonnes <span class="math notranslate nohighlight">\((0, 2, 1)\)</span></p>
@@ -1771,7 +1830,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\left[\begin{matrix}1 &amp; 3 &amp; 2\\4 &amp; 6 &amp; 5\\7 &amp; 9 &amp; 8\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 3 &amp; 2\\4 &amp; 6 &amp; 5\\7 &amp; 9 &amp; 8\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 </div>
@@ -1805,7 +1864,7 @@ Si vous rencontrez une erreur <strong>ModuleNotFoundError</strong> vous devez d‚
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../misc/style.html" title="previous page">Style</a>
+    <a class='left-prev' id="prev-link" href="../ref/style.html" title="previous page">Style</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

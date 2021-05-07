@@ -1,0 +1,870 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style &#8212; Education numérique</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/reactions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Calcul symbolique" href="../dev/sympy.html" />
+    <link rel="prev" title="GitHub" href="github.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Education numérique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../start/index.html">
+   Démarrer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/why.html">
+     Á quoi ça sert?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/thonny/thonny.html">
+     Thonny
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/markdown.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/rappel.html">
+     Rappel
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../python/index.html">
+   Programmer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/1_intro.html">
+     Introduction à Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/1_calc.html">
+     Calcul numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/1_text.html">
+     Texte (string)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/2_struct.html">
+     L’instruction conditionnelle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/3_list.html">
+     Listes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/4_loop.html">
+     Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/fonction.html">
+     Fonctions
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../python/exercices.html">
+     Exercices
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/ex1.html">
+       Exercices Boucles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/ex2.html">
+       Exercices if-else
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/quiz.html">
+       Quiz
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../jeu/index.html">
+   Jouer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/ppc.html">
+     Pierre-papier-ciseaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/texte.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jeu/japon.html">
+     Culture du Japon
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../plot/index.html">
+   Visualiser
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/plot.html">
+     Graphe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/figure.html">
+     Figure et axes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/format.html">
+     Format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/numpy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/bar.html">
+     Diagramme à barres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/hist.html">
+     Histogramme
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/polar.html">
+     Graphe polaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/pie.html">
+     Diagramme en secteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/text.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plot/gif/gif.html">
+     GIF animé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/le/7/mri.html">
+     Imagerie médicale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bokeh/bokeh.html">
+     Bokeh
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bokeh/bokeh2.html">
+     Bokeh
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../rep/index.html">
+   Encoder
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/bin/bin.html">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rep/son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algo/algo.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/vi/5/SystemeDeFichiers.html">
+   Le système de fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/vi/5/MotsDePasse.html">
+   Les mots de passe
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jupyter.html">
+   Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="thonny.html">
+   Thonny
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github.html">
+   GitHub
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dev/sympy.html">
+   Calcul symbolique
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ref/style.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fref/style.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/ref/style.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/ref/style.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rasql/edunum/blob/main/doc/ref/style.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="lancement Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#debut-de-chapitre">
+   Début de chapitre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#public-cible">
+   Public cible
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#titres">
+   Titres
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#style-de-code">
+   Style de code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#espaces">
+   Espaces
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operateurs">
+     Opérateurs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fonctions">
+     Fonctions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#commentaires">
+   Commentaires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guillemets">
+   Guillemets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boucles">
+   Boucles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemples-de-code">
+   Exemples de code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#style-code">
+   Style code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listes">
+   Listes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#texte-dans-la-marge">
+   Texte dans la marge
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="style">
+<h1>Style<a class="headerlink" href="#style" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ceci est un guide de style pour éditer les documents de ce jupyter-book.</p>
+<div class="section" id="debut-de-chapitre">
+<h2>Début de chapitre<a class="headerlink" href="#debut-de-chapitre" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Mettez une phrase qui explique le concept principal du chapitre, suivi d’une image captivant en lien avec ce concept.</p>
+<p><img alt="" src="https://media.giphy.com/media/l0HlOBZcl7sbV6LnO/giphy.gif" /></p>
+<p>Vous pouvez trouver des GIF animés sur <a class="reference external" href="https://giphy.com">giphy.com</a><br />
+Choisir <strong>Media &gt; Small</strong> et coller le lien.</p>
+</div>
+<div class="section" id="public-cible">
+<h2>Public cible<a class="headerlink" href="#public-cible" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le public principal est âgé de 15 à 18 ans.</p>
+<ul class="simple">
+<li><p>Il ne faut pas utiliser le <em>tu</em>.</p></li>
+<li><p>Utilisez <em>nous</em> et <em>vous</em>.</p></li>
+<li><p>Faites attention au genre féminin.</p></li>
+</ul>
+</div>
+<div class="section" id="titres">
+<h2>Titres<a class="headerlink" href="#titres" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Chaque document doit commencer avec un titre principal de niveau 1. Ce titre va apparaitre dans la barre de navigation du site, à gauche. De préférence ce titre doit tenir sur une seule ligne dans le menu de navigation (typiquement 1 à 3 mots). Ce titre au début du document est le seul titre de niveau 1.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Titre
+</pre></div>
+</div>
+<p>Tous les autres titres doivent être de niveau 2 ou 3.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>## Sous-titre
+### Sous-sous-titre
+</pre></div>
+</div>
+<p>Les sous-titres (niveau 2) apparaissent dans le menu de navigation de la page, sous <strong>Contenu</strong> à droite. De préférence il faut les choisir courts, pour qu’ils ne dépassent pas une ligne. Voici un exemple</p>
+<p><img alt="" src="../_images/menu_nav2.png" /></p>
+<p>Il ne faut pas sauter d’hiérarchie. Par exemple il ne faut pas aller d’un titre de niveau 1 directement vers un titre de niveau 3. Ceci produit un avertissement lors de la compilation avec <strong>jupyter-book</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>WARNING: Non-consecutive header level increase; 0 to 2
+</pre></div>
+</div>
+<p>Attention:</p>
+<ul class="simple">
+<li><p>il ne faudrait pas avoir plus que 12 documents dans une section<br />
+(autrement le menu sur smartphone devient trop long)</p></li>
+<li><p>il ne faudrait pas avoir plus que 12 sous-sections dans un documents<br />
+(autrement le bouton forward pourrait être couvert par le menu)</p></li>
+</ul>
+</div>
+<div class="section" id="style-de-code">
+<h2>Style de code<a class="headerlink" href="#style-de-code" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le style de code Python doit suivre les recommandations officielles:<br />
+<a class="reference external" href="https://pep8.org">PEP8 - The Style Guide for Python Code</a></p>
+<p>L’objectif est d’être consistent et d’augmenter la lisibilité.</p>
+</div>
+<div class="section" id="espaces">
+<h2>Espaces<a class="headerlink" href="#espaces" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Mettre des espaces augmente la lisibilité.</p>
+<div class="section" id="operateurs">
+<h3>Opérateurs<a class="headerlink" href="#operateurs" title="Lien permanent vers ce titre">¶</a></h3>
+<p>De manière générale il faut toujours entourer ces opérateurs avec une espace:</p>
+<ul class="simple">
+<li><p>opérateurs arithmétiques (+, -, *, /, %)</p></li>
+<li><p>affectation (=),</p></li>
+<li><p>affectation augmenté (+=, -= etc.)</p></li>
+<li><p>comparaisons (==, &lt;, &gt;, !=, &lt;&gt;, &lt;=, &gt;=, in, not in, is, is not)</p></li>
+<li><p>opérateurs booléen (and, or, not).</p></li>
+</ul>
+<p>Dans des expression avec priorités mixtes,
+il est possible de ne pas mettre des espaces autour l’opérateur avec la plus haute priorité.
+Par contre, il faut toujours avoir le même nombres d’espaces de chaque côté d’un opérateur.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>i = i + 1
+submitted += 1
+x = x**2 - 1
+hypot2 = x*x + y*y
+c = (a+b) * (a-b)
+</pre></div>
+</div>
+</div>
+<div class="section" id="fonctions">
+<h3>Fonctions<a class="headerlink" href="#fonctions" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il ne faut pas mettre une espace après le nom d’une fonction.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print (123)   # faux
+print(123)
+</pre></div>
+</div>
+<p>Il ne faut pas mettre une espace à l’intérieur des parenthèses.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print( 123 )  # faux
+print(123)
+</pre></div>
+</div>
+<p>Il faut mettre une espace après la virgule.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(1,2,3)  # faux
+print(1, 2, 3)
+</pre></div>
+</div>
+<p>Il ne faut pas mettre d’espace autour du <code class="docutils literal notranslate"><span class="pre">=</span></code> d’un argument à option.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(*liste, sep = &#39;:&#39;)   # faux
+print(*liste, sep=&#39;:&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="commentaires">
+<h2>Commentaires<a class="headerlink" href="#commentaires" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Mettez une espace entre le hashtag et le commentaire.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#commentaire (faux)
+# commentaire
+</pre></div>
+</div>
+</div>
+<div class="section" id="guillemets">
+<h2>Guillemets<a class="headerlink" href="#guillemets" title="Lien permanent vers ce titre">¶</a></h2>
+<p>De préférence il faut utiliser les guillemets simples.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(&quot;hello&quot;)
+print(&#39;hello&#39;)   # préférable
+</pre></div>
+</div>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il ne faut jamais utiliser</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">l</span></code> - L minuscule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">O</span></code> - O majuscule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">I</span></code> - i majuscule</p></li>
+</ul>
+<p>Dans certaines polices ces caractères sont identiques à 0 et 1.</p>
+<p>Utilisez des noms de variable courts, si le sens est clair dans le contexte.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a = input(&#39;age: &#39;)
+n = input(&#39;nom: &#39;)
+</pre></div>
+</div>
+</div>
+<div class="section" id="boucles">
+<h2>Boucles<a class="headerlink" href="#boucles" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Utilisez les noms standard <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j</span></code> pour des compteurs de boucle.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>for i in range(10):
+    for j in range(10):
+        print(i * j)
+</pre></div>
+</div>
+</div>
+<div class="section" id="exemples-de-code">
+<h2>Exemples de code<a class="headerlink" href="#exemples-de-code" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Illustrez votre texte fréquemment avec des exemples de code courts (1-2 lignes). Par exemple:</p>
+<p>Une liste peut contenir un mélange d’objets de types différents.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mix</span> <span class="o">=</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">mix</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[123, &#39;hello&#39;, True, False]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Toutes les expressions dans une cellule code sont exécutés, mais seulement le résultat de la dernière est affiché.</p>
+</div>
+<div class="section" id="style-code">
+<h2>Style code<a class="headerlink" href="#style-code" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il faut écrire en style <code class="docutils literal notranslate"><span class="pre">code</span></code> tous les mots qui font partie du code Python tel que</p>
+<ul class="simple">
+<li><p>des mots-clés <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, ou <code class="docutils literal notranslate"><span class="pre">def</span></code></p></li>
+<li><p>des fonctions <code class="docutils literal notranslate"><span class="pre">print()</span></code> et <code class="docutils literal notranslate"><span class="pre">intput()</span></code></p></li>
+<li><p>des variables <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code></p></li>
+<li><p>des expressions <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="listes">
+<h2>Listes<a class="headerlink" href="#listes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une liste doit avoir un minimum de deux éléments</p>
+<ul class="simple">
+<li><p>ceci n’est pas une liste</p></li>
+</ul>
+<p>Les éléments doivent être de la même catégorie</p>
+<ul class="simple">
+<li><p>rapide</p></li>
+<li><p>élégante</p></li>
+<li><p>éducation (faux, ce n’est pas un adjectif)</p></li>
+</ul>
+<p>La première lettre des éléments est en minuscule si les items sont très court.
+La première lettre des items est en majuscule si les items sont des phrases entières, et terminées par une ponctuation.</p>
+</div>
+<div class="section" id="texte-dans-la-marge">
+<h2>Texte dans la marge<a class="headerlink" href="#texte-dans-la-marge" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il ne faut pas placer de texte dans la marge (sidebar). Ca parait trop serré sur un smartphone.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ref"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="github.html" title="previous page">GitHub</a>
+    <a class='right-next' id="next-link" href="../dev/sympy.html" title="next page">Calcul symbolique</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Holzer<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
