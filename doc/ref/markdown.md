@@ -1,40 +1,44 @@
 # Markdown
 
-Markdown est un **langage de balisage léger**, avec une syntaxe facile à lire et facile à écrire. Un document balisé par Markdown peut être transformé en HTML ou en PDF. Les fichiers Markdown ont une extension `.md`.
+Markdown est un **langage de balisage léger**, avec une syntaxe
+- facile à lire
+- facile à écrire. 
 
+Un document balisé par Markdown peut être transformé en HTML ou en PDF. Les fichiers Markdown ont une extension `.md`.
 
-Markdown est utilisé pour formatter les fichiers README sur GitHub.
+Ce texte que vous êtes en train de lire est écrit en Markdown. Vous pouvez télécharger son fichier source avec le bouton **Télécharger** en haut à droite.
 
+![](img/md_button.png)
 
 ## Emphase
 
 Les caractères `_` ou `*` sont utilisés pour entourer les mots à mettre en **emphase**.
 
-    _mot_ en *italique*. 
+    Ce _mot_ est en *italique*. 
     
-_mot_ en *italique*. 
+Ce _mot_ est en *italique*. 
 
 Les caractères  `__` ou `**` sont utilisés pour mettre des mots en **grande emphase**. 
 
-    __mot__ en **gras**. 
+    Ce __mot__ est en **gras**. 
     
-__mot__ en **gras**. 
+Ce __mot__ est en **gras**. 
 
 
 ## Espaces
 
-Les **espaces multiples** ou des simples retours à la lignes sont tous remplacés par une seule espace.
+Les **espaces multiples** ou un **simple retour à la ligne** sont tous remplacés par une seule espace.
 
     Des            grands                espaces
     et
     des
-    retours.
+    retours à la ligne.
 
     
 Des            grands                espaces
 et
 des
-retours.
+retours à la ligne.
 
 
 ## Paragraphe
@@ -43,15 +47,15 @@ Une **ligne vide** crée un paragraphe.
 
     Ceci est le premier paragraphe.
 
-    Ceci est le paragraphe suivant.
+    Ceci est le deuxième paragraphe.
 
 
 Ceci est le premier paragraphe.
 
-Ceci est le paragraphe suivant.
+Ceci est le deuxième paragraphe.
 
 
-## Retour à la ligne forcé
+## Retour à la ligne
 
 Ajouter **deux espaces** en fin de ligne insère un retour à la ligne forcé.
 
@@ -61,6 +65,26 @@ Ajouter **deux espaces** en fin de ligne insère un retour à la ligne forcé.
 Les deux espaces en fin de cette ligne  
 forcent un retour à la ligne.
 
+
+## Ligne de séparation
+
+Ajouter **trois traits-d'union** crée une ligne de séparation.
+
+    ---
+
+---
+
+
+## Commentaire
+
+Vous pouvez utiliser des balises HTML pour insérer un commentaire.
+Le commentaire ne sera pas affiché dans la page web.
+
+    <!--- Ceci est un commentaire --->
+    
+<!--- Ceci est un commentaire --->
+
+
 ## Code
 
 Le caractère ` (backquote) indique des éléments de code.
@@ -69,33 +93,6 @@ Le caractère ` (backquote) indique des éléments de code.
     
 La fonction `print(x)` imprime la valeur de la variable `x`. 
 
-    
-
-## Directives
-
-Pour mettre un paragraphe en évidence, voici quelques directives:
-
-- note
-- tip
-- warning
-
-Le code Markdown pour utiliser une directive est:
-
-    ```{note}
-    This is a note.
-    ```
-
-```{note}
-This is a note.
-```
-
-```{tip}
-This is a tip.
-```
-
-```{warning}
-This is a warning.
-```
 
 ## Insérer une image
 
@@ -105,42 +102,101 @@ Le code suivant insère une image.
 
 ![](../img/logo.png)
 
-## Math
+
+## Insérer une formule
 
 Le code suivant insère une formule mathématique en LaTeX.
 
-    $$\frac{a + b}{1+x^2}$$
+    $$ 
+    \frac{a + b}{1+x^2}
+    $$ 
+
+$$
+\frac{a + b}{1+x^2}
+$$
 
 
-$$\frac{a + b}{1+x^2}$$
+## Directives
+
+Les **directives** permettent d'appliquer une fonction (directive) sur un bout de texte (contenu). 
+
+- elle est entourée par des triples back-quotes 
+- les options sont entourés par des deux-points
+
+Voici le format d'une directive
+
+    ```{directive}
+    :option: valeur
+    
+    contenu
+    ```
 
 
-## Sidebar
-Vous pouvez intégrer un texte dans le côté gauche du texte. 
-Les deux textes sont séparés par une barre verticale.
-Ceci est à éviter si le document est destiné pour smartphone.
+## Paragraphe en évidence
 
-```{sidebar} My sidebar title
-My sidebar content
+Pour mettre un paragraphe en évidence, voici quelques directives:
+
+- note
+- tip
+- warning
+
+Voici le code:
+
+    ```{note}
+    Ceci est une directive **note**.
+    ```
+
+Voici trois exemples:
+
+```{note}
+Ceci est une directive **note**.
 ```
 
-## Margin content
-Vous pouvez placer un texte dans la marge.
-Ceci est à éviter si le document est destiné pour smartphone.
-
-```{margin} An optional title
-My margin content
+```{tip}
+Ceci est une directive **tip**.
 ```
+
+```{warning}
+Ceci est une directive **warning**.
+```
+
+## Texte à côté
+
+```{sidebar} Titre
+Mon texte à côté.
+```
+
+Le directive `sidebar` intègre un texte dans le côté droite du texte. 
+Les deux textes sont séparés par une barre verticale.  
+**Attention:**   
+Evitez cette directive si le document est destiné pour smartphone.
+
+    ```{sidebar} Titre
+    Mon texte à côté.
+    ```
+
+## Texte dans la marge
+
+```{margin} Titre
+Mon texte en marge.
+```
+
+Le directive `margin` place un texte dans la marge.
+Ce texte peut couvrir la barre de navigation à droite.
+**Attention:**  
+Evitez cette directive si le document est destiné pour smartphone.
+
+    ```{margin} Titre
+    Mon texte en marge.
+    ```
 
 --- 
-## Notebook Statistics
+## Statistiques des notebooks
 
-Le code
+Le directive `nb-exec-table` affiche les statistiques des Jupyter notebooks.
 
     ```{nb-exec-table}
     ```
-    
-affiche les statistiques des Jupyter notebooks.
 
 ```{nb-exec-table}
 ```
@@ -148,40 +204,32 @@ affiche les statistiques des Jupyter notebooks.
 
 ## Inclure un document
 
-Le code
+Le directive `literalinclude` permet d'incure un fichier. 
 
     ``` {literalinclude} hello.py
     ```
 
-inclut le fichier **hello.py**
-
 ``` {literalinclude} hello.py
 ```
 
-Le code
+L'option `:lines:` permet de specifier une plage de lignes.  
+Ici, le fichier est inclu à partir de la ligne 2.
 
     ``` {literalinclude} hello.py
     :lines: 2-
     ```
     
-inclut le fichier à partir de la ligne 2.
-
 ``` {literalinclude} hello.py
 :lines: 2-
 ```
 
 ## Télécharger un document
 
-Le code
+La commande `{download}` permet de télécharger un fichier.
 
     {download}`hello.py <hello.py>`
 
-permet de télécharger un fichier.  
 {download}`download <hello.py>`
-
-    {download}`demo.txt <demo.txt>`
-
-{download}`download <demo.txt>`
 
 
 ## Questions à choix multiples
