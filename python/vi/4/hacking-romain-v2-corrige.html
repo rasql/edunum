@@ -1,0 +1,1063 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coder et décoder comme les Romains &#8212; Education numérique</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/questions.js"></script>
+    <script src="../../../_static/blanks.js"></script>
+    <script src="../../../_static/reactions.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../../search.html" />
+    <link rel="next" title="Structures de données" href="../6/StructuresDeDonnees.html" />
+    <link rel="prev" title="Les mots de passe" href="../5/MotsDePasse.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Education numérique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cours
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../start/index.html">
+   Démarrer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../start/why.html">
+     Á quoi ça sert?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../start/thonny/thonny.html">
+     Thonny
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../start/jupyterlab.html">
+     JupyterLab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../start/markdown.html">
+     Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../start/rappel.html">
+     Rappel
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../index.html">
+   Programmer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../1_intro.html">
+     Introduction à Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../1_calc.html">
+     Calcul numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../1_text.html">
+     Texte (string)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2_struct.html">
+     L’instruction conditionnelle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3_list.html">
+     Listes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4_loop.html">
+     Boucle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../logique.html">
+     Logique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../fonction.html">
+     Fonctions
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../exercices.html">
+     Exercices
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ex1.html">
+       Exercices Boucles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ex2.html">
+       Exercices if-else
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../quiz.html">
+       Quiz
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../jeu/index.html">
+   Jouer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../jeu/ppc.html">
+     Pierre-papier-ciseaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../jeu/texte.html">
+     Composer des textes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../jeu/japon.html">
+     Culture du Japon
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../plot/index.html">
+   Visualiser
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/plot.html">
+     Graphe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/figure.html">
+     Figure et axes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/format.html">
+     Format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/numpy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/bar.html">
+     Diagramme à barres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/hist.html">
+     Histogramme
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/scatter.html">
+     Nuage de points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/polar.html">
+     Graphe polaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/pie.html">
+     Diagramme en secteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/text.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../plot/gif/gif.html">
+     GIF animé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../le/7/mri.html">
+     Imagerie médicale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../bokeh/bokeh.html">
+     Bokeh
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../bokeh/bokeh2.html">
+     Bokeh
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../rep/index.html">
+   Encoder
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../rep/unaire.html">
+     Système unaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../rep/bin/bin.html">
+     Système binaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../rep/nombre.html">
+     Nombres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../rep/texte.html">
+     Texte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../rep/image.html">
+     Images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../rep/couleur.html">
+     Couleur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../rep/svg.html">
+     Graphique vectoriel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../rep/son.html">
+     Son
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../algo/algo.html">
+   Algorithmique
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../5/Securite.html">
+   Securite
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5/SystemeDeFichiers.html">
+     Le système de fichiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5/MotsDePasse.html">
+     Les mots de passe
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Coder et décoder comme les Romains
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../6/StructuresDeDonnees.html">
+   Structures de données
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6/Tableaux.html">
+     Tableaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6/Dictionnaires.html">
+     Dictionnaires
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6/LesFiles.html">
+     Piles et files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6/LesArbres.html">
+     Arbres
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ref/markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ref/jupyter.html">
+   Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ref/thonny.html">
+   Thonny
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ref/github.html">
+   GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ref/style.html">
+   Style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../dev/sympy.html">
+   SymPy
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/python/vi/4/hacking-romain-v2-corrige.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rasql/edunum"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fpython/vi/4/hacking-romain-v2-corrige.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
+        <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/python/vi/4/hacking-romain-v2-corrige.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+                title="Mode plein écran"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rasql/edunum/main?urlpath=tree/doc/python/vi/4/hacking-romain-v2-corrige.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rasql/edunum/blob/main/doc/python/vi/4/hacking-romain-v2-corrige.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="lancement Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenu
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs">
+   Objectifs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-code-de-cesar">
+   Le code de César
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comment-fonctionne-le-code-de-cesar">
+   Comment fonctionne le code de Cesar ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encoder-une-lettre">
+   Encoder une lettre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decoder-une-lettre">
+   Décoder une lettre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coder-une-phrase">
+   Coder une phrase
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programme-pour-chiffrer-coder-un-texte-clair">
+   Programme pour chiffrer (coder) un texte clair
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programme-pour-dechiffrer-un-texte-code">
+   Programme pour déchiffrer un texte codé
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Décoder une lettre
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="coder-et-decoder-comme-les-romains">
+<h1>Coder et décoder comme les Romains<a class="headerlink" href="#coder-et-decoder-comme-les-romains" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="objectifs">
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>chaînes de caractères</p></li>
+<li><p>boucles</p></li>
+<li><p>tests conditionnels</p></li>
+<li><p>fonctions</p></li>
+</ul>
+</div>
+<div class="section" id="le-code-de-cesar">
+<h2>Le code de César<a class="headerlink" href="#le-code-de-cesar" title="Lien permanent vers ce titre">¶</a></h2>
+<p><strong>Jules César</strong> était un général Romain (il n’a jamais été empereur) qui a vécu au 1er siècle avant Jésus-Christ. Comme chef militaire, il souhaitait pouvoir communiquer avec ses officiers de plus hauts rangs localisés aux quatre coins de son immense empire. Notamment avec Ciceron durant la Guerre des Gaules.</p>
+<p><img alt="Jules Cesar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Portrait_of_Julius_Caesar_%281st_cent._B.C.%29_at_the_Archaeological_Museum_of_Sparta_on_15_May_2019.jpg/349px-Portrait_of_Julius_Caesar_%281st_cent._B.C.%29_at_the_Archaeological_Museum_of_Sparta_on_15_May_2019.jpg" /></p>
+<p>Pour qu’un éventuel ennemi ne s’empare jamais du message de César, il a décidé d’utiliser une technique de <strong>cryptage</strong> afin de rendre le message illisible si on ne connaît pas la <strong>clef de chiffrement</strong>. C’est l’une des toutes premières applications de la <strong>cryptographie</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;vT8q1mXeZ2A&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">960</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">540</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="960"
+    height="540"
+    src="https://www.youtube.com/embed/vT8q1mXeZ2A"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="comment-fonctionne-le-code-de-cesar">
+<h2>Comment fonctionne le code de Cesar ?<a class="headerlink" href="#comment-fonctionne-le-code-de-cesar" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le <strong>texte chiffré (codé)</strong> s’obtient en remplaçant chaque lettre du <strong>texte clair</strong> original par un décalage à distance fixe, toujours du même côté, dans les lettres de l’alphabet. Cette distance est appelée <strong>clef de chiffrement</strong></p>
+<p><img alt="alt text" src="python/vi/4/img/clef.png" /></p>
+<p>Par exemple, si la clef de chiffrement vaut <strong>1</strong>, alors on décalera chaque lettre du texte clair de un sur la droite :</p>
+<ul class="simple">
+<li><p>le « a » devient « b »</p></li>
+<li><p>le « b » devient « c »</p></li>
+</ul>
+<p>et ainsi de suite. On peut ensuite chiffrer et déchiffrer des messages plus longs :</p>
+<ul class="simple">
+<li><p>le texte clair « inf », chiffré avec la clef 1 devient le texte chiffré « jog »</p></li>
+</ul>
+</div>
+<div class="section" id="encoder-une-lettre">
+<h2>Encoder une lettre<a class="headerlink" href="#encoder-une-lettre" title="Lien permanent vers ce titre">¶</a></h2>
+<p>C’est la première étape.</p>
+<p>Nous allons travailler avec deux chaînes de caractères. <code class="docutils literal notranslate"><span class="pre">alphabet_clair</span></code> contient toutes les lettres de l’alphabet en minuscule et <code class="docutils literal notranslate"><span class="pre">alphabet_code</span></code> qui contient toutes les lettres codée</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>index</p></th>
+<th class="text-align:left head"><p>0</p></th>
+<th class="text-align:left head"><p>1</p></th>
+<th class="text-align:left head"><p>2</p></th>
+<th class="text-align:left head"><p>3</p></th>
+<th class="text-align:left head"><p>4</p></th>
+<th class="text-align:left head"><p>5</p></th>
+<th class="text-align:left head"><p>6</p></th>
+<th class="text-align:left head"><p>7</p></th>
+<th class="text-align:left head"><p>8</p></th>
+<th class="text-align:left head"><p>9</p></th>
+<th class="text-align:left head"><p>10</p></th>
+<th class="text-align:left head"><p>11</p></th>
+<th class="text-align:left head"><p>12</p></th>
+<th class="text-align:left head"><p>13</p></th>
+<th class="text-align:left head"><p>14</p></th>
+<th class="text-align:left head"><p>15</p></th>
+<th class="text-align:left head"><p>16</p></th>
+<th class="text-align:left head"><p>17</p></th>
+<th class="text-align:left head"><p>18</p></th>
+<th class="text-align:left head"><p>19</p></th>
+<th class="text-align:left head"><p>20</p></th>
+<th class="text-align:left head"><p>21</p></th>
+<th class="text-align:left head"><p>22</p></th>
+<th class="text-align:left head"><p>23</p></th>
+<th class="text-align:left head"><p>24</p></th>
+<th class="text-align:left head"><p>25</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">alphabet_clair</span></code></p></td>
+<td class="text-align:left"><p>a</p></td>
+<td class="text-align:left"><p>b</p></td>
+<td class="text-align:left"><p>c</p></td>
+<td class="text-align:left"><p>d</p></td>
+<td class="text-align:left"><p>e</p></td>
+<td class="text-align:left"><p>f</p></td>
+<td class="text-align:left"><p>g</p></td>
+<td class="text-align:left"><p>h</p></td>
+<td class="text-align:left"><p>i</p></td>
+<td class="text-align:left"><p>j</p></td>
+<td class="text-align:left"><p>k</p></td>
+<td class="text-align:left"><p>l</p></td>
+<td class="text-align:left"><p>m</p></td>
+<td class="text-align:left"><p>n</p></td>
+<td class="text-align:left"><p>o</p></td>
+<td class="text-align:left"><p>p</p></td>
+<td class="text-align:left"><p>q</p></td>
+<td class="text-align:left"><p>r</p></td>
+<td class="text-align:left"><p>s</p></td>
+<td class="text-align:left"><p>t</p></td>
+<td class="text-align:left"><p>u</p></td>
+<td class="text-align:left"><p>v</p></td>
+<td class="text-align:left"><p>w</p></td>
+<td class="text-align:left"><p>x</p></td>
+<td class="text-align:left"><p>y</p></td>
+<td class="text-align:left"><p>z</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">alphabet_code</span></code></p></td>
+<td class="text-align:left"><p>b</p></td>
+<td class="text-align:left"><p>c</p></td>
+<td class="text-align:left"><p>d</p></td>
+<td class="text-align:left"><p>e</p></td>
+<td class="text-align:left"><p>f</p></td>
+<td class="text-align:left"><p>g</p></td>
+<td class="text-align:left"><p>h</p></td>
+<td class="text-align:left"><p>i</p></td>
+<td class="text-align:left"><p>j</p></td>
+<td class="text-align:left"><p>k</p></td>
+<td class="text-align:left"><p>l</p></td>
+<td class="text-align:left"><p>m</p></td>
+<td class="text-align:left"><p>n</p></td>
+<td class="text-align:left"><p>o</p></td>
+<td class="text-align:left"><p>p</p></td>
+<td class="text-align:left"><p>q</p></td>
+<td class="text-align:left"><p>r</p></td>
+<td class="text-align:left"><p>s</p></td>
+<td class="text-align:left"><p>t</p></td>
+<td class="text-align:left"><p>u</p></td>
+<td class="text-align:left"><p>v</p></td>
+<td class="text-align:left"><p>w</p></td>
+<td class="text-align:left"><p>x</p></td>
+<td class="text-align:left"><p>y</p></td>
+<td class="text-align:left"><p>z</p></td>
+<td class="text-align:left"><p>a</p></td>
+</tr>
+</tbody>
+</table>
+<p>Pour encoder une lettre, il faut donc:</p>
+<ol class="simple">
+<li><p>trouver l’index (la position) de la lettre dans l’alphabet clair</p></li>
+<li><p>trouver à quelle lettre correspond cet index dans l’alphabet codé</p></li>
+</ol>
+<p>Déclarez une variable <code class="docutils literal notranslate"><span class="pre">alphabet_clair</span></code> de type chaîne de caractères qui contient toutes les lettres de l’alphabet en minuscules. Cette chaîne a une longueur de 26 !</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Trouvez l’index (la position) de la lettre <code class="docutils literal notranslate"><span class="pre">h</span></code> dans la variable <code class="docutils literal notranslate"><span class="pre">alphabet_clair</span></code> à l’aide de la fonction <code class="docutils literal notranslate"><span class="pre">alphabet_clair.index('h')</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<p>Définissez une nouvelle chaîne de caractères <code class="docutils literal notranslate"><span class="pre">alphabet_code</span></code> qui contient toutes les lettres de l’alphabet minuscules et décalées de 1 : a devient b, b devient c, etc.. jusqu’à z qui devient a. Cette chaîne a une longueur de 26 !</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_code</span> <span class="o">=</span> <span class="s1">&#39;bcdefghijklmnopqrstuvwxyza&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Trouvez la lettre codée pour “h” qui a l’index 7</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_code</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;i&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="decoder-une-lettre">
+<h2>Décoder une lettre<a class="headerlink" href="#decoder-une-lettre" title="Lien permanent vers ce titre">¶</a></h2>
+<p>C’est le processus inverse.</p>
+<p>Pour décoder une lettre, il faut:</p>
+<ol class="simple">
+<li><p>trouver l’index de la lettre dans l’alphabet codé</p></li>
+<li><p>trouver à quelle lettre correspond cet index dans l’alphabet clair</p></li>
+</ol>
+<p>Trouvez l’index de la lettre codée “i”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_code</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<p>Trouvez à quelle lettre dans l’alphabet clair correspond l’index 7</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;h&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="coder-une-phrase">
+<h2>Coder une phrase<a class="headerlink" href="#coder-une-phrase" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une phrase c’est plusieurs lettres. Nous allons donc coder chaque lettre de la phrase. Attention : un <strong>espace</strong> (le caractère <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>) en clair reste un <strong>espace</strong> en codé.</p>
+<p>Déclarez un message en clair <code class="docutils literal notranslate"><span class="pre">message_clair</span> <span class="pre">=</span> <span class="pre">'bonjour'</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">message_clair</span> <span class="o">=</span> <span class="s1">&#39;gymnase bugnon&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Déclarez un message codé vide <code class="docutils literal notranslate"><span class="pre">message_code</span> <span class="pre">=</span> <span class="pre">''</span></code>. Cette chaîne de caractère contiendra le message codé (on ajoute au fur et à mesure les lettres codées)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">message_code</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pour chaque lettre du message clair, il faut vérifier si le caractère est un espace ou non. On utilise pour cela un test conditionnel:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+    <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># on encode la lettre</span>
+</pre></div>
+</div>
+<p>Ecrivez un test conditionnel (4 lignes !) qui affiche <code class="docutils literal notranslate"><span class="pre">espace</span></code> si le caractère d’index 8 de la chaîne <code class="docutils literal notranslate"><span class="pre">message_clair</span></code> est un espace, <code class="docutils literal notranslate"><span class="pre">pas</span> <span class="pre">d'espace</span></code> sinon.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">message_clair</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;espace&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pas espace&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pas espace
+</pre></div>
+</div>
+</div>
+</div>
+<p>Une <strong>boucle for</strong> permet de répéter les instructions pour encoder les lettres en ayant vérifié qu’il s’agit d’un espace ou non. La variable <code class="docutils literal notranslate"><span class="pre">c</span></code> va</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">message_clair</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span> 
+        <span class="c1"># ajouter un espace à message_code</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># coder la lettre c et l&#39;ajouter au message_code</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">message_clair</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+        <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span><span class="o">+</span><span class="n">c</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">alphabet_clair</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span> <span class="o">+</span> <span class="n">alphabet_code</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message_clair</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message_code</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gymnase bugnon
+hznobtf cvhopo
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="programme-pour-chiffrer-coder-un-texte-clair">
+<h2>Programme pour chiffrer (coder) un texte clair<a class="headerlink" href="#programme-pour-chiffrer-coder-un-texte-clair" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Si l’on met toutes les instructions à la suite, on obtient le programme suivant qui perme de coder un texte en clair :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
+<span class="n">alphabet_code</span> <span class="o">=</span> <span class="s1">&#39;bcdefghijklmnopqrstuvwxyza&#39;</span>
+<span class="n">message_clair</span> <span class="o">=</span> <span class="s1">&#39;gymnase bugnon&#39;</span>
+<span class="n">message_code</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">message_clair</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+        <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span><span class="o">+</span><span class="n">c</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">alphabet_clair</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span> <span class="o">+</span> <span class="n">alphabet_code</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message_clair</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message_code</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gymnase bugnon
+hznobtf cvhopo
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="programme-pour-dechiffrer-un-texte-code">
+<h2>Programme pour déchiffrer un texte codé<a class="headerlink" href="#programme-pour-dechiffrer-un-texte-code" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On rappelle que pour décoder une lettre, on applique le processus inverse que pour celui de coder.</p>
+<div class="section" id="id1">
+<h3>Décoder une lettre<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si la lettre à décoder est un espace, alors il reste un espace. Sinon il faut rechercher l’index de la lettre codée dans l’alphabet codé puis rechercher la lettre correspondant à cet index dans l’alphabet en clair.</p>
+<p>En python :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+        <span class="n">message_clair</span> <span class="o">=</span> <span class="n">message_clair</span><span class="o">+</span><span class="n">c</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">alphabet_code</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="n">message_clair</span> <span class="o">=</span> <span class="n">message_clair</span> <span class="o">+</span> <span class="n">alphabet_clair</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Modifiez le programme suivant pour qu’il décode le message codé donné</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
+<span class="n">alphabet_code</span> <span class="o">=</span> <span class="s1">&#39;bcdefghijklmnopqrstuvwxyza&#39;</span>
+<span class="n">message_clair</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">message_code</span> <span class="o">=</span> <span class="s1">&#39;hznobtf ef dibncmboeft&#39;</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">message_clair</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+        <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span><span class="o">+</span><span class="n">c</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">alphabet_clair</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span> <span class="o">+</span> <span class="n">alphabet_code</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message_clair</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message_code</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hznobtf ef dibncmboeft
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python/vi/4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../5/MotsDePasse.html" title="previous page">Les mots de passe</a>
+    <a class='right-next' id="next-link" href="../6/StructuresDeDonnees.html" title="next page">Structures de données</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Holzer<br/>
+        
+          <div class="extra_footer">
+            <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

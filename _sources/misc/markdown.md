@@ -1,202 +1,86 @@
 # Markdown
 
-Markdown est un **langage de balisage léger**, avec une syntaxe
-- facile à lire
-- facile à écrire. 
-
-Un document balisé par Markdown peut être transformé en HTML ou en PDF. Les fichiers Markdown ont une extension `.md`.
-
-Ce texte que vous êtes en train de lire est écrit en Markdown. Vous pouvez télécharger son fichier source avec le bouton **Télécharger** en haut à droite.
-
-![](img/md_button.png)
-
-## Emphase
-
-Les caractères `_` ou `*` sont utilisés pour entourer les mots à mettre en **emphase**.
-
-    Ce _mot_ est en *italique*. 
-    
-Ce _mot_ est en *italique*. 
-
-Les caractères  `__` ou `**` sont utilisés pour mettre des mots en **grande emphase**. 
-
-    Ce __mot__ est en **gras**. 
-    
-Ce __mot__ est en **gras**. 
-
-
-## Espaces
-
-Les **espaces multiples** ou un **simple retour à la ligne** sont tous remplacés par une seule espace.
-
-    Des            grands                espaces
-    et
-    des
-    retours à la ligne.
-
-    
-Des            grands                espaces
-et
-des
-retours à la ligne.
-
-
-## Paragraphe
-
-Une **ligne vide** crée un paragraphe.
-
-    Ceci est le premier paragraphe.
-
-    Ceci est le deuxième paragraphe.
-
-
-Ceci est le premier paragraphe.
-
-Ceci est le deuxième paragraphe.
-
-
-## Retour à la ligne
-
-Ajouter **deux espaces** en fin de ligne insère un retour à la ligne forcé.
-
-    Les deux espaces en fin de cette ligne  
-    forcent un retour à la ligne.
-
-Les deux espaces en fin de cette ligne  
-forcent un retour à la ligne.
-
-
-## Ligne de séparation
-
-Ajouter **trois traits-d'union** crée une ligne de séparation.
-
-    ---
-
----
-
-
-## Commentaire
-
-Vous pouvez utiliser des balises HTML pour insérer un commentaire.
-Le commentaire ne sera pas affiché dans la page web.
-
-    <!--- Ceci est un commentaire --->
-    
-<!--- Ceci est un commentaire --->
-
-
-## Code
-
-Le caractère ` (backquote) indique des éléments de code.
-
-    La fonction `print(x)` imprime la valeur de la variable `x`. 
-    
-La fonction `print(x)` imprime la valeur de la variable `x`. 
-
-
-## Insérer une image
-
-Le code suivant insère une image.
-
-    ![](../img/logo.png)
-
-![](../img/logo.png)
-
-
-## Insérer une formule
-
-Le code suivant insère une formule mathématique en LaTeX.
-
-    $$ 
-    \frac{a + b}{1+x^2}
-    $$ 
-
-$$
-\frac{a + b}{1+x^2}
-$$
-
+Ce document est écrit en Markdown.
 
 ## Directives
-
-Les **directives** permettent d'appliquer une fonction (directive) sur un bout de texte (contenu). 
-
-- elle est entourée par des triples back-quotes 
-- les options sont entourés par des deux-points
-
-Voici le format d'une directive
-
-    ```{directive}
-    :option: valeur
-    
-    contenu
-    ```
-
-
-## Paragraphe en évidence
 
 Pour mettre un paragraphe en évidence, voici quelques directives:
 
 - note
 - tip
+- caution
+- attention
 - warning
+- danger
+- error
 
-Voici le code:
+Le code Markdown pour utiliser une directive est:
 
     ```{note}
-    Ceci est une directive **note**.
+    This is a note.
     ```
 
-Voici trois exemples:
-
 ```{note}
-Ceci est une directive **note**.
+This is a note.
 ```
 
 ```{tip}
-Ceci est une directive **tip**.
+This is a tip.
+```
+
+```{caution}
+This is a warning.
+```
+
+```{attention}
+This is attention info.
 ```
 
 ```{warning}
-Ceci est une directive **warning**.
+This is a warning.
 ```
 
-## Texte à côté
-
-```{sidebar} Titre
-Mon texte à côté.
+```{danger}
+This is danger info.
 ```
 
-Le directive `sidebar` intègre un texte dans le côté droite du texte. 
-Les deux textes sont séparés par une barre verticale.  
-**Attention:**   
-Evitez cette directive si le document est destiné pour smartphone.
-
-    ```{sidebar} Titre
-    Mon texte à côté.
-    ```
-
-## Texte dans la marge
-
-```{margin} Titre
-Mon texte en marge.
+```{error}
+This is error info.
 ```
 
-Le directive `margin` place un texte dans la marge.
-Ce texte peut couvrir la barre de navigation à droite.
-**Attention:**  
-Evitez cette directive si le document est destiné pour smartphone.
+## Insert an image
+![](../img/logo.png)
 
-    ```{margin} Titre
-    Mon texte en marge.
-    ```
+## Math
+$$\frac{a + b}{1+x^2}$$
+
+
+## Sidebar
+Vous pouvez intégrer un texte dans le côté gauche du texte. 
+Les deux textes sont séparés par une barre verticale.
+
+```{sidebar} My sidebar title
+My sidebar content
+```
+
+## Margin content
+Vous pouvez placer un texte dans la marge.
+
+```{margin} An optional title
+My margin content
+```
+
+## Full-width
+
+````{div} full-width
+```{note}
+Here's a note that will take the full width
+```
+````
 
 --- 
-## Statistiques des notebooks
-
-Le directive `nb-exec-table` affiche les statistiques des Jupyter notebooks.
-
-    ```{nb-exec-table}
-    ```
+## Notebook Statistics
+Voici les statistiques des Jupyter notebooks.
 
 ```{nb-exec-table}
 ```
@@ -204,32 +88,26 @@ Le directive `nb-exec-table` affiche les statistiques des Jupyter notebooks.
 
 ## Inclure un document
 
-Le directive `literalinclude` permet d'incure un fichier. 
-
-    ``` {literalinclude} hello.py
-    ```
+Inclure le fichier **hello.py**
 
 ``` {literalinclude} hello.py
 ```
 
-L'option `:lines:` permet de specifier une plage de lignes.  
-Ici, le fichier est inclu à partir de la ligne 2.
+Inclure à partir de la ligne 2.
 
-    ``` {literalinclude} hello.py
-    :lines: 2-
-    ```
-    
 ``` {literalinclude} hello.py
 :lines: 2-
 ```
 
 ## Télécharger un document
 
-La commande `{download}` permet de télécharger un fichier.
-
     {download}`hello.py <hello.py>`
 
 {download}`download <hello.py>`
+
+    {download}`demo.txt <demo.txt>`
+
+{download}`download <demo.txt>`
 
 
 ## Questions à choix multiples
