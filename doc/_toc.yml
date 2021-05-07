@@ -64,8 +64,20 @@
       - file: rep/son
         
   - file: algo/algo
-  - file: python/vi/5/SystemeDeFichiers
-  - file: python/vi/5/MotsDePasse
+# Vince's chapters
+  - file: python/vi/5/Securite
+    sections:
+      - file: python/vi/5/SystemeDeFichiers
+      - file: python/vi/5/MotsDePasse
+      - file: python/vi/4/hacking-romain-v2-corrige
+
+  - file: python/vi/6/StructuresDeDonnees
+    sections:
+      - file: python/vi/6/Tableaux
+      - file: python/vi/6/Dictionnaires
+      - file: python/vi/6/LesFiles
+      - file: python/vi/6/LesArbres
+    
     
 - part: Reference
   chapters:
