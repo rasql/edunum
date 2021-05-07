@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jupyter &#8212; Education numérique</title>
+    <title>Jupyter notebook &#8212; Education numérique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -53,6 +53,8 @@
     <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -60,8 +62,6 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Thonny" href="thonny.html" />
@@ -394,7 +394,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Jupyter
+   Jupyter notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -536,35 +536,6 @@
   <a class="reference internal nav-link" href="#listes">
    Listes
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#listes-a-puces">
-     Listes à puces
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#listes-numerotes">
-     Listes numérotés
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#listes-melangees">
-     Listes mélangées
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#blockquote">
-   Blockquote
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     blockquote
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#texte-litteral">
@@ -577,8 +548,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#images-et-liens">
-   Images et liens
+  <a class="reference internal nav-link" href="#inserer-des-images">
+   Insérer des images
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -607,13 +578,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#executer-un-fichier">
+   Exécuter un fichier
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#code-html">
    Code HTML
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#file-manipulation">
-   File manipulation
+  <a class="reference internal nav-link" href="#ecrire-dans-un-fichier">
+   Ecrire dans un fichier
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -641,6 +617,11 @@
    Hide cell
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#telecharger-un-fichier">
+   Télécharger un fichier
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -652,79 +633,34 @@
         
               <div>
                 
-  <div class="section" id="jupyter">
-<h1>Jupyter<a class="headerlink" href="#jupyter" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Ce document peut être édité dans</p>
-<ul class="simple">
-<li><p>VS code</p></li>
-<li><p>Jupyter Lab</p></li>
-</ul>
+  <div class="section" id="jupyter-notebook">
+<h1>Jupyter notebook<a class="headerlink" href="#jupyter-notebook" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Un document Jupyter Notebook est un document <strong>JSON</strong>.
+Il est composé de cellules d’entrée/sortie. Celles-ci peuvent contenir du code, du texte (à l’aide de Markdown), des formules mathématiques, des graphiques et des médias interactifs.</p>
+<p>Il se termine généralement par l’extension « .ipynb ».</p>
 <div class="section" id="styles">
 <h2>Styles<a class="headerlink" href="#styles" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les styles <em>italic</em>  <strong>bold</strong> et <code class="docutils literal notranslate"><span class="pre">code</span></code> peuvent être appliqués dans un text.</p>
 </div>
 <div class="section" id="listes">
 <h2>Listes<a class="headerlink" href="#listes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les listes peuvent avoir plusieurs niveaux.</p>
-<div class="section" id="listes-a-puces">
-<h3>Listes à puces<a class="headerlink" href="#listes-a-puces" title="Lien permanent vers ce titre">¶</a></h3>
-<ul class="simple">
-<li><p>item</p>
-<ul>
-<li><p>item</p>
-<ul>
-<li><p>item</p></li>
-<li><p>item</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="listes-numerotes">
-<h3>Listes numérotés<a class="headerlink" href="#listes-numerotes" title="Lien permanent vers ce titre">¶</a></h3>
-<ol class="simple">
-<li><p>item</p></li>
-<li><p>item
-1. item
-1. item</p></li>
-<li><p>item
-1. item</p></li>
-</ol>
-</div>
-<div class="section" id="listes-melangees">
-<h3>Listes mélangées<a class="headerlink" href="#listes-melangees" title="Lien permanent vers ce titre">¶</a></h3>
-<ol class="simple">
-<li><p>item</p></li>
-</ol>
-<ul>
-<li><p>item</p>
-<ol class="simple">
-<li><p>item</p></li>
-</ol>
+<p>Les listes avec plusieurs niveaux sont à éviter, car les sous-niveau s’affichent pas de la même façon dans un notebook et dans la page web généré avec l’outil <strong>jupyter-book</strong>.</p>
+<p>Liste à puces</p>
 <ul class="simple">
 <li><p>item</p></li>
+<li><p>item</p></li>
+<li><p>item</p></li>
 </ul>
-</li>
-</ul>
-</div>
-</div>
-<div class="section" id="blockquote">
-<h2>Blockquote<a class="headerlink" href="#blockquote" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Toutes les lignes sont précédées par <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.</p>
-<div class="section" id="id1">
-<h3>blockquote<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
-<p>text</p>
-<ul class="simple">
-<li><p><em>italic</em></p></li>
-<li><p><strong>bold</strong></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code></p></li>
-</ul>
-</div>
+<p>Liste numéroté</p>
+<ol class="simple">
+<li><p>item</p></li>
+<li><p>item</p></li>
+<li><p>item</p></li>
+</ol>
 </div>
 <div class="section" id="texte-litteral">
 <h2>Texte littéral<a class="headerlink" href="#texte-litteral" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Toutes les lignes sont indentées.</p>
+<p>Pour afficher un texte littéral il suffit d’indenter ces lignes.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># text littéral
 x = &#39;hello&#39;
 print(x)
@@ -733,7 +669,7 @@ print(x)
 </div>
 <div class="section" id="commandes-magiques">
 <h2>Commandes magiques<a class="headerlink" href="#commandes-magiques" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les commandes magiques permettent d’appeler certaines commandes UNIX</p>
+<p>Les commandes magiques permettent d’appeler certaines commandes UNIX. La commande <code class="docutils literal notranslate"><span class="pre">pwd</span></code> affiche le dossier actuel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
@@ -746,34 +682,32 @@ print(x)
 </div>
 </div>
 </div>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">ls</span></code> pour afficher les dossiers et fichiers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">ls</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">*.</span><span class="n">ipynb</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>demo.txt       hello.py       jupyter.ipynb  markdown.md
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>github.ipynb   jupyter.ipynb  style.ipynb    thonny.ipynb
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ll</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ll</span> <span class="o">*.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 56
--rw-r--r--  1 raphael  staff     10 Jan 13 09:07 demo.txt
--rw-r--r--  1 raphael  staff     29 Jan 10 08:09 hello.py
--rw-r--r--@ 1 raphael  staff  15030 Jan 13 09:07 jupyter.ipynb
--rw-r--r--  1 raphael  staff    867 Jan 13 08:39 markdown.md
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-r--r--  1 virginie  staff  22 Jan 17 13:12 demo.txt
 </pre></div>
 </div>
 </div>
 </div>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">%save</span></code> permet de sauvegarder les lignes qui suivent dans un fichier.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">save</span> hello.py
@@ -794,44 +728,65 @@ world
 </div>
 </div>
 </div>
-<div class="section" id="images-et-liens">
-<h2>Images et liens<a class="headerlink" href="#images-et-liens" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="inserer-des-images">
+<h2>Insérer des images<a class="headerlink" href="#inserer-des-images" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La commande</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>![logo](../logo.png)
 </pre></div>
 </div>
+<p>insère une image</p>
 <p><img alt="logo" src="../_images/logo.png" /></p>
 </div>
 <div class="section" id="hyper-liens">
 <h2>Hyper-liens<a class="headerlink" href="#hyper-liens" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La commande</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[notebook](https://jupyter-notebook.readthedocs.io)
 </pre></div>
 </div>
-<p><a class="reference external" href="https://jupyter-notebook.readthedocs.io">notebook</a></p>
+<p>insère un hyper-lien
+<a class="reference external" href="https://jupyter-notebook.readthedocs.io">notebook</a></p>
 </div>
 <div class="section" id="formules-mathematiques">
 <h2>Formules mathématiques<a class="headerlink" href="#formules-mathematiques" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Des expression en LaTeX peuvent être inséré dans le texte.</p>
+<p>Des expression en LaTeX peuvent être insérés dans le texte.</p>
 <ul class="simple">
-<li><p>index <code class="docutils literal notranslate"><span class="pre">$a_2$</span></code> <span class="math notranslate nohighlight">\(a_2\)</span></p></li>
-<li><p>exposant <code class="docutils literal notranslate"><span class="pre">$a^2$</span></code> <span class="math notranslate nohighlight">\(a^2\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$a_2$</span></code> pour un index <span class="math notranslate nohighlight">\(a_2\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$a^2$</span></code> pour un exposant <span class="math notranslate nohighlight">\(a^2\)</span></p></li>
 </ul>
 <p>Les accolades permettent le groupement de sous-expressions.</p>
 <ul class="simple">
-<li><p>groupement <code class="docutils literal notranslate"><span class="pre">$a^{1+2}$</span></code> <span class="math notranslate nohighlight">\(a^{1+2}\)</span></p></li>
-<li><p>fraction <code class="docutils literal notranslate"><span class="pre">$\frac{2}{x+1}$</span></code> <span class="math notranslate nohighlight">\(\frac{2}{x+1}\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$a^{1+2}$</span></code> pour un exposant <span class="math notranslate nohighlight">\(a^{1+2}\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$\frac{2}{x+1}$</span></code> pour une fraction <span class="math notranslate nohighlight">\(\frac{2}{x+1}\)</span></p></li>
 </ul>
-<p>Une formule LaTeX entourée par <code class="docutils literal notranslate"><span class="pre">$$</span></code> apparait plus grandes et centrée sur la page (<em>display mode</em>).</p>
+<p>Une formule LaTeX entourée par <code class="docutils literal notranslate"><span class="pre">$$</span></code> apparait plus grande et centrée sur la page (<em>display mode</em>).</p>
 <p><code class="docutils literal notranslate"><span class="pre">$$\sum_{i=0}^n</span> <span class="pre">{n}</span> <span class="pre">=</span> <span class="pre">0</span> <span class="pre">+</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">n$$</span></code></p>
 <div class="math notranslate nohighlight">
 \[\sum_{i=0}^n {n} = 0 + 1 + 2 + ... + n\]</div>
 </div>
 <div class="section" id="exemple-de-code">
 <h2>Exemple de code<a class="headerlink" href="#exemple-de-code" title="Lien permanent vers ce titre">¶</a></h2>
-<p>En Python</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="s2">&quot;Hello World&quot;</span>
+<p>Le code source (Python)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```python
+for in range(3):
+    print(i)
+```
 </pre></div>
 </div>
-<p>En C</p>
+<p>produit</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Le code source (C)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```c
+for (i=0; i++, i&lt;3)
+{
+    print(i)
+}
+```
+</pre></div>
+</div>
+<p>produit</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">,</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -841,7 +796,8 @@ world
 </div>
 <div class="section" id="tableau">
 <h2>Tableau<a class="headerlink" href="#tableau" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Un tableau est centré avec des bandes alternés.</p>
+<p>Un tableau est centré avec des bandes alternés en Jupyter.<br />
+Il s’afficher plus aéré et aligné à gauche dans le site web.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>x</p></th>
@@ -870,7 +826,10 @@ world
 </div>
 </div>
 </div>
-<p>Exécuter un fichier externe.</p>
+</div>
+<div class="section" id="executer-un-fichier">
+<h2>Exécuter un fichier<a class="headerlink" href="#executer-un-fichier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">%run</span></code> permet d’exécuter un fichier externe et afficher son résultat dans la cellule suivante.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> hello.py
@@ -887,22 +846,24 @@ world
 </div>
 <div class="section" id="code-html">
 <h2>Code HTML<a class="headerlink" href="#code-html" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">%%html</span></code> permet d’interpreter du code HTML et d’afficher son résultat dans la cellule suivante.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
-<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Titre<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-Text <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>bold<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>italics<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> 
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Titre 2<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+Texte en <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>gras<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span> et <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>italique<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>. 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><h1>Titre</h1>
-Text <b>bold</b> <i>italics</i> 
+<div class="output text_html"><h2>Titre 2</h2>
+Texte en <b>gras</b> et <i>italique</i>. 
 </div></div>
 </div>
 </div>
-<div class="section" id="file-manipulation">
-<h2>File manipulation<a class="headerlink" href="#file-manipulation" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="ecrire-dans-un-fichier">
+<h2>Ecrire dans un fichier<a class="headerlink" href="#ecrire-dans-un-fichier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">%%file</span></code> permet d’écrire les lignes de texte qui suivent dans un fichier.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> demo.txt
@@ -916,20 +877,20 @@ Text <b>bold</b> <i>italics</i>
 </div>
 </div>
 </div>
-<p>Checking if the file exists.</p>
+<p>Vérifions si le fichier texte existe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">*.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>demo.txt       hello.py       jupyter.ipynb  markdown.md
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>demo.txt
 </pre></div>
 </div>
 </div>
 </div>
-<p>Append more text to the existing file.</p>
+<p>Avec l’option <code class="docutils literal notranslate"><span class="pre">-a</span></code> (append) nous pouvons ajouter des lignes de texte à un fichier existant.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> -a demo.txt
@@ -943,7 +904,7 @@ Text <b>bold</b> <i>italics</i>
 </div>
 </div>
 </div>
-<p>Display the new contents of the file.</p>
+<p>Affichons le nouveau contenu.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">demo</span><span class="o">.</span><span class="n">txt</span>
@@ -964,7 +925,7 @@ append text
 Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
 </pre></div>
 </div>
@@ -978,7 +939,7 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "23cf92b4b4994736b9e04abad26fc540", "version_major": 2, "version_minor": 0}
+{"model_id": "98ca02b07f0e4199834a2dce67dface6", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -996,14 +957,15 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "27d82834f0b146d1bb963de6deacf918", "version_major": 2, "version_minor": 0}
-</script></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="tags">
 <h2>Tags<a class="headerlink" href="#tags" title="Lien permanent vers ce titre">¶</a></h2>
-<p>These tags can be added to the Jupyter notebook cell</p>
+<p>Ces <code class="docutils literal notranslate"><span class="pre">tags</span></code> peuvent être ajouté à une cellule d’un notebook.</p>
 <ul class="simple">
 <li><p>fill-width</p></li>
 <li><p>output-scroll</p></li>
@@ -1019,7 +981,7 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 <div class="section" id="hide-input">
 <h2>Hide input<a class="headerlink" href="#hide-input" title="Lien permanent vers ce titre">¶</a></h2>
-<p>To hide the input add this to the Cell Metadata:</p>
+<p>Pour cacher la cellule d’entrée, il faut ajouter ceci aux méta-données de la celule:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
     &quot;tags&quot;: [
         &quot;hide-input&quot;
@@ -1029,9 +991,9 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 <p>Dans Jupyter Lab il faut</p>
 <ul class="simple">
-<li><p>choisir l’onglet <strong>Settings</strong></p></li>
-<li><p>ouvrir <strong>Advanced tools</strong></p></li>
-<li><p>éditer <strong>Cell Metadata</strong></p></li>
+<li><p>choisir la cellule</p></li>
+<li><p>ouvrir <strong>Property Inspector</strong> (icône avec deux rouages à droite en haut)</p></li>
+<li><p>cliquer sur un <strong>Cell Tag</strong> existant ou ajouter un nouveau tag</p></li>
 </ul>
 <p><img alt="" src="../_images/hide-input-tag.png" /></p>
 <p>Pour afficher cliquer sur <strong>Click to show (+)</strong></p>
@@ -1103,6 +1065,21 @@ Par contre le document HTML est statique et n’a pas de serveur Python.</p>
 </div>
 </div>
 </div>
+<div class="section" id="telecharger-un-fichier">
+<h2>Télécharger un fichier<a class="headerlink" href="#telecharger-un-fichier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le code</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* {download}`test.md &lt;test.md&gt;`
+* {download}`Demo &lt;demo.txt&gt;`
+* {download}`hello.py &lt;hello.py&gt;`
+</pre></div>
+</div>
+<p>produit des liens pour télécharger des fichiers</p>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/f30761c162492dc2df92c6c4eb316ab0/test.md"><code class="xref download docutils literal notranslate"><span class="pre">test.md</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/85b9acf98b2b8c9ee6c513b7c5126ee1/demo.txt"><code class="xref download docutils literal notranslate"><span class="pre">Demo</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/fc717d182895f20dc56f3cc5f69da37d/hello.py"><code class="xref download docutils literal notranslate"><span class="pre">hello.py</span></code></a></p></li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1164,7 +1141,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     

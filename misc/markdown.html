@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Markdown &#8212; Education numérique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -53,6 +53,8 @@
     <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -60,11 +62,9 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Jupyter" href="jupyter.html" />
+    <link rel="next" title="Jupyter notebook" href="jupyter.html" />
     <link rel="prev" title="Les mots de passe" href="../python/vi/5/MotsDePasse.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -394,7 +394,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="jupyter.html">
-   Jupyter
+   Jupyter notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -506,13 +506,38 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#emphase">
+   Emphase
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#espaces">
+   Espaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#paragraphe">
+   Paragraphe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#retour-a-la-ligne-force">
+   Retour à la ligne forcé
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code">
+   Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#directives">
    Directives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#insert-an-image">
-   Insert an image
+  <a class="reference internal nav-link" href="#inserer-une-image">
+   Insérer une image
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -528,11 +553,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#margin-content">
    Margin content
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#full-width">
-   Full-width
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -573,18 +593,71 @@
                 
   <div class="section" id="markdown">
 <h1>Markdown<a class="headerlink" href="#markdown" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Ce document est écrit en Markdown.</p>
+<p>Markdown est un <strong>langage de balisage léger</strong>, avec une syntaxe facile à lire et facile à écrire. Un document balisé par Markdown peut être transformé en HTML ou en PDF. Les fichiers Markdown ont une extension <code class="docutils literal notranslate"><span class="pre">.md</span></code>.</p>
+<p>Markdown est utilisé pour formatter les fichiers README sur GitHub.</p>
+<div class="section" id="emphase">
+<h2>Emphase<a class="headerlink" href="#emphase" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les caractères <code class="docutils literal notranslate"><span class="pre">_</span></code> ou <code class="docutils literal notranslate"><span class="pre">*</span></code> sont utilisés pour entourer les mots à mettre en <strong>emphase</strong>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>_mot_ en *italique*. 
+</pre></div>
+</div>
+<p><em>mot</em> en <em>italique</em>.</p>
+<p>Les caractères  <code class="docutils literal notranslate"><span class="pre">__</span></code> ou <code class="docutils literal notranslate"><span class="pre">**</span></code> sont utilisés pour mettre des mots en <strong>grande emphase</strong>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>__mot__ en **gras**. 
+</pre></div>
+</div>
+<p><strong>mot</strong> en <strong>gras</strong>.</p>
+</div>
+<div class="section" id="espaces">
+<h2>Espaces<a class="headerlink" href="#espaces" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les <strong>espaces multiples</strong> ou des simples retours à la lignes sont tous remplacés par une seule espace.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Des            grands                espaces
+et
+des
+retours.
+</pre></div>
+</div>
+<p>Des            grands                espaces
+et
+des
+retours.</p>
+</div>
+<div class="section" id="paragraphe">
+<h2>Paragraphe<a class="headerlink" href="#paragraphe" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une <strong>ligne vide</strong> crée un paragraphe.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Ceci est le premier paragraphe.
+
+Ceci est le paragraphe suivant.
+</pre></div>
+</div>
+<p>Ceci est le premier paragraphe.</p>
+<p>Ceci est le paragraphe suivant.</p>
+</div>
+<div class="section" id="retour-a-la-ligne-force">
+<h2>Retour à la ligne forcé<a class="headerlink" href="#retour-a-la-ligne-force" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ajouter <strong>deux espaces</strong> en fin de ligne insère un retour à la ligne forcé.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Les deux espaces en fin de cette ligne  
+forcent un retour à la ligne.
+</pre></div>
+</div>
+<p>Les deux espaces en fin de cette ligne<br />
+forcent un retour à la ligne.</p>
+</div>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le caractère ` (backquote) indique des éléments de code.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>La fonction `print(x)` imprime la valeur de la variable `x`. 
+</pre></div>
+</div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> imprime la valeur de la variable <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</div>
 <div class="section" id="directives">
 <h2>Directives<a class="headerlink" href="#directives" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour mettre un paragraphe en évidence, voici quelques directives:</p>
 <ul class="simple">
 <li><p>note</p></li>
 <li><p>tip</p></li>
-<li><p>caution</p></li>
-<li><p>attention</p></li>
 <li><p>warning</p></li>
-<li><p>danger</p></li>
-<li><p>error</p></li>
 </ul>
 <p>Le code Markdown pour utiliser une directive est:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{note}
@@ -600,40 +673,33 @@ This is a note.
 <p class="admonition-title">Astuce</p>
 <p>This is a tip.</p>
 </div>
-<div class="admonition caution">
-<p class="admonition-title">Prudence</p>
-<p>This is a warning.</p>
-</div>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>This is attention info.</p>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
 <p>This is a warning.</p>
 </div>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>This is danger info.</p>
 </div>
-<div class="admonition error">
-<p class="admonition-title">Erreur</p>
-<p>This is error info.</p>
+<div class="section" id="inserer-une-image">
+<h2>Insérer une image<a class="headerlink" href="#inserer-une-image" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le code suivant insère une image.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>![](../img/logo.png)
+</pre></div>
 </div>
-</div>
-<div class="section" id="insert-an-image">
-<h2>Insert an image<a class="headerlink" href="#insert-an-image" title="Lien permanent vers ce titre">¶</a></h2>
 <p><img alt="" src="../_images/logo.png" /></p>
 </div>
 <div class="section" id="math">
 <h2>Math<a class="headerlink" href="#math" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le code suivant insère une formule mathématique en LaTeX.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$$\frac{a + b}{1+x^2}$$
+</pre></div>
+</div>
 <div class="math notranslate nohighlight">
 \[\frac{a + b}{1+x^2}\]</div>
 </div>
 <div class="section" id="sidebar">
 <h2>Sidebar<a class="headerlink" href="#sidebar" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Vous pouvez intégrer un texte dans le côté gauche du texte.
-Les deux textes sont séparés par une barre verticale.</p>
+Les deux textes sont séparés par une barre verticale.
+Ceci est à éviter si le document est destiné pour smartphone.</p>
 <div class="sidebar">
 <p class="sidebar-title">My sidebar title</p>
 <p>My sidebar content</p>
@@ -641,25 +707,22 @@ Les deux textes sont séparés par une barre verticale.</p>
 </div>
 <div class="section" id="margin-content">
 <h2>Margin content<a class="headerlink" href="#margin-content" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Vous pouvez placer un texte dans la marge.</p>
+<p>Vous pouvez placer un texte dans la marge.
+Ceci est à éviter si le document est destiné pour smartphone.</p>
 <div class="margin sidebar">
 <p class="sidebar-title">An optional title</p>
 <p>My margin content</p>
 </div>
 </div>
-<div class="section" id="full-width">
-<h2>Full-width<a class="headerlink" href="#full-width" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="full-width docutils">
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here’s a note that will take the full width</p>
-</div>
-</div>
-</div>
 <hr class="docutils" />
 <div class="section" id="notebook-statistics">
 <h2>Notebook Statistics<a class="headerlink" href="#notebook-statistics" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Voici les statistiques des Jupyter notebooks.</p>
+<p>Le code</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{nb-exec-table}
+```
+</pre></div>
+</div>
+<p>affiche les statistiques des Jupyter notebooks.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Document</p></th>
@@ -675,22 +738,35 @@ Les deux textes sont séparés par une barre verticale.</p>
 </div>
 <div class="section" id="inclure-un-document">
 <h2>Inclure un document<a class="headerlink" href="#inclure-un-document" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Inclure le fichier <strong>hello.py</strong></p>
+<p>Le code</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>``` {literalinclude} hello.py
+```
+</pre></div>
+</div>
+<p>inclut le fichier <strong>hello.py</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Inclure à partir de la ligne 2.</p>
+<p>Le code</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>``` {literalinclude} hello.py
+:lines: 2-
+```
+</pre></div>
+</div>
+<p>inclut le fichier à partir de la ligne 2.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="telecharger-un-document">
 <h2>Télécharger un document<a class="headerlink" href="#telecharger-un-document" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le code</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{download}`hello.py &lt;hello.py&gt;`
 </pre></div>
 </div>
-<p><a class="reference download internal" download="" href="../_downloads/fc717d182895f20dc56f3cc5f69da37d/hello.py"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a></p>
+<p>permet de télécharger un fichier.<br />
+<a class="reference download internal" download="" href="../_downloads/fc717d182895f20dc56f3cc5f69da37d/hello.py"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{download}`demo.txt &lt;demo.txt&gt;`
 </pre></div>
 </div>
@@ -701,8 +777,8 @@ Les deux textes sont séparés par une barre verticale.</p>
 <p>Il est possible d’intégrer des questions à choix multiples au fil des pages via la directive <code class="docutils literal notranslate"><span class="pre">question</span></code>.
 Dans le corps de la directive, les bonnes et mauvaises réponses sont indiquées via les rôles <code class="docutils literal notranslate"><span class="pre">{v}</span></code> et <code class="docutils literal notranslate"><span class="pre">{f}</span></code> pour <em>vrai</em> et <em>faux</em>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2385af2b-f6d0-43ab-bf67-7d9755949283" name="ac85fd59-8388-4c28-a9e6-90f998fe23b2" type="radio">
-</input><label class="tabbed-label" for="2385af2b-f6d0-43ab-bf67-7d9755949283">
+<input checked="checked" id="94ae374d-5465-41f3-b6d0-a65159579492" name="cbee1096-4d64-45e9-914f-d103e7098916" type="radio">
+</input><label class="tabbed-label" for="94ae374d-5465-41f3-b6d0-a65159579492">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
@@ -712,8 +788,8 @@ Je pense qu’il y en a <label class="answer incorrect"><input type="checkbox" /
 </div>
 <div class="controls"><input type="button" class="check btn btn-primary" value="Vérifier ma réponse" /><input type="button" class="show btn btn-secondary" value="Afficher la réponse" /></div></div>
 </form></div></div>
-<input id="00be7701-ff28-4cab-81e1-a2bd90a2a82e" name="ac85fd59-8388-4c28-a9e6-90f998fe23b2" type="radio">
-</input><label class="tabbed-label" for="00be7701-ff28-4cab-81e1-a2bd90a2a82e">
+<input id="99ca32f9-6ccc-4eb6-9673-f94d2aabdb90" name="cbee1096-4d64-45e9-914f-d103e7098916" type="radio">
+</input><label class="tabbed-label" for="99ca32f9-6ccc-4eb6-9673-f94d2aabdb90">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{question}
 Combien y a t&#39;il de bits dans un octet ?
@@ -727,8 +803,8 @@ Je pense qu&#39;il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
 Le contenu de la question peut lui-même être structuré en Markdown.
 Dans l’exemple ci-dessous, les réponses sont affichées dans une liste.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="14f84356-0362-46c9-96f1-ef9b14169ae2" name="e54d50fe-58d5-4be0-9712-5d7b5d7e4280" type="radio">
-</input><label class="tabbed-label" for="14f84356-0362-46c9-96f1-ef9b14169ae2">
+<input checked="checked" id="4bbd603c-f5c7-4835-878d-9495c91636c1" name="67142737-5c86-430e-8383-79dd4d3636ec" type="radio">
+</input><label class="tabbed-label" for="4bbd603c-f5c7-4835-878d-9495c91636c1">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question avec un titre personnalisé</p>
@@ -743,8 +819,8 @@ Aperçu</label><div class="tabbed-content docutils">
 </div>
 <div class="controls"><input type="button" class="check btn btn-primary" value="Vérifier ma réponse" /><input type="button" class="show btn btn-secondary" value="Afficher la réponse" /></div></div>
 </form></div></div>
-<input id="a4e1a94e-3974-4f2e-ba0f-884312a6f38c" name="e54d50fe-58d5-4be0-9712-5d7b5d7e4280" type="radio">
-</input><label class="tabbed-label" for="a4e1a94e-3974-4f2e-ba0f-884312a6f38c">
+<input id="81104920-605b-445f-9011-b19e9821130c" name="67142737-5c86-430e-8383-79dd4d3636ec" type="radio">
+</input><label class="tabbed-label" for="81104920-605b-445f-9011-b19e9821130c">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{question} Question avec un titre personnalisé
 Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turing ?
@@ -764,13 +840,13 @@ Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turin
 Dans le texte du rôle, les différentes options de réponses sont séparées par un caractère <code class="docutils literal notranslate"><span class="pre">|</span></code>.
 Une réponse valable est précédée d’un caractère <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2270ef1b-8e32-4102-83c5-2a186dd85b62" name="dec8e55a-4fc8-4b85-bb19-3d74d4ff8900" type="radio">
-</input><label class="tabbed-label" for="2270ef1b-8e32-4102-83c5-2a186dd85b62">
+<input checked="checked" id="f880b985-04df-4701-85de-5bdb7761a533" name="b0c998ac-fc5a-4ba5-ac37-7407fd6f5487" type="radio">
+</input><label class="tabbed-label" for="f880b985-04df-4701-85de-5bdb7761a533">
 Aperçu</label><div class="tabbed-content docutils">
 <p>Dans le texte suivant, certains <select class="blank"><option class="blank_option" value="-1" selected="selected"></option><option class="correct_option" value="1">mots</option><option class="incorrect_option" value="0">trucs</option><option class="incorrect_option" value="0">machins</option></select> sont laissés <select class="blank"><option class="blank_option" value="-1" selected="selected"></option><option class="incorrect_option" value="0">pour compte</option><option class="correct_option" value="1">blancs</option><option class="incorrect_option" value="0">verts</option><option class="incorrect_option" value="0">seuls</option></select>.</p>
 </div>
-<input id="ec9d8561-9642-453a-9dc1-dab631456535" name="dec8e55a-4fc8-4b85-bb19-3d74d4ff8900" type="radio">
-</input><label class="tabbed-label" for="ec9d8561-9642-453a-9dc1-dab631456535">
+<input id="48bea513-ccd6-4011-9dc0-4d59e99f44bb" name="b0c998ac-fc5a-4ba5-ac37-7407fd6f5487" type="radio">
+</input><label class="tabbed-label" for="48bea513-ccd6-4011-9dc0-4d59e99f44bb">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Dans le texte suivant, certains {bl}`&gt;mots|trucs|machins` sont laissés {bl}`pour compte|&gt;blancs|verts|seuls`.
 </pre></div>
@@ -809,7 +885,7 @@ Code</label><div class="tabbed-content docutils">
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../python/vi/5/MotsDePasse.html" title="previous page">Les mots de passe</a>
-    <a class='right-next' id="next-link" href="jupyter.html" title="next page">Jupyter</a>
+    <a class='right-next' id="next-link" href="jupyter.html" title="next page">Jupyter notebook</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -839,7 +915,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
     </div>
 
     
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     
