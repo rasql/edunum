@@ -405,7 +405,7 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../6/Dictionnaires.html">
+    <a class="reference internal" href="../../le/8/Dictionnaires2.html">
      Dictionnaires
     </a>
    </li>
@@ -646,7 +646,7 @@
 <p>Pour qu’un éventuel ennemi ne s’empare jamais du message de César, il a décidé d’utiliser une technique de <strong>cryptage</strong> afin de rendre le message illisible si on ne connaît pas la <strong>clef de chiffrement</strong>. C’est l’une des toutes premières applications de la <strong>cryptographie</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
 
 <span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;vT8q1mXeZ2A&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">960</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">540</span><span class="p">)</span>
 </pre></div>
@@ -667,7 +667,7 @@
 <div class="section" id="comment-fonctionne-le-code-de-cesar">
 <h2>Comment fonctionne le code de Cesar ?<a class="headerlink" href="#comment-fonctionne-le-code-de-cesar" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le <strong>texte chiffré (codé)</strong> s’obtient en remplaçant chaque lettre du <strong>texte clair</strong> original par un décalage à distance fixe, toujours du même côté, dans les lettres de l’alphabet. Cette distance est appelée <strong>clef de chiffrement</strong></p>
-<p><img alt="alt text" src="python/vi/4/img/clef.png" /></p>
+<p><img alt="alt text" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/640px-Caesar3.svg.png" /></p>
 <p>Par exemple, si la clef de chiffrement vaut <strong>1</strong>, alors on décalera chaque lettre du texte clair de un sur la droite :</p>
 <ul class="simple">
 <li><p>le « a » devient « b »</p></li>
@@ -780,7 +780,7 @@
 <p>Déclarez une variable <code class="docutils literal notranslate"><span class="pre">alphabet_clair</span></code> de type chaîne de caractères qui contient toutes les lettres de l’alphabet en minuscules. Cette chaîne a une longueur de 26 !</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -788,7 +788,7 @@
 <p>Trouvez l’index (la position) de la lettre <code class="docutils literal notranslate"><span class="pre">h</span></code> dans la variable <code class="docutils literal notranslate"><span class="pre">alphabet_clair</span></code> à l’aide de la fonction <code class="docutils literal notranslate"><span class="pre">alphabet_clair.index('h')</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -801,7 +801,7 @@
 <p>Définissez une nouvelle chaîne de caractères <code class="docutils literal notranslate"><span class="pre">alphabet_code</span></code> qui contient toutes les lettres de l’alphabet minuscules et décalées de 1 : a devient b, b devient c, etc.. jusqu’à z qui devient a. Cette chaîne a une longueur de 26 !</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_code</span> <span class="o">=</span> <span class="s1">&#39;bcdefghijklmnopqrstuvwxyza&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_code</span> <span class="o">=</span> <span class="s1">&#39;bcdefghijklmnopqrstuvwxyza&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -809,7 +809,7 @@
 <p>Trouvez la lettre codée pour “h” qui a l’index 7</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_code</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_code</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -831,7 +831,7 @@
 <p>Trouvez l’index de la lettre codée “i”</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_code</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_code</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -844,7 +844,7 @@
 <p>Trouvez à quelle lettre dans l’alphabet clair correspond l’index 7</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -861,7 +861,7 @@
 <p>Déclarez un message en clair <code class="docutils literal notranslate"><span class="pre">message_clair</span> <span class="pre">=</span> <span class="pre">'bonjour'</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">message_clair</span> <span class="o">=</span> <span class="s1">&#39;gymnase bugnon&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message_clair</span> <span class="o">=</span> <span class="s1">&#39;gymnase bugnon&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -869,7 +869,7 @@
 <p>Déclarez un message codé vide <code class="docutils literal notranslate"><span class="pre">message_code</span> <span class="pre">=</span> <span class="pre">''</span></code>. Cette chaîne de caractère contiendra le message codé (on ajoute au fur et à mesure les lettres codées)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">message_code</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message_code</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -884,7 +884,7 @@
 <p>Ecrivez un test conditionnel (4 lignes !) qui affiche <code class="docutils literal notranslate"><span class="pre">espace</span></code> si le caractère d’index 8 de la chaîne <code class="docutils literal notranslate"><span class="pre">message_clair</span></code> est un espace, <code class="docutils literal notranslate"><span class="pre">pas</span> <span class="pre">d'espace</span></code> sinon.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">message_clair</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">message_clair</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;espace&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pas espace&#39;</span><span class="p">)</span>
@@ -907,7 +907,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">message_clair</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">message_clair</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
         <span class="n">message_code</span> <span class="o">=</span> <span class="n">message_code</span><span class="o">+</span><span class="n">c</span>
     <span class="k">else</span><span class="p">:</span>
@@ -931,7 +931,7 @@ hznobtf cvhopo
 <p>Si l’on met toutes les instructions à la suite, on obtient le programme suivant qui perme de coder un texte en clair :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
 <span class="n">alphabet_code</span> <span class="o">=</span> <span class="s1">&#39;bcdefghijklmnopqrstuvwxyza&#39;</span>
 <span class="n">message_clair</span> <span class="o">=</span> <span class="s1">&#39;gymnase bugnon&#39;</span>
 <span class="n">message_code</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -971,7 +971,7 @@ hznobtf cvhopo
 <p>Modifiez le programme suivant pour qu’il décode le message codé donné</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet_clair</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
 <span class="n">alphabet_code</span> <span class="o">=</span> <span class="s1">&#39;bcdefghijklmnopqrstuvwxyza&#39;</span>
 <span class="n">message_clair</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="n">message_code</span> <span class="o">=</span> <span class="s1">&#39;hznobtf ef dibncmboeft&#39;</span>
