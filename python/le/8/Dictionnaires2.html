@@ -33,8 +33,8 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/questions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/blanks.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -53,8 +53,6 @@
     <script src="../../../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -64,8 +62,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Recherche" href="../../../search.html" />
-    <link rel="next" title="Piles et files" href="../../vi/6/LesFiles.html" />
-    <link rel="prev" title="Tableaux" href="../../vi/6/Tableaux.html" />
+    <link rel="next" title="Markdown" href="../../../ref/markdown.html" />
+    <link rel="prev" title="Arbres" href="../../vi/6/LesArbres.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -404,8 +402,8 @@
      Tableaux
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../vi/6/Dictionnaires.html">
      Dictionnaires
     </a>
    </li>
@@ -417,6 +415,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../vi/6/LesArbres.html">
      Arbres
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Dictionnaires
     </a>
    </li>
   </ul>
@@ -609,7 +612,7 @@
   <div class="section" id="dictionnaires">
 <h1>Dictionnaires<a class="headerlink" href="#dictionnaires" title="Lien permanent vers ce titre">¶</a></h1>
 <p>En Python, un <em>dictionnaire</em> est une structure de données qui, comme une liste, contient plusieurs éléments, mais plus puissant. Dans une liste les indices sont des entiers. Dans un dictionnaire les indices peuvent être de n’importe quel type immuable (entier, nombre, texte, tuple, …).</p>
-<p><img alt="" src="../../../_images/dict.jpg" /></p>
+<p><img alt="" src="python/le/8/dict.jpg" /></p>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">dict</span></code> crée un dictionnaire vide. On pourrait aussi le créer avec une paire d’accolades <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -626,14 +629,6 @@
 </div>
 <p><strong>Exercice</strong><br />
 Créez un dictionnaire français_anglais vide nommé <code class="docutils literal notranslate"><span class="pre">fr_ang</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A effacer</span>
-<span class="n">fr_ang</span><span class="o">=</span><span class="p">{}</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="section" id="memoire-associative">
 <h2>Mémoire associative<a class="headerlink" href="#memoire-associative" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un dictionnaire associe une série de <strong>clés</strong> à une autre série de <strong>valeurs</strong>. Cette structure est aussi appelée</p>
@@ -735,16 +730,6 @@ Créez un dictionnaire français_anglais vide nommé <code class="docutils liter
 <li><p>Affichez le nombre de paires de mots</p></li>
 <li><p>Vérifiez si cochon fait partie du dictionnaire</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A effacer</span>
-<span class="n">fr_ang</span><span class="p">[</span><span class="s1">&#39;chat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;cat&#39;</span>
-<span class="n">fr_ang</span><span class="p">[</span><span class="s1">&#39;chien&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;dog&#39;</span>
-<span class="n">fr_ang</span><span class="p">[</span><span class="s2">&quot;cochon d&#39;inde&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;guinea pig&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="compter-histogramme">
 <h2>Compter (histogramme)<a class="headerlink" href="#compter-histogramme" title="Lien permanent vers ce titre">¶</a></h2>
@@ -804,23 +789,6 @@ Créez un dictionnaire français_anglais vide nommé <code class="docutils liter
 <p>Ceci nous permet de raccourcir le programme de l’histogramme encore plus.</p>
 <p><strong>Exercice</strong>
 Ecrivez un programme qui donne l’histogramme du mot « anticonstitutionnellement »</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A effacer</span>
-<span class="n">mot</span> <span class="o">=</span> <span class="s1">&#39;cocorico&#39;</span>
-<span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
-    <span class="nb">dict</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="nb">dict</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;c&#39;: 3, &#39;o&#39;: 3, &#39;r&#39;: 1, &#39;i&#39;: 1}
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="iteration-sur-les-cles">
 <h2>Itération sur les clés<a class="headerlink" href="#iteration-sur-les-cles" title="Lien permanent vers ce titre">¶</a></h2>
@@ -874,19 +842,6 @@ e 1
 </div>
 <p><strong>Exercice</strong><br />
 Ordonnez le contenu du dictionnaire <code class="docutils literal notranslate"><span class="pre">fr_ang</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">sorted</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A effacer</span>
-<span class="nb">sorted</span><span class="p">(</span><span class="n">fr_ang</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;chat&#39;, &#39;chien&#39;, &quot;cochon d&#39;inde&quot;]
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="list-et-ensemble-des-valeurs">
 <h2>List et ensemble des valeurs<a class="headerlink" href="#list-et-ensemble-des-valeurs" title="Lien permanent vers ce titre">¶</a></h2>
@@ -931,19 +886,6 @@ Ordonnez le contenu du dictionnaire <code class="docutils literal notranslate"><
 </div>
 <p><strong>Exercice</strong><br />
 Affichez tous les mots anglais de traducteur</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A effacer</span>
-<span class="nb">list</span><span class="p">(</span><span class="n">fr_ang</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;cat&#39;, &#39;dog&#39;, &#39;guinea pig&#39;, &#39;owl&#39;, &#39;owl&#39;, [&#39;q&#39;, &#39;c&#39;]]
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="inverser-un-dictionnaire">
 <h2>Inverser un dictionnaire<a class="headerlink" href="#inverser-un-dictionnaire" title="Lien permanent vers ce titre">¶</a></h2>
@@ -989,80 +931,8 @@ Affichez tous les mots anglais de traducteur</p>
 </li>
 <li><p>Inversez le dictionnaire <code class="docutils literal notranslate"><span class="pre">fr_ang</span></code></p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A effacer</span>
-<span class="n">fr_ang</span><span class="p">[</span><span class="s1">&#39;hibou&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;owl&#39;</span>
-<span class="n">fr_ang</span><span class="p">[</span><span class="s1">&#39;chouette&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;owl&#39;</span>
-
-<span class="n">inverse</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">fr_ang</span><span class="p">:</span>
-    <span class="n">val</span> <span class="o">=</span> <span class="n">fr_ang</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">inverse</span><span class="p">:</span>
-        <span class="n">inverse</span><span class="p">[</span><span class="n">val</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">inverse</span><span class="p">[</span><span class="n">val</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">]</span>
-<span class="n">inverse</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;cat&#39;: [&#39;chat&#39;],
- &#39;dog&#39;: [&#39;chien&#39;],
- &#39;guinea pig&#39;: [&quot;cochon d&#39;inde&quot;],
- &#39;owl&#39;: [&#39;hibou&#39;, &#39;chouette&#39;]}
-</pre></div>
-</div>
-</div>
-</div>
 <p><strong>Exercice</strong><br />
 Ecrivez un programme Quiz qui permet de vérifier si votre tradcution est juste ou fausse pour tous les mots du dictionnaire fr_ang</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">fr_ang</span><span class="p">:</span>
-    <span class="n">val</span> <span class="o">=</span> <span class="n">fr_ang</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;traduisez :&#39;</span><span class="o">+</span><span class="n">c</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">fr_ang</span><span class="p">[</span><span class="n">c</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bravo&#39;</span><span class="p">)</span>
-    <span class="k">else</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No No No &#39;</span><span class="p">)</span>
-    
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>traduisez :chat cat
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bravo
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>traduisez :chien dog
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bravo
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>traduisez :cochon d&#39;inde awiwveo
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No No No 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>traduisez :hibou haool
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No No No 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>traduisez :chouette owl
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bravo
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -1094,8 +964,8 @@ Ecrivez un programme Quiz qui permet de vérifier si votre tradcution est juste 
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../../vi/6/Tableaux.html" title="previous page">Tableaux</a>
-    <a class='right-next' id="next-link" href="../../vi/6/LesFiles.html" title="next page">Piles et files</a>
+    <a class='left-prev' id="prev-link" href="../../vi/6/LesArbres.html" title="previous page">Arbres</a>
+    <a class='right-next' id="next-link" href="../../../ref/markdown.html" title="next page">Markdown</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
