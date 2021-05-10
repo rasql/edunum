@@ -74,7 +74,6 @@
   - file: python/vi/6/StructuresDeDonnees
     sections:
       - file: python/vi/6/Tableaux
-      - file: python/vi/6/Dictionnaires
       - file: python/vi/6/LesFiles
       - file: python/vi/6/LesArbres
       - file: python/le/8/Dictionnaires2
