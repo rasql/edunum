@@ -33,8 +33,8 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/questions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/blanks.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -53,6 +53,8 @@
     <script src="../../../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -62,7 +64,7 @@
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Recherche" href="../../../search.html" />
-    <link rel="next" title="Dictionnaires" href="Dictionnaires.html" />
+    <link rel="next" title="Piles et files" href="LesFiles.html" />
     <link rel="prev" title="Structures de données" href="StructuresDeDonnees.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -403,11 +405,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Dictionnaires.html">
-     Dictionnaires
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="LesFiles.html">
      Piles et files
     </a>
@@ -574,36 +571,49 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exemple-introductif">
-   Exemple introductif
+  <a class="reference internal nav-link" href="#un-horaire-de-train">
+   Un horaire de train
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creation-d-un-tableau-2d">
-     Création d’un tableau 2D
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acces-aux-elements">
-     Accès aux éléments
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#longueur-d-un-tableau">
-     Longueur d’un tableau
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ajouter-un-element">
-     Ajouter un élément
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enlever-des-elements">
-     Enlever des éléments
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creation-d-une-liste">
+   Création d’une liste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creation-d-un-tableau-2d">
+   Création d’un tableau 2D
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acces-aux-elements">
+   Accès aux éléments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acceder-a-une-plage">
+   Accéder à une plage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#longueur-d-un-tableau">
+   Longueur d’un tableau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajouter-un-element">
+   Ajouter un élément
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enlever-des-elements">
+   Enlever des éléments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice">
+   Exercice
+  </a>
  </li>
 </ul>
 
@@ -618,80 +628,92 @@
                 
   <div class="section" id="tableaux">
 <h1>Tableaux<a class="headerlink" href="#tableaux" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Un tableau est une structure de donnée linéaire</p>
+<p>Un tableau est une structure en <strong>deux dimensions</strong>, avec des lignes et colonnes.<br />
+En Python, un tableau est <strong>une liste de listes</strong>.</p>
 <p><img alt="" src="../../../_images/cff-general.jpg" /></p>
-<div class="section" id="exemple-introductif">
-<h2>Exemple introductif<a class="headerlink" href="#exemple-introductif" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La photo montre le tableau des départs de trains, prises le matin à la gare de Renens.
+Le tableau affiche 12 trains qui vont partir prochainement.</p>
+<div class="section" id="un-horaire-de-train">
+<h2>Un horaire de train<a class="headerlink" href="#un-horaire-de-train" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un horaire CFF est un tableau. Chaque ligne de ce tableau représente un train. Chaque train a les caractéristiques suivantes :</p>
 <ul class="simple">
 <li><p>type</p></li>
 <li><p>heure de départ</p></li>
-<li><p>gares de destination</p></li>
+<li><p>gare de destination</p></li>
 <li><p>voie</p></li>
-<li><p>éventuelles remarques (retard, suppression). Peut-être vide</p></li>
 </ul>
-<p>Le nombre de lignes de ce tableau correspond à une plage de l’horaire journalier complet. Tous les trains de la journée ne peuvent pas tous être affichés en même temps.</p>
-<p>Un informatique, on parle d’un <strong>tableau 2D</strong> ou tableau à deux dimensions. Chaque <strong>colonne</strong> représente les caractéristiques d’un train (type, heure de départ, destination, etc..) et chaque ligne représente un train.</p>
-<div class="section" id="creation-d-un-tableau-2d">
-<h3>Création d’un tableau 2D<a class="headerlink" href="#creation-d-un-tableau-2d" title="Lien permanent vers ce titre">¶</a></h3>
-<p>En Python, il n’existe pas de structure de donnée de type tableau. On le construit avec des listes. Un tableau 2D est <strong>une liste de liste</strong></p>
+<p>Tous les trains de la journée ne peuvent pas tous être affichés en même temps.</p>
+<p>En informatique, on parle d’un <strong>tableau 2D</strong> ou tableau à deux dimensions. Chaque <strong>colonne</strong> représente les caractéristiques d’un train (type, heure de départ, destination, etc..) et chaque ligne représente un train.</p>
+</div>
+<div class="section" id="creation-d-une-liste">
+<h2>Création d’une liste<a class="headerlink" href="#creation-d-une-liste" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une liste est un ensemble d’objets. En Python une liste</p>
 <ul class="simple">
-<li><p>est délimitée par des crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code></p></li>
-<li><p>ses éléments sont séparés par des virgules <code class="docutils literal notranslate"><span class="pre">,</span></code></p></li>
+<li><p>est délimitée par des crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code>, et</p></li>
+<li><p>ses éléments sont séparés par une virgule <code class="docutils literal notranslate"><span class="pre">,</span></code></p></li>
 </ul>
-<p>On créé d’abord chaque ligne en déclarant une liste.</p>
-<p>Chaque liste possède autant d’élément qu’il y a de caractéristiques séparées par une virgule <code class="docutils literal notranslate"><span class="pre">,</span></code></p>
+<p>Chaque <code class="docutils literal notranslate"><span class="pre">train</span></code> est une liste qui possède autant d’éléments qu’il y a de caractéristiques dans l’horaire, séparées par une virgule <code class="docutils literal notranslate"><span class="pre">,</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S22&#39;</span><span class="p">,</span><span class="s1">&#39;8h47&#39;</span><span class="p">,</span><span class="s1">&#39;Bussigny, Vufflens-la-Ville&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S22&#39;</span><span class="p">,</span> <span class="s1">&#39;8h47&#39;</span><span class="p">,</span> <span class="s1">&#39;Vufflens-la-Ville&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S2&#39;</span><span class="p">,</span><span class="s1">&#39;8h51&#39;</span><span class="p">,</span><span class="s1">&#39;Prilly-M, Lausanne, Pully, Aigle&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S2&#39;</span><span class="p">,</span> <span class="s1">&#39;8h51&#39;</span><span class="p">,</span> <span class="s1">&#39;Aigle&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train3</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;S4&#39;</span><span class="p">,</span><span class="s1">&#39;8h55&#39;</span><span class="p">,</span><span class="s1">&#39;Lausanne, Pully-Nord, Palézieux&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train3</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;S4&#39;</span><span class="p">,</span> <span class="s1">&#39;8h55&#39;</span><span class="p">,</span> <span class="s1">&#39;Palézieux&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>L’horaire devient une liste de listes. Chaque élément de la liste est une liste:</p>
+<p><strong>Exercice</strong><br />
+Définissez la liste <code class="docutils literal notranslate"><span class="pre">train4</span></code> selon l’horaire dans l’image ci-dessus.</p>
+</div>
+<div class="section" id="creation-d-un-tableau-2d">
+<h2>Création d’un tableau 2D<a class="headerlink" href="#creation-d-un-tableau-2d" title="Lien permanent vers ce titre">¶</a></h2>
+<p>En Python, il n’existe pas de structure de donnée de type tableau. On le construit avec des listes. Un tableau 2D est <strong>une liste de liste</strong>.
+L’horaire devient une liste de listes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span> <span class="o">=</span> <span class="p">[</span><span class="n">train1</span><span class="p">,</span><span class="n">train2</span><span class="p">,</span><span class="n">train3</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">horaire</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span> <span class="o">=</span> <span class="p">[</span><span class="n">train1</span><span class="p">,</span> <span class="n">train2</span><span class="p">,</span> <span class="n">train3</span><span class="p">]</span>
+<span class="n">horaire</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Bussigny, Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Prilly-M, Lausanne, Pully, Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55&#39;, &#39;Lausanne, Pully-Nord, Palézieux&#39;, 3]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1],
+ [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4],
+ [&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]]
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Ajoutez <code class="docutils literal notranslate"><span class="pre">train4</span></code> à l’horaire.</p>
 </div>
 <div class="section" id="acces-aux-elements">
-<h3>Accès aux éléments<a class="headerlink" href="#acces-aux-elements" title="Lien permanent vers ce titre">¶</a></h3>
-<p>On peut accéder un élément du tableau par son <strong>indice</strong> : son numéro dans la liste entre crochet <code class="docutils literal notranslate"><span class="pre">[]</span></code>. Le premier est <code class="docutils literal notranslate"><span class="pre">[0]</span></code>, le second <code class="docutils literal notranslate"><span class="pre">[1]</span></code> et ainsi de suite</p>
-<p>La deuxième ligne du tableau 2D <code class="docutils literal notranslate"><span class="pre">horaire</span></code> est <code class="docutils literal notranslate"><span class="pre">horaire[1]</span></code>. Cette ligne est une liste</p>
+<h2>Accès aux éléments<a class="headerlink" href="#acces-aux-elements" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On peut accéder une ligne du tableau par son <strong>indice</strong>.<br />
+Un indice est un nombre entier entre crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
+<p>En Python, les indices commencent avec 0.<br />
+L’indice <code class="docutils literal notranslate"><span class="pre">[0]</span></code> désigne donc la première ligne et l’indice <code class="docutils literal notranslate"><span class="pre">[1]</span></code> désigne la deuxième ligne.</p>
+<p>La deuxième ligne du tableau 2D <code class="docutils literal notranslate"><span class="pre">horaire</span></code> est <code class="docutils literal notranslate"><span class="pre">horaire[1]</span></code>, et c’est aussi une liste</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">horaire</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S2&#39;, &#39;8h51&#39;, &#39;Prilly-M, Lausanne, Pully, Aigle&#39;, 4]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
 </pre></div>
 </div>
 </div>
@@ -700,33 +722,54 @@
 <p>L’élément <code class="docutils literal notranslate"><span class="pre">horaire[1][2]</span></code> correspond au troisième élément de la liste <code class="docutils literal notranslate"><span class="pre">horaire[1]</span></code>, donc la destination</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">horaire</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prilly-M, Lausanne, Pully, Aigle
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Aigle&#39;
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong><br />
+Accédez à l’heure du départ du troisième train dans le tableau.</p>
+</div>
+<div class="section" id="acceder-a-une-plage">
+<h2>Accéder à une plage<a class="headerlink" href="#acceder-a-une-plage" title="Lien permanent vers ce titre">¶</a></h2>
 <p>On peut accéder à une plage d’éléments. La plage entre le premier et le deuxième élément s’écrit <code class="docutils literal notranslate"><span class="pre">horaire[0:2]</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">horaire</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Bussigny, Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Prilly-M, Lausanne, Pully, Aigle&#39;, 4]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1], [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]]
 </pre></div>
 </div>
 </div>
 </div>
+<p>Avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> nous pouvons itérer sur la liste et afficher les trains ligne par ligne.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">train</span> <span class="ow">in</span> <span class="n">horaire</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1]
+[&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Affichez les lignes 3-4 de l’horaire.</p>
 </div>
 <div class="section" id="longueur-d-un-tableau">
-<h3>Longueur d’un tableau<a class="headerlink" href="#longueur-d-un-tableau" title="Lien permanent vers ce titre">¶</a></h3>
+<h2>Longueur d’un tableau<a class="headerlink" href="#longueur-d-un-tableau" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">len(list)</span></code> retourne la longueur d’une liste</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -740,10 +783,10 @@
 </div>
 </div>
 </div>
-<p>La longueur de l’une ligne du tableau 2D est retourné avec l’index:</p>
+<p>La longueur de l’une ligne du tableau 2D est retourné avec:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">horaire</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">horaire</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -755,64 +798,66 @@
 </div>
 </div>
 <div class="section" id="ajouter-un-element">
-<h3>Ajouter un élément<a class="headerlink" href="#ajouter-un-element" title="Lien permanent vers ce titre">¶</a></h3>
+<h2>Ajouter un élément<a class="headerlink" href="#ajouter-un-element" title="Lien permanent vers ce titre">¶</a></h2>
 <p>On peut ajouter une nouvelle ligne à la fin avec la fonction <code class="docutils literal notranslate"><span class="pre">list.append()</span></code> :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train4</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;RE&#39;</span><span class="p">,</span><span class="s1">&#39;8h58&#39;</span><span class="p">,</span><span class="s1">&#39;Morges, Genève, Annemasse&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">horaire</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train5</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;RE&#39;</span><span class="p">,</span> <span class="s1">&#39;8h58&#39;</span><span class="p">,</span> <span class="s1">&#39;Annemasse&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">horaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train5</span><span class="p">)</span>
+<span class="n">horaire</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Bussigny, Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Prilly-M, Lausanne, Pully, Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55&#39;, &#39;Lausanne, Pully-Nord, Palézieux&#39;, 3]
-[&#39;RE&#39;, &#39;8h58&#39;, &#39;Morges, Genève, Annemasse&#39;, 2]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1],
+ [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4],
+ [&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3],
+ [&#39;RE&#39;, &#39;8h58&#39;, &#39;Annemasse&#39;, 2]]
 </pre></div>
 </div>
 </div>
 </div>
-<p>On peut ajouter une nouvelle ligne à la position <code class="docutils literal notranslate"><span class="pre">i</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">list.insert(i,element)</span></code></p>
+<p>On peut ajouter une nouvelle ligne à la position <code class="docutils literal notranslate"><span class="pre">i</span></code> avec la fonction <code class="docutils literal notranslate"><span class="pre">list.insert(i,</span> <span class="pre">element)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train5</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;S1&#39;</span><span class="p">,</span><span class="s1">&#39;8h57&#39;</span><span class="p">,</span><span class="s1">&#39;Prilly-M, Lausanne&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">horaire</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">train5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">horaire</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train6</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;S1&#39;</span><span class="p">,</span> <span class="s1">&#39;8h57&#39;</span><span class="p">,</span> <span class="s1">&#39;Lausanne&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">horaire</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">train6</span><span class="p">)</span>
+<span class="n">horaire</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Bussigny, Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Prilly-M, Lausanne, Pully, Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55&#39;, &#39;Lausanne, Pully-Nord, Palézieux&#39;, 3]
-[&#39;S1&#39;, &#39;8h57&#39;, &#39;Prilly-M, Lausanne&#39;, 4]
-[&#39;RE&#39;, &#39;8h58&#39;, &#39;Morges, Genève, Annemasse&#39;, 2]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1],
+ [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4],
+ [&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3],
+ [&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4],
+ [&#39;RE&#39;, &#39;8h58&#39;, &#39;Annemasse&#39;, 2]]
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="enlever-des-elements">
-<h3>Enlever des éléments<a class="headerlink" href="#enlever-des-elements" title="Lien permanent vers ce titre">¶</a></h3>
+<h2>Enlever des éléments<a class="headerlink" href="#enlever-des-elements" title="Lien permanent vers ce titre">¶</a></h2>
 <p>On peut enlever des éléments avec les méthodes suivantes :</p>
-<p>*<code class="docutils literal notranslate"><span class="pre">list.remove(x)</span></code> si l’élément <code class="docutils literal notranslate"><span class="pre">x</span></code> existe
-*<code class="docutils literal notranslate"><span class="pre">list.pop()</span></code> le dernier élément
-*<code class="docutils literal notranslate"><span class="pre">list.clear()</span></code> tous les éléments</p>
-<p>On enlève l’élément <code class="docutils literal notranslate"><span class="pre">train4</span></code> :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">list.remove(x)</span></code> si l’élément <code class="docutils literal notranslate"><span class="pre">x</span></code> existe</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list.pop()</span></code> le dernier élément</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list.clear()</span></code> tous les éléments</p></li>
+</ul>
+<p>On enlève l’élément <code class="docutils literal notranslate"><span class="pre">train5</span></code> :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">train4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">horaire</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">train5</span><span class="p">)</span>
+<span class="n">horaire</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Bussigny, Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Prilly-M, Lausanne, Pully, Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55&#39;, &#39;Lausanne, Pully-Nord, Palézieux&#39;, 3]
-[&#39;S1&#39;, &#39;8h57&#39;, &#39;Prilly-M, Lausanne&#39;, 4]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1],
+ [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4],
+ [&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3],
+ [&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4]]
 </pre></div>
 </div>
 </div>
@@ -821,57 +866,59 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">horaire</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">horaire</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Bussigny, Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Prilly-M, Lausanne, Pully, Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55&#39;, &#39;Lausanne, Pully-Nord, Palézieux&#39;, 3]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1],
+ [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4],
+ [&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3]]
 </pre></div>
 </div>
 </div>
 </div>
-<p>On efface tous les éléments avec la méthode <code class="docutils literal notranslate"><span class="pre">list.clear()</span></code></p>
+<p>On efface tous les éléments avec la méthode <code class="docutils literal notranslate"><span class="pre">list.clear()</span></code>. La variable <code class="docutils literal notranslate"><span class="pre">horaire</span></code> est maintenant une liste vide.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">horaire</span><span class="p">,</span><span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">horaire</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="exercice">
+<h2>Exercice<a class="headerlink" href="#exercice" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici votre horaire de départ.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span> <span class="o">=</span> <span class="p">[</span><span class="n">train1</span><span class="p">,</span><span class="n">train2</span><span class="p">,</span><span class="n">train3</span><span class="p">,</span><span class="n">train5</span><span class="p">,</span><span class="n">train4</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">horaire</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">horaire</span> <span class="o">=</span> <span class="p">[</span><span class="n">train1</span><span class="p">,</span> <span class="n">train2</span><span class="p">,</span> <span class="n">train3</span><span class="p">,</span> <span class="n">train6</span><span class="p">,</span> <span class="n">train5</span><span class="p">]</span>
+<span class="n">horaire</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S22&#39;, &#39;8h47&#39;, &#39;Bussigny, Vufflens-la-Ville&#39;, 1]
-[&#39;S2&#39;, &#39;8h51&#39;, &#39;Prilly-M, Lausanne, Pully, Aigle&#39;, 4]
-[&#39;S4&#39;, &#39;8h55&#39;, &#39;Lausanne, Pully-Nord, Palézieux&#39;, 3]
-[&#39;S1&#39;, &#39;8h57&#39;, &#39;Prilly-M, Lausanne&#39;, 4]
-[&#39;RE&#39;, &#39;8h58&#39;, &#39;Morges, Genève, Annemasse&#39;, 2]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;S22&#39;, &#39;8h47&#39;, &#39;Vufflens-la-Ville&#39;, 1],
+ [&#39;S2&#39;, &#39;8h51&#39;, &#39;Aigle&#39;, 4],
+ [&#39;S4&#39;, &#39;8h55&#39;, &#39;Palézieux&#39;, 3],
+ [&#39;S1&#39;, &#39;8h57&#39;, &#39;Lausanne&#39;, 4],
+ [&#39;RE&#39;, &#39;8h58&#39;, &#39;Annemasse&#39;, 2]]
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Exercice</strong></p>
 <ol class="simple">
 <li><p>Ajoutez à l’horaire le régional S1 pour Bussigny qui part à 9h01 sur voie 1</p></li>
 <li><p>Il est 8h50, le régional S22 pour Bussigny et Vufflens-la-Ville est parti. Supprimez-le de l’horaire</p></li>
 <li><p>Un dérangement sur la ligne de contact entre Vevey et Lausanne provoque un retard de 20 minutes. Ajoutez cette information pour le RE de 8h58 pour Annemasse</p></li>
 <li><p>Pour l’affichage de quai, sélectionnez tous les trains qui partiront de voie 4</p></li>
 </ol>
-</div>
 </div>
 </div>
 
@@ -904,7 +951,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="StructuresDeDonnees.html" title="previous page">Structures de données</a>
-    <a class='right-next' id="next-link" href="Dictionnaires.html" title="next page">Dictionnaires</a>
+    <a class='right-next' id="next-link" href="LesFiles.html" title="next page">Piles et files</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

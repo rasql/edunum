@@ -33,8 +33,8 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/questions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/blanks.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -53,6 +53,8 @@
     <script src="../../../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -63,7 +65,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Recherche" href="../../../search.html" />
     <link rel="next" title="Arbres" href="LesArbres.html" />
-    <link rel="prev" title="Dictionnaires" href="Dictionnaires.html" />
+    <link rel="prev" title="Tableaux" href="Tableaux.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -402,11 +404,6 @@
      Tableaux
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Dictionnaires.html">
-     Dictionnaires
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Piles et files
@@ -574,30 +571,53 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exemples-introductifs">
-   Exemples introductifs
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pile">
-     Pile
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#file">
-     File
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#la-pile-lifo">
-   La pile (LIFO)
+  <a class="reference internal nav-link" href="#la-pile">
+   La pile
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-tampon-fifo">
-   Le tampon (FIFO)
+  <a class="reference internal nav-link" href="#ajouter-un-element">
+   Ajouter un élément
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enlever-un-element">
+   Enlever un élément
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#afficher-les-elements">
+   Afficher les éléments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-file-d-attente">
+   La file d’attente
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Ajouter un élément
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Enlever un élément
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-la-poste">
+   A la poste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-guichet">
+   Le guichet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice">
+   Exercice
   </a>
  </li>
 </ul>
@@ -613,65 +633,44 @@
                 
   <div class="section" id="piles-et-files">
 <h1>Piles et files<a class="headerlink" href="#piles-et-files" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les Piles et les files sont des structures de données proches des listes, mais sans toutes les caractéristiques des listes. Elles permettent de mettre en oeuvre certains problèmes et algorithmes simplement</p>
+<p>Les <strong>piles et les files</strong> sont des structures de données proches des listes. Elles permettent de gérer l’arrivé et le départ de ses éléments.</p>
 <p><img alt="" src="../../../_images/poste.jpeg" /></p>
-<div class="section" id="exemples-introductifs">
-<h2>Exemples introductifs<a class="headerlink" href="#exemples-introductifs" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour comprendre les caractéristiques d’une pile et d’une file, nous donnons ici deux exemples de la vie de tous les jours</p>
-<div class="section" id="pile">
-<h3>Pile<a class="headerlink" href="#pile" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Dans une pile d’assiettes, il est possible d’accéder uniquement à la dernière ajoutée: celle qui se trouve au sommet. Dans une pile, il n’est donc possible d’effectuer que les opérations suivantes :</p>
+<p>Voici une file d’attente de la Poste, avec un panneau qui affiche la gestion de la liste d’attente.</p>
+<div class="section" id="la-pile">
+<h2>La pile<a class="headerlink" href="#la-pile" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La <strong>pile</strong> est une structure de données qui permet de gérer un ensemble d’éléments et leurs arrivées et départs dans le temps.</p>
+<p>Dans une pile d’assiettes, il est possible d’accéder uniquement à la dernière ajoutée: celle qui se trouve au sommet.</p>
+<p>Il n’est donc possible d’effectuer que les opérations suivantes :</p>
 <ul class="simple">
 <li><p>créer une nouvelle pile vide</p></li>
 <li><p>empiler un nouvel élément</p></li>
 <li><p>récupérer un élément au sommet de la pile</p></li>
 </ul>
 <p>Dans une pile, <strong>le dernier élément ajouté est le premier que l’on peut enlever</strong></p>
+<p>Cette structure s’appelle <strong>LIFO</strong> (<em>Last In First Out</em> en anglais)</p>
 </div>
-<div class="section" id="file">
-<h3>File<a class="headerlink" href="#file" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Lorsque vous allez au guichet postal, vous recevez un numéro. Lorsqu’un guichet se libère, c’est le numéro le plus petit qui est servi. S’il y a 10 numéros avant vous, vous devrez attendre que ces 10 personnes soient servies avant vous.</p>
-<p>Les opérations d’une file sont :</p>
-<ul class="simple">
-<li><p>créer une nouvelle file vide</p></li>
-<li><p>ajouter un nouvel élément à la file</p></li>
-<li><p>supprimer un élément de la file</p></li>
-</ul>
-<p>Dans une file, <strong>le premier élément ajouté est le dernier que l’on peut enlever</strong></p>
-</div>
-</div>
-<div class="section" id="la-pile-lifo">
-<h2>La pile (LIFO)<a class="headerlink" href="#la-pile-lifo" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La <strong>pile</strong> est un structure de données qui permet de gérer un ensemble d’éléments et leur arrivés et départs dans le temps. Dans une pile le dernier élément arrivé est le premier à partir.</p>
-<p>Cette structure s’appele <strong>stack</strong> en anglais ou <strong>LIFO</strong> (<em>Last In First Out</em> en anglais)</p>
-<p>On ajoute un élément avec la fonction <code class="docutils literal notranslate"><span class="pre">append()</span></code> et on le supprime avec la fonction <code class="docutils literal notranslate"><span class="pre">pop()</span></code></p>
+<div class="section" id="ajouter-un-element">
+<h2>Ajouter un élément<a class="headerlink" href="#ajouter-un-element" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On ajoute un élément avec la fonction <code class="docutils literal notranslate"><span class="pre">append()</span></code> et on le supprime avec la fonction <code class="docutils literal notranslate"><span class="pre">pop()</span></code>. Simulons une pile avec des livres que nous avons sur notre bureau.</p>
+<p>Commençons avec une pile vide.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pile</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">pile</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 1, 4, 1]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pile</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Nous allons maintenant ajouter 3 livres sur la pile, en utilisant la fonction <code class="docutils literal notranslate"><span class="pre">append()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pile</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Zola&#39;</span><span class="p">)</span>
+<span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Balzac&#39;</span><span class="p">)</span>
+<span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Hugo&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
 </div>
-</div>
-</div>
+<p>Voici la pile actuelle</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pile</span>
@@ -679,75 +678,358 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 1, 4]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Zola&#39;, &#39;Balzac&#39;, &#39;Hugo&#39;]
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="le-tampon-fifo">
-<h2>Le tampon (FIFO)<a class="headerlink" href="#le-tampon-fifo" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La <strong>tampon</strong> (ou le file d’attente) est un structure de données qui permet de gérer des éléments et leur arrivés et départs. Dans une file d’attente le premier élément arrivé est le premier à partir.</p>
-<p>Cette structure s’appele <strong>buffer</strong> en anglais ou <strong>FIFO</strong> (<em>First In First Out</em> en anglais)</p>
+<div class="section" id="enlever-un-element">
+<h2>Enlever un élément<a class="headerlink" href="#enlever-un-element" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans une pile, le seul livre qui peut être enlevé est le dernier ajouté. Nous utilisons la fonction <code class="docutils literal notranslate"><span class="pre">pop()</span></code> pour enlever un livre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tampon</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
-<span class="n">tampon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
-<span class="n">tampon</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pile</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;h&#39;, &#39;a&#39;, &#39;m&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hugo&#39;
 </pre></div>
 </div>
 </div>
 </div>
+<p>Mettons 3 autres livres sur la pile.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tampon</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Frisch&#39;</span><span class="p">)</span>
+<span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Murakami&#39;</span><span class="p">)</span>
+<span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Higgins&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Enlevons-en un.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pile</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;h&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Higgins&#39;
 </pre></div>
 </div>
 </div>
 </div>
+<p>Combien de livres restent sur la pile ?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tampon</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">pile</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;a&#39;, &#39;m&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
 </div>
-<p>L’accès au premier élément se fait avec la notation <code class="docutils literal notranslate"><span class="pre">[-1]</span></code>:</p>
+<p>Lesquels?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tampon</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pile</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;m&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Zola&#39;, &#39;Balzac&#39;, &#39;Frisch&#39;, &#39;Murakami&#39;]
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Exercice</strong></p>
-<p>Nous sommes à la Poste de Renens et il est 14h. Trois guichets sont ouverts et deux personnes attendent dans la file. La machine à tickets indique que le prochain ticket délivré sera le 79. Les guichets sont décrits comme un dictionnaire, et la file d’attente comme une file:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">file</span> <span class="o">=</span> <span class="p">[</span><span class="mi">77</span><span class="p">,</span><span class="mi">78</span><span class="p">]</span>
-<span class="n">guichets</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;guichet 1&#39;</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span> <span class="s1">&#39;guichet 2&#39;</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span> <span class="s1">&#39;guichet 3&#39;</span><span class="p">:</span><span class="bp">True</span><span class="p">}</span>
-
+<p><strong>Exercice</strong><br />
+Enlevez d’abord un livre et ajoutez ensuite deux nouveaux livres à vous.</p>
+</div>
+<div class="section" id="afficher-les-elements">
+<h2>Afficher les éléments<a class="headerlink" href="#afficher-les-elements" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Essayons d’afficher la pile des livres.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">livre</span> <span class="ow">in</span> <span class="n">pile</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">livre</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Si une personne est au guichet, la valeur est <code class="docutils literal notranslate"><span class="pre">True</span></code>, sinon <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Zola
+Balzac
+Frisch
+Murakami
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le problème avec cette façon d’imprimer c’est que la pile n’est pas dans le bon ordre. Nous pouvons utiliser l’opérateur de tranche <code class="docutils literal notranslate"><span class="pre">[::-1]</span></code> pour inverser l’ordre d’une liste.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">livre</span> <span class="ow">in</span> <span class="n">pile</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">livre</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Murakami
+Frisch
+Balzac
+Zola
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Enlevez un livre de la pile avec <code class="docutils literal notranslate"><span class="pre">pop</span></code> et affichez la pile qui reste avec l’opérateur de tranche <code class="docutils literal notranslate"><span class="pre">[::-1]</span></code>.</p>
+</div>
+<div class="section" id="la-file-d-attente">
+<h2>La file d’attente<a class="headerlink" href="#la-file-d-attente" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La file d’attente est une structure de données qui permet de gérer les arrivées et les départs.</p>
+<p>Les opérations d’une file sont :</p>
+<ul class="simple">
+<li><p>créer une nouvelle file vide</p></li>
+<li><p>ajouter un nouvel élément à la file</p></li>
+<li><p>supprimer un élément de la file</p></li>
+</ul>
+<p>Dans une file, <strong>le premier élément ajouté est le dernier que l’on peut enlever</strong></p>
+<p>En anglais une file d’attente est connu sous le nom <strong>FIFO</strong> (First In First Out).</p>
+</div>
+<div class="section" id="id1">
+<h2>Ajouter un élément<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous ajoutons un élément dans la file avec la fonction <code class="docutils literal notranslate"><span class="pre">append()</span></code></p>
+<p>Simulons une file d’attente à la caféteria.</p>
+<p>Nous commençons avec une file vide.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>C’est midi et les personnes commençent à arriver.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">append()</span></code> permet de les ajouter à la liste <code class="docutils literal notranslate"><span class="pre">file</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Anna&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Léa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous avons maintenant les personnes suivantes dans la file d’attente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Anna&#39;, &#39;Tom&#39;, &#39;Léa&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Enlever un élément<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La première personne à être servie, est enlevée de la liste avec la fonction <code class="docutils literal notranslate"><span class="pre">pop(0)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Anna&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>La file est devenu plus petite.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Tom&#39;, &#39;Léa&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Des nouvelles personnes arrivent.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Jim&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Noa&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Elsa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Une nouvelle personne est servie.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Tom&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Combient de personne sont en attente ?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Qui est dans la file d’attente</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Léa&#39;, &#39;Jim&#39;, &#39;Noa&#39;, &#39;Elsa&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong><br />
+Utilisez la fonction <code class="docutils literal notranslate"><span class="pre">pop()</span></code> pour enlever les personnes dans le bon ordre.</p>
+</div>
+<div class="section" id="a-la-poste">
+<h2>A la poste<a class="headerlink" href="#a-la-poste" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous sommes à la Poste de Renens et il est 14h. Trois guichets sont ouverts et deux personnes attendent dans la file. La machine à tickets indique que le prochain ticket délivré sera le 544.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="p">[</span><span class="mi">542</span><span class="p">,</span> <span class="mi">543</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>L’indice du dernier numéro (<code class="docutils literal notranslate"><span class="pre">543</span></code>) est <code class="docutils literal notranslate"><span class="pre">[-1]</span></code>. En ajoutant <code class="docutils literal notranslate"><span class="pre">1</span></code> à la valeur contenue dans <code class="docutils literal notranslate"><span class="pre">file[-1]</span></code>, on trouve <code class="docutils literal notranslate"><span class="pre">544</span></code></p>
+<p>Le prochain numéro sera donc</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>544
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si une personne entre, elle prend son numéro et elle s’insére dans la liste d’attente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suivant</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">suivant</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La file d’attente comprend maintenant:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[542, 543, 544]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ensuite deux personnes entrent.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[542, 543, 544, 545, 546]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="le-guichet">
+<h2>Le guichet<a class="headerlink" href="#le-guichet" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il y a trois guichets A, B, et C, qui vont se libérer de façon alétoire.</p>
+<p>Nous importons le module <code class="docutils literal notranslate"><span class="pre">random</span></code> et utilisons la fonction <code class="docutils literal notranslate"><span class="pre">choice()</span></code> pour choisir un des trois guichets de façon aléatoire.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="s1">&#39;ABC&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;B&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le prochain guichet qui se libère</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="s1">&#39;ABC&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>C’est la personne entrée en premier qui peut se diriger vers le guichet qui se libère</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suivant</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">guichet</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="s1">&#39;ABC&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">suivant</span><span class="p">,</span> <span class="n">guichet</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>542 A
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice">
+<h2>Exercice<a class="headerlink" href="#exercice" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Traduisez en python les étapes suivantes :</p>
 <ol class="simple">
 <li><p>Une femme entre dans la poste, elle va chercher son ticket.</p></li>
 <li><p>Le guichet 1 et le guichet 3 se libèrent. Deux personnes de la file les occupent ensuite</p></li>
@@ -755,44 +1037,7 @@
 <li><p>Le guichet 2 se libère</p></li>
 <li><p>L’homme pressé quitte la poste, il en a marre d’attendre</p></li>
 </ol>
-<p>Traduisez en Python les étapes en utilisant les fonctions suivantes :</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">file.append(file[-1]+1)</span></code> pour ajouter une personne dans la file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">file.pop(0)</span></code> pour enlever une personne de la file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">guichets['guichet</span> <span class="pre">1']</span> <span class="pre">=</span> <span class="pre">False</span></code> pour enlever une personne du guichet 1</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">guichets['guichet</span> <span class="pre">1']</span> <span class="pre">=</span> <span class="pre">True</span></code> pour ajouter une personne dans la file</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="p">[</span><span class="mi">77</span><span class="p">,</span><span class="mi">78</span><span class="p">]</span>
-<span class="n">file</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[77, 78]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">guichets</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;guichet 1&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;guichet 2&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;guichet 3&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">}</span>
-<span class="n">guichets</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;guichet 1&#39;: True, &#39;guichet 2&#39;: True, &#39;guichet 3&#39;: True}
-</pre></div>
-</div>
-</div>
-</div>
-<p>Après les étapes, quel est l’état des guichets ? Quels sont les numéros des tickets dans la file ? Quel est le prochain numéro délivré par la machine à tickets ?</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">guichets</span></code> pour afficher l’état des guichets</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">print(file)</span></code> pour afficher l’état de la file</p></li>
-</ul>
+<p>Après les étapes, quel est l’état des de la file ? Quel est le prochain numéro délivré par la machine à tickets ?</p>
 </div>
 </div>
 
@@ -824,7 +1069,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Dictionnaires.html" title="previous page">Dictionnaires</a>
+    <a class='left-prev' id="prev-link" href="Tableaux.html" title="previous page">Tableaux</a>
     <a class='right-next' id="next-link" href="LesArbres.html" title="next page">Arbres</a>
 
     </div>
