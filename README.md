@@ -22,6 +22,10 @@ jupyter-book build .
 Le résultat se trouvera dans **_build/html**
 Pour transférer les pages HTML sur GitHub pages utilisez:
 
+- n - include à **.nojekyll** file
+- p - push the branch to origin/{branch}
+- f - force the push to the repository
+
 ```
 ghp-import -n -p -f _build/html
 ```
