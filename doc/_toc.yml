@@ -1,85 +1,75 @@
-- file: index
-
-- part: Cours
+format: jb-book
+root: index
+parts:
+- caption: Cours
   chapters:
-  
   - file: start/index
     sections:
-      - file: start/why
-      - file: start/thonny/thonny
-      - file: start/jupyterlab
-      - file: start/markdown
-      - file: start/rappel
-      
+    - file: start/why
+    - file: start/thonny/thonny
+    - file: start/jupyterlab
+    - file: start/markdown
+    - file: start/rappel
   - file: python/index
     sections:
-      - file: python/1_intro
-      - file: python/1_calc
-      - file: python/1_text
-      - file: python/2_struct
-      - file: python/3_list
-      - file: python/4_loop
-      - file: python/logique
-      - file: python/fonction
-        
-      - file: python/exercices
-        sections:
-          - file: python/ex1
-          - file: python/ex2
-          - file: python/quiz
-      
+    - file: python/1_intro
+    - file: python/1_calc
+    - file: python/1_text
+    - file: python/2_struct
+    - file: python/3_list
+    - file: python/4_loop
+    - file: python/logique
+    - file: python/fonction
+    - file: python/exercices
+      sections:
+      - file: python/ex1
+      - file: python/ex2
+      - file: python/quiz
   - file: jeu/index
     sections:
-      - file: jeu/ppc
-      - file: jeu/texte
-      - file: jeu/japon
-      
+    - file: jeu/ppc
+    - file: jeu/texte
+    - file: jeu/japon
   - file: plot/index
     sections:
-      - file: plot/plot
-      - file: plot/figure
-      - file: plot/format
-      - file: plot/numpy
-      - file: plot/bar
-      - file: plot/image
-      - file: plot/hist
-      - file: plot/scatter
-      - file: plot/polar
-      - file: plot/pie
-      - file: plot/text
-      - file: plot/gif/gif
-      - file: python/le/7/mri
-      - file: bokeh/bokeh
-      - file: bokeh/bokeh2
-        
+    - file: plot/plot
+    - file: plot/figure
+    - file: plot/format
+    - file: plot/numpy
+    - file: plot/bar
+    - file: plot/image
+    - file: plot/hist
+    - file: plot/scatter
+    - file: plot/polar
+    - file: plot/pie
+    - file: plot/text
+    - file: plot/gif/gif
+    - file: python/le/7/mri
+    - file: bokeh/bokeh
+    - file: bokeh/bokeh2
   - file: rep/index
     sections:
-      - file: rep/unaire
-      - file: rep/bin/bin
-      - file: rep/nombre
-      - file: rep/texte
-      - file: rep/image
-      - file: rep/couleur
-      - file: rep/svg
-      - file: rep/son
-        
+    - file: rep/unaire
+    - file: rep/bin/bin
+    - file: rep/nombre
+    - file: rep/texte
+    - file: rep/image
+    - file: rep/couleur
+    - file: rep/svg
+    - file: rep/son
   - file: algo/algo
-# Vince's chapters
   - file: python/vi/5/Securite
     sections:
-      - file: python/vi/5/SystemeDeFichiers
-      - file: python/vi/5/MotsDePasse
-      - file: python/vi/4/hacking-romain-v2-corrige
-
+    - file: python/vi/5/SystemeDeFichiers
+    - file: python/vi/5/MotsDePasse
+    - file: python/vi/4/hacking-romain-v2-corrige
   - file: python/vi/6/StructuresDeDonnees
     sections:
-      - file: python/vi/6/Tableaux
-      - file: python/vi/6/LesFiles
-      - file: python/vi/6/LesArbres
-      - file: python/le/8/Dictionnaires2
-    
-    
-- part: Reference
+    - file: python/vi/6/Tableaux
+    - file: python/vi/6/LesFiles
+    - file: python/vi/6/LesArbres
+    - file: python/le/8/Dictionnaires2
+- caption: Reference
   chapters:
   - file: ref/markdown
   - file: ref/jupyter

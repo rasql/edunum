@@ -1,0 +1,8 @@
+format: jb-article
+root: ensemble
+sections:
+- file: graphe
+- file: unix
+- file: widget
+- file: sympy
+- file: fonc_natifs
