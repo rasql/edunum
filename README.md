@@ -39,7 +39,7 @@ pip install ghp-import
 ## Extensions
 
 Des extensions Sphinx ont été ajouté avec un dossier `extension`:
-- quesionts
+- questions
 - blanks
 `
 Un dossier `doc/_static` a été ajouté avec
