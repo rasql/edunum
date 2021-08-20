@@ -21,7 +21,7 @@ execute:
 latex:
   latex_engine                : "xelatex"
   latex_documents:
-    targetname: eleve.tex
+  targetname: eleve.tex
 
 #######################################################################################
 # MyST parsing settings
@@ -65,7 +65,7 @@ notebook_interface            : "notebook"
 # Information about where the book exists on the web
 repository:
   url: https://github.com/rasql/edunum  # Online location of your book
-  path_to_book: doc  # Optional path to your book, relative to the repository root
+  path_to_book: doc/  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 #######################################################################################

@@ -1,3 +1,17 @@
 title: "My book"
 execute:
   execute_notebooks: "off"
+  
+repository:
+  url: https://github.com/rasql/edunum
+  path_to_book: doc/
+  branch: main
+  
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+
+launch_buttons:
+  notebook_interface: "jupyterlab"  # or "classic"
+  

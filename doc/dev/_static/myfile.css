@@ -1,0 +1,15 @@
+p {
+    text-align: justify;
+    font-family: verdana;
+    font-size: 14px;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+}
+
+h2 {
+  color: blue;
+  text-align: center;
+}
