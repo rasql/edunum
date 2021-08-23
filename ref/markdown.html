@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Markdown &#8212; Education numérique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -35,10 +32,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/reactions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/reactions-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/style-checkpoint.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -52,9 +51,7 @@
     <script src="../_static/reactions.js"></script>
     <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -62,18 +59,20 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Jupyter" href="jupyter.html" />
     <link rel="prev" title="Dictionnaires" href="../python/le/8/Dictionnaires2.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -82,30 +81,35 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Education numérique</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Education numérique</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <p class="caption collapsible-parent">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
  <span class="caption-text">
   Cours
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../start/index.html">
    Démarrer
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../start/why.html">
      Á quoi ça sert?
@@ -132,14 +136,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../python/index.html">
    Programmer
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/1_intro.html">
      Introduction à Python
@@ -180,11 +187,16 @@
      Fonctions
     </a>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../python/exercices.html">
      Exercices
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../python/ex1.html">
        Exercices Boucles
@@ -201,18 +213,19 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../jeu/index.html">
    Jouer
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../jeu/ppc.html">
      Pierre-papier-ciseaux
@@ -229,14 +242,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../plot/index.html">
    Visualiser
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../plot/plot.html">
      Graphe
@@ -313,14 +329,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../rep/index.html">
    Encoder
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../rep/unaire.html">
      Système unaire
@@ -362,19 +381,22 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../algo/algo.html">
    Algorithmique
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../python/vi/5/Securite.html">
    Securite
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/vi/5/SystemeDeFichiers.html">
      Le système de fichiers
@@ -391,14 +413,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../python/vi/6/StructuresDeDonnees.html">
    Structures de données
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/vi/6/Tableaux.html">
      Tableaux
@@ -420,16 +445,14 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Reference
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Markdown
@@ -462,6 +485,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -477,21 +501,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
-            title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
             class="fas fa-download"></i></button>
@@ -509,7 +533,7 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -522,32 +546,32 @@
         <a class="issues-button"
             href="https://github.com/rasql/edunum/issues/new?title=Issue%20on%20page%20%2Fref/markdown.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>problème ouvert</button></a>
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
         <a class="edit-button" href="https://github.com/rasql/edunum/edit/main/doc/ref/markdown.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>problème ouvert</button></a>
+                title="Modifier cette page"><i class="fas fa-pencil-alt"></i>suggestion de modification</button></a>
     </div>
 </div>
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
-                title="Mode plein écran"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contenu
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#emphase">
    Emphase
@@ -640,8 +664,8 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -885,8 +909,8 @@ Ici, le fichier est inclu à partir de la ligne 2.</p>
 <p>Il est possible d’intégrer des questions à choix multiples au fil des pages via la directive <code class="docutils literal notranslate"><span class="pre">question</span></code>.
 Dans le corps de la directive, les bonnes et mauvaises réponses sont indiquées via les rôles <code class="docutils literal notranslate"><span class="pre">{v}</span></code> et <code class="docutils literal notranslate"><span class="pre">{f}</span></code> pour <em>vrai</em> et <em>faux</em>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="cd0a3546-2e33-4ef8-b416-16bca40d0e5c" name="bc7731d0-3ab4-4c29-b63b-1adc223758f6" type="radio">
-</input><label class="tabbed-label" for="cd0a3546-2e33-4ef8-b416-16bca40d0e5c">
+<input checked="checked" id="d60cae61-03e4-4722-932e-41e012a468bd" name="7bbcaf55-cb15-438d-9315-354967ba86ab" type="radio">
+</input><label class="tabbed-label" for="d60cae61-03e4-4722-932e-41e012a468bd">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
@@ -896,8 +920,8 @@ Je pense qu’il y en a <label class="answer incorrect"><input type="checkbox" /
 </div>
 <div class="controls"><input type="button" class="check btn btn-primary" value="Vérifier ma réponse" /><input type="button" class="show btn btn-secondary" value="Afficher la réponse" /></div></div>
 </form></div></div>
-<input id="76550c31-549c-42f9-9426-7991797ec8a8" name="bc7731d0-3ab4-4c29-b63b-1adc223758f6" type="radio">
-</input><label class="tabbed-label" for="76550c31-549c-42f9-9426-7991797ec8a8">
+<input id="8bdeef10-8473-4cca-b396-4fff536c3d4f" name="7bbcaf55-cb15-438d-9315-354967ba86ab" type="radio">
+</input><label class="tabbed-label" for="8bdeef10-8473-4cca-b396-4fff536c3d4f">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{question}
 Combien y a t&#39;il de bits dans un octet ?
@@ -911,8 +935,8 @@ Je pense qu&#39;il y en a {f}`2`, {f}`4`, {v}`8` ou {f}`64`.
 Le contenu de la question peut lui-même être structuré en Markdown.
 Dans l’exemple ci-dessous, les réponses sont affichées dans une liste.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c06b9d41-8340-40e6-9592-db1b1b765636" name="e24dab18-0c45-4fe8-b9e2-31d91c4138e9" type="radio">
-</input><label class="tabbed-label" for="c06b9d41-8340-40e6-9592-db1b1b765636">
+<input checked="checked" id="9b352e46-1f0a-434c-9ad8-52a3dcf4de60" name="ad58a863-18c5-409b-8c49-55840a282421" type="radio">
+</input><label class="tabbed-label" for="9b352e46-1f0a-434c-9ad8-52a3dcf4de60">
 Aperçu</label><div class="tabbed-content docutils">
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question avec un titre personnalisé</p>
@@ -927,15 +951,15 @@ Aperçu</label><div class="tabbed-content docutils">
 </div>
 <div class="controls"><input type="button" class="check btn btn-primary" value="Vérifier ma réponse" /><input type="button" class="show btn btn-secondary" value="Afficher la réponse" /></div></div>
 </form></div></div>
-<input id="0d857c6f-8cd7-4024-964e-85d8b3f8ce35" name="e24dab18-0c45-4fe8-b9e2-31d91c4138e9" type="radio">
-</input><label class="tabbed-label" for="0d857c6f-8cd7-4024-964e-85d8b3f8ce35">
+<input id="d47156cb-8048-448d-ab56-28f22d06934d" name="ad58a863-18c5-409b-8c49-55840a282421" type="radio">
+</input><label class="tabbed-label" for="d47156cb-8048-448d-ab56-28f22d06934d">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{question} Question avec un titre personnalisé
 Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turing ?
-* {v}`Barbara Liskov`
-* {v}`Niklaus Wirth`
-* {f}`Alan Turing`
-* {v}`Tim Berners-Lee`
+<span class="k">*</span> {v}`Barbara Liskov`
+<span class="k">*</span> {v}`Niklaus Wirth`
+<span class="k">*</span> {f}`Alan Turing`
+<span class="k">*</span> {v}`Tim Berners-Lee`
 ```
 </pre></div>
 </div>
@@ -948,13 +972,13 @@ Parmi les informaticiens et informaticiennes suivants, qui a reçu le prix Turin
 Dans le texte du rôle, les différentes options de réponses sont séparées par un caractère <code class="docutils literal notranslate"><span class="pre">|</span></code>.
 Une réponse valable est précédée d’un caractère <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1b796436-3f4b-471d-99e8-0f0c48e95cf7" name="c37d7bfa-709b-409c-bba3-1bafaa14e7e4" type="radio">
-</input><label class="tabbed-label" for="1b796436-3f4b-471d-99e8-0f0c48e95cf7">
+<input checked="checked" id="73b28fe1-d980-466b-b595-088dc05082b6" name="32788b7e-6fdc-4bed-ae98-d94f26afcef6" type="radio">
+</input><label class="tabbed-label" for="73b28fe1-d980-466b-b595-088dc05082b6">
 Aperçu</label><div class="tabbed-content docutils">
 <p>Dans le texte suivant, certains <select class="blank"><option class="blank_option" value="-1" selected="selected"></option><option class="correct_option" value="1">mots</option><option class="incorrect_option" value="0">trucs</option><option class="incorrect_option" value="0">machins</option></select> sont laissés <select class="blank"><option class="blank_option" value="-1" selected="selected"></option><option class="incorrect_option" value="0">pour compte</option><option class="correct_option" value="1">blancs</option><option class="incorrect_option" value="0">verts</option><option class="incorrect_option" value="0">seuls</option></select>.</p>
 </div>
-<input id="b10ecd48-32da-4e37-b1fa-a16bff5de464" name="c37d7bfa-709b-409c-bba3-1bafaa14e7e4" type="radio">
-</input><label class="tabbed-label" for="b10ecd48-32da-4e37-b1fa-a16bff5de464">
+<input id="1113a03a-554a-4f1f-8ed7-bb2865e38e22" name="32788b7e-6fdc-4bed-ae98-d94f26afcef6" type="radio">
+</input><label class="tabbed-label" for="1113a03a-554a-4f1f-8ed7-bb2865e38e22">
 Code</label><div class="tabbed-content docutils">
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Dans le texte suivant, certains {bl}`&gt;mots|trucs|machins` sont laissés {bl}`pour compte|&gt;blancs|verts|seuls`.
 </pre></div>
@@ -986,21 +1010,21 @@ Code</label><div class="tabbed-content docutils">
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="../python/le/8/Dictionnaires2.html" title="previous page">Dictionnaires</a>
     <a class='right-next' id="next-link" href="jupyter.html" title="next page">Jupyter</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
-          By Raphael Holzer<br/>
+          Par Raphael Holzer<br/>
         
           <div class="extra_footer">
             <p>
@@ -1021,11 +1045,9 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
+  
   </body>
 </html>
