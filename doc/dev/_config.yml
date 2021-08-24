@@ -1,6 +1,6 @@
 title: "My book"
 execute:
-  execute_notebooks: "off"
+  execute_notebooks: off
   
 repository:
   url: https://github.com/rasql/edunum
@@ -14,4 +14,19 @@ html:
 
 launch_buttons:
   notebook_interface: "jupyterlab"  # or "classic"
+  
+  
+sphinx:
+  config:
+    html_show_copyright: false
+    language: fr
+    html_theme: sphinx_book_theme
+  local_extensions:
+    questions: ../../extensions/
+    blanks: ../../extensions/
+    videos: ../../extensions/
+    codeplay: ../..extensions/
+    logic: ../../extensions/
+    role: ../../extensions/
+    timeline: ../../extensions/
   

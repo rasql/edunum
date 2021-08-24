@@ -18,10 +18,10 @@ execute:
 
 #######################################################################################
 # Define the latex engine and the name of the latex output file for PDF builds
-latex:
-  latex_engine                : "xelatex"
-  latex_documents:
-  targetname: eleve.tex
+#latex:
+#  latex_engine                : "xelatex"
+#  latex_documents:
+#  targetname: eleve.tex
 
 #######################################################################################
 # MyST parsing settings
@@ -37,15 +37,15 @@ html:
   use_repository_button: true
   use_edit_page_button: true
   home_page_in_navbar         : false
-  extra_footer: |
-    <p>
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
-    </a>
-    <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
-    </a>.
-    </p>
+#  extra_footer: |
+#    <p>
+#    <a rel="license" href="http://creativecommons.org/licenses/by-#nc-sa/4.0/">
+#    <img alt="Creative Commons License" style="border-width:0" #src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+#    </a>
+#    <br />This work is licensed under a <a rel="license" #href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+#    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 #International License
+#    </a>.
+#    </p>
 
 #######################################################################################
 sphinx:

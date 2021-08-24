@@ -51,12 +51,19 @@ Un dossier `doc/_static` a été ajouté avec
 
 Le fichier `_config.yml` a été modifié:
 
+```
     sphinx:
-    config:
-        html_show_copyright: false
-        language: fr
-        html_theme: sphinx_book_theme
-    local_extensions:
-        questions: ../extensions/
-        blanks: ../extensions/
-        
+        config:
+            html_show_copyright: false
+            language: fr
+            html_theme: sphinx_book_theme
+        local_extensions:
+            questions: ../extensions/
+            blanks: ../extensions/
+```
+
+Deux dossier ont été copié du projet https://github.com/edunumsec2/book
+
+- config
+    - assets
+    - extensions

@@ -1,6 +1,7 @@
 format: jb-article
-root: ensemble
+root: index
 sections:
+- file: 5_prog
 - file: graphe
 - file: unix
 - file: widget
